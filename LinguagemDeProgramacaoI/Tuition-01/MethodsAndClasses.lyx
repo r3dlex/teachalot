@@ -1,0 +1,448 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+%\usetheme[height=7mm]{Rochester} 
+\usetheme[]{default} 
+\usepackage{listings}
+\usepackage{minted}               		
+\usepackage{natbib}
+\usepackage{bibentry}
+\bibliographystyle{apalike}
+\usepackage{chngcntr}
+
+\newminted{java}{
+  fontsize=\footnotesize, 
+  linenos,
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout BeginPlainFrame
+Enumerações
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+Define um tipo enumerável
+\end_layout
+
+\begin_layout Itemize
+Exemplos: Meses do ano, dias, peças de tabuleiro...
+\end_layout
+
+\begin_layout Itemize
+Tudo que seja 
+\emph on
+contável
+\emph default
+, ou seja, 
+\emph on
+enumerável
+\end_layout
+
+\begin_layout Itemize
+Serve para abstrair dados
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+Exemplo antigo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSource
+	filename ../Code/ExemploDiasSwitch.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+Definindo uma enumeração
+\end_layout
+
+\begin_layout Itemize
+Em arquivo próprio (como uma classe)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSource
+	filename ../Code/Enumeracao.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+Depois de definida, basta usar
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSource
+	filename ../Code/ExemploDiasSwitchEnum.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+Classes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+Define um conjunto de objetos
+\end_layout
+
+\begin_layout Itemize
+1 classe 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 1 arquivo
+\end_layout
+
+\begin_layout Itemize
+Se tiver o método 
+\emph on
+main
+\emph default
+, pode executar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+Classes possuem uma estrutura bem definida:
+\end_layout
+
+\begin_layout Enumerate
+Campos (atributos)
+\end_layout
+
+\begin_layout Enumerate
+Construtores
+\end_layout
+
+\begin_layout Enumerate
+Métodos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSource
+	filename ../Code/UmaClasse.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+Criando uma classe
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+UmaClasse instancia = new UmaClasse(); 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Para Acessar um Atributo usar
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+instancia._umNome
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+Exercícios II
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Enumerate
+Faça uma classe 
+\emph on
+Particula
+\emph default
+ que resolva o problema do cálculo de posição.
+ Essa classe terá somente um método público chamado atualizarPosicao que
+ recebe um 
+\emph on
+float
+\emph default
+ 
+\emph on
+tempo
+\emph default
+ como parâmetro e retorna a nova posição da partícula.
+\end_layout
+
+\begin_layout Enumerate
+Completar a implementação da classe Particula com sua própria implementação,
+ seguindo aquela definida anteriormente.
+ Com a integração é possível ver a partícula sendo desenhada!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\end_body
+\end_document
