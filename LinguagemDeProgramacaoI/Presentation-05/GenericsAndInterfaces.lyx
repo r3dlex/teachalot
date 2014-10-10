@@ -534,7 +534,59 @@ status open
 \end_layout
 
 \begin_layout BeginPlainFrame
-Exercícios
+Exercícios II
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Enumerate
+Fazer o mesmo que foi feito para a classe Retangulo para a classe Quadrado
+ e para a Triangulo.
+ Ambas devem implementar as interfaces de acordo com suas próprias fórmulas.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Repita o exercício anterior, adicionando uma interface móvel, com a seguinte
+ interface:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/Movel.java
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Essa classe deve ser implementada pelo RetanguloMovel, QuadradoMovel e Triangulo
+Movel, os quais agora devem ter um ponto de referência, por exemplo o 
+\emph on
+canto inferior esquerdo.
+ 
+\emph default
+Esse ponto deve ser movido no metodo relativo.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout EndFrame
