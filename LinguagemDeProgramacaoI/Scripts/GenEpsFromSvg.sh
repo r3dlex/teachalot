@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #TODO check if inskscape is installed and stuff
+mkdir -p Gen/Image/
 for x in `ls Svg/*`; do
   fname=`basename -s .svg $x`
   echo "Running:   inkscape -f $x -e Gen/Image/${fname}.eps --export-dpi=300"
