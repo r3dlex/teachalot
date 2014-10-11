@@ -125,7 +125,7 @@ reviver, socos, sopapos
 \end_layout
 
 \begin_layout BeginPlainFrame
-Exercício
+Exercícios
 \end_layout
 
 \begin_layout Standard
@@ -171,6 +171,12 @@ charAt
 e o tamanho da mesma pode ser obtido com o 
 \emph on
 length.
+\end_layout
+
+\begin_layout Enumerate
+Dada uma string de entrada, verifique se essa string corresponde a um número
+ hexadecimal ou não.
+ Lembrando que os números hexadecimais são do tipo 0xFF ou FF.
 \end_layout
 
 \end_inset
