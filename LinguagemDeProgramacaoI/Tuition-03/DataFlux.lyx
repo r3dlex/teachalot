@@ -21,14 +21,6 @@
   baselinestretch=1,
   tabsize=2
 } 
-
-\newminted{javasnip}{
-  fontsize=\footnotesize, 
-  frame=lines,
-  bgcolor=bg,
-  baselinestretch=1,
-  tabsize=2
-} 
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -87,62 +79,44 @@
 
 \begin_body
 
-\begin_layout Title (Plain Frame)
-Aulas Extra 03-04
-\end_layout
-
-\begin_layout Subtitle
-Operadores, fluxos e estruturas
-\end_layout
-
-\begin_layout Author
-André Ferreira Bem Silva
-\end_layout
-
-\begin_layout Institute
-Faculdade de Ciências Sociais de Florianópolis
+\begin_layout BeginPlainFrame
+Palíndromo
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status collapsed
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
 
 \begin_layout Plain Layout
-
-
-\backslash
-AtBeginSection[]{
+Frase cuja leitura da direita para esquerda ou da direita para esquerda
+ não influencia na sua compreensão, isto é, são iguais.
+ Ex:
 \end_layout
 
-\begin_layout Plain Layout
-
-  
-\backslash
-frame<beamer>{ 
+\begin_layout Itemize
+aba, asa, ata, oco, ovo
 \end_layout
 
-\begin_layout Plain Layout
-
-    
-\backslash
-frametitle{Tema}   
+\begin_layout Itemize
+osso, radar, reler
 \end_layout
 
-\begin_layout Plain Layout
-
-    
-\backslash
-tableofcontents[currentsection] 
+\begin_layout Itemize
+matam, metem
 \end_layout
 
-\begin_layout Plain Layout
-
-  }
-\end_layout
-
-\begin_layout Plain Layout
-
-}
+\begin_layout Itemize
+reviver, socos, sopapos
 \end_layout
 
 \end_inset
@@ -150,31 +124,61 @@ tableofcontents[currentsection]
 
 \end_layout
 
-\begin_layout Section
-Operadores
+\begin_layout BeginPlainFrame
+Exercício
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "Operators.lyx"
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Enumerate
+Implementar um algoritmo que resolva para uma determinada 
+\emph on
+String
+\emph default
+ qualquer de entrada, se aquela 
+\emph on
+String
+\emph default
+ é um palíndromo ou não.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Dica: Cada 
+\emph on
+char
+\emph default
+ de uma 
+\emph on
+String 
+\emph default
+pode ser acessado pelo método 
+\emph on
+charAt 
+\emph default
+e o tamanho da mesma pode ser obtido com o 
+\emph on
+length.
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Section
-Fluxo de dados
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "DataFlux.lyx"
-
-\end_inset
-
+\begin_layout EndFrame
 
 \end_layout
 
