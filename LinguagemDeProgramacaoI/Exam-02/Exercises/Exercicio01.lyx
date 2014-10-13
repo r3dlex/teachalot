@@ -1,0 +1,375 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{color}
+%Necessary for minted
+\definecolor{bg}{rgb}{1,1,1}
+\usepackage{minted}
+
+\newminted{java}{
+  fontsize=\footnotesize, 
+  linenos,
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+\newminted{javasnip}{
+  fontsize=\footnotesize, 
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+%Remove a numeracao das paginas
+\pagestyle{empty}% Reset page style to 'empty'
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\series bold
+Faculdade de Ciências Sociais de Florianópolis
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Disciplina: Linguagem de Programação I
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Professor: André Ferreira Bem Silva
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Data: 10/10/2014
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Aluno(a): _________________________________
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size huge
+Lista de Exercícios I
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Levando em questão uma classe 
+\emph on
+Circulo
+\emph default
+, cujo método 
+\emph on
+area
+\emph default
+ retorna o valor da área do círculo e o método 
+\emph on
+perimetro 
+\emph default
+que retorna o valor de seu perímetro.
+ Qual(is) o(s) problema(s) com o trecho de código em sequência? Proponha
+ mudança(s) para resolver o(s) problema(s).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../../Code/NullPtrAccess.java
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{8
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+A respeito do 
+\emph on
+coletor de lixo
+\emph default
+ responda, levando o código em consideração.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../../Code/SetandoNull.java
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Alguma referência nesse código será elegível para coleta de lixo após a
+ execução desse código?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{3
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Como um programa Java faz para destruir um objeto criado por ele utilizando
+ a diretiva 
+\emph on
+new
+\emph default
+?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{3
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+É possível forçar a coleta de lixo em Java? Como fazer? 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{3
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Responda as questões referentes ao código
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../../Code/ClasseExemplo.java
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Quais são as variáveis de classe?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Quais são as variáveis de instância? 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Em quais escopos as variáveis podem ser acessadas?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Qual o resultado das saídas para o seguinte código e qual(is) os erros no
+ código referente? Assuma que as linhas erradas são removidas antes da execução.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
