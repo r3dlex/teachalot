@@ -95,7 +95,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Acontece um evento inesperado
@@ -257,7 +257,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -390,7 +390,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -423,7 +423,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -456,7 +456,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -489,7 +489,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -524,6 +524,89 @@ uncover<2->{Somente Java >= 1.7!}}
 
 \begin_layout BeginPlainFrame
 Exercícios I
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Enumerate
+Defina uma 
+\emph on
+Conta 
+\emph default
+que é uma abstração para uma conta bancária.
+ Cada uma receberá um objeto 
+\emph on
+Operacao
+\emph default
+ com um valor a ser creditado (positivo) ou debitado (negativo).
+ O método 
+\emph on
+fazerOperacao
+\emph default
+ deve poder lançar uma exeção do tipo 
+\emph on
+ExcecaoNaoHaFundosSuficientes
+\emph default
+.
+ A exceção deverá guardar o valor do fundo presente no momento da operação.
+\end_layout
+
+\begin_layout Enumerate
+Estendendo o exercício 1, defina um 
+\emph on
+Banco 
+\emph default
+com uma Lista de 
+\emph on
+Conta
+\emph default
+.
+ Cada conta deve saber quem é a 
+\emph on
+Pessoa 
+\emph default
+referente a conta.
+ O 
+\emph on
+Banco 
+\emph default
+deve implementar o método 
+\emph on
+transferir 
+\emph default
+que recebe duas contas e um valor a ser debitado da primeira e creditado
+ a segunda.
+ Esse método deve tratar as exceções ocorridas durante a operação.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+No lo seeeee
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout EndFrame

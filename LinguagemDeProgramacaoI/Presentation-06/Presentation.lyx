@@ -92,7 +92,7 @@ Aula 06
 \end_layout
 
 \begin_layout Subtitle
-Exceções e I/O de Arquivos
+Exceções
 \end_layout
 
 \begin_layout Author
@@ -175,18 +175,9 @@ Overview - 10 slides
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand include
 filename "Last.lyx"
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -208,21 +199,49 @@ filename "Exceptions.lyx"
 \end_layout
 
 \begin_layout Section
-Arquivos
+Próxima aula
+\end_layout
+
+\begin_layout BeginPlainFrame
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand include
-filename "GenericsAndInterfaces.lyx"
+I/O de Arquivos
+\end_layout
 
-\end_inset
+\begin_layout Itemize
+Estrutura
+\end_layout
 
+\begin_layout Itemize
+Acesso
+\end_layout
 
+\begin_layout Itemize
+Leitura
+\end_layout
+
+\begin_layout Itemize
+Escrita
+\end_layout
+
+\begin_layout Itemize
+Exceções específicas
 \end_layout
 
 \end_inset

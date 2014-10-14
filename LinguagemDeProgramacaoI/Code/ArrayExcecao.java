@@ -10,4 +10,3 @@ public class ArrayExcecao {
 		return objetos_[indice];
 	}
 }
- 
