@@ -95,20 +95,32 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Acontece um evento inesperado
 \end_layout
 
 \begin_layout Itemize
-(new int[1])[1] = 13;
+Index out of bounds exception
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-null.meuMetodo(); //Null pointer exception
+(new int[1])[1]) = 13; 
 \end_layout
 
+\end_deeper
+\begin_layout Itemize
+Null pointer exception
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+null.meuMetodo(); 
+\end_layout
+
+\end_deeper
 \end_inset
 
 
@@ -184,7 +196,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 O que acontece?
@@ -219,13 +231,13 @@ Baseado no mecanismo de OO: Você pode implementar a sua!
 
 \begin_layout BeginPlainFrame
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-href{http://rymden.nu/exceptions.html}{Exceções Java}
+href{http://rymden.nu/exceptions.html}{Novas  Exceções}
 \end_layout
 
 \end_inset
@@ -245,7 +257,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -255,6 +267,10 @@ status collapsed
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+A lista existente é bastante extensiva!
 \end_layout
 
 \begin_layout Itemize
@@ -346,6 +362,154 @@ status open
 \begin_layout Plain Layout
 
 }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+Try-catch-finally
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/TryCatchExemplo.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/ArrayExcecaoCatch.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+Multiplas exceções
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/TryCatch.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/TryCatchMultiplo.java
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+uncover<2->{Somente Java >= 1.7!}}
 \end_layout
 
 \end_inset
