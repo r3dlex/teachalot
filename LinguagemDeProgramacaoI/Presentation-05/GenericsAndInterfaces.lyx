@@ -333,7 +333,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Itemize
 Uma interface é como uma classe abstrata
@@ -347,6 +347,12 @@ Mas os métodos não possuem implementação
 Por isso é só uma 
 \emph on
 interface
+\end_layout
+
+\begin_layout Itemize
+Pode-se entendê-la também como um 
+\emph on
+contrato
 \end_layout
 
 \end_inset
