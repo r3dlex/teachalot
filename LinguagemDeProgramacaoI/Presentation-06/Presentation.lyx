@@ -218,7 +218,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 I/O de Arquivos
@@ -246,6 +246,10 @@ Exceções específicas
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout EndFrame
 
 \end_layout
 
