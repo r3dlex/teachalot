@@ -157,7 +157,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -383,7 +383,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Itemize
 Open
@@ -407,7 +407,170 @@ status open
 
 {
 \backslash
-uncover<2->{Exceto que o código causa exceção! FileNotFoundException}}
+uncover<2->{Exceto que o código pode causar exceção! FileNotFoundException}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSource
+	filename ../Code/AbrirArquivo.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+Fechar
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/FecharArquivo.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+E como ler?
+\end_layout
+
+\begin_layout Itemize
+Depende do intuito
+\end_layout
+
+\begin_layout Itemize
+Stream de dados 
+\end_layout
+
+\begin_layout Itemize
+Por linhas
+\end_layout
+
+\begin_layout Itemize
+Ou caracteres de controle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+Hierarquia de Readers
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/ReaderHierarchy.gif
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+uncover<2->{Mãos à obra! Cada um serve em casos específicos}}
 \end_layout
 
 \end_inset
@@ -439,9 +602,48 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-\begin_inset External
-	template JavaSource
-	filename ../Code/AbrirArquivo.java
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Exemplo de leitura
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+Exercício
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Exercício de cópia de arquivo
+\end_layout
 
 \end_inset
 
