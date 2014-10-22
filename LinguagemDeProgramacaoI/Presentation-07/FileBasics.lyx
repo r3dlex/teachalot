@@ -535,7 +535,7 @@ Ou caracteres de controle
 
 \end_layout
 
-\begin_layout BeginFrame
+\begin_layout BeginPlainFrame
 
 \end_layout
 
@@ -551,26 +551,12 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
-\begin_layout Itemize
-Arquivo de entrada do caminho 
-\emph on
-"Caminho
-\backslash
-Para
-\backslash
-O
-\backslash
-Arquivo.txt"
-\emph default
-:
-\end_layout
-
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset External
 	template JavaSource
-	filename ../Text/Exemplo.txt
+	filename ../Code/LendoTexto.java
 
 \end_inset
 
@@ -598,12 +584,26 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
+
+\begin_layout Itemize
+Arquivo de entrada do caminho 
+\emph on
+"Caminho
+\backslash
+Para
+\backslash
+O
+\backslash
+Arquivo.txt"
+\emph default
+:
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset External
 	template JavaSource
-	filename ../Code/LendoTexto.java
+	filename ../Text/Exemplo.txt
 
 \end_inset
 
@@ -741,12 +741,9 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Exemplo de escrita
-\end_layout
+\begin_inset External
+	template JavaSource
+	filename ../Code/EscreverTexto.java
 
 \end_inset
 
@@ -759,11 +756,7 @@ Exemplo de escrita
 \end_layout
 
 \begin_layout BeginPlainFrame
-
-\end_layout
-
-\begin_layout BeginPlainFrame
-Exercício
+Exercício I
 \end_layout
 
 \begin_layout Standard
@@ -780,17 +773,14 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Exercício de cópia de arquivo
+\begin_layout Enumerate
+Faça um programa que leia um arquivo de texto e salve-o, linha a linha,
+ num outro arquivo de saída.
 \end_layout
 
-\end_inset
-
-
+\begin_layout Enumerate
+Faça um programa que leia um arquivo de texto e inverta a ordem das linhas
+ do arquivo, salvando-o num outro arquivo de saída.
 \end_layout
 
 \end_inset
