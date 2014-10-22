@@ -83,6 +83,296 @@
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Dados binários
+\end_layout
+
+\begin_layout Itemize
+Dados que só assumem 1 ou 0
+\end_layout
+
+\begin_layout Itemize
+Arquivos de imagem, executáveis...
+\end_layout
+
+\begin_layout Itemize
+Dados 
+\begin_inset Quotes eld
+\end_inset
+
+codificados
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Lembram do formato hexadecimal?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+Editor Hexadecimal
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/ArquivoBinarioHex.png
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Standard
+Leitura (readX)
+\end_layout
+
+\begin_layout Itemize
+readVariavel
+\end_layout
+
+\begin_layout Itemize
+readInt
+\end_layout
+
+\begin_layout Itemize
+readChar
+\end_layout
+
+\begin_layout Itemize
+readByte
+\end_layout
+
+\begin_layout Itemize
+...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSource
+	filename ../Code/LerBinario.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Escrita (writeX)
+\end_layout
+
+\begin_layout Itemize
+write
+\end_layout
+
+\begin_layout Itemize
+writeInt
+\end_layout
+
+\begin_layout Itemize
+writeChar
+\end_layout
+
+\begin_layout Itemize
+writeByte
+\end_layout
+
+\begin_layout Itemize
+...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSource
+	filename ../Code/EscreverBinario.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+Exercícios II
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Enumerate
+Escreva um programa que leia a mensagem do código em conjunto com esta apresenta
+ção, sabendo que a mensagem do arquivo está salva como um 
+\emph on
+inteiro
+\emph default
+ (
+\emph on
+int
+\emph default
+), determinando o número de 
+\emph on
+caracteres
+\emph default
+ (
+\emph on
+char
+\emph default
+) subsequentes a serem lidos.
+\end_layout
+
+\begin_layout Enumerate
+Implemente uma rotina que escreva um arquivo idêntico àquele lido no exercício
+ anterior.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout EndFrame
 
 \end_layout
