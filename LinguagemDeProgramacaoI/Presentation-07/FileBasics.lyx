@@ -12,6 +12,8 @@
 \usepackage{bibentry}
 \bibliographystyle{apalike}
 \usepackage{chngcntr}
+%\usepackage[dvipsnames]{xcolor}
+%\usepackage{fancyvrb}
 
 \newminted{java}{
   fontsize=\footnotesize, 
@@ -533,6 +535,143 @@ Ou caracteres de controle
 
 \end_layout
 
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+Arquivo de entrada do caminho 
+\emph on
+"Caminho
+\backslash
+Para
+\backslash
+O
+\backslash
+Arquivo.txt"
+\emph default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset External
+	template JavaSource
+	filename ../Text/Exemplo.txt
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSource
+	filename ../Code/LendoTexto.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Se botarmos um System.out.println(linha) no while:
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{The quick brown fox jumps over the lazy dog
+\backslash
+
+\backslash
+Lorem ipsum 
+\backslash
+
+\backslash
+The quick brown fox jumps over the lazy dog
+\backslash
+
+\backslash
+Lorem ipsum
+\backslash
+
+\backslash
+Lorem ipsum}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout BeginPlainFrame
 Hierarquia de Readers
 \end_layout
@@ -606,7 +745,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-Exemplo de leitura
+Exemplo de escrita
 \end_layout
 
 \end_inset
@@ -616,6 +755,10 @@ Exemplo de leitura
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout BeginPlainFrame
 
 \end_layout
 

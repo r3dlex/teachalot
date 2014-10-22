@@ -231,27 +231,27 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-I/O de Arquivos
+Próxima aula (Avaliação N2)
 \end_layout
 
 \begin_layout Itemize
-Estrutura
+Listas encadeadas e listas array
 \end_layout
 
 \begin_layout Itemize
-Acesso
+Rederências e tipos nativos
 \end_layout
 
 \begin_layout Itemize
-Leitura
+Classes, objetos, hierarquia de objetos
 \end_layout
 
 \begin_layout Itemize
-Escrita
+Polimorfismo, herança, interfaces, generics
 \end_layout
 
 \begin_layout Itemize
-Exceções específicas
+Arquivos, exceções
 \end_layout
 
 \end_inset
