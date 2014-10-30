@@ -604,13 +604,18 @@ sobrecarga
 
 \end_deeper
 \begin_layout Enumerate
-(1 ponto) 
-\begin_inset Note Note
-status open
+(1 ponto) A respeito do código abaixo, responda qual assertiva é 
+\series bold
+incorreta
+\series default
+: 
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Plain Layout
-ARQUIVOS
-\end_layout
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/AbrirArquivo.java
 
 \end_inset
 
@@ -619,48 +624,171 @@ ARQUIVOS
 
 \begin_deeper
 \begin_layout Enumerate
-A
+O código efetua a abertura do arquivo 
+\emph on
+teste.txt, 
+\emph default
+em modo 
+\emph on
+leitura
+\emph default
+, localizado no drive C do sistema da pasta raíz (primária).
 \end_layout
 
 \begin_layout Enumerate
-B
+Caso o arquivo não seja encontrado o bloco dentro do try causará uma exceção
+ do tipo 
+\emph on
+FileNotFoundException 
+\emph default
+a qual será capturada no 
+\emph on
+catch 
+\emph default
+subsequente.
 \end_layout
 
 \begin_layout Enumerate
-C
+O construtor do 
+\emph on
+FileReader
+\emph default
+ apresenta pelo menos a seguinte diretiva de exceção em sua assinatura:
+ 
+\emph on
+throws FileNotFoundException
+\emph default
+.
 \end_layout
 
 \begin_layout Enumerate
-D
+Sabendo que a exceção 
+\emph on
+FileNotFoundException 
+\emph default
+é do tipo 
+\emph on
+IOException
+\emph default
+, a troca, no código, do bloco catch para capturar uma exceção do tipo 
+\emph on
+IOException
+\emph default
+, continuará somente capturando as mesmas exceções independente do que aconteça
+ na linha 7.
 \end_layout
 
 \begin_layout Enumerate
-E
+Na linha 10, o método chamado é herdado da superclasse 
+\emph on
+Exception
+\emph default
+ que imprimirá um texto de erro na saída de console, que usualmente é chamado
+ de 
+\emph on
+dump 
+\emph default
+da exceção.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-Bla
+(1 ponto) Assinale o subitem correto, no que toca polimorfismo, herança
+ e mecanismos de herança:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O polimorfismo caracteriza-se pela assunção de diversos objetos sob uma
+ mesma 
+\emph on
+interface
+\emph default
+ comum.
+ Assim, trata-se conjuntos de objetos distintos sob uma mesma ótica, sendo
+ possível assim reutilizar-se diversos algoritmos desde que todos respeitem
+ essa mesma definição.
 \end_layout
 
 \begin_layout Enumerate
-Bli
+Ao herdar-se de uma classe pai, os métodos provenientes da mesma são herdados,
+ mas não os atributos.
 \end_layout
 
 \begin_layout Enumerate
-Blo
+O mecanismo de herança é uma via de mão dupla, ao herdar-se uma classe,
+ ela automaticamente também herda os métodos e atributos da classe que a
+ herdou, havendo assim uma partilha de funções, métodos e atributos.
 \end_layout
 
 \begin_layout Enumerate
-Blu
+O mecanismo de 
+\emph on
+casting
+\emph default
+ não funciona no caso de uma classe menos especializada na hierarquia de
+ classes para uma mais especializada na mesma hierarquia.
 \end_layout
 
 \begin_layout Enumerate
-Uhuu
+Ao chamar-se um método não implementado de uma classe abstrata, o valor
+ 
+\emph on
+null
+\emph default
+ será retornado pelo objeto no qual o método encontra-se indefinido.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) Ao determinar que uma determinada variável de uma classe possui
+ acesso 
+\emph on
+protected
+\emph default
+, estamos indicando que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Possui acesso irrestrito em qualquer escopo.
 \end_layout
 
 \begin_layout Enumerate
-Yeah!
+É possível acessá-lo numa subclasse.
+\end_layout
+
+\begin_layout Enumerate
+É acessível na superclasse.
+\end_layout
+
+\begin_layout Enumerate
+Só pode ser usada em um método também 
+\emph on
+protected
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+É modificável, mas somente nos construtores da classe.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) A 
+\end_layout
+
+\begin_layout Enumerate
+(1 ponto) 
+\end_layout
+
+\begin_layout Enumerate
+(1 ponto) 
+\end_layout
+
+\begin_layout Enumerate
+(1 ponto) 
 \end_layout
 
 \end_body
