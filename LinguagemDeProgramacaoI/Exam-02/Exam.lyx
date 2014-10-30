@@ -776,9 +776,44 @@ protected
 
 \end_deeper
 \begin_layout Enumerate
-(1 ponto) A 
+(1 ponto) A herança múltipla é comum em algumas linguagens como a C++.
+ Em Java, para implementar-se esse tipo de herança ao:
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+Estender duas 
+\emph on
+classes abstratas
+\emph default
+ simultaneamente.
+\end_layout
+
+\begin_layout Enumerate
+Implementar-se duas 
+\emph on
+interfaces
+\emph default
+ simultaneamente.
+\end_layout
+
+\begin_layout Enumerate
+Implementando uma classe qualquer.
+\end_layout
+
+\begin_layout Enumerate
+Implementar-se duas classes 
+\emph on
+concretas
+\emph default
+, isso é, não abstratas.
+\end_layout
+
+\begin_layout Enumerate
+Herdar de uma classe que implemente as duas classes.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 (1 ponto) 
 \end_layout
