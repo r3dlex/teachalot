@@ -163,8 +163,9 @@ Leia atentamente as questões a seguir e responda-as.
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="11">
+<lyxtabular version="3" rows="2" columns="12">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -267,11 +268,20 @@ Questão
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
 \end_layout
 
 \end_inset
@@ -296,6 +306,24 @@ status open
 
 \begin_layout Plain Layout
 a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+c
 \end_layout
 
 \end_inset
@@ -399,15 +427,6 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
@@ -539,9 +558,9 @@ Uma variável estática pode ser acessada mesmo sem haver um objeto da classe
 \end_layout
 
 \begin_layout Enumerate
-O mecanismo de exceção utiliza-se do mecanismo de herança e polimorfismo,
- uma vez que é possível estender o conceito de exceção com novas classes
- que as definam e que o bloco 
+A exceção utiliza-se dos mecanismos de herança e polimorfismo, uma vez que
+ é possível estender o conceito de exceção com novas classes que as definam
+ e que o bloco 
 \emph on
 catch
 \emph default
@@ -693,8 +712,11 @@ da exceção.
 
 \end_deeper
 \begin_layout Enumerate
-(1 ponto) Assinale o subitem correto, no que toca polimorfismo, herança
- e mecanismos de herança:
+(1 ponto) Assinale o subitem 
+\series bold
+correto
+\series default
+, no que toca polimorfismo, herança e mecanismos de herança:
 \end_layout
 
 \begin_deeper
@@ -815,15 +837,121 @@ Herdar de uma classe que implemente as duas classes.
 
 \end_deeper
 \begin_layout Enumerate
-(1 ponto) 
+(1 ponto) A diretiva 
+\emph on
+super 
+\emph default
+é usada para...
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Chamar explicitamente o método ou construtor da superclasse.
 \end_layout
 
 \begin_layout Enumerate
-(1 ponto) 
+Chamar um método da classe pai.
 \end_layout
 
 \begin_layout Enumerate
-(1 ponto) 
+Chamar um método da subclasse.
+\end_layout
+
+\begin_layout Enumerate
+Definir que o método atual não pode ser herdado.
+\end_layout
+
+\begin_layout Enumerate
+Chamar recursivamente o método atual.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,5 ponto) Após a execução do código abaixo, qual seria a combinação correta
+ para j, i e bebe.nome (variável inicializada no construtor do objeto), após
+ a chamada do 
+\emph on
+metodo
+\emph default
+, na linha 11?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/ExemploDeReferencia.java
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+j = 99, i = {0, 99}, bebe.nome = 
+\begin_inset Quotes eld
+\end_inset
+
+Joana
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+j = 0, i = {99, 1}, bebe.nome = 
+\begin_inset Quotes eld
+\end_inset
+
+Joana
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+j = 99, i = {99, 1}, bebe.nome = 
+\begin_inset Quotes eld
+\end_inset
+
+Joana
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+j = 0, i = {0, 1}, bebe.nome = 
+\begin_inset Quotes eld
+\end_inset
+
+Maria
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+j = 99, i = {0, 1}, bebe.nome = 
+\begin_inset Quotes eld
+\end_inset
+
+Maria
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,5 ponto) Demonstre na forma de um gráfico ou outra demonstração que preferir
+ como ficam as listas após a execução do seguinte trecho de código:
 \end_layout
 
 \end_body
