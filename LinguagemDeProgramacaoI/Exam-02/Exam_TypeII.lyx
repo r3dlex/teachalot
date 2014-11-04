@@ -1,4 +1,4 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 413
 \begin_document
 \begin_header
@@ -44,7 +44,6 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -107,7 +106,7 @@ Professor: André Ferreira Bem Silva
 \begin_layout Standard
 
 \series bold
-Data: 31/10/2014
+Data: 06/11/2014
 \end_layout
 
 \begin_layout Standard
@@ -165,16 +164,16 @@ Leia atentamente as questões a seguir e responda-as.
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="10">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -339,7 +338,7 @@ c
 status open
 
 \begin_layout Plain Layout
-
+d
 \end_layout
 
 \end_inset
@@ -357,7 +356,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-
+a
 \end_layout
 
 \end_inset
@@ -375,7 +374,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-
+b
 \end_layout
 
 \end_inset
@@ -393,7 +392,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-
+b
 \end_layout
 
 \end_inset
@@ -407,6 +406,15 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -416,6 +424,15 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -451,7 +468,7 @@ static
 \end_layout
 
 \begin_layout Enumerate
-Tem somente métodos públicos.
+Tem somente métodos públicos.z
 \end_layout
 
 \begin_layout Enumerate
