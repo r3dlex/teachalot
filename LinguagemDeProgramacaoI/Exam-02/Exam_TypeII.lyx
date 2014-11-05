@@ -1,4 +1,4 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
 \lyxformat 413
 \begin_document
 \begin_header
@@ -44,6 +44,7 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -164,16 +165,16 @@ Leia atentamente as questões a seguir e responda-as.
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="10">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -468,7 +469,7 @@ static
 \end_layout
 
 \begin_layout Enumerate
-Tem somente métodos públicos.z
+Tem somente métodos públicos.
 \end_layout
 
 \begin_layout Enumerate
@@ -745,7 +746,7 @@ null
 (1 ponto) Ao determinar que uma determinada variável de uma classe possui
  acesso 
 \emph on
-protected
+private
 \emph default
 , estamos indicando que:
 \end_layout
@@ -756,7 +757,7 @@ Possui acesso irrestrito em qualquer escopo.
 \end_layout
 
 \begin_layout Enumerate
-É possível acessá-lo numa subclasse.
+É impossível acessá-lo numa subclasse.
 \end_layout
 
 \begin_layout Enumerate
@@ -777,8 +778,8 @@ protected
 
 \end_deeper
 \begin_layout Enumerate
-(1 ponto) A herança múltipla é comum em algumas linguagens como a C++.
- Em Java, para implementar-se esse tipo de herança ao:
+(1 ponto) A herança múltipla é comum em outras linguagens.
+ Em Java, implementa-se esse tipo de herança ao:
 \end_layout
 
 \begin_deeper
@@ -829,7 +830,7 @@ Chamar explicitamente o método ou construtor da superclasse.
 \end_layout
 
 \begin_layout Enumerate
-Chamar um método da classe pai.
+Chamar um método com nome diferente da classe pai.
 \end_layout
 
 \begin_layout Enumerate
@@ -847,19 +848,33 @@ Chamar recursivamente o método atual.
 \end_deeper
 \begin_layout Enumerate
 (1,5 ponto) Após a execução do código abaixo, qual seria a combinação correta
- para j, i e bebe.nome (variável inicializada no construtor do objeto), após
- a chamada do 
+ para j, i e bebe.nome, após a chamada do 
 \emph on
 metodo
 \emph default
-, na linha 11?
+, na linha 11 do 
+\emph on
+main 
+\emph default
+na classe 
+\emph on
+Ref
+\emph default
+?
 \begin_inset Newline newline
 \end_inset
 
 
 \begin_inset External
 	template JavaSource
-	filename ../Code/ExemploDeReferencia.java
+	filename ../Code/Bebe.java
+
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/Ref.java
 
 \end_inset
 
@@ -868,7 +883,7 @@ metodo
 
 \begin_deeper
 \begin_layout Enumerate
-j = 99, i = {0, 99}, bebe.nome = 
+j = 99, i = {0, 99}, bebe._nome = 
 \begin_inset Quotes eld
 \end_inset
 
@@ -880,31 +895,7 @@ Joana
 \end_layout
 
 \begin_layout Enumerate
-j = 0, i = {99, 1}, bebe.nome = 
-\begin_inset Quotes eld
-\end_inset
-
-Joana
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-j = 99, i = {99, 1}, bebe.nome = 
-\begin_inset Quotes eld
-\end_inset
-
-Joana
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-j = 0, i = {0, 1}, bebe.nome = 
+j = 0, i = {99, 1}, bebe._nome = 
 \begin_inset Quotes eld
 \end_inset
 
@@ -916,11 +907,35 @@ Maria
 \end_layout
 
 \begin_layout Enumerate
-j = 99, i = {0, 1}, bebe.nome = 
+j = 99, i = {99, 1}, bebe._nome = 
+\begin_inset Quotes eld
+\end_inset
+
+Joana
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+j = 0, i = {0, 1}, bebe._nome = 
 \begin_inset Quotes eld
 \end_inset
 
 Maria
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+j = 99, i = {0, 1}, bebe._nome = 
+\begin_inset Quotes eld
+\end_inset
+
+Joana
 \begin_inset Quotes erd
 \end_inset
 
