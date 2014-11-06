@@ -12,18 +12,12 @@
 \usepackage{bibentry}
 \bibliographystyle{apalike}
 \usepackage{chngcntr}
+%\usepackage[dvipsnames]{xcolor}
+%\usepackage{fancyvrb}
 
 \newminted{java}{
   fontsize=\footnotesize, 
   linenos,
-  frame=lines,
-  bgcolor=bg,
-  baselinestretch=1,
-  tabsize=2
-} 
-
-\newminted{javasnip}{
-  fontsize=\footnotesize, 
   frame=lines,
   bgcolor=bg,
   baselinestretch=1,
@@ -87,134 +81,69 @@
 
 \begin_body
 
-\begin_layout Title (Plain Frame)
-Aula 08
-\end_layout
-
-\begin_layout Subtitle
-Interface Gráfica (GUI)
-\end_layout
-
-\begin_layout Author
-André Ferreira Bem Silva
-\end_layout
-
-\begin_layout Date
-\begin_inset space \space{}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Institute
-Faculdade de Ciências Sociais de Florianópolis
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-AtBeginSection[]{
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-frame<beamer>{ 
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-frametitle{Tema}   
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-tableofcontents[currentsection] 
-\end_layout
-
-\begin_layout Plain Layout
-
-  }
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
+\begin_layout BeginPlainFrame
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
 status open
 
-\begin_layout Section
-Aula anterior
+\begin_layout Itemize
+A utilização de GUIs utiliza conceitos de geometria analítica
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Overview - 10 slides
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand include
-filename "Last.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Interface
+\begin_layout Itemize
+Imaginamos sempre o plano cartesiano...
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "GUIBasics.lyx"
+\align center
+\begin_inset Graphics
+	filename /home/andre/Workspace/teachalot/LinguagemDeProgramacaoI/Gen/Image/CartesianSystem.eps
+	width 50text%
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Section
-Outras operações
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "FileHandling.lyx"
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+Coordenadas podem ser invertidadas
+\end_layout
 
 \end_inset
 
@@ -240,6 +169,13 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Gen/Image/BinarySmile.eps
+	height 70theight%
+
+\end_inset
+
 
 \end_layout
 
