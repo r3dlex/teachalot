@@ -1,5 +1,5 @@
 #LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass beamer
@@ -33,7 +33,6 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
-\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
@@ -50,24 +49,15 @@
 \use_hyperref false
 \papersize default
 \use_geometry true
-\use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
-\use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
-\cite_engine_type default
-\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\justification true
 \use_refstyle 1
 \index Index
 \shortcut idx
@@ -90,20 +80,13 @@
 
 \begin_body
 
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
+\begin_layout BeginPlainFrame
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
 
 
 \end_layout
 
-\begin_deeper
+
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -142,25 +125,22 @@ Imaginamos sempre o plano cartesiano...
 
 \end_layout
 
-\end_deeper
+
+\begin_layout EndFrame
+
+\end_layout
+
 \begin_layout Separator
 
 \end_layout
 
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
+\begin_layout BeginPlainFrame
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
 
 
 \end_layout
 
-\begin_deeper
+
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -195,25 +175,22 @@ Coordenadas podem ser invertidas
 
 \end_layout
 
-\end_deeper
+
+\begin_layout EndFrame
+
+\end_layout
+
 \begin_layout Separator
 
 \end_layout
 
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
+\begin_layout BeginPlainFrame
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
 
 
 \end_layout
 
-\begin_deeper
+
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -244,25 +221,22 @@ status collapsed
 
 \end_layout
 
-\end_deeper
+
+\begin_layout EndFrame
+
+\end_layout
+
 \begin_layout Separator
 
 \end_layout
 
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
+\begin_layout BeginPlainFrame
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
 
 
 \end_layout
 
-\begin_deeper
+
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -286,25 +260,22 @@ status open
 
 \end_layout
 
-\end_deeper
+
+\begin_layout EndFrame
+
+\end_layout
+
 \begin_layout Separator
 
 \end_layout
 
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
+\begin_layout BeginPlainFrame
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
 
 
 \end_layout
 
-\begin_deeper
+
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -356,25 +327,22 @@ Look and feel único
 
 \end_layout
 
-\end_deeper
+
+\begin_layout EndFrame
+
+\end_layout
+
 \begin_layout Separator
 
 \end_layout
 
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
+\begin_layout BeginPlainFrame
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
 
 
 \end_layout
 
-\begin_deeper
+
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -528,25 +496,22 @@ status collapsed
 
 \end_layout
 
-\end_deeper
+
+\begin_layout EndFrame
+
+\end_layout
+
 \begin_layout Separator
 
 \end_layout
 
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
+\begin_layout BeginPlainFrame
 Overview de classes
-\end_layout
-
-\end_inset
 
 
 \end_layout
 
-\begin_deeper
+
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -577,25 +542,22 @@ status collapsed
 
 \end_layout
 
-\end_deeper
+
+\begin_layout EndFrame
+
+\end_layout
+
 \begin_layout Separator
 
 \end_layout
 
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Overview de classes
-\end_layout
-
-\end_inset
+\begin_layout BeginPlainFrame
+Componentes
 
 
 \end_layout
 
-\begin_deeper
+
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -608,13 +570,243 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="15text%">
+<column alignment="center" valignment="top" width="35text%">
+<column alignment="left" valignment="top" width="30text%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Visual
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Criação
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Descrição
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
 \begin_inset Graphics
-	filename /Users/afb/Workspace/teachalot/LinguagemDeProgramacaoI/Image/SwingComponents.jpg
-	width 90text%
+	filename ../Image/JButton.png
+	width 15text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+new JButton (<texto>);
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Botão pressionável com texto.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Graphics
+	filename ../Image/JTextField.png
+	width 15text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+new JTextField(<colunas>); 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Caixa de texto de uma linha.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Graphics
+	filename ../Image/JLabel.png
+	width 15text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+new JLabel(<texto>);
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Etiqueta com nome.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Graphics
+	filename ../Image/JTextArea.png
+	width 15text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+new JTextArea(<linhas>, <colunas>);
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Caixa de texto com múltiplas linhas.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
 
 \end_inset
 
@@ -626,7 +818,11 @@ status collapsed
 
 \end_layout
 
-\end_deeper
+
+\begin_layout EndFrame
+
+\end_layout
+
 \begin_layout Separator
 
 \end_layout
