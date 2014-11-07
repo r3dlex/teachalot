@@ -249,10 +249,30 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
+Canvas
+\end_layout
 
+\begin_layout Itemize
+Desenha-se o que quiser
+\end_layout
+
+\begin_layout Itemize
+Nome da tela de pintura usada por artistas
+\end_layout
+
+\begin_layout Itemize
+Em muitas APIs as janelas são 
+\emph on
+Canvas
+\end_layout
+
+\begin_layout Itemize
+No Swing/AWT são denominadas 
+\emph on
+Window
 \end_layout
 
 \end_inset
@@ -570,7 +590,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -578,8 +598,8 @@ status open
 <lyxtabular version="3" rows="6" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="middle" width="15text%">
-<column alignment="center" valignment="top" width="35text%">
-<column alignment="left" valignment="top" width="30text%">
+<column alignment="center" valignment="middle" width="35text%">
+<column alignment="center" valignment="middle" width="30text%">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
@@ -601,7 +621,7 @@ Criação
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -614,7 +634,7 @@ Descrição
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -631,7 +651,7 @@ Descrição
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -642,7 +662,7 @@ new JButton (<texto>);
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -655,7 +675,7 @@ Botão pressionável com texto.
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -672,7 +692,7 @@ Botão pressionável com texto.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -683,7 +703,7 @@ new JTextField(<colunas>);
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -696,7 +716,7 @@ Caixa de texto de uma linha.
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -713,7 +733,7 @@ Caixa de texto de uma linha.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -724,7 +744,7 @@ new JLabel(<texto>);
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -737,7 +757,7 @@ Etiqueta com nome.
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -754,7 +774,7 @@ Etiqueta com nome.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -765,7 +785,7 @@ new JTextArea(<linhas>, <colunas>);
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -778,29 +798,39 @@ Caixa de texto com múltiplas linhas.
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
+\begin_inset Graphics
+	filename ../Image/JComboBox.png
+	width 15text%
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
+\size small
+new JComboBox(<array>);
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Caixa de mútipla escolha.
 \end_layout
 
 \end_inset
@@ -811,6 +841,272 @@ Caixa de texto com múltiplas linhas.
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+
+
+\end_layout
+
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+Primeira janela
+\end_layout
+
+\begin_layout Itemize
+Para instanciar uma janela basta usar o JFrame
+\end_layout
+
+\begin_layout Itemize
+A implementação se dá por herança
+\end_layout
+
+\begin_layout Itemize
+Isso aplica-se a todos os componentes Swing
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2->{Orientação a objetos na prática!}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+
+
+\end_layout
+
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+RESULTADO DA PRIMEIRA JANELA!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+
+
+\end_layout
+
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+Flow
+\emph default
+ Layout (Linear Layout)
+\end_layout
+
+\begin_layout Itemize
+new FlowLayout
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+
+
+\end_layout
+
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+Grid
+\emph default
+ Layout
+\end_layout
+
+\begin_layout Itemize
+new GridLayout...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+Exercícios I
+
+
+\end_layout
+
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Enumerate
+Criar uma janela com um botão.
+\end_layout
+
+\begin_layout Enumerate
+Criar uma janela com três componentes usando FlexLayout e GridLayout para
+ ordenar cada um dos componentes.
+ Modifique tamanhos mínimos para cada um dos componentes.
+ 
 \end_layout
 
 \end_inset
