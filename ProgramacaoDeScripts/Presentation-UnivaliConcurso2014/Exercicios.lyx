@@ -1,0 +1,430 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[lastexercise]{exercise}
+\usepackage{minted}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\series bold
+Universidade do Vale do Itajaí
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Disciplina: Lógica de Programação
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Professor: André Ferreira Bem Silva
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Data: 03/02/2014
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Aluno(a): _____________________________________
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Exercise}[title=Corotinas, name=Exercício]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Question{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Implemente uma corotina, denominada 
+\begin_inset Formula $dobro(x)$
+\end_inset
+
+ que utilize das instruções 
+\emph on
+create, resume, yield 
+\emph default
+para retornar o dobro do valor 
+\emph on
+x
+\emph default
+ para a função chamadora, a qual imprime os valores obtidos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Question{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considere um jogo o qual, em determinado momento, apresenta um vulcão em
+ erupção.
+ O seguinte trecho de código, aciona a erupção: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minted}{lua}
+\end_layout
+
+\begin_layout Plain Layout
+
+function ativarErupcao()
+\end_layout
+
+\begin_layout Plain Layout
+
+	frames(esperar(10))
+\end_layout
+
+\begin_layout Plain Layout
+
+	tocar.arquivo("erupcao.ogg", tempo(1, "segundos"))
+\end_layout
+
+\begin_layout Plain Layout
+
+	jogador.efeito("blur")
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minted}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Seria possível implementar o código acima utilizando corotinas? Se sim,
+ esboçe um fluxograma das mesmas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Question{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considere a API do luasocket.
+ Utilize-a para implementar uma função 
+\emph on
+download
+\emph default
+, nos conformes da função implementada no 
+\emph on
+slide 3
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Question{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considerando o código em sequência, explique o que acontece quando é chamado
+ o 
+\emph on
+resume
+\emph default
+ da corotina.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function loop()
+\end_layout
+
+\begin_layout Plain Layout
+
+	while true
+\end_layout
+
+\begin_layout Plain Layout
+
+	end
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+co = coroutine.create(loop)
+\end_layout
+
+\begin_layout Plain Layout
+
+coroutine.resume(co)ogg
+\end_layout
+
+\begin_layout Plain Layout
+
+print("Ola!")
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Exercise}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

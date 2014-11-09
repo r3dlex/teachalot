@@ -1,0 +1,109 @@
+Index: AI/a_star.h
+===================================================================
+--- AI/a_star.h	(revision 8458)
++++ AI/a_star.h	(working copy)
+@@ -14,6 +14,7 @@
+ 
+ #include <tr1/functional>
+ #include <vector>
++#include <algorithm>
+ 
+ namespace AI {
+ 
+Index: Character/follow_behaviour.cpp
+===================================================================
+--- Character/follow_behaviour.cpp	(revision 8458)
++++ Character/follow_behaviour.cpp	(working copy)
+@@ -11,8 +11,8 @@
+ 
+ namespace character {
+ 
+-FollowBehaviour::FollowBehaviour()
+-	: _target(make_shared<Entity>(0)) {
++FollowBehaviour::FollowBehaviour(std::tr1::shared_ptr<Entity> target)
++	: _target(target) {
+ }
+ 
+ FollowBehaviour::~FollowBehaviour() {
+Index: Character/follow_behaviour.h
+===================================================================
+--- Character/follow_behaviour.h	(revision 8458)
++++ Character/follow_behaviour.h	(working copy)
+@@ -15,11 +15,9 @@
+ 
+ class FollowBehaviour: public Behaviour {
+ public:
+-	FollowBehaviour();
++	FollowBehaviour(std::tr1::shared_ptr<Entity> target);
+ 	virtual ~FollowBehaviour();
+ 
+-	void setTarget(std::tr1::shared_ptr<Entity> target) { _target = target; }
+-
+ 	DirectionE nextMove(const Coord& currentPosition, std::tr1::shared_ptr<scenario::Scenario> scenario);
+ 
+ private:
+Index: Character/key_guardian_behaviour.cpp
+===================================================================
+--- Character/key_guardian_behaviour.cpp	(revision 8458)
++++ Character/key_guardian_behaviour.cpp	(working copy)
+@@ -31,7 +31,7 @@
+ 
+ 		pathfinder.findPath(path, heroOrig, heroDest);
+ 
+-		std::vector<Coord>::iterator it = find(path.begin(), path.end(), currentPosition);
++		std::vector<Coord>::iterator it = std::find(path.begin(), path.end(), currentPosition);
+ 		if (it != path.end()) {
+ 			/* I am on hero's path,  */
+ 			Coord nextMove = *--it;
+Index: Character/key_guardian_behaviour.h
+===================================================================
+--- Character/key_guardian_behaviour.h	(revision 8458)
++++ Character/key_guardian_behaviour.h	(working copy)
+@@ -5,8 +5,8 @@
+  *      Author: zce
+  */
+ 
+-#ifndef FOLLOW_BEHAVIOUR_H_
+-#define FOLLOW_BEHAVIOUR_H_
++#ifndef KEY_GUARDIAN_BEHAVIOUR_H_
++#define KEY_GUARDIAN_BEHAVIOUR_H_
+ 
+ #include "behaviour.h"
+ #include "key.h"
+Index: Util/util.h
+===================================================================
+--- Util/util.h	(revision 8458)
++++ Util/util.h	(working copy)
+@@ -67,6 +67,10 @@
+ 		return x == o.x && y == o.y;
+ 	}
+ 
++  bool operator!=(const Coord& o) const {
++    return x != o.x || y != o.y;
++  }
++
+ 	int x, y;
+ };
+ 
+Index: game.cpp
+===================================================================
+--- game.cpp	(revision 8458)
++++ game.cpp	(working copy)
+@@ -9,7 +9,7 @@
+ 
+ #include "Scenario/scenario1.h"
+ 
+-
++#include "Character/follow_behaviour.h"
+ #include "Character/follow_behaviour_genetic.h"
+ #include "Character/repulse_behaviour.h"
+ #include "Character/key_guardian_behaviour.h"
+@@ -67,7 +67,7 @@
+ 	_guardianGhost = std::tr1::static_pointer_cast<character::GhostCharacter>(guardianGhostSprite->entity());
+ 
+ 	_scaredGhost->behaviour(make_shared(new character::RepulseBehaviour(_hero, _mino)));
+-	_mino->behaviour(make_shared(new character::FollowBehaviourGenetic(_hero)));
++	_mino->behaviour(make_shared(new character::FollowBehaviour(_hero)));
+ 	_guardianGhost->behaviour(make_shared(new character::KeyGuardianBehaviour(_key, _hero, _scaredGhost)));
+ 
+ 	_enemies.push_back(_scaredGhost);
