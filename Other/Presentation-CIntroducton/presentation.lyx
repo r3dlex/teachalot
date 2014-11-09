@@ -1,0 +1,1065 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{listings}
+\usepackage{multimedia}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usetheme{Cyclops}
+\end_preamble
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Introdução a C
+\end_layout
+
+\begin_layout Author
+
+\size small
+André Ferreira
+\begin_inset Newline newline
+\end_inset
+
+Aldo von Wangenheim
+\end_layout
+
+\begin_layout Date
+12 de agosto de 2010
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Itemize
+C foi desenvolvida entre 1969 e 1973
+\end_layout
+
+\begin_layout Itemize
+Criada para ser um assembly portátil
+\end_layout
+
+\begin_layout Itemize
+O último padrão C é o ISO C99 (1999)
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Tipos
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+inteiros
+\size default
+ - {
+\color magenta
+signed/unsigned
+\color inherit
+} {
+\color magenta
+char, short, int, long
+\color inherit
+}
+\end_layout
+
+\begin_layout Itemize
+dados 
+\color magenta
+- structs, union, enums
+\end_layout
+
+\begin_layout Itemize
+ponto flutuante - 
+\color magenta
+float, double, long double
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Estruturas de controle
+\end_layout
+
+\begin_layout Itemize
+
+\color magenta
+if/else
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+if (COND) {...} else {...}
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\color magenta
+while, do-while
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+while (COND) { ...
+ }
+\end_layout
+
+\begin_layout Itemize
+do {...} while (COND);
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\color magenta
+for
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+for (int i = 0; i < N; ++i) {...}
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\color magenta
+switch
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+switch (CONST) { case 0: ...
+ case N: ...
+ }
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
+Compilando
+\end_layout
+
+\begin_layout Itemize
+gcc -o executável arquivoUm.c arquivoDois.c ....
+ arquivoN.c
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Otimização - 
+\begin_inset Quotes eld
+\end_inset
+
+-On
+\begin_inset Quotes erd
+\end_inset
+
+ onde 
+\begin_inset Formula $n\in\{0,1,2,3,s\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Depuração - 
+\begin_inset Quotes eld
+\end_inset
+
+-gn
+\begin_inset Quotes erd
+\end_inset
+
+ onde 
+\begin_inset Formula $n\in\{0,1,2,3\}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+GNU Debugger (GDB) - 
+\begin_inset Quotes eld
+\end_inset
+
+gdb caminhoParaOExecutável
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+r
+\emph default
+ roda o programa
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+bt
+\emph default
+ imprime o backtrace de chamadas
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+print
+\emph default
+ 
+\emph on
+X
+\emph default
+, imprime o valor da variável X no escopo atual
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+up
+\emph default
+ sobe um escopo nas chamadas
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+down
+\emph default
+ desce um escopo nas chamadas
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Hello world
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinputlisting[basicstyle={
+\backslash
+small},language={C},showstringspaces=false,tabsize=4]{hw.c}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Obtendo entrada do console
+\end_layout
+
+\begin_layout Itemize
+Função scanf obtém a entrada formatada.
+ Exemplo:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinputlisting[basicstyle={
+\backslash
+small},language={C},showstringspaces=false,tabsize=4]{scanf.c}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Ponteiros
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+referência 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{http://cplusplus.com/doc/tutorial/pointers/}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Apontam
+\emph default
+ uma região de memória
+\end_layout
+
+\begin_layout Itemize
+Sintaxe:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+int
+\color magenta
+*
+\color inherit
+ a;
+\end_layout
+
+\begin_layout Itemize
+char
+\color magenta
+**
+\color inherit
+ a;
+\end_layout
+
+\begin_layout Itemize
+short
+\color magenta
+**...*
+\color inherit
+ a;
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+width "32col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+int andy = 25;
+\end_layout
+
+\begin_layout Plain Layout
+int fred = 25;
+\end_layout
+
+\begin_layout Plain Layout
+int* ted = &andy;
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/reference_operator.gif
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+width "32col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+int beth = *ted;
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/dereference_operator.gif
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\color yellow
+Saídas serão 10, 19 e 19
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinputlisting[basicstyle={
+\backslash
+scriptsize},language={C},showstringspaces=false,tabsize=4]{pointer.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinputlisting[basicstyle={
+\backslash
+scriptsize},language={C},showstringspaces=false,tabsize=4]{pointer.c}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Array
+\end_layout
+
+\begin_layout Itemize
+Vetor de elementos de um mesmo tipo
+\end_layout
+
+\begin_layout Itemize
+unidimensionais - Tipo nomeDaVariável[TAMANHO];
+\end_layout
+
+\begin_layout Itemize
+bidimensionais - Tipo nomeDaVariável[LINHAS][COLUNAS];
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinputlisting[basicstyle={
+\backslash
+scriptsize},language={C},showstringspaces=false,tabsize=4]{matrix.c}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Strings
+\end_layout
+
+\begin_layout Itemize
+Cadeia de caracteres
+\end_layout
+
+\begin_layout Itemize
+C - arrays de tipo char (
+\color magenta
+char*
+\color inherit
+)
+\end_layout
+
+\begin_layout Itemize
+Terminada em caracter 
+\color magenta
+'
+\backslash
+0'
+\color inherit
+, denominado 
+\color magenta
+NUL 
+\color inherit
+(ASCII)
+\end_layout
+
+\begin_layout Itemize
+Ex: char nome[12] = 
+\begin_inset Quotes eld
+\end_inset
+
+Andre Silva
+\begin_inset Quotes erd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Estruturas de dados
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinputlisting[basicstyle={
+\backslash
+tiny},language={C},showstringspaces=false,tabsize=4]{structs.h}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinputlisting[basicstyle={
+\backslash
+tiny},language={C},showstringspaces=false,tabsize=4]{structs.c}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+Outros tipos
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<1->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\backslash
+color{green}}{Enum}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2>{
+\backslash
+color{green}}{Union}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+width "64col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\backslash
+lstinputlisting[basicstyle={
+\backslash
+footnotesize},language={C},showstringspaces=false,tabsize=4]{enum.h}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2>{
+\backslash
+lstinputlisting[basicstyle={
+\backslash
+footnotesize},language={C},showstringspaces=false,tabsize=4]{union.h}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{http://cplusplus.com/}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{http://mtm.ufsc.br/~azeredo/cursoC/}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{http://en.wikipedia.org/wiki/C_(programming_language)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-5"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{http://www.manpagez.com/}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
