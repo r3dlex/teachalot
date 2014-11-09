@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class EscreverBinario {
+public class EscreverParabensBinario {
 	public static void main(String[] args) throws IOException {
 		DataOutputStream escritor = new DataOutputStream(new FileOutputStream("/tmp/file.dat"));
 		escritor.writeInt(8);

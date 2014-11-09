@@ -1,1 +1,1 @@
-FileReader fr = new FileReader("C:/teste.txt");
+FileReader fr = new FileReader("C:\\teste.txt");
