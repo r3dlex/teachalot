@@ -1,4 +1,4 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 413
 \begin_document
 \begin_header
@@ -44,7 +44,6 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -144,10 +143,581 @@ baselineskip}
 \end_layout
 
 \begin_layout Standard
+\noindent
+
+\series bold
+\size large
+Bootstrap
+\end_layout
+
+\begin_layout Standard
 \align center
-\begin_inset Graphics
-	filename Image/GRID12.png
-	width 100text%
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="12">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
 
 \end_inset
 
@@ -162,9 +732,51 @@ Figura 1:
 \series default
  A divisão gráfica é feita por 12 colunas espaçadas entre si com a união
  de espaços entre as colunas em um componente multicoluna.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\noindent
+
+\series bold
+\size large
+Questões
+\series default
+\size default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
 1.
  Em qual tag HTML será introduzido o uso do framework 
 \emph on
@@ -179,8 +791,7 @@ R:
 status open
 
 \begin_layout Plain Layout
-No head, como um arquivo css
- por meio de <link rel=
+No head, como um arquivo css por meio de <link rel=
 \begin_inset Quotes erd
 \end_inset
 
@@ -209,7 +820,7 @@ status open
 
 
 \backslash
-vspace*{
+vspace*{2
 \backslash
 baselineskip}
 \end_layout
@@ -220,37 +831,827 @@ baselineskip}
 \end_layout
 
 \begin_layout Standard
+\noindent
 2.
- Qual a notação de inserir uma 
+ Qual a estrutura básica do Bootstrap para fazer um componente que utilize
+ o conceito de grade? Qual a diferença entre o 
 \emph on
-nova linha
+container
 \emph default
- no Bootstrap? E colunas? Como é feito para pular-se colunas à esquerda?
+ e o 
+\emph on
+container-fluid
+\emph default
+?
 \begin_inset Newline newline
 \end_inset
 
 R:
+ 
+\lang brazilian
 
-\begin_inset Note Note
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-Novas linhas são com <div class=
-\begin_inset Quotes erd
-\end_inset
 
-row
-\begin_inset Quotes erd
-\end_inset
-
-> e 
+\backslash
+vspace*{2
+\backslash
+baselineskip} 
 \end_layout
 
 \end_inset
 
 
-\lang brazilian
+\end_layout
+
+\begin_layout Standard
+\noindent
+3.
+ Preencha a tabela abaixo, de acordo com as definições do Bootstrap: 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="15text%">
+<column alignment="center" valignment="top" width="15text%">
+<column alignment="center" valignment="top" width="15text%">
+<column alignment="center" valignment="top" width="15text%">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Menor 
+\begin_inset Newline newline
+\end_inset
+
+(< 768px)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Pequeno 
+\begin_inset Newline newline
+\end_inset
+
+(>= 768px)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Médio
+\begin_inset Newline newline
+\end_inset
+
+ (>= 992px)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Maior (>=1200px)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Dispositivo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+celular
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+tablet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+desktop
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+desktop
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Comportamento do grid
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Sempre horizontal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Horizontal se passar de 12
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Horizontal se passar de 12
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Horizontal se passar de 12
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Largura do Container
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+Automático
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+750px
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+970px
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+1170px
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Colunas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+12
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+12
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+12
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+12
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Largura da coluna
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+Automático
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\approx$
+\end_inset
+
+62px
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\approx$
+\end_inset
+
+81px
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\approx$
+\end_inset
+
+97px
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Prefixo da classe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+.col-xs-
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+.col-sm-
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+.col-md-
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+.col-lg-
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Espaçamento entre células
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+15px / lado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+15px / lado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+15px / lado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+15px / lado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
 
 \begin_inset ERT
 status open
@@ -270,12 +1671,59 @@ baselineskip}
 \end_layout
 
 \begin_layout Standard
-3.
- Demonstre
+\noindent
+4.
+ Qual a notação de inserir uma 
+\emph on
+nova linha
+\emph default
+ no 
+\emph on
+Bootstrap
+\emph default
+? E colunas? Como é feito para pular-se colunas à esquerda?
+\begin_inset Newline newline
+\end_inset
+
+R:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Novas linhas são com <div class=
+\begin_inset Quotes erd
+\end_inset
+
+row
+\begin_inset Quotes erd
+\end_inset
+
+> e 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-4.
+\noindent
+5.
  Preencha a tabela abaixo a respeito dos componentes Bootstrap.
 \end_layout
 
@@ -284,13 +1732,15 @@ baselineskip}
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="2">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top" width="60text%">
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 Classe
 \end_layout
 
@@ -300,6 +1750,8 @@ Classe
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 Descrição
 \end_layout
 
@@ -312,17 +1764,7 @@ Descrição
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\size small
 container
 \end_layout
 
@@ -333,6 +1775,20 @@ container
 
 \begin_layout Plain Layout
 
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+Um container de tamanho fixo, dependente da resolução do dispositivo em
+ que está aparecendo.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -343,6 +1799,8 @@ container
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
 container-fluid
 \end_layout
 
@@ -353,6 +1811,20 @@ container-fluid
 
 \begin_layout Plain Layout
 
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+Um container fluido, com tamanho máximo e percentual em função do tamanho
+ do navegador.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -364,17 +1836,7 @@ container-fluid
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\size small
 row
 \end_layout
 
@@ -385,6 +1847,21 @@ row
 
 \begin_layout Plain Layout
 
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+Abstrai uma linha da grade do Bootstrap com componentes que podem abranger
+ até 12 colunas.
+ Pode contar outras linhas.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -396,17 +1873,7 @@ row
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\size small
 jumbotron
 \end_layout
 
@@ -417,6 +1884,23 @@ jumbotron
 
 \begin_layout Plain Layout
 
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+Um componente, típicamente com uma foto de fundo o qual é a 
+\emph on
+capa 
+\emph default
+do website.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -428,17 +1912,7 @@ jumbotron
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\size small
 nav
 \end_layout
 
@@ -449,6 +1923,20 @@ nav
 
 \begin_layout Plain Layout
 
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+Menu de navegação, tipicamente ao topo do site que apresenta, muitas vezes,
+ as informações de login e cadastro também.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -460,17 +1948,7 @@ nav
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\size small
 footer
 \end_layout
 
@@ -480,6 +1958,19 @@ footer
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+Demonstra o copyright e outras informações sobre a empresa ou site referente.
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -492,17 +1983,7 @@ footer
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\size small
 btn
 \end_layout
 
@@ -513,12 +1994,84 @@ btn
 
 \begin_layout Plain Layout
 
+\size small
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size small
+Um botão clicável, cuja aparênca varia em função da subclasse utilizada.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+6.
+ Qual o efeito das diretivas 
+\emph on
+pull-right 
+\emph default
+e 
+\emph on
+pull-left
+\emph default
+? Quais as diferenças dessas classes com a propriedade 
+\emph on
+float
+\emph default
+ do CSS3?
+\end_layout
+
+\begin_layout Standard
+R:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
 
 \end_inset
 
@@ -554,9 +2107,76 @@ Bootstrap
 \end_layout
 
 \begin_layout Standard
-5.
+7.
  Quais componentes correspondem os números 1, 2 e 3 na figura 2? Descreva
- também os demais componentes Bootstrap ou HTML que você consiga identificar.
+ também os demais componentes Bootstrap e HTML que você consiga identificar.
+\end_layout
+
+\begin_layout Standard
+R:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\size larger
+Lista de Exercícios
+\series default
+\size default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Defina a saída gráfica para o seguinte código?
+\end_layout
+
+\begin_layout Enumerate
+Whatevs
+\end_layout
+
+\begin_layout Enumerate
+Baseado nas matérias a respeito de comércio eletrônico apresentadas, defina...
+\end_layout
+
+\begin_layout Enumerate
+Fazer um trabalho de pesquisa quanto ao tema da revista apresentada
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
