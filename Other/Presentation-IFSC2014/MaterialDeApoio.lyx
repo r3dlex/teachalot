@@ -1,0 +1,543 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{color}
+%Necessary for minted
+\definecolor{bg}{rgb}{1,1,1}
+\usepackage{minted}
+
+\newminted{java}{
+  fontsize=\footnotesize, 
+  linenos,
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+\newminted{javasnip}{
+  fontsize=\footnotesize, 
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+%Remove a numeracao das paginas
+\pagestyle{empty}% Reset page style to 'empty'
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Instituto Federal de Educação, Ciência e Tecnologia de Santa Catarina
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Aluno(a):
+\series default
+ _______________________ 
+\series bold
+Data:
+\series default
+ 12/11/2014
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+Material de Apoio
+\series default
+\size default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Image/GRID12.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+Figura 1:
+\series default
+ A divisão gráfica é feita por 12 colunas espaçadas entre si com a união
+ de espaços entre as colunas em um componente multicoluna.
+\end_layout
+
+\begin_layout Standard
+1.
+ Em qual tag HTML será introduzido o uso do framework 
+\emph on
+Bootstrap
+\emph default
+? Qual o comando?
+\begin_inset Newline newline
+\end_inset
+
+R: 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+No head, como um arquivo css
+ por meio de <link rel=
+\begin_inset Quotes erd
+\end_inset
+
+stylesheet
+\begin_inset Quotes erd
+\end_inset
+
+ href=
+\begin_inset Quotes erd
+\end_inset
+
+CaminhoParaOBootstrap
+\begin_inset Quotes erd
+\end_inset
+
+>
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ Qual a notação de inserir uma 
+\emph on
+nova linha
+\emph default
+ no Bootstrap? E colunas? Como é feito para pular-se colunas à esquerda?
+\begin_inset Newline newline
+\end_inset
+
+R:
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+Novas linhas são com <div class=
+\begin_inset Quotes erd
+\end_inset
+
+row
+\begin_inset Quotes erd
+\end_inset
+
+> e 
+\end_layout
+
+\end_inset
+
+
+\lang brazilian
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ Demonstre
+\end_layout
+
+\begin_layout Standard
+4.
+ Preencha a tabela abaixo a respeito dos componentes Bootstrap.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="60text%">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Classe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descrição
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+container
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+row
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+jumbotron
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+nav
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+footer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+btn
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Image/ImagemDosComponentes.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+Figura 2:
+\series default
+ 
+\emph on
+Site
+\emph default
+ feito com 
+\emph on
+Bootstrap
+\emph default
+ três regiões de interesse selecionadas.
+\end_layout
+
+\begin_layout Standard
+5.
+ Quais componentes correspondem os números 1, 2 e 3 na figura 2? Descreva
+ também os demais componentes Bootstrap ou HTML que você consiga identificar.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,526 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{color}
+%Necessary for minted
+\definecolor{bg}{rgb}{1,1,1}
+\usepackage{minted}
+
+\newminted{java}{
+  fontsize=\footnotesize, 
+  linenos,
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+\newminted{javasnip}{
+  fontsize=\footnotesize, 
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+%Remove a numeracao das paginas
+\pagestyle{empty}% Reset page style to 'empty'
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\noindent
+Instituto Federal de Educação, Ciência e Tecnologia de Santa Catarina
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Professor: 
+\series default
+André Ferreira Bem Silva
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Disciplina: 
+\series default
+Programação Web
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Fase: 
+\begin_inset Formula $3^{a}$
+\end_inset
+
+ 
+\series default
+fase do curso Técnico em Informática
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Data: 
+\series default
+12/10/2014
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Tempo determinado: 
+\series default
+35 minutos
+\end_layout
+
+\begin_layout Paragraph
+
+\series bold
+Conteúdo: 
+\series medium
+Layouts CSS3 com Bootstrap
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Objetivo Geral:
+\series default
+ 
+\series medium
+Propiciar ao aluno o domínio dos conhecimentos de
+\emph on
+ 
+\emph default
+programação web para o seu desenvolvimento crítico sobre o uso desses conhecimen
+tos na área de tecnologia e informática.
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Objetivos Específicos:
+\series default
+ 
+\series medium
+Ao final da aula, o aluno deve ser capaz de:
+\end_layout
+
+\begin_layout Itemize
+Compreender e utilizar o conhecimento de layouts em conjunto com HTML5/CSS3.
+\end_layout
+
+\begin_layout Itemize
+Entender a complementação HTML5/CSS3 por meio do framework Bootstrap.
+\end_layout
+
+\begin_layout Itemize
+Ser capaz de identificar pontos de equivalência na programação de Layouts
+ web com àqueles de interfaces gráficas vistas anteriormente.
+\end_layout
+
+\begin_layout Itemize
+Montar sites estáticos seguindo o padrão HTML5/CSS3 com layouts em Grid.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Metodologia:
+\series default
+ Aula expositiva dialogada
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Recursos didáticos: 
+\series default
+quadro negro ou quadro branco, giz ou marcador para quadro branco, revistas
+ com notícias relacionadas à area, material de apoio e lista de exercícios.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+quadro negro ou quadro branco, giz ou marcador para quadro branco, 
+\end_layout
+
+\begin_layout Plain Layout
+amostras de compostos iônicos e não iônicos, equipamento para testar a condutibi
+lidade 
+\end_layout
+
+\begin_layout Plain Layout
+elétrica de uma solução e lista de exercícios.
+\end_layout
+
+\end_inset
+
+
+\series bold
+Procedimentos:
+\end_layout
+
+\begin_layout Enumerate
+Levando em conta a preocupação com a construção do conhecimento, a abordagem
+ de ensino de layouts web será feita através de uma aula interativa na qual
+ os alunos farão uso do material de apoio.
+ Para esta aula contaremos com a participação de uma odontóloga, onde a
+ mesma transmitirá aos alunos noções básicas sobre histologia buco-dental
+ com ênfase na constituição do esmalte dentário.
+\end_layout
+
+\begin_layout Enumerate
+Os alunos receberão uma lista de exercícios para fazer em sala.
+\end_layout
+
+\begin_layout Enumerate
+O professor determinará uma atividade de pesquisa extra-classe para que
+ os alunos façam a entrega e exposição no hall da escola, no prazo de quinze
+ dias.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Avaliação:
+\series default
+ Será realizada durante a aula, após o término e em aulas subsequentes,
+ terminando com a entrega da pesquisa.
+ Deverão ser avaliados os conhecimentos, as habilidades e as atitudes dos
+ estudantes no desempenho das atividades citadas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1o passo: Levando em conta a preocupação com a construção do conhecimento,
+ a 
+\end_layout
+
+\begin_layout Plain Layout
+abordagem da necessidade de ocorrência das ligações químicas será feita
+ através de uma 
+\end_layout
+
+\begin_layout Plain Layout
+aula interativa na qual os alunos farão uso do material de apoio.
+ Para esta aula contaremos 
+\end_layout
+
+\begin_layout Plain Layout
+com a participação de uma odontóloga, onde a mesma transmitirá aos alunos
+ noções 
+\end_layout
+
+\begin_layout Plain Layout
+básicas sobre histologia buco-dental com ênfase na constituição do esmalte
+ dentário.
+\end_layout
+
+\begin_layout Plain Layout
+2o passo: Em seguida, os alunos receberão uma lista de exercícios para fazer
+ em sala.
+\end_layout
+
+\begin_layout Plain Layout
+3o passo: O professor determinará uma atividade de pesquisa extra-classe
+ para que os 
+\end_layout
+
+\begin_layout Plain Layout
+alunos façam a entrega e exposição no hall da escola no prazo de quinze
+ dias.
+\end_layout
+
+\begin_layout Plain Layout
+Avaliação: A avaliação será realizada durante a aula e no final, após o
+ término das 
+\end_layout
+
+\begin_layout Plain Layout
+atividades em sala, bem como em um momento posterior, após a entrega da
+ pesquisa 
+\end_layout
+
+\begin_layout Plain Layout
+realizada em casa pelos alunos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Conteúdo: Ligações iônicas
+\end_layout
+
+\begin_layout Plain Layout
+Objetivo geral: Propiciar ao aluno o domínio de conhecimentos que contribua
+ para o 
+\end_layout
+
+\begin_layout Plain Layout
+desenvolvimento da consciência crítica sobre o uso de conhecimentos sobre
+ química na 
+\end_layout
+
+\begin_layout Plain Layout
+compreensão de fenômenos no seu dia-a-dia.
+\end_layout
+
+\begin_layout Plain Layout
+Objetivos específicos: Ao final da aula, espera-se que o aluno seja capaz
+ de: 
+\end_layout
+
+\begin_layout Plain Layout
+• compreender o motivo da ocorrência das ligações químicas
+\end_layout
+
+\begin_layout Plain Layout
+• situar a teoria dada no contexto social
+\end_layout
+
+\begin_layout Plain Layout
+• prever a fórmula mínima dos compostos iônicos
+\end_layout
+
+\begin_layout Plain Layout
+Metodologia: Aula expositiva dialogada.
+\end_layout
+
+\begin_layout Plain Layout
+Recursos didáticos: quadro negro ou quadro branco, giz ou marcador para
+ quadro branco, 
+\end_layout
+
+\begin_layout Plain Layout
+amostras de compostos iônicos e não iônicos, equipamento para testar a condutibi
+lidade 
+\end_layout
+
+\begin_layout Plain Layout
+elétrica de uma solução e lista de exercícios.
+\end_layout
+
+\begin_layout Plain Layout
+Procedimentos:
+\end_layout
+
+\begin_layout Plain Layout
+1o passo: Levando em conta a preocupação com a construção do conhecimento,
+ a 
+\end_layout
+
+\begin_layout Plain Layout
+abordagem da necessidade de ocorrência das ligações químicas será feita
+ através de uma 
+\end_layout
+
+\begin_layout Plain Layout
+aula interativa na qual os alunos farão uso do material de apoio.
+ Para esta aula contaremos 
+\end_layout
+
+\begin_layout Plain Layout
+com a participação de uma odontóloga, onde a mesma transmitirá aos alunos
+ noções 
+\end_layout
+
+\begin_layout Plain Layout
+básicas sobre histologia buco-dental com ênfase na constituição do esmalte
+ dentário.
+\end_layout
+
+\begin_layout Plain Layout
+2o passo: Em seguida, os alunos receberão uma lista de exercícios para fazer
+ em sala.
+\end_layout
+
+\begin_layout Plain Layout
+3o passo: O professor determinará uma atividade de pesquisa extra-classe
+ para que os 
+\end_layout
+
+\begin_layout Plain Layout
+alunos façam a entrega e exposição no hall da escola no prazo de quinze
+ dias.
+\end_layout
+
+\begin_layout Plain Layout
+Avaliação: A avaliação será realizada durante a aula e no final, após o
+ término das 
+\end_layout
+
+\begin_layout Plain Layout
+atividades em sala, bem como em um momento posterior, após a entrega da
+ pesquisa 
+\end_layout
+
+\begin_layout Plain Layout
+realizada em casa pelos alunos.
+\end_layout
+
+\begin_layout Plain Layout
+Bibliografia:
+\end_layout
+
+\begin_layout Plain Layout
+MORTIMER, E.
+ F.
+ ; MACHADO, A.
+ H.
+ .
+ Química para o Ensino Médio.
+ 1.
+ ed.
+ São Paulo: 
+\end_layout
+
+\begin_layout Plain Layout
+Editora Scipione, 2002.
+ v.
+ 1.
+ 398 p.
+\end_layout
+
+\begin_layout Plain Layout
+RUSSEL J.
+ B.
+ Quimica Geral.
+ 2.Ed.
+ Vol 1, São Paulo: Pearson Makron Books 1994.
+\end_layout
+
+\begin_layout Plain Layout
+Discovery Magazine.
+ Edição número 10.
+ Maio 2005.
+\end_layout
+
+\begin_layout Plain Layout
+Galileu.
+ Edição número 184.
+ Novembro 2006.
+\end_layout
+
+\begin_layout Plain Layout
+Scientific American Brasil.
+ Edição número 71.
+ Abril 2008.
+\end_layout
+
+\begin_layout Plain Layout
+www.qmc.ufsc.br/qmcweb
+\end_layout
+
+\begin_layout Plain Layout
+www.brasilescola.com/quimica/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
