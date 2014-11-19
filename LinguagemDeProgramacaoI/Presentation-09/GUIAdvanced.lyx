@@ -1,4 +1,4 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
 \lyxformat 413
 \begin_document
 \begin_header
@@ -39,6 +39,7 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -82,10 +83,7 @@
 
 \begin_layout BeginPlainFrame
 
-
-
 \end_layout
-
 
 \begin_layout Standard
 \begin_inset Box Frameless
@@ -99,7 +97,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 JOptionPane
@@ -117,7 +115,7 @@ Apresenta escolha/mensagem ao usuário
 \align center
 \begin_inset Graphics
 	filename ../Image/JOptionPane-ShowInputDialog.gif
-	width 80text%
+	width 60text%
 
 \end_inset
 
@@ -128,7 +126,6 @@ Apresenta escolha/mensagem ao usuário
 
 
 \end_layout
-
 
 \begin_layout EndFrame
 
@@ -140,10 +137,7 @@ Apresenta escolha/mensagem ao usuário
 
 \begin_layout BeginPlainFrame
 
-
-
 \end_layout
-
 
 \begin_layout Standard
 \begin_inset Box Frameless
@@ -160,14 +154,19 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-CODIGO DO INPUT DIALOG
-\end_layout
+\begin_inset External
+	template JavaSourceNoLn
+	filename ../Code/CaixaDeDialogo.java
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
 
 \begin_layout EndFrame
 
@@ -179,10 +178,7 @@ CODIGO DO INPUT DIALOG
 
 \begin_layout BeginPlainFrame
 
-
-
 \end_layout
-
 
 \begin_layout Standard
 \align center
@@ -197,16 +193,16 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
 <row>
 <cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
@@ -335,7 +331,6 @@ Cancelou
 
 \end_layout
 
-
 \begin_layout EndFrame
 
 \end_layout
@@ -346,10 +341,7 @@ Cancelou
 
 \begin_layout BeginPlainFrame
 
-
-
 \end_layout
-
 
 \begin_layout Standard
 \align center
@@ -364,7 +356,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -379,7 +371,14 @@ only<1>{
 
 \end_inset
 
-CODIGO DO MULTIPLE CHOICE
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/CaixaDeResposta.java
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -397,10 +396,9 @@ only<2>{
 
 \begin_layout Plain Layout
 \align center
-
 \begin_inset Graphics
 	filename ../Image/JOptionPane-Confirm.gif
-	width 80text%
+	width 60text%
 
 \end_inset
 
@@ -426,7 +424,6 @@ status open
 
 \end_layout
 
-
 \begin_layout EndFrame
 
 \end_layout
@@ -437,10 +434,7 @@ status open
 
 \begin_layout BeginPlainFrame
 
-
-
 \end_layout
-
 
 \begin_layout Standard
 \align center
@@ -455,7 +449,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -470,7 +464,14 @@ only<1>{
 
 \end_inset
 
-CODIGO DO ALERT
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/DialogoCompleto.java
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -488,10 +489,9 @@ only<2>{
 
 \begin_layout Plain Layout
 \align center
-
 \begin_inset Graphics
 	filename ../Image/JOptionPane-Alert.gif
-	width 80text%
+	width 60text%
 
 \end_inset
 
@@ -517,7 +517,6 @@ status open
 
 \end_layout
 
-
 \begin_layout EndFrame
 
 \end_layout
@@ -528,10 +527,7 @@ status open
 
 \begin_layout BeginPlainFrame
 
-
-
 \end_layout
-
 
 \begin_layout Standard
 \align center
@@ -549,14 +545,19 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-CODIGO DIALOGO COMPLETO
-\end_layout
+\begin_inset External
+	template JavaSource
+	filename ../Code/BusyLoop.java
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
 
 \begin_layout EndFrame
 
@@ -568,90 +569,7 @@ CODIGO DIALOGO COMPLETO
 
 \begin_layout BeginPlainFrame
 
-
-
 \end_layout
-
-
-\begin_layout Standard
-\align center
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-RESULTADO GRAFICO
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout BeginPlainFrame
-
-
-
-\end_layout
-
-
-\begin_layout Standard
-\align center
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-CODIGO DOS LOOPS de TEMPO
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout BeginPlainFrame
-
-
-
-\end_layout
-
 
 \begin_layout Standard
 \align center
@@ -701,6 +619,73 @@ Tipo básico em inúmeras linguagens
 
 \end_layout
 
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Runnable 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Falar também do Runnable!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Método 
+\emph on
+run
+\end_layout
+
+\begin_layout Itemize
+Threads 
+\emph on
+rodam 
+\emph default
+Runnable
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Main 
+\emph default
+da Thread
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout EndFrame
 
@@ -712,10 +697,7 @@ Tipo básico em inúmeras linguagens
 
 \begin_layout BeginPlainFrame
 
-
-
 \end_layout
-
 
 \begin_layout Standard
 \align center
@@ -755,21 +737,9 @@ hardware
 
 \end_layout
 
-
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout Separator
-
-\end_layout
-
 \begin_layout BeginPlainFrame
 
-
-
 \end_layout
-
 
 \begin_layout Standard
 \align center
@@ -787,14 +757,19 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-CODIGO COM TIMER
-\end_layout
+\begin_inset External
+	template JavaSource
+	filename ../Code/Temporizacao.java
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
 
 \begin_layout EndFrame
 
@@ -806,13 +781,9 @@ CODIGO COM TIMER
 
 \begin_layout BeginPlainFrame
 
-
-
 \end_layout
 
-
 \begin_layout Standard
-\align center
 \begin_inset Box Frameless
 position "t"
 hor_pos "c"
@@ -825,45 +796,6 @@ special "none"
 height "1in"
 height_special "totalheight"
 status open
-
-\begin_layout Plain Layout
-CODIGO DO TIMER COM CLASSES
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout BeginPlainFrame
-
-
-
-\end_layout
-
-
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
 
 \begin_layout Plain Layout
 Ações (
@@ -890,6 +822,47 @@ Utilizam também OO
 
 \end_layout
 
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSource
+	filename ../Code/BotaoAction.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout EndFrame
 
@@ -901,10 +874,47 @@ Utilizam também OO
 
 \begin_layout BeginPlainFrame
 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+Também é possível estender
+\end_layout
+
+\begin_layout Itemize
+E implementar ActionListener
+\end_layout
+
+\begin_layout Itemize
+Isso será usado no MVC, mais adiante
+\end_layout
+
+\end_inset
 
 
 \end_layout
 
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
 
 \begin_layout Standard
 \align center
@@ -922,7 +932,52 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-CODIGO BotaoAction.java
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/MeuBotao.java
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\backslash
+only<2>{
+\end_layout
+
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/BotaoAction2.java
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset
@@ -930,6 +985,10 @@ CODIGO BotaoAction.java
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
 
 \begin_layout EndFrame
 
@@ -941,10 +1000,7 @@ CODIGO BotaoAction.java
 
 \begin_layout BeginPlainFrame
 
-
-
 \end_layout
-
 
 \begin_layout Standard
 \align center
@@ -962,22 +1018,24 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-CODIGO usando extends no Botao
+Observador-Notificar
 \end_layout
 
 \begin_layout Plain Layout
-MeuBotao.java
-\end_layout
-
-\begin_layout Plain Layout
-BotaoAction2.java
-\end_layout
+\align center
+\begin_inset Graphics
+	filename ../Image/ObserverNotifier.png
+	width 60text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
 
 \begin_layout EndFrame
 
@@ -988,11 +1046,8 @@ BotaoAction2.java
 \end_layout
 
 \begin_layout BeginPlainFrame
-
-
-
+Exercícios I
 \end_layout
-
 
 \begin_layout Standard
 \align center
@@ -1009,15 +1064,22 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Plain Layout
-Falar de Observer - Notifier
+\begin_layout Enumerate
+Fazer um timer que conta o número de vezes já chamado e atualiza na saída
+ de console, conforme o exemplo visto em aula, trocando o título da janela
+ com esse número.
+\end_layout
+
+\begin_layout Enumerate
+Fazer um campo de texto com um botão, que quando pressionado pergunta se
+ a informação inserida está correta.
+ Depois, caso seja afirmativo, confirma o envio da informação.
 \end_layout
 
 \end_inset
 
 
 \end_layout
-
 
 \begin_layout EndFrame
 
@@ -1029,10 +1091,7 @@ Falar de Observer - Notifier
 
 \begin_layout BeginPlainFrame
 
-
-
 \end_layout
-
 
 \begin_layout Standard
 \align center
@@ -1053,11 +1112,22 @@ status open
 GridBagLayout
 \end_layout
 
+\begin_layout Itemize
+Permite layout em grid
+\end_layout
+
+\begin_layout Itemize
+Permite dar pesos distintos a componentes
+\end_layout
+
+\begin_layout Itemize
+Ver slides anteriores para todos
+\end_layout
+
 \end_inset
 
 
 \end_layout
-
 
 \begin_layout EndFrame
 
@@ -1069,10 +1139,7 @@ GridBagLayout
 
 \begin_layout BeginPlainFrame
 
-
-
 \end_layout
-
 
 \begin_layout Standard
 \align center
@@ -1090,7 +1157,13 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-CODIGO DE EXEMPLO
+\begin_inset Graphics
+	filename ../Gen/Image/UsoDoGrid.eps
+	width 100text%
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1098,8 +1171,47 @@ CODIGO DE EXEMPLO
 
 \end_layout
 
-
 \begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+href{https://docs.oracle.com/javase/tutorial/uiswing/layout/visual.html}{Oracle
+ Docs}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -1108,11 +1220,8 @@ CODIGO DE EXEMPLO
 \end_layout
 
 \begin_layout BeginPlainFrame
-
-
-
+Exercício II
 \end_layout
-
 
 \begin_layout Standard
 \align center
@@ -1129,15 +1238,16 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Plain Layout
-Exemplo Complexo
+\begin_layout Enumerate
+Fazer um layout em grid com 10 linhas e 4 colunas onde hajam um botão por
+ coluna.
+ Os botões devem emitir uma mensagem com seu número ao serem clicados!
 \end_layout
 
 \end_inset
 
 
 \end_layout
-
 
 \begin_layout EndFrame
 
