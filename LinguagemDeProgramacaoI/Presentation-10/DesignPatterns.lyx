@@ -363,7 +363,19 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-FABRICA - TEXTO
+Fábrica
+\end_layout
+
+\begin_layout Itemize
+Cria objetos concretos
+\end_layout
+
+\begin_layout Itemize
+Centralização de responsabilidade
+\end_layout
+
+\begin_layout Itemize
+Muitas vezes, são Singletons
 \end_layout
 
 \end_inset
@@ -541,7 +553,23 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-ITERATOR - TEXTO
+Iterator
+\end_layout
+
+\begin_layout Itemize
+Torna possível, iterar genericamente
+\end_layout
+
+\begin_layout Itemize
+Operador 
+\emph on
+next 
+\emph default
+(i++)
+\end_layout
+
+\begin_layout Itemize
+Reusável em inúmeras estruturas
 \end_layout
 
 \end_inset
@@ -656,6 +684,50 @@ status open
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Standard
+Visitante
+\end_layout
+
+\begin_layout Itemize
+Ideia de receber visitantes
+\end_layout
+
+\begin_layout Itemize
+Uma determinada classe recebe um visitante
+\end_layout
+
+\begin_layout Itemize
+Ele decide o que fazer após a visita...!!!
 \end_layout
 
 \end_inset
@@ -808,6 +880,165 @@ status open
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+MVC
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+Model-View-Controller
+\end_layout
+
+\begin_layout Itemize
+Responsabilidades são separadas
+\end_layout
+
+\begin_layout Itemize
+Modelo: Lógica
+\end_layout
+
+\begin_layout Itemize
+Controle: Input
+\end_layout
+
+\begin_layout Itemize
+View: UI
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+MVC
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/MVC.gif
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginPlainFrame
+Exercícios 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Enumerate
+Faça um objeto Cache, o qual seja um Singleton.
+ Ela deve guardar o valor de todas as raízes quadrada de 
+\emph on
+n 
+\emph default
+primeiros números já usados pelo método 
+\emph on
+calculaRaiz.
+ 
+\emph default
+Isto é, ao calcular-se uma raíz quadrada, ele faz a cache automática daquele
+ número.
+ (Memoização)
+\end_layout
+
+\begin_layout Enumerate
+Implemente um iterator que funcione sobre qualquer 
+\emph on
+List
+\emph default
+ java.
+\end_layout
+
+\begin_layout Enumerate
+Implementar uma 
+\emph on
+FabricaDePeças
+\emph default
+ onde seja possível criar uma 
+\emph on
+Peça
+\emph default
+ de xadrez passando o nome da peça.
+ Cada uma deve ser uma subclasse de peça.
+ A fábrica deve possuir uma única instância, acessível globalmente (Singleton).
+\end_layout
+
+\begin_layout Enumerate
+Faça uma implementação de um botão o qual abra uma caixa de diálogo para
+ que o usuário insira o nome.
+ O controle, lógica e UI devem ficar em abstrações distinas
 \end_layout
 
 \end_inset
