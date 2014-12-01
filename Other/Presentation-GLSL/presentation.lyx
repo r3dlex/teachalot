@@ -1,0 +1,1982 @@
+#LyX 1.5.6 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{listings}
+\usepackage{multimedia}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usetheme{Warsaw}
+% or ...
+%\usetheme{Antibes}	% tree outline, neat
+%\usetheme{JuanLesPins}	% like Antibes, with shading
+%\usetheme{Bergen}	% outline on side
+%\usetheme{Luebeck}	% like Warsaw, square sides
+%\usetheme{Berkeley}	% interesting left bar outline
+%\usetheme{Madrid}	% clean, nice.  7/12 page numbers
+%\usetheme{Berlin}	% dots show slide number
+%\usetheme{Malmoe}	% OK, plain, unshaded
+%\usetheme{Boadilla}	% nice, white bg, no top bar
+%\usetheme{Marburg}	% nice, outline on right
+%\usetheme{boxes}	% ???
+%\usetheme{Montpellier}	% tree outline on top, plainish white
+%\usetheme{Copenhagen}	% like Warsaw
+%\usetheme{PaloAlto}	% looks good
+%\usetheme{Darmstadt}	% like Warsaw with circle outline
+%\usetheme{Pittsburgh}
+%\usetheme{default}
+%\usetheme{Rochester}	% like boxy, unshaded warsaw
+%\usetheme{Dresden}	% circle outline on top
+%\usetheme{Singapore}	% purple gradient top
+%\usetheme{Frankfurt}	% like Warsaw with circle outline on top
+%\usetheme{Szeged}
+%\usetheme{Goettingen}	% light purple right bar outline
+%\usetheme{Warsaw}
+%\usetheme{Hannover}	% like Goett with bar on left
+%\usetheme{compatibility}
+%\usetheme{Ilmenau}
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+%\usecolortheme{seahorse}
+%\usecolortheme{rose}
+
+% seems to fix typewriter font in outline header:
+\usepackage{ae,aecompl}
+\end_preamble
+\language english
+\inputencoding utf8
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "andre" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title (Plain Frame)
+GLSL - OpenGL Shading Language
+\end_layout
+
+\begin_layout Author
+André Ferreira Bem Silva e Renan Teston Inácio
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+AtBeginSection[]{
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+    
+\backslash
+frametitle{Chapter}   
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+    
+\backslash
+tableofcontents[currentsection,currentsubsection] 
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+  }
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Index
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout BeginFrame
+Graphics Hardware Evolution
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size footnotesize
+\begin_inset Graphics
+	filename cgpu-gro.png
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size footnotesize
+CPUs annual growth = 1.5x -> decade growth = 60x
+\newline
+GPUs annual growth = 2x ->
+ decade growth > 1000x
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+General-Purpose Computation on GPU
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{Motivations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+New Technology Trend
+\end_layout
+
+\begin_layout Itemize
+GPUs as computation engine
+\end_layout
+
+\begin_layout Itemize
+Capable of performing more than processing geometricprimitives
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+GPGPU - Applications
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features>
+<column alignment="left" valignment="top" leftline="true" width="0">
+<column alignment="left" valignment="top" leftline="true" rightline="true" width="0">
+<row topline="true" bottomline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Scientific computing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Computational Finance
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Bioinformatics
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Medical Imaging
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Database operations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Robot motion planning
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Digital Image Processing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Procedural texturing and shading
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Segmentation (2D & 3D)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Img-space geometric computations
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Physically-based simulations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Global illumination
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Video Processing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Image-based modelling
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true" bottomline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Neural Networks
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ Grid Computing, Cryptography
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Basics
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{What is Computer Graphics?}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+CG is a set of methods and techniques for representation and manipulation
+ of graphical data using computers
+\end_layout
+
+\begin_layout Itemize
+There must be:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A representation model an operations to manipulate it
+\end_layout
+
+\begin_layout Itemize
+A output device (plotter, graphics card)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Representation models
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{Representations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Bitmap
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A grid, each cell being called 
+\begin_inset Quotes eld
+\end_inset
+
+pixel
+\begin_inset Quotes erd
+\end_inset
+
+, that stores color information
+\end_layout
+
+\begin_layout Itemize
+Pictures and displays in general
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Meshes
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Collection of vertices, edges and faces
+\end_layout
+
+\begin_layout Itemize
+Faces are generally triangles or convex polygons
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Polygon mesh
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename teapot_full.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Wireframe(1), wireframe and shade(2), texture(3) and shade(4) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Transformations
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{Description}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+There are three main types of transformations: rotation, scaling and translation
+\end_layout
+
+\begin_layout Itemize
+Can be applied using quaternions (rotation) and matrices
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Transformations Examples
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename tranforms.png
+	scale 26
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Translation, scaling and rotation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Section
+Lighting and Rendering
+\end_layout
+
+\begin_layout BeginFrame
+Rendering
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{Render process}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Rendering is the process of generating an image from a model description
+\end_layout
+
+\begin_layout Itemize
+Ray tracing and rasterization are examples of rendering techniques
+\end_layout
+
+\begin_layout Itemize
+Most developed technique for real time rendering is rasterization
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Rasterization
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{Rasterizing}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+For each face to be rendered, generates pixels for those faces
+\end_layout
+
+\begin_layout Itemize
+Pixel colors are determined, or 
+\begin_inset Quotes eld
+\end_inset
+
+shaded
+\begin_inset Quotes erd
+\end_inset
+
+, according to textures and the lighting model
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Introduction to Lighting
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{Lighting Schemes}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Most schemes divide lighting in different components, each one creating
+ specific visual effects
+\end_layout
+
+\begin_layout Itemize
+Phong Reflection scheme, for example, is composed of three components: ambient,
+ diffuse and specular
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename lighting_scheme.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Lighting influence on renderized object
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Normals
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{
+\change_inserted 1 1224515419
+U
+\change_unchanged
+tilization}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Used in lighting reflection calculation
+\end_layout
+
+\begin_layout Itemize
+There's one normal for each vertex in an object
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename plane_normal.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+A plane and its normal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+View Projection
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename view_projection_result.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+View frustum and the resulting renderized image
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\change_inserted 1 1224262755
+
+\end_layout
+
+\begin_layout Section
+
+\change_inserted 1 1224262779
+GPU
+\change_unchanged
+
+\end_layout
+
+\begin_layout BeginFrame
+GPU - Graphics Processing Unit
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{Graphics processors}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Processors dedicated to accelerate rendering process
+\end_layout
+
+\begin_layout Itemize
+Incorporates custom microchips which contain most mathematical operations
+ commonly used in graphics rendering
+\end_layout
+
+\begin_layout Itemize
+Uses an intrinsically parallel architecture for obtaining high level 3D
+\change_inserted 1 1224261431
+ 
+\change_unchanged
+performance
+\change_inserted 1 1224262064
+
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
+
+\change_inserted 1 1224262928
+GPU - Shaders
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+\lang brazilian
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Enumerate
+
+\change_inserted 1 1224263286
+
+\lang brazilian
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+\change_inserted 1 1224263275
+
+<alert@1>
+\end_layout
+
+\end_inset
+
+ Shaders
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted 1 1224262991
+
+\lang brazilian
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+<alert@2>
+\end_layout
+
+\end_inset
+
+Vertex Shader
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted 1 1224262998
+
+\lang brazilian
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+<alert@3>
+\end_layout
+
+\end_inset
+
+Geometry Shader
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted 1 1224263007
+
+\lang brazilian
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+<alert@4>
+\end_layout
+
+\end_inset
+
+Fragment Shader
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "60col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout ExampleBlock
+
+\change_inserted 1 1224262928
+
+\lang brazilian
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+\change_inserted 1 1224263443
+
+{Description}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+\lang brazilian
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+P
+\change_inserted 1 1224263298
+rograms that run in a GPU
+\end_layout
+
+\begin_layout Itemize
+
+\lang brazilian
+Su
+\change_inserted 1 1224263085
+pport w
+\change_unchanged
+as
+\change_inserted 1 1224263085
+ added in OpenGL 
+\change_unchanged
+1.5 
+\change_inserted 1 1224263085
+and Direct3D 8
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+\lang brazilian
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+}
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+
+\backslash
+only<2>{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted 1 1224263175
+Runs once for each 
+\change_unchanged
+v
+\change_inserted 1 1224263175
+ertex.
+ Transform
+\change_unchanged
+ world coordinates to camera coordinates and m
+\change_inserted 1 1224263175
+ay
+\change_unchanged
+ only
+\change_inserted 1 1224263175
+ 
+\change_unchanged
+modify vertex attributes (color, normal, position...) 
+\change_inserted 1 1224263175
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+\lang brazilian
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+}
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+
+\backslash
+only<3>{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted 1 1224263191
+Manipulate meshes.
+ 
+\change_unchanged
+May modify basic geometries and create new ones
+\change_inserted 1 1224263191
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+\lang brazilian
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+}
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+
+\backslash
+only<4>{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\lang brazilian
+Also called Pixel Shader (DirectX)
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted 1 1224263200
+Calculate
+\change_unchanged
+s 
+\change_inserted 1 1224263200
+the individual color value of each pixel.
+ Normally is used for effects like bump mapping
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+\lang brazilian
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+}
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1 1224262928
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\change_inserted 1 1224263923
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\change_inserted 1 1224263939
+Bump Mapping
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1 1224263942
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\align center
+
+\change_inserted 1 1224264808
+\begin_inset Graphics
+	filename nexuiz_bump_mappings.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1 1224263942
+\begin_inset Caption
+
+\begin_layout Standard
+Nexuiz with BM (left) and without BM (right) 
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\change_inserted 1 1224265536
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\change_inserted 1 1224267450
+GLSL - OpenGL Interface
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1 1224267454
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\align center
+
+\change_inserted 1 1224267496
+\begin_inset Graphics
+	filename glsl_program.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 1 1224267454
+\begin_inset Caption
+
+\begin_layout Standard
+
+\change_inserted 1 1224270314
+Using 
+\change_unchanged
+v
+\change_inserted 1 1224270314
+ertex and 
+\change_unchanged
+f
+\change_inserted 1 1224270314
+ragment 
+\change_unchanged
+s
+\change_inserted 1 1224270314
+hader
+\change_unchanged
+s
+\change_inserted 1 1224270314
+ with 
+\change_unchanged
+O
+\change_inserted 1 1224270314
+penGL
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Section
+GPU Pipeline
+\end_layout
+
+\begin_layout BeginFrame
+Overview
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pipeline.eps
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Overview of GPU pipeline in the programmer's point of view
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Vertex Shader
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename vertex_shader.eps
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Inputs and outputs of Vertex Shader
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Rasterization
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename rasterization.eps
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Main steps of rasterization
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Fragment Shader
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename fragment_shader.eps
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Inputs and outputs of Fragment Shader
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Section
+Programming Model
+\end_layout
+
+\begin_layout BeginFrame
+Programming Model
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{Difficulties and Limitations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Specialized architecture -> power of the GPUs
+\end_layout
+
+\begin_layout Itemize
+Restricted I/O: arbitrary read, limited write
+\end_layout
+
+\begin_layout Itemize
+No integer data operands;
+\end_layout
+
+\begin_layout Itemize
+No bit-shift and bitwise operations;
+\end_layout
+
+\begin_layout Itemize
+ No double-precision arithmetic;
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Programming Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename complete-system.png
+	width 100col%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Programing Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename lang.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Programing Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename mecanica.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+References
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+
+\change_inserted 1 1224271324
+
+\size small
+GPGPU.ORG - GPGPU TUTORIALS 
+\change_unchanged
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+url{
+\change_inserted 1 1224271307
+http://gpgpu.org/developer/index.shtml
+\change_unchanged
+}
+\end_layout
+
+\end_inset
+
+
+\change_inserted 1 1224270472
+
+\end_layout
+
+\begin_layout Bibliography
+
+\change_inserted 1 1224271513
+
+\size small
+\begin_inset LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+WIKIPEDIA 2008 - SHADER, 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+\change_inserted 1 1224271148
+
+
+\backslash
+url{http://en.wikipedia.org/wiki/
+\change_unchanged
+S
+\change_inserted 1 1224271148
+hader}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+
+\change_inserted 1 1224276503
+
+\size small
+\begin_inset LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+COMPUTER GRAPHICS CLAUSTAL, 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+\change_inserted 1 1224271712
+
+
+\backslash
+url{http://cg.in.tu-clausthal.de/publications.shtml}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+
+\change_inserted 1 1224276622
+
+\size small
+\begin_inset LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+INTERMEDIATE COMPUTER GRAPHICS, 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+\change_inserted 1 1224276519
+
+
+\backslash
+url{http://web.syr.edu/~deaster/331def.html}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+
+\change_inserted 1 1224276632
+
+\size small
+\begin_inset LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+COMPUTAÇÃO GRÁFICA, 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+\change_inserted 1 1224276636
+
+
+\backslash
+url{http://www.inf.ufsc.br/~awangenh/CG/index.html}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Bibliography
+
+\size small
+\begin_inset LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+LIGHTHOUSE 3D - GLSL TUTORIAL, 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+url{http://www.lighthouse3d.com/opengl/glsl/}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\end_body
+\end_document

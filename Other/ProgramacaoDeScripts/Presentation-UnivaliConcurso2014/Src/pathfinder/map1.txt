@@ -1,0 +1,18 @@
+30 19
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x x                    x  x xx
+x   x x xxxxxx xxx xx x      x
+x xx  xkx    x x x xx  xx  x x 
+x x x xxx  x x x    x xx x x x
+x     x x  x x x x  xxx      x
+x x x x x           x xx x  xx
+x x x   x  x x x    x  x xx xx
+x   x x    x x xxx   sx      x
+x x   x x  x     x  x  x x x x
+x x x  x   xx x     x  x x x x
+x x x x x  x     x  x xxx x  x
+x   x   x xx xx xx    x   x  x
+x x x x x  x      xxxxx x x  x
+x xxx xxx xxx x xx ex x x   xx
+x                         x  x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

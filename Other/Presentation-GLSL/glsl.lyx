@@ -1,0 +1,1887 @@
+#LyX 1.5.6 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{listings}
+\usepackage{multimedia}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usetheme{Warsaw}
+% or ...
+%\usetheme{Antibes}	% tree outline, neat
+%\usetheme{JuanLesPins}	% like Antibes, with shading
+%\usetheme{Bergen}	% outline on side
+%\usetheme{Luebeck}	% like Warsaw, square sides
+%\usetheme{Berkeley}	% interesting left bar outline
+%\usetheme{Madrid}	% clean, nice.  7/12 page numbers
+%\usetheme{Berlin}	% dots show slide number
+%\usetheme{Malmoe}	% OK, plain, unshaded
+%\usetheme{Boadilla}	% nice, white bg, no top bar
+%\usetheme{Marburg}	% nice, outline on right
+%\usetheme{boxes}	% ???
+%\usetheme{Montpellier}	% tree outline on top, plainish white
+%\usetheme{Copenhagen}	% like Warsaw
+%\usetheme{PaloAlto}	% looks good
+%\usetheme{Darmstadt}	% like Warsaw with circle outline
+%\usetheme{Pittsburgh}
+%\usetheme{default}
+%\usetheme{Rochester}	% like boxy, unshaded warsaw
+%\usetheme{Dresden}	% circle outline on top
+%\usetheme{Singapore}	% purple gradient top
+%\usetheme{Frankfurt}	% like Warsaw with circle outline on top
+%\usetheme{Szeged}
+%\usetheme{Goettingen}	% light purple right bar outline
+%\usetheme{Warsaw}
+%\usetheme{Hannover}	% like Goett with bar on left
+%\usetheme{compatibility}
+%\usetheme{Ilmenau}
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+%\usecolortheme{seahorse}
+%\usecolortheme{rose}
+
+% seems to fix typewriter font in outline header:
+\usepackage{ae,aecompl}
+\usepackage{listings}
+\end_preamble
+\language english
+\inputencoding utf8
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\author "andre" 
+\end_header
+
+\begin_body
+
+\begin_layout Title (Plain Frame)
+GLSL - OpenGL Shading Language
+\end_layout
+
+\begin_layout Author
+André Ferreira Bem Silva e Renan Teston Inácio
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+AtBeginSection[]{
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+    
+\backslash
+frametitle{Chapter}   
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+    
+\backslash
+tableofcontents[currentsection,currentsubsection] 
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+  }
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Index
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Section
+GLSL Basics
+\end_layout
+
+\begin_layout BeginFrame
+Code Sample
+\end_layout
+
+\begin_layout Itemize
+Syntax similar to C.
+\end_layout
+
+\begin_layout Itemize
+Each vertex or fragment program has its own source.
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{Simple Vertex Shader program}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+void main() {
+\end_layout
+
+\begin_layout LyX-Code
+  
+\size small
+\color red
+gl_Position
+\size default
+\color inherit
+ = 
+\size small
+\color magenta
+gl_ModelViewProjectionMatrix
+\end_layout
+
+\begin_layout LyX-Code
+    * 
+\size small
+\color blue
+gl_Vertex
+\size default
+\color inherit
+;
+\end_layout
+
+\begin_layout LyX-Code
+  
+\size small
+\color red
+gl_FrontColor
+\size default
+\color inherit
+ = 
+\size small
+\color blue
+gl_Color
+\size default
+\color inherit
+;
+\end_layout
+
+\begin_layout LyX-Code
+  
+\size small
+\color red
+gl_TexCoord
+\size default
+\color inherit
+[0] = 
+\size small
+\color blue
+gl_MultiTexCoord0
+\size default
+\color inherit
+;
+\end_layout
+
+\begin_layout LyX-Code
+}
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout BeginFrame
+Scalars
+\end_layout
+
+\begin_layout Itemize
+float: floating point, 32 bits.
+\end_layout
+
+\begin_layout Itemize
+int: integer, guaranteed to be at least 16 bits plus the signal.
+\end_layout
+
+\begin_layout Itemize
+bool: boolean.
+\end_layout
+
+\begin_layout BeginFrame
+Vectors
+\end_layout
+
+\begin_layout Itemize
+vec, ivec, bvec: vector of floats, integers and booleans
+\end_layout
+
+\begin_layout Itemize
+May have 2 to 4 components (vec2, vec3, vec4)
+\end_layout
+
+\begin_layout Block
+
+\size footnotesize
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{Manipulation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+x y z w (geometric)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+vec4(1.0, 2.0, 3.0, 4.0).w == 4.0
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size footnotesize
+r g b a (color)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+vec4 c; c.g = 1.0
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size footnotesize
+s t p q (texture coordinates)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+vec2(0.4, 0.5).s == 0.4
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size footnotesize
+Indexing
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+vec3 v; v[2] = -3.0
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout BeginFrame
+Matrices
+\end_layout
+
+\begin_layout Itemize
+mat2, mat3, mat4: square matrices of floats
+\end_layout
+
+\begin_layout Block
+
+\size small
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{Manipulation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Construction
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size small
+mat3 M1 = mat3(vec3(1.0, 2.0, 3.0), vec3(4.0, 5.0, 6.0), vec3(7.0, 8.0, 9.0));
+\end_layout
+
+\begin_layout Itemize
+mat2 M2 = mat2(11.0, 21.0, 12.0, 22.0);
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size small
+Column access
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size small
+M1[1] returns vec3(4.0, 5.0, 6.0)
+\end_layout
+
+\begin_layout Itemize
+M2[0] returns vec2(11.0, 21.0)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout BeginFrame
+Arrays
+\end_layout
+
+\begin_layout Itemize
+Can be of any type;
+\end_layout
+
+\begin_layout Itemize
+There are no pointers, arrays must have explicitly or implicitly declared
+ length.
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{Array declarations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+void main() {
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  vec3 points[];
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  vec4 colors[];
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  bool marked[5]; /* Explicit length declaration */
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  ...
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  vec3 points[10]; /* Explicit redeclaration */
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  ...
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  colors[2] = ...; /* Implicitly defining the length */
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  colors[5] = ...;
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  ...
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout BeginFrame
+Other types
+\end_layout
+
+\begin_layout Itemize
+Samplers
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+sampler1D, sampler2D, sampler3D: texture;
+\end_layout
+
+\begin_layout Itemize
+samplerCube: cube-map texture;
+\end_layout
+
+\begin_layout Itemize
+sampler1DShadow, sampler2DShadow: depth/shadow texture.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Structures
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Declared with 
+\begin_inset Quotes eld
+\end_inset
+
+struct
+\begin_inset Quotes erd
+\end_inset
+
+ and works like in C;
+\end_layout
+
+\begin_layout Itemize
+No obscure C features like defining alignment or bit-fields;
+\end_layout
+
+\begin_layout Itemize
+Can be nested.
+\end_layout
+
+\begin_layout LyX-Code
+struct cube {
+\end_layout
+
+\begin_layout LyX-Code
+  vec3 position;
+\end_layout
+
+\begin_layout LyX-Code
+  float length;
+\end_layout
+
+\begin_layout LyX-Code
+}
+\newline
+
+\newline
+cube myNewCube;
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
+Swizzling
+\end_layout
+
+\begin_layout LyX-Code
+vec4 c = vec4(1.0, 0.5, 0.25, 0.75);
+\end_layout
+
+\begin_layout LyX-Code
+vec4 d = vec4(10.0, 20.0, 30.0, 40.0);
+\newline
+
+\newline
+c.wy = vec2(2.0, 4.0);
+\end_layout
+
+\begin_layout LyX-Code
+// c is vec4(1.0, 4.0, 0.25, 2.0);
+\newline
+
+\newline
+d.xy = c.zz;
+\end_layout
+
+\begin_layout LyX-Code
+// d is vec4(0.25, 0.25, 30.0, 40.0);
+\newline
+
+\newline
+vec2 e = c.xy + d.wz;
+\end_layout
+
+\begin_layout LyX-Code
+// e is vec2(41.0, 34.0);
+\end_layout
+
+\begin_layout BeginFrame
+Qualifiers
+\end_layout
+
+\begin_layout Itemize
+Attribute
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Value defined outside the shader programs;
+\end_layout
+
+\begin_layout Itemize
+Read-only access and only by vertex shader.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Uniform
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Value defined outside the shader programs;
+\end_layout
+
+\begin_layout Itemize
+Read-only access by any shader.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Varying
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Value defined inside vertex shader;
+\end_layout
+
+\begin_layout Itemize
+Read-only access by fragment shader;
+\end_layout
+
+\begin_layout Itemize
+Value is interpolated across fragments of the primitive.
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
+Built-ins
+\end_layout
+
+\begin_layout Standard
+
+\size scriptsize
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+
+\size scriptsize
+Any shader
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+gl_FrontMaterial: current material properties (ambient, diffuse, specular,
+ shininess)
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+gl_LightSource[X]: properties of light X (ambient, diffuse, specular, position)
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+gl_LightModel: properties of global ilumination (ambient)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Vertex shader
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+gl_Color: input color
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+gl_FrontColor: output color
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+gl_Vertex: input position
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+gl_Position: output position
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+
+\size scriptsize
+Fragment shader
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+gl_Color: input color
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+gl_FragColor: output color
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size scriptsize
+Functions
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size scriptsize
+ftransform(): fixed-functionality vertex projection (vertex shader only)
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+min(x, y)
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+max(x, y)
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+dot(u, v): dot product
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+normalize(u)
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+pow(x, y)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Limitations
+\end_layout
+
+\begin_layout Itemize
+The only memory you can access are the textures themselves;
+\end_layout
+
+\begin_layout Itemize
+There is no stack, so, there is no recursion;
+\end_layout
+
+\begin_layout Itemize
+Even arrays are translated to registers at compile-time, which explain why
+ their length must be known;
+\end_layout
+
+\begin_layout Itemize
+Floating point arithmetics may not be totally IEEE-754 compliant, ie, rounding
+ rules may be different;
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Itemize
+There are no integer bitwise operators in GLSL 1.2 (OpenGL 2.x);
+\end_layout
+
+\begin_layout Itemize
+Integer size may vary between implementations.
+ Standard requests at least 16 bits;
+\end_layout
+
+\begin_layout Itemize
+There are limits in respect to how much registers the code can use, how
+ many instructions and how many textures can be accessed by a shader.
+\end_layout
+
+\begin_layout BeginFrame
+Vertex shader example
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+2.5in
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{Code}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+void main()
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+{
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  
+\color red
+gl_Position
+\color inherit
+ = ftransform();
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  if (
+\color blue
+gl_Vertex
+\color inherit
+.x > 0.5) {
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+    
+\color red
+gl_FrontColor
+\color inherit
+ =
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+      vec4(1.0, 0.0, 0.0, 1.0);
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  } else {
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+    
+\color red
+gl_FrontColor
+\color inherit
+ =
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+      vec4(0.0, 0.0, 1.0, 1.0);
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  }
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\end_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+1.5in
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename cow_vertex_shader.png
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
+Fragment shader example
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+2.5in
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{Code}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+void main()
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+{
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  
+\color red
+gl_FragColor
+\color inherit
+.r =
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+    sin(
+\color blue
+gl_FragCoord
+\color inherit
+.x/10);
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color red
+  gl_FragColor
+\color inherit
+.g =
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+    cos(
+\color blue
+gl_FragCoord
+\color inherit
+.y/10);
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color red
+  gl_FragColor
+\color inherit
+.b = 0.5;
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color red
+  gl_FragColor
+\color inherit
+.a = 1.0;
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\end_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+1.5in
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename cow_fragment_shader.png
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Phong Shading
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Itemize
+Phong reflection model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+I=m_{a}i_{a}+\sum_{j\in Lights}(m_{d}j_{d}(L\cdot N)+m_{s}(R\cdot V)^{\alpha}j_{s})\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename lighting_scheme.png
+	width 75page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Phong reflection model components
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Itemize
+Phong reflection model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+I=m_{a}i_{a}+\sum_{j\in Lights}(m_{d}j_{d}(L\cdot N)+m_{s}(R\cdot V)^{\alpha}j_{s})\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Ambient component
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $m_{a}$
+\end_inset
+
+: Material's ambient constant;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $i_{a}$
+\end_inset
+
+: Global ambient constant.
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Itemize
+Phong reflection model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+I=m_{a}i_{a}+\sum_{j\in Lights}(m_{d}j_{d}(L\cdot N)+m_{s}j_{s}(R\cdot V)^{\alpha})\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+Diffuse component
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $m_{d}$
+\end_inset
+
+: Material's diffuse constant;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $j_{d}$
+\end_inset
+
+: Light's diffuse constant;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L$
+\end_inset
+
+: Direction of the light;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $N$
+\end_inset
+
+: Surface's normal.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename phong_diffuse.eps
+	height 50theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Itemize
+Phong reflection model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+I=m_{a}i_{a}+\sum_{j\in Lights}(m_{d}j_{d}(L\cdot N)+m_{s}j_{s}(R\cdot V)^{\alpha})\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+Specular component
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $m_{s}$
+\end_inset
+
+: Material's specular constant;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $j_{s}$
+\end_inset
+
+: Light's specular constant;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R$
+\end_inset
+
+: Direction L of the light after being reflected by N;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V$
+\end_inset
+
+: Direction to the viewer's;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha$
+\end_inset
+
+: Material's shininess.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename phong_specular.eps
+	height 50theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Toon shading
+\end_layout
+
+\begin_layout BeginFrame
+Concept
+\end_layout
+
+\begin_layout Standard
+Very similar to Phong's diffuse shading, but instead of having continuous
+ color changing according to the angle of light, toon shading only uses
+ some tones with abrubt changes between intensity ranges.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename toon_shading.gif
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Example of toon shading
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Bump mapping
+\end_layout
+
+\begin_layout BeginFrame
+Concept
+\end_layout
+
+\begin_layout Itemize
+High level of detail can be achieved using a lot of polygons, but rasterization
+ gets slower
+\end_layout
+
+\begin_layout Itemize
+Perception of detail is based on pixel color, so you can fake it using textures
+\end_layout
+
+\begin_layout Itemize
+Textures does not transmit sensation of roughness or relief, since they
+ are only flat images
+\end_layout
+
+\begin_layout Itemize
+Bump mapping is a technique that adds more details with help of mappings
+ (textures) without adding more polygons
+\end_layout
+
+\begin_layout BeginFrame
+Normal Mapping
+\end_layout
+
+\begin_layout Itemize
+Instead of using only the interpolated normal, use the normal stored in
+ a texture
+\end_layout
+
+\begin_layout Itemize
+For each pixel there is a normal value, encoded as a pixel color in the
+ normal map texture
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Fieldstone.PNG
+	width 33col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename FieldstoneBumpDOT3.PNG
+	width 33col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plane_bump_mapped.png
+	width 33col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Texture, normal map and final result
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Exercises
+\end_layout
+
+\begin_layout BeginFrame
+Shader example
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+{Vertex Shader for Phong's ambient calculation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+void main() {
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  vec4 globalAmbient = 
+\color magenta
+gl_FrontMaterial
+\color inherit
+.ambient
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+    * 
+\color magenta
+gl_LightModel
+\color inherit
+.ambient;
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  vec4 ambient = 
+\color magenta
+gl_FrontMaterial
+\color inherit
+.ambient
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+    * 
+\color magenta
+gl_LightSource
+\color inherit
+[0].ambient;
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  
+\color red
+gl_FrontColor
+\color inherit
+ = ambient + globalAmbient;
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  
+\color red
+gl_Position
+\color inherit
+ = ftransform();
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+Implement diffuse lighting on the vertex shader
+\end_layout
+
+\begin_layout Enumerate
+Implement specular lighting on the vertex shader, then on fragment shader
+\end_layout
+
+\begin_layout Enumerate
+Implement toon shading on vertex shader, then on fragment shader
+\end_layout
+
+\begin_layout BeginFrame
+References
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+
+\change_inserted 2 1224271324
+
+\size small
+GPGPU.ORG - GPGPU TUTORIALS 
+\change_unchanged
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+url{
+\change_inserted 2 1224271307
+http://gpgpu.org/developer/index.shtml
+\change_unchanged
+}
+\end_layout
+
+\end_inset
+
+
+\change_inserted 2 1224270472
+
+\end_layout
+
+\begin_layout Bibliography
+
+\change_inserted 2 1224276503
+
+\size small
+\begin_inset LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+WIKIPEDIA 2008 - SHADER, 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+\change_inserted 2 1224271148
+
+
+\backslash
+url{http://en.wikipedia.org/wiki/
+\change_unchanged
+S
+\change_inserted 2 1224271148
+hader}
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Bibliography
+
+\size small
+\begin_inset LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+LIGHTHOUSE 3D - GLSL TUTORIAL, 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+url{http://www.lighthouse3d.com/opengl/glsl/}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+
+\size small
+\begin_inset LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+OPENGL SHADING LANGUAGE, SECOND EDITION (RANDI J.
+ ROST)
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\end_body
+\end_document

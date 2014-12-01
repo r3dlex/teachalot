@@ -1,0 +1,974 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{color}
+%Necessary for minted
+\definecolor{bg}{rgb}{1,1,1}
+\usepackage{minted}
+
+\newminted{java}{
+  fontsize=\footnotesize, 
+  linenos,
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+\newminted{javasnip}{
+  fontsize=\footnotesize, 
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+%Remove a numeracao das paginas
+\pagestyle{empty}% Reset page style to 'empty'
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\series bold
+Faculdade de Ciências Sociais de Florianópolis
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Disciplina: Linguagem de Programação I
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Professor: André Ferreira Bem Silva
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Data: 31/10/2014
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Aluno(a): _________________________________
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Leia atentamente as questões a seguir e responda-as.
+ Assinale somente uma alternativa correta em cada questão de múltipla escolha
+ e observe a pontuação de cada questão.
+ Boa sorte!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="10">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Questão
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gabarito
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+d
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+(0,5 ponto) As interfaces...
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Apresentam somente declaração de métodos.
+\end_layout
+
+\begin_layout Enumerate
+Possuem somente implementação de métodos.
+\end_layout
+
+\begin_layout Enumerate
+Só possuem elementos estáticos (
+\emph on
+static
+\emph default
+).
+\end_layout
+
+\begin_layout Enumerate
+Tem somente métodos públicos.
+\end_layout
+
+\begin_layout Enumerate
+São idênticas as 
+\emph on
+classes abstratas
+\emph default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(0,5 ponto) Assinale a alternativa 
+\series bold
+correta
+\series default
+ a respeito de classes abstratas:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+São classes que não podem ser instanciadas com a diretiva 
+\emph on
+new.
+\end_layout
+
+\begin_layout Enumerate
+Só possuem elementos públicos.
+\end_layout
+
+\begin_layout Enumerate
+É diferente das interfaces, uma vez que torna opcional a implementação ou
+ não de métodos.
+\end_layout
+
+\begin_layout Enumerate
+A diretiva 
+\emph on
+abstract
+\emph default
+ não pode ser utilizada para identificar uma classe, sendo somente usada
+ em métodos abstratos.
+\end_layout
+
+\begin_layout Enumerate
+Um tipo abstrato não pode ser herdado.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) Assinale a assertiva 
+\series bold
+incorreta
+\series default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Uma variável estática pode ser acessada mesmo sem haver um objeto da classe
+ instanciado.
+\end_layout
+
+\begin_layout Enumerate
+A exceção utiliza-se dos mecanismos de herança e polimorfismo, uma vez que
+ é possível estender o conceito de exceção com novas classes que as definam
+ e que o bloco 
+\emph on
+catch
+\emph default
+ capturas exceções de tipos predeterminadas.
+\end_layout
+
+\begin_layout Enumerate
+A palavra chave 
+\emph on
+extends
+\emph default
+ é utilizada na herança de classes e a 
+\emph on
+implements
+\emph default
+ na implementação de 
+\emph on
+classes
+\emph default
+ 
+\emph on
+abstratas
+\emph default
+ e 
+\emph on
+interfaces
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Os métodos sobrecarregados da superclasse podem receber a annotation 
+\emph on
+@Override
+\emph default
+, a qual indica para o desenvolvedor que esse método foi sobrecarregado
+ de uma 
+\emph on
+classe
+\emph default
+ 
+\emph on
+pai
+\emph default
+, também denominada 
+\emph on
+superclasse
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Ao chamar um método de um objeto, o método efetivamente a ser invocado será
+ o mais especializado, isso é a última 
+\emph on
+sobrecarga
+\emph default
+ na hierarquia de classes em direção à folha.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) A respeito do código abaixo, responda qual assertiva é 
+\series bold
+incorreta
+\series default
+: 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/AbrirArquivo.java
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O código efetua a abertura do arquivo 
+\emph on
+teste.txt, 
+\emph default
+em modo 
+\emph on
+leitura
+\emph default
+, localizado no drive C do sistema da pasta raíz (primária).
+\end_layout
+
+\begin_layout Enumerate
+Caso o arquivo não seja encontrado o bloco dentro do try causará uma exceção
+ do tipo 
+\emph on
+FileNotFoundException 
+\emph default
+a qual será capturada no 
+\emph on
+catch 
+\emph default
+subsequente.
+\end_layout
+
+\begin_layout Enumerate
+O construtor do 
+\emph on
+FileReader
+\emph default
+ apresenta pelo menos a seguinte diretiva de exceção em sua assinatura:
+ 
+\emph on
+throws FileNotFoundException
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Sabendo que a exceção 
+\emph on
+FileNotFoundException 
+\emph default
+é do tipo 
+\emph on
+IOException
+\emph default
+, a troca, no código, do bloco catch para capturar uma exceção do tipo 
+\emph on
+IOException
+\emph default
+, continuará somente capturando as mesmas exceções independente do que aconteça
+ na linha 7.
+\end_layout
+
+\begin_layout Enumerate
+Na linha 10, o método chamado é herdado da superclasse 
+\emph on
+Exception
+\emph default
+ que imprimirá um texto de erro na saída de console, que usualmente é chamado
+ de 
+\emph on
+dump 
+\emph default
+da exceção.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) Assinale o subitem 
+\series bold
+correto
+\series default
+, no que toca polimorfismo, herança e mecanismos de herança:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O polimorfismo caracteriza-se pela assunção de diversos objetos sob uma
+ mesma 
+\emph on
+interface
+\emph default
+ comum.
+ Assim, trata-se conjuntos de objetos distintos sob uma mesma ótica, sendo
+ possível assim reutilizar-se diversos algoritmos desde que todos respeitem
+ essa mesma definição.
+\end_layout
+
+\begin_layout Enumerate
+Ao herdar-se de uma classe pai, os métodos provenientes da mesma são herdados,
+ mas não os atributos.
+\end_layout
+
+\begin_layout Enumerate
+O mecanismo de herança é uma via de mão dupla, ao herdar-se uma classe,
+ ela automaticamente também herda os métodos e atributos da classe que a
+ herdou, havendo assim uma partilha de funções, métodos e atributos.
+\end_layout
+
+\begin_layout Enumerate
+O mecanismo de 
+\emph on
+casting
+\emph default
+ não funciona no caso de uma classe menos especializada na hierarquia de
+ classes para uma mais especializada na mesma hierarquia.
+\end_layout
+
+\begin_layout Enumerate
+Ao chamar-se um método não implementado de uma classe abstrata, o valor
+ 
+\emph on
+null
+\emph default
+ será retornado pelo objeto no qual o método encontra-se indefinido.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) Ao determinar que uma determinada variável de uma classe possui
+ acesso 
+\emph on
+protected
+\emph default
+, estamos indicando que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Possui acesso irrestrito em qualquer escopo.
+\end_layout
+
+\begin_layout Enumerate
+É possível acessá-lo numa subclasse.
+\end_layout
+
+\begin_layout Enumerate
+É acessível na superclasse.
+\end_layout
+
+\begin_layout Enumerate
+Só pode ser usada em um método também 
+\emph on
+protected
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+É modificável, mas somente nos construtores da classe.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) A herança múltipla é comum em algumas linguagens como a C++.
+ Em Java, implementa-se esse tipo de herança ao:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Estender duas 
+\emph on
+classes abstratas
+\emph default
+ simultaneamente.
+\end_layout
+
+\begin_layout Enumerate
+Implementar-se duas 
+\emph on
+interfaces
+\emph default
+ simultaneamente.
+\end_layout
+
+\begin_layout Enumerate
+Implementando uma classe qualquer.
+\end_layout
+
+\begin_layout Enumerate
+Implementar-se duas classes 
+\emph on
+concretas
+\emph default
+, isso é, não abstratas.
+\end_layout
+
+\begin_layout Enumerate
+Herdar de uma classe que implemente as duas classes.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) A diretiva 
+\emph on
+super 
+\emph default
+é usada para...
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Chamar explicitamente o método ou construtor da superclasse.
+\end_layout
+
+\begin_layout Enumerate
+Chamar um método da classe pai.
+\end_layout
+
+\begin_layout Enumerate
+Chamar um método da subclasse.
+\end_layout
+
+\begin_layout Enumerate
+Definir que o método atual não pode ser herdado.
+\end_layout
+
+\begin_layout Enumerate
+Chamar recursivamente o método atual.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,5 ponto) Após a execução do código abaixo, qual seria a combinação correta
+ para j, i e bebe.nome, após a chamada do 
+\emph on
+metodo
+\emph default
+, na linha 11 do 
+\emph on
+main 
+\emph default
+na classe 
+\emph on
+Ref
+\emph default
+?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/Bebe.java
+
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/Ref.java
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+j = 99, i = {0, 99}, bebe._nome = 
+\begin_inset Quotes eld
+\end_inset
+
+Joana
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+j = 0, i = {99, 1}, bebe._nome = 
+\begin_inset Quotes eld
+\end_inset
+
+Maria
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+j = 99, i = {99, 1}, bebe._nome = 
+\begin_inset Quotes eld
+\end_inset
+
+Joana
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+j = 0, i = {0, 1}, bebe._nome = 
+\begin_inset Quotes eld
+\end_inset
+
+Maria
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+j = 99, i = {0, 1}, bebe._nome = 
+\begin_inset Quotes eld
+\end_inset
+
+Joana
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,5 ponto) Demonstre na forma de um gráfico ou outra demonstração que preferir
+ como ficam os elementos da lista do código abaixo após a execução do seguinte
+ trecho de código, isto é ao final das iterações de loop 
+\emph on
+for
+\emph default
+, na linha 9 do 
+\emph on
+main
+\emph default
+.
+ Também, informe quais são os valores impressos na linha 7 para cada iteração
+ do loop:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/ExemploArrayList.java
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

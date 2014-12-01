@@ -1,0 +1,132 @@
+% Copyright 2007 by Till Tantau
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+\ProvidesPackageRCS $Header: /cvsroot/latex-beamer/latex-beamer/themes/outer/beamerouterthemeinfolines.sty,v 1.9 2007/01/28 20:48:30 tantau Exp $
+
+
+\mode<presentation>
+
+
+\setbeamercolor*{author in head/foot}{parent=palette tertiary}
+\setbeamercolor*{title in head/foot}{parent=palette secondary}
+\setbeamercolor*{date in head/foot}{parent=palette primary}
+\setbeamercolor*{black box}{parent=palette quaternary}
+\setbeamercolor*{red box}{use=structure,fg=white,bg=red}
+
+\setbeamercolor*{section in head/foot}{parent=palette tertiary}
+\setbeamercolor*{subsection in head/foot}{parent=palette primary}
+
+\defbeamertemplate*{footline}{infolines theme}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.75ex,dp=1.5ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}
+	\fontsize{6.5}{6.5}{{\textcolor{black}{\textbf{<http://www.cyclops.ufsc.br>}}}}
+  \end{beamercolorbox}%
+%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=7.25ex,dp=1ex,center]{title in head/foot}%
+%    \usebeamerfont{title in head/foot}\insertshorttitle
+%  \end{beamercolorbox}%
+%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=7.25ex,dp=1ex,right]{date in head/foot}%
+%    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+%    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+%  \end{beamercolorbox}}%
+	}
+  \vskip2.25pt%
+}
+
+\defbeamertemplate*{headline}{infolines theme}
+{
+	\leavevmode
+	\begin{minipage}[t]{\paperwidth}
+    \includegraphics[width=1.01\paperwidth]{barra-cyclops.png}
+	\end{minipage}
+	\begin{beamercolorbox}[wd=\paperwidth,ht=0.25ex,dp=1ex,left]{black box}%
+	  \usebeamerfont{section in head/foot}
+	\end{beamercolorbox}%
+}
+
+
+%\defbeamertemplate*{headline}{infolines theme}
+%{
+%  \leavevmode%
+%%  \hbox{
+%	  \begin{minipage}[t]{0.9\paperwidth}%
+%	  \begin{beamercolorbox}[wd=0.9\paperwidth,dp=6.25ex,left]{section in head/foot}%
+%	    \usebeamerfont{section in head/foot}
+%	  \end{beamercolorbox}%
+%%	  \begin{beamercolorbox}[wd=0.85\paperwidth,ht=2.25ex,dp=1ex,left]{black box}%
+%%	    \usebeamerfont{section in head/foot}
+%%	  \end{beamercolorbox}%
+%	%  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,left]{subsection in head/foot}%
+%	%    \usebeamerfont{subsection in head/foot}\hspace*{2ex}\insertsubsectionhead
+%	%  \end{beamercolorbox}}%
+%	  \end{minipage}
+%	  \begin{minipage}[t]{0.1\paperwidth}%
+%	  \includegraphics[width=0.1\paperwidth]{logo_azul.jpg}
+%	  \end{minipage}
+%%  }
+%  \vskip0pt%
+%}
+
+\setbeamertemplate{frametitle}
+{
+  \begin{centering}
+    \par
+    \textbf{\insertframetitle}
+    \par
+  \end{centering}
+}
+
+\setbeamertemplate{title page}
+{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=6.25ex,dp=1ex,sep=2ex,right]{black box}%
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=\paperwidth,ht=10.25ex,dp=1ex,sep=2ex,center]{black box}%
+    \usebeamerfont{title}{\inserttitle}
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=\paperwidth,ht=3.25ex,dp=1ex,sep=2ex,right]{black box}%
+  \end{beamercolorbox}
+
+  \hbox{
+  \begin{beamercolorbox}[wd=0.65\paperwidth,ht=0.4ex,left]{black box}%
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[wd=0.35\paperwidth,ht=0.4ex,right]{red box}%
+  \end{beamercolorbox}
+  }
+%  \begin{beamercolorbox}[wd=\paperwidth,ht=10.25ex,dp=1ex,sep=2ex,right]{black box}%
+
+  \hbox{
+  \begin{beamercolorbox}[wd=0.65\paperwidth,ht=10ex,left]{black box}%
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[wd=0.35\paperwidth,ht=10ex,sep=0ex,left]{black box}%
+		\textbf{\insertauthor}
+  \end{beamercolorbox}
+  }
+%	\hfill{ \textbf{\insertauthor}}
+%  \end{beamercolorbox}
+%  \end{minipage}
+  
+}
+
+%\setbeamertemplate{title}
+%{
+%  \begin{centering}
+%    \par
+%    \textbf{\inserttitle}
+%    \par
+%  \end{centering}
+%}
+
+\setbeamersize{text margin left=1em,text margin right=1em}
+
+\mode
+<all>
