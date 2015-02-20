@@ -564,7 +564,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -837,13 +837,83 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename ../Image/TrafficShare-MobileVsOther.png
 	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/home/andre/Workspace/Github/teachalot/LinguagemDeProgramacaoII/Image/WorldwideSmartDevices.png
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Total de transferência de dados por tipo de dispositivo
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -938,7 +1008,7 @@ SO Mobile
 \end_layout
 
 \begin_layout Itemize
-IOS
+iOS
 \end_layout
 
 \begin_layout Itemize
@@ -986,7 +1056,14 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-GRÁFICO DE SHARE MOBILE
+\align center
+\begin_inset Graphics
+	filename /home/home/andre/Workspace/Github/teachalot/LinguagemDeProgramacaoII/Image/MobileOperatingSystemMarketShareOctober2014.jpg
+	width 90text%
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1003,7 +1080,7 @@ GRÁFICO DE SHARE MOBILE
 status open
 
 \begin_layout Plain Layout
-
+iOS
 \end_layout
 
 \end_inset
@@ -1025,8 +1102,16 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Plain Layout
-GRÁFICO DE SHARE MOBILE
+\begin_layout Itemize
+Celular amplamente utilizado
+\end_layout
+
+\begin_layout Itemize
+Sistema fechado
+\end_layout
+
+\begin_layout Itemize
+Royalties para gerar aplicativos
 \end_layout
 
 \end_inset
@@ -1043,7 +1128,7 @@ GRÁFICO DE SHARE MOBILE
 status open
 
 \begin_layout Plain Layout
-IOS
+iOS
 \end_layout
 
 \end_inset
@@ -1065,8 +1150,94 @@ height "1in"
 height_special "totalheight"
 status open
 
+\begin_layout Itemize
+Linguagens de programação
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Objective-C
+\end_layout
+
+\begin_layout Itemize
+Objective-C++
+\end_layout
+
+\begin_layout Itemize
+Swift
+\end_layout
+
+\end_deeper
+\begin_layout AlertBlock
+\begin_inset Argument 2
+status open
+
 \begin_layout Plain Layout
-BLABLABLA
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2>{Programação em Java? Inexistente nativamente}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Windows Mobile
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/home/andre/Workspace/Github/teachalot/LinguagemDeProgramacaoII/Image/WindowsPhone8StartScreens.jpg
+	width 90text%
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1105,8 +1276,16 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Plain Layout
-BLABLABLA
+\begin_layout Itemize
+Plataforma conhecida
+\end_layout
+
+\begin_layout Itemize
+Plataforma .NET
+\end_layout
+
+\begin_layout Itemize
+Baixa utilização
 \end_layout
 
 \end_inset
