@@ -116,77 +116,17 @@ André Ferreira Bem Silva
 \end_layout
 
 \begin_layout Institute
-Faculdade de Ciências Sociais de Florianópolis
+CESUSC
 \end_layout
 
 \begin_layout Section
 Introdução
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Bibliografia
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-btprint "btPrintAll"
-bibfiles "Refs"
-options "plain"
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "Introduction.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-inputminted[basicstyle={
-\backslash
-small
-\backslash
-ttfamily},tabsize=2]{lua}{Lua/Download.lua}
-\end_layout
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 

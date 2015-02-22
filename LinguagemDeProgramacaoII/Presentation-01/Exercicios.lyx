@@ -110,7 +110,44 @@ height_special "totalheight"
 status open
 
 \begin_layout Enumerate
+Faça uma aplicação HelloWorld que imprima a string HelloWorld na tela do
+ emulador.
+\end_layout
 
+\begin_layout Enumerate
+Adicione um label 
+\emph on
+Username
+\emph default
+ e 
+\emph on
+Password
+\emph default
+ um abaixo do outro e um campo de texto para inserir o nome de usuário ao
+ lado do 
+\emph on
+Username
+\emph default
+ e outro para o campo 
+\emph on
+Password
+\emph default
+.
+ O primeiro deve ser um 
+\emph on
+Text field 
+\emph default
+do tipo 
+\emph on
+Plain Text 
+\emph default
+e o segundo é um 
+\emph on
+Text Field
+\emph default
+ do tipo 
+\emph on
+Password.
 \end_layout
 
 \end_inset
