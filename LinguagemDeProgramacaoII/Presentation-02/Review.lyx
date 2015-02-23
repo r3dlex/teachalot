@@ -522,8 +522,9 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="8" columns="2">
+<lyxtabular version="3" rows="7" columns="2">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="center" valignment="top" width="15text%">
 <column alignment="left" valignment="top" width="70text%">
@@ -545,7 +546,7 @@ Feature
 \begin_layout Plain Layout
 
 \size footnotesize
-Description
+Descrição
 \end_layout
 
 \end_inset
@@ -558,31 +559,7 @@ Description
 \begin_layout Plain Layout
 
 \size footnotesize
-Beautiful UI
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Android OS basic screen provides a beautiful and intuitive user interface.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-Connectivity
+Conectividade
 \end_layout
 
 \end_inset
@@ -606,7 +583,7 @@ GSM/EDGE, IDEN, CDMA, EV-DO, UMTS, Bluetooth, Wi-Fi, LTE, NFC and WiMAX.
 \begin_layout Plain Layout
 
 \size footnotesize
-Storage
+Armazenamento
 \end_layout
 
 \end_inset
@@ -617,7 +594,7 @@ Storage
 \begin_layout Plain Layout
 
 \size footnotesize
-SQLite, a lightweight relational database, is used for data storage purposes.
+SQLite, um banco de dados relacional leve, é usado para armazenamento
 \end_layout
 
 \end_inset
@@ -630,7 +607,7 @@ SQLite, a lightweight relational database, is used for data storage purposes.
 \begin_layout Plain Layout
 
 \size footnotesize
-Media support
+Media
 \end_layout
 
 \end_inset
@@ -642,7 +619,7 @@ Media support
 
 \size footnotesize
 H.263, H.264, MPEG-4 SP, AMR, AMR-WB, AAC, HE-AAC, AAC 5.1, MP3, MIDI, Ogg
- Vorbis, WAV, JPEG, PNG, GIF, and BMP
+ Vorbis, WAV, JPEG, PNG, GIF, e BMP.
 \end_layout
 
 \end_inset
@@ -666,7 +643,7 @@ Messaging
 \begin_layout Plain Layout
 
 \size footnotesize
-SMS and MMS
+SMS e MMS.
 \end_layout
 
 \end_inset
@@ -679,7 +656,7 @@ SMS and MMS
 \begin_layout Plain Layout
 
 \size footnotesize
-Web browser
+Browser
 \end_layout
 
 \end_inset
@@ -690,8 +667,8 @@ Web browser
 \begin_layout Plain Layout
 
 \size footnotesize
-Based on the open-source WebKit layout engine, coupled with Chrome's V8
- JavaScript engine supporting HTML5 and CSS3.
+Baseado em WebKit, integrado com a engine Chrome's V8 JavaScript com suporte
+ a HTML5 e CSS3.
 \end_layout
 
 \end_inset
@@ -715,8 +692,7 @@ Multi-touch
 \begin_layout Plain Layout
 
 \size footnotesize
-Android has native support for multi-touch which was initially made available
- in handsets such as the HTC Hero.
+Tem suporte nativo deste as versões HTC Hero.
 \end_layout
 
 \end_inset
@@ -768,6 +744,7 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features rotate="0" tabularvalignment="middle">
@@ -791,7 +768,7 @@ Feature
 \begin_layout Plain Layout
 
 \size footnotesize
-Description
+Descrição
 \end_layout
 
 \end_inset
@@ -948,6 +925,112 @@ A popular NFC-based technology that lets users instantly share, just by
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+Criando Aplicativos
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/AndroidStudio-Step1.png
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Criando interfaces
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/AndroidStudio-Step4.png
+	width 100text%
 
 \end_inset
 
