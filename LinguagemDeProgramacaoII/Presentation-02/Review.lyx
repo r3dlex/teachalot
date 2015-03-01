@@ -632,7 +632,7 @@ H.263, H.264, MPEG-4 SP, AMR, AMR-WB, AAC, HE-AAC, AAC 5.1, MP3, MIDI, Ogg
 \begin_layout Plain Layout
 
 \size footnotesize
-Messaging
+Mensagem
 \end_layout
 
 \end_inset
@@ -741,7 +741,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -792,8 +792,8 @@ Multi-tasking
 \begin_layout Plain Layout
 
 \size footnotesize
-User can jump from one task to another and same time various application
- can run simultaneously.
+Usuários podem pular entre diversas tarefas da mesma aplicação ou de várias
+ aplicações
 \end_layout
 
 \end_inset
@@ -806,7 +806,7 @@ User can jump from one task to another and same time various application
 \begin_layout Plain Layout
 
 \size footnotesize
-Resizable widgets
+Widgets redimensionáveis
 \end_layout
 
 \end_inset
@@ -817,8 +817,7 @@ Resizable widgets
 \begin_layout Plain Layout
 
 \size footnotesize
-Widgets are resizable, so users can expand them to show more content or
- shrink them to save space
+Widgets são redimensionáveis e podem mostrar níveis diferentes de informação
 \end_layout
 
 \end_inset
@@ -831,7 +830,7 @@ Widgets are resizable, so users can expand them to show more content or
 \begin_layout Plain Layout
 
 \size footnotesize
-Multi-Language
+Multi linguagem
 \end_layout
 
 \end_inset
@@ -842,7 +841,7 @@ Multi-Language
 \begin_layout Plain Layout
 
 \size footnotesize
-Supports single direction and bi-directional text.
+Suporte a textos unidirecionais e bidirecionais
 \end_layout
 
 \end_inset
@@ -881,7 +880,7 @@ Google Cloud Messaging (GCM) is a service that lets developers send short
 \begin_layout Plain Layout
 
 \size footnotesize
-Wi-Fi Direct
+Wi-Fi Direto
 \end_layout
 
 \end_inset
@@ -917,8 +916,8 @@ Android Beam
 \begin_layout Plain Layout
 
 \size footnotesize
-A popular NFC-based technology that lets users instantly share, just by
- touching two NFC-enabled phones together.
+Uma tecnologia NFC popular para troca de informações entre dois dispositivos
+ que estão próximos
 \end_layout
 
 \end_inset
@@ -1022,7 +1021,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 

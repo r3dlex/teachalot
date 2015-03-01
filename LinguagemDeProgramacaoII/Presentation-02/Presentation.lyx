@@ -175,13 +175,41 @@ filename "XML.lyx"
 \end_layout
 
 \begin_layout Section
-Exercícios
+Exercícios I
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Exercicios.lyx"
+filename "ExerciciosI.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Atividades (Activities)
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Activity.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Exercícios II
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "ExerciciosII.lyx"
 
 \end_inset
 

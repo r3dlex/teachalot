@@ -1046,7 +1046,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Itemize
 
@@ -1204,18 +1204,18 @@ status open
 \begin_layout Itemize
 
 \size larger
-manifest
+application
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
 
 \size larger
-xmlns:android="http://..." 
+android:allowBackup="true/false" 
 \begin_inset Formula $\rightarrow$
 \end_inset
 
- Id do Layout
+ Permite backup do aplicativo no dispositivo
 \end_layout
 
 \begin_layout Itemize
@@ -1271,7 +1271,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-Revendo o AndroiManifest...
+Revendo o AndroidManifest...
 \end_layout
 
 \end_inset
@@ -1291,7 +1291,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1352,7 +1352,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Itemize
 
@@ -1419,7 +1419,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Itemize
 
@@ -1706,6 +1706,221 @@ url{http://developer.android.com/guide/topics/manifest/manifest-intro.html}}
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Parser XML
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+
+\size larger
+Parser 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ Extrai dados de um formato
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Parser XML 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ Extrai dados do XML...
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+XMLSerializer
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Android e Java
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/QrCode-AndroidXML.png
+	height 50theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{blue}{
+\backslash
+url{http://developer.android.com/training/basics/network-ops/xml.html}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+EXEMPLO JAVA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+EXEMPLO ANDROID
 \end_layout
 
 \end_inset
