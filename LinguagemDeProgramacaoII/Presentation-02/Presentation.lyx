@@ -34,7 +34,7 @@
 \maintain_unincluded_children false
 \language brazilian
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman default
 \font_sans default
@@ -101,7 +101,7 @@ Aula 02
 \end_layout
 
 \begin_layout Subtitle
-Aplicações
+Começando a Entender Aplicativos
 \end_layout
 
 \begin_layout Author
@@ -119,6 +119,33 @@ André Ferreira Bem Silva
 CESUSC
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%%Hides syntax errors on Minted lexer
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+expandafter
+\backslash
+def
+\backslash
+csname PY@tok@err
+\backslash
+endcsname{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Revendo
 \end_layout
@@ -134,13 +161,13 @@ filename "Review.lyx"
 \end_layout
 
 \begin_layout Section
-Introdução
+XML
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Introduction.lyx"
+filename "XML.lyx"
 
 \end_inset
 

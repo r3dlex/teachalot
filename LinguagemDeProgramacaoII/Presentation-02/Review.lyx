@@ -7,7 +7,7 @@
 \maintain_unincluded_children false
 \language brazilian
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman default
 \font_sans default
@@ -519,7 +519,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -741,7 +741,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -970,6 +970,8 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Plain Layout
+
+\size larger
 Criando Aplicativos
 \end_layout
 
@@ -1023,6 +1025,8 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
+
+\size larger
 Criando interfaces
 \end_layout
 
