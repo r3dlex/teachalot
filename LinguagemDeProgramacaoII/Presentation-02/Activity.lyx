@@ -77,7 +77,7 @@
 status open
 
 \begin_layout Plain Layout
-Ciclo de vida
+Activity
 \end_layout
 
 \end_inset
@@ -97,7 +97,67 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+
+\size larger
+Uma tarefa 
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Pode ser manipulada pelo sistema
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+O Android é multi-tarefa
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Possui um ciclo bem definido...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
 status open
+
+\begin_layout Plain Layout
+Ciclo de vida da atividade
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -144,12 +204,333 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
 	template JavaSourceNoLn
 	filename ../Code/Java/HelloWorldOnCreate.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Task backstack
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+
+\size larger
+Task 
+\begin_inset Formula $\equiv$
+\end_inset
+
+ Tarefa
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+backstack
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size larger
+stack é uma pilha
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+back é plano de fundo
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size larger
+Pilha de tarefas
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Back faz o pop (remove)
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Iniciar activity faz o push (empurra)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../Image/AndroidTaskBackstack.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/QrCode-TaskBackstack.png
+	height 50theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{blue}{
+\backslash
+url{http://developer.android.com/guide/components/tasks-and-back-stack.html}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+System.out.println?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+Biblioteca Android não possui System.out...
+ 
+\end_layout
+
+\begin_layout Itemize
+Classes android.util.Log
+\end_layout
+
+\begin_layout Itemize
+Log.nivel(TAG, MENSAGEM)
+\end_layout
+
+\begin_layout Itemize
+Vamos entender...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+
+\size larger
+Android não possui saída de console
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Existe uma saída para um arquivo o logcat
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Aparece no Android Studio, parte inferior
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/AndroidStudio-Logcat.png
+	width 100text%
 
 \end_inset
 
@@ -190,7 +571,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -547,7 +928,6 @@ status collapsed
 \end_layout
 
 \begin_layout AlertBlock
-
 \begin_inset Argument 2
 status open
 
@@ -559,12 +939,16 @@ status open
 
 
 \backslash
-uncover<2>{
+uncover<2->{
 \end_layout
 
 \end_inset
 
+
+\size larger
 I/HelloWorld: onStart
+\size default
+
 \begin_inset ERT
 status open
 
@@ -576,6 +960,37 @@ status open
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<3>{
+\end_layout
+
+\end_inset
+
+
+\size larger
+Nível/TAG: onStart
+\size default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset
@@ -617,7 +1032,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -642,118 +1057,6 @@ color{blue}{
 \backslash
 url{http://developer.android.com/reference/android/util/Log.html}}
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-System.out.println?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Itemize
-Biblioteca Android não possui System.out...
- 
-\end_layout
-
-\begin_layout Itemize
-Classes android.util.Log
-\end_layout
-
-\begin_layout Itemize
-Log.nivel(TAG, MENSAGEM)
-\end_layout
-
-\begin_layout Itemize
-Vamos entender...
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Itemize
-Android não possui saída de console
-\end_layout
-
-\begin_layout Itemize
-Existe uma saída para um arquivo o logcat
-\end_layout
-
-\begin_layout Itemize
-Aparece no Android Studio, parte inferior
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../Image/AndroidStudio-Logcat.png
-	width 100text%
 
 \end_inset
 

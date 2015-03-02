@@ -98,10 +98,16 @@ height_special "totalheight"
 status open
 
 \begin_layout Enumerate
-Implementar os métodos de vida de ciclo da activity, assim como a impressão
- na saída de console do Android.
- Observar o resultado no emulador na saída de console para a activity HelloWorld.
- Observem a ordem em que as operações acontecem e informem junto ao exercício.
+Escreva um leitor de arquivo Nota.xml.
+\end_layout
+
+\begin_layout Enumerate
+Escreva um escritor de arquivo Nota.xml.
+\end_layout
+
+\begin_layout Plain Layout
+Obs: Utilize o diretório "/data/local/tmp" para escrever os arquivos de
+ entrada e saída no dispositivo.
 \end_layout
 
 \end_inset

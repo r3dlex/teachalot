@@ -161,13 +161,13 @@ filename "Review.lyx"
 \end_layout
 
 \begin_layout Section
-XML
+Atividades (Activities)
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "XML.lyx"
+filename "Activity.lyx"
 
 \end_inset
 
@@ -189,13 +189,13 @@ filename "ExerciciosI.lyx"
 \end_layout
 
 \begin_layout Section
-Atividades (Activities)
+XML
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Activity.lyx"
+filename "XML.lyx"
 
 \end_inset
 
