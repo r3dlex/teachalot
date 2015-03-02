@@ -570,7 +570,7 @@ Conectividade
 \begin_layout Plain Layout
 
 \size footnotesize
-GSM/EDGE, IDEN, CDMA, EV-DO, UMTS, Bluetooth, Wi-Fi, LTE, NFC and WiMAX.
+GSM/EDGE, IDEN, CDMA, EV-DO, UMTS, Bluetooth, Wi-Fi, LTE, NFC e WiMAX.
 \end_layout
 
 \end_inset
@@ -865,9 +865,9 @@ GCM
 \begin_layout Plain Layout
 
 \size footnotesize
-Google Cloud Messaging (GCM) is a service that lets developers send short
- message data to their users on Android devices, without needing a proprietary
- sync solution.
+Google Cloud Messaging (GCM) é um seriço que permite a desenvolvedores enviarem
+ pequenas mensagens aos seus usuários Android, sem a necessidade de uma
+ solução proprietária para tal.
 \end_layout
 
 \end_inset
@@ -880,7 +880,7 @@ Google Cloud Messaging (GCM) is a service that lets developers send short
 \begin_layout Plain Layout
 
 \size footnotesize
-Wi-Fi Direto
+Wi-Fi Direct
 \end_layout
 
 \end_inset
@@ -891,8 +891,8 @@ Wi-Fi Direto
 \begin_layout Plain Layout
 
 \size footnotesize
-A technology that lets apps discover and pair directly, over a high-bandwidth
- peer-to-peer connection.
+Uma tecnologia que permite aos apps descobrir seus pares diretamente, em
+ uma rede P2P de alta largura de banda.
 \end_layout
 
 \end_inset
