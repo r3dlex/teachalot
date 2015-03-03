@@ -453,22 +453,30 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Itemize
+
+\size larger
 Biblioteca Android não possui System.out...
  
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Classes android.util.Log
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Log.nivel(TAG, MENSAGEM)
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Vamos entender...
 \end_layout
 

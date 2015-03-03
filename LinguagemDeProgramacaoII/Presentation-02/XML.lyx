@@ -1291,7 +1291,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1501,7 +1501,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1677,7 +1677,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1878,8 +1878,53 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-\align center
-EXEMPLO JAVA
+
+\size larger
+Cenário
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Usuário tem acesso a um mural
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+O mural tem mensagens com:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size larger
+título
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+corpo/mensagem
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+autor
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+data
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size larger
+Como salvar as mensagens em XML?
 \end_layout
 
 \end_inset
@@ -1919,8 +1964,13 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-\align center
-EXEMPLO ANDROID
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/Java/Mensagem-Part.java
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1928,6 +1978,261 @@ EXEMPLO ANDROID
 
 \end_layout
 
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+XmlSerializer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/Java/XmlSerializer-Init.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/Java/XmlSerializer-Write.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Resultado?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template XmlSourceNoLnNoFrame
+	filename ../Code/XML/MensagemOutput.xml
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/Java/XmlSerializer-Call.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Formatador Xml
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/QrCode-XmlFormatter.png
+	height 50theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{blue}{
+\backslash
+url{http://www.freeformatter.com/xml-formatter.html}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Separator
 
 \end_layout

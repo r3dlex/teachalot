@@ -1,4 +1,4 @@
-public String writeXml(List<Mensagem> mensagens) {
+public String escreverXml(List<Mensagem> mensagens) {
   XmlSerializer serializer = Xml.newSerializer();
   StringWriter writer = new StringWriter();
   try {

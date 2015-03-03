@@ -98,16 +98,21 @@ height_special "totalheight"
 status open
 
 \begin_layout Enumerate
-Escreva um leitor de arquivo Nota.xml.
+Escreva um escritor de arquivo Nota.xml.
 \end_layout
 
 \begin_layout Enumerate
-Escreva um escritor de arquivo Nota.xml.
+Escreva um leitor de arquivo Nota.xml, pesquise métodos e possibilidades!
+\end_layout
+
+\begin_layout Enumerate
+Escreva um leitor e escritor da classe Mensagem, conforme demonstrado nos
+ slides!
 \end_layout
 
 \begin_layout Plain Layout
 Obs: Utilize o diretório "/data/local/tmp" para escrever os arquivos de
- entrada e saída no dispositivo.
+ entrada e saída no dispositivo e a saída de Log para verificar a corretude
 \end_layout
 
 \end_inset
