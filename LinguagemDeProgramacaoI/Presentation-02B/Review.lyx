@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass beamer
@@ -31,13 +31,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -48,15 +48,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry true
-\use_amsmath 1
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 1
 \index Index
 \shortcut idx
@@ -79,10 +88,20 @@
 
 \begin_body
 
-\begin_layout BeginPlainFrame
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Computador
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -120,10 +139,25 @@ Todos os comandos são dados por ela
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Instruções
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -140,6 +174,8 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
+
+\size larger
 c = a + b;
 \end_layout
 
@@ -160,18 +196,24 @@ uncover<2->{
 \end_layout
 
 \begin_layout Enumerate
+
+\size larger
 Leia o valor de 
 \emph on
 a
 \end_layout
 
 \begin_layout Enumerate
+
+\size larger
 Leia o valor de 
 \emph on
 b
 \end_layout
 
 \begin_layout Enumerate
+
+\size larger
 Some 
 \emph on
 a
@@ -182,6 +224,8 @@ b
 \end_layout
 
 \begin_layout Enumerate
+
+\size larger
 Escreva o resultado em 
 \emph on
 c
@@ -206,10 +250,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Linguagens de Programação
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -222,14 +281,22 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Itemize
-Tem uma sintaxe mais fácil de entender que linguagem de máquina
+Sintaxe complexa
+\end_layout
+
+\begin_layout Itemize
+Pode gerar linguagem de máquina
 \end_layout
 
 \begin_layout Itemize
 Precisa ser "traduzida"
+\end_layout
+
+\begin_layout Itemize
+Traduzida pelo compilador
 \end_layout
 
 \end_inset
@@ -237,10 +304,25 @@ Precisa ser "traduzida"
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Compilador
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -362,10 +444,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Java
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -394,20 +491,28 @@ Falar sobre Java e JVM
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Popular
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Roda em uma 
 \emph on
 máquina virtual
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Complexa
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Muito usada, muitos exemplos
 \end_layout
 
@@ -416,10 +521,25 @@ Muito usada, muitos exemplos
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -435,10 +555,14 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Itemize
+
+\size larger
 Código fonte (.java)
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Código binário JVM (.class)
 \end_layout
 
@@ -491,10 +615,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Tipos
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -513,9 +652,9 @@ status collapsed
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
@@ -650,10 +789,21 @@ textos ("Uma string", "Exemplo")
 
 \end_layout
 
-\begin_layout BeginFrame
+\end_deeper
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Inteiros
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -672,11 +822,11 @@ status collapsed
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
@@ -975,10 +1125,21 @@ u0000'
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Variável
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1028,70 +1189,25 @@ Tipo nativo usamos (int, float, boolean, ...)
 
 \end_layout
 
-\begin_layout BeginPlainFrame
-Usando variáveis
-\end_layout
-
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Itemize
-Declaração
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-int a;
-\end_layout
-
-\begin_layout Itemize
-Existe variável 
-\emph on
-a
-\emph default
- no escopo
-\end_layout
-
 \end_deeper
-\begin_layout Itemize
-Atribuição
+\begin_layout Separator
+
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-a = 1024;
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Operações
 \end_layout
 
-\begin_layout Itemize
-
-\family roman
-\emph on
-a 
-\emph default
-recebe o valor 1024
-\end_layout
-
-\end_deeper
 \end_inset
 
 
 \end_layout
 
-\begin_layout BeginPlainFrame
-Operações
-\end_layout
-
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1139,9 +1255,9 @@ Division: /
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
@@ -1294,10 +1410,25 @@ Módulo
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Divisão
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout LyX-Code
 \begin_inset Box Frameless
 position "t"
@@ -1310,7 +1441,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Itemize
 Funciona diferente para 
@@ -1324,7 +1455,7 @@ decimais
 
 \begin_layout Plain Layout
 \begin_inset External
-	template JavaSource
+	template JavaSourceNoLnNoFrame
 	filename ../Code/Divisao.java
 
 \end_inset
@@ -1337,10 +1468,25 @@ decimais
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Ordem de operações
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1380,10 +1526,25 @@ Operadores lógicos
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1399,14 +1560,20 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Itemize
+
+\size larger
 A precedência é esquerda para a direita (matemática)
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Lado direito de um '=' é sempre avaliado primeiro!
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Parênteses aumentam a precedência
 \end_layout
 
@@ -1425,7 +1592,7 @@ uncover<2->{
 
 
 \begin_inset External
-	template JavaSource
+	template JavaSourceNoLnNoFrame
 	filename ../Code/OrdemDeOperacoes.java
 
 \end_inset
@@ -1449,334 +1616,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
-Operações relacionais
+\end_deeper
+\begin_layout Separator
+
 \end_layout
 
-\begin_layout Standard
-\align center
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
 
 \begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<row>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Operador
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Descrição
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Exemplo
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Resultado
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-==
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-é igual a
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-a == b
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\{true,false\}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-!=
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-é diferente de
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-a != b
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\{true,false\}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
->=
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-maior ou igual a
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2 >= 4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\{true,false\}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
->
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-maior que
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2 > 4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\{true,false\}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-<
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-menor que
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4 < 2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\{true,false\}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-<=
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-menor ou igual a
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4 <= 2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\{true,false\}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout BeginPlainFrame
 Conversão de tipos
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1792,22 +1650,28 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Plain Layout
+
+\size larger
 String numero = 10;
 \end_layout
 
 \begin_layout AlertBlock
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-{
+
 \backslash
 uncover<2->{Causa erro! (incompatible types)
 \backslash
 
 \backslash
-Java é uma linguagem fortemente tipada.}}
+Java é uma linguagem fortemente tipada.}
 \end_layout
 
 \end_inset
@@ -1820,10 +1684,30 @@ Java é uma linguagem fortemente tipada.}}
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Casting
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1839,12 +1723,14 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Itemize
+
+\size larger
 Conversão de um tipo em outro
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset External
-	template JavaSource
+	template JavaSourceNoLnNoFrame
 	filename ../Code/Casting.java
 
 \end_inset
@@ -1857,10 +1743,25 @@ Conversão de um tipo em outro
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Concatenação de Strings
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1873,32 +1774,42 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
+
+\size larger
 "Hello" + "World!";
 \end_layout
 
 \begin_layout ExampleBlock
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-{
+
 \backslash
 uncover<2->{
 \end_layout
 
 \end_inset
 
+
+\size larger
 "Hello World!"
+\size default
+
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-}}
+}
 \end_layout
 
 \end_inset
@@ -1911,10 +1822,30 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_inset
+
 
 \end_layout
 
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1927,7 +1858,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 String umaString = "Meu nome é ";
@@ -1938,12 +1869,16 @@ umaString + "João";
 \end_layout
 
 \begin_layout ExampleBlock
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-{
+
 \backslash
 uncover<2->{
 \end_layout
@@ -1956,7 +1891,7 @@ status open
 
 \begin_layout Plain Layout
 
-}}
+}
 \end_layout
 
 \end_inset
@@ -1969,10 +1904,30 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
-Função main
+\end_inset
+
+
 \end_layout
 
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Funções...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1985,298 +1940,11 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
-
-\begin_layout Itemize
-Função chamada ao executar a classe (
-\emph on
-.class
-\emph default
-)
-\end_layout
-
-\begin_layout Itemize
-no eclipse, se digitar "main" e ctrl+espaço ele aparece a sugestão do método
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \begin_inset External
-	template JavaSource
-	filename ../Code/FuncaoMain.java
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout BeginPlainFrame
-E agora?
-\end_layout
-
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset External
-	template JavaSource
-	filename ../Code/FuncaoMain.java
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Programas definidos dentro da função 
-\emph on
-main
-\emph default
-?
-\end_layout
-
-\begin_layout AlertBlock
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-{
-\backslash
-uncover<2->{
-\end_layout
-
-\end_inset
-
-Programas podem possuir milhares de linhas de código!!!
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout BeginPlainFrame
-Programando em "blocos"
-\end_layout
-
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset External
-	template JavaSource
-	filename ../Code/FuncaoMain.java
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<2->{
-\end_layout
-
-\end_inset
-
-
-\emph on
-Modificadores TipoDeRetorno NomeDaFuncao(Argumentos)
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<3->{
-\end_layout
-
-\end_inset
-
-Modificadores: 
-\begin_inset Formula $\{public,static\}$
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<4->{
-\end_layout
-
-\end_inset
-
-TipoDeRetorno: void
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<5->{
-\end_layout
-
-\end_inset
-
-NomeDaFuncao: main
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<6->{
-\end_layout
-
-\end_inset
-
-Argumentos: String[] args
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout BeginPlainFrame
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset External
-	template JavaSource
+	template JavaSourceNoLnNoFrame
 	filename ../Code/ImprimirLinhas.java
 
 \end_inset
@@ -2285,12 +1953,16 @@ status collapsed
 \end_layout
 
 \begin_layout ExampleBlock
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-{
+
 \backslash
 uncover<2->{Começando impressão de linhas
 \backslash
@@ -2304,7 +1976,7 @@ uncover<2->{Começando impressão de linhas
 \backslash
 
 \backslash
-Terminando impressão de linhas}}
+Terminando impressão de linhas}
 \end_layout
 
 \end_inset
@@ -2317,10 +1989,30 @@ Terminando impressão de linhas}}
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Exercícios I
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -2334,6 +2026,19 @@ special "none"
 height "1in"
 height_special "totalheight"
 status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+WOOT ME
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Enumerate
 Implemente um código que faça o cálculo da posição unidimensional 
@@ -2369,9 +2074,6 @@ calcularPosicao
 
 \end_layout
 
-\begin_layout EndFrame
-
-\end_layout
-
+\end_deeper
 \end_body
 \end_document

@@ -137,53 +137,6 @@ Possui um ciclo bem definido...
 status open
 
 \begin_layout Plain Layout
-Ciclo de vida da atividade
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../Image/AndroidActivityLifecycle.png
-	height 90theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -230,6 +183,57 @@ status collapsed
 status open
 
 \begin_layout Plain Layout
+Ciclo de vida da atividade
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/AndroidActivityLifecycle.png
+	height 90theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Task backstack
 \end_layout
 
@@ -254,7 +258,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Itemize
 
@@ -453,7 +457,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Itemize
 
@@ -898,6 +902,10 @@ Os níveis de log podem ser utilizados para filtrar os tipos de mensagem
 \end_layout
 
 \begin_layout PlainFrame
+
+\end_layout
+
+\begin_layout PlainFrame
 \begin_inset Argument 4
 status open
 
@@ -922,7 +930,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
