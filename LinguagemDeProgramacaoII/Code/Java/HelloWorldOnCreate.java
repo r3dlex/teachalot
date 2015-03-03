@@ -1,9 +1,10 @@
 public class HelloWorldActivity extends Activity {
-  private static final String TAG = "HelloWorld";
   @Override
-  protected void onStart() {
-    Log.i(TAG, "onStart");
-    super.onStart();
+  protected void onCreate(Bundle savedInstanceState) {
+    //Salva o estado da activity
+    super.onCreate(savedInstanceState);
+    //Organiza a interface da atividade
+    setContentView(R.layout.activity_hello_world);
   }
   //...
 }
