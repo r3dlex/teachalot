@@ -1007,8 +1007,9 @@ aceleração
 \end_layout
 
 \begin_layout Enumerate
-Faça um algoritmo que calcule se determinado número é um palíndromo (sua
+Faça um algoritmo que calcule se determinado String é um palíndromo (sua
  leitura da esquerda para a direita e vice-versa obtém o mesmo resultado).
+ Ex: aba, asa, raiar, sopapos, salas...
 \end_layout
 
 \begin_layout Enumerate
