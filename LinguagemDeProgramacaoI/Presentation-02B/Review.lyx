@@ -1155,10 +1155,14 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Itemize
+
+\size larger
 NomeDoTipo nomeDaVariavel;
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 NomeDoTipo é uma 
 \emph on
 class
@@ -1173,14 +1177,20 @@ tipo nativo
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Classes definimos ou importamos (Java)
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Enums definimos ou importamos (Java)
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Tipo nativo usamos (int, float, boolean, ...)
 \end_layout
 
@@ -1441,10 +1451,12 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Itemize
-Funciona diferente para 
+
+\size larger
+Diferente para 
 \emph on
 inteiros
 \emph default
@@ -1502,22 +1514,32 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Plain Layout
+
+\size larger
 Regras matemáticas tradicionais mais operadores lógicos:
 \end_layout
 
 \begin_layout Enumerate
+
+\size larger
 Parênteses
 \end_layout
 
 \begin_layout Enumerate
+
+\size larger
 Multiplicação, divisão
 \end_layout
 
 \begin_layout Enumerate
+
+\size larger
 Adição, subtração, módulo
 \end_layout
 
 \begin_layout Enumerate
+
+\size larger
 Operadores lógicos
 \end_layout
 
@@ -1858,13 +1880,17 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
+
+\size larger
 String umaString = "Meu nome é ";
 \end_layout
 
 \begin_layout Plain Layout
+
+\size larger
 umaString + "João";
 \end_layout
 
@@ -1885,7 +1911,11 @@ uncover<2->{
 
 \end_inset
 
+
+\size larger
 "Meu nome é João"
+\size default
+
 \begin_inset ERT
 status open
 
@@ -1919,7 +1949,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-Funções...
+Funções
 \end_layout
 
 \end_inset
@@ -1964,8 +1994,21 @@ status open
 
 
 \backslash
-uncover<2->{Começando impressão de linhas
-\backslash
+uncover<2->{
+\end_layout
+
+\end_inset
+
+
+\size larger
+Começando impressão de linhas
+\size default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
 
 \backslash
 
@@ -1976,7 +2019,24 @@ uncover<2->{Começando impressão de linhas
 \backslash
 
 \backslash
-Terminando impressão de linhas}
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\size larger
+Terminando impressão de linhas
+\size default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset
@@ -2004,7 +2064,7 @@ Terminando impressão de linhas}
 status open
 
 \begin_layout Plain Layout
-Exercícios I
+Exercícios II
 \end_layout
 
 \end_inset
@@ -2025,20 +2085,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-WOOT ME
-\end_layout
-
-\end_inset
-
-
-\end_layout
+status collapsed
 
 \begin_layout Enumerate
 Implemente um código que faça o cálculo da posição unidimensional 

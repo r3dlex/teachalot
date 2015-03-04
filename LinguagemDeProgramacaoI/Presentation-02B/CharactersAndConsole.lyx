@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass beamer
@@ -31,13 +31,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -48,15 +48,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry true
-\use_amsmath 1
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 1
 \index Index
 \shortcut idx
@@ -79,10 +88,20 @@
 
 \begin_body
 
-\begin_layout BeginPlainFrame
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Console
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -229,10 +248,25 @@ public class Test {
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -255,7 +289,7 @@ Direto do console
 String input = System.console().readLine();
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -290,28 +324,29 @@ status open
 \end_layout
 
 \begin_layout AlertBlock
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-{
+
 \backslash
 uncover<3->{
 \end_layout
 
 \end_inset
 
-Problema:
- Não funciona em IDE! (Eclipse)
-\lang brazilian
-
+Problema: Não funciona em IDE! (Eclipse)
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-}}
+}
 \end_layout
 
 \end_inset
@@ -324,10 +359,30 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_inset
+
 
 \end_layout
 
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -343,10 +398,14 @@ height_special "totalheight"
 status open
 
 \begin_layout Itemize
+
+\size larger
 Uma IDE implementa seu próprio console
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Solução: Usar a entrada padrão (
 \emph on
 System.in
@@ -354,12 +413,12 @@ System.in
 )
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -373,14 +432,18 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\size larger
 Console do sistema (
 \emph on
 cmd.exe
 \emph default
- no Windows)
+ no Windows
+\size default
+)
 \end_layout
 
 \end_inset
@@ -398,10 +461,117 @@ cmd.exe
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\size larger
+BufferedReader (InputStreamReader)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/LendoConsole.java
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2->{
+\end_layout
+
+\end_inset
+
+
+\size larger
+Funciona com IDEs e Consoles!
+\size default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\size larger
+String
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -417,82 +587,26 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Itemize
-BufferedReader (InputStreamReader)
-\end_layout
 
-\begin_layout Plain Layout
-\begin_inset External
-	template JavaSource
-	filename ../Code/LendoConsole.java
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout ExampleBlock
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-{
-\backslash
-uncover<2->{
-\end_layout
-
-\end_inset
-
-Funciona com IDEs e Consoles!
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout BeginPlainFrame
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Itemize
-Uma string é uma sequência de caracteres
+\size larger
+Sequência de caracteres
 \end_layout
 
 \begin_layout Itemize
-Isto é, um array!
+
+\size larger
+Um array! (de caracteres)
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Acessando: String.charAt(indice)
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Tamanho: String.length()
 \end_layout
 
@@ -501,10 +615,25 @@ Tamanho: String.length()
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -517,9 +646,11 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
-\begin_layout Itemize
+\begin_layout Plain Layout
+
+\size larger
 "Ola mundo!"
 \end_layout
 
@@ -527,17 +658,17 @@ status open
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="10">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
@@ -655,6 +786,8 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size larger
 O
 \end_layout
 
@@ -664,6 +797,8 @@ O
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size larger
 l
 \end_layout
 
@@ -673,6 +808,8 @@ l
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size larger
 a
 \end_layout
 
@@ -691,6 +828,8 @@ a
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size larger
 m
 \end_layout
 
@@ -700,6 +839,8 @@ m
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size larger
 u
 \end_layout
 
@@ -709,6 +850,8 @@ u
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size larger
 n
 \end_layout
 
@@ -718,6 +861,8 @@ n
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size larger
 d
 \end_layout
 
@@ -727,6 +872,8 @@ d
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size larger
 o
 \end_layout
 
@@ -736,6 +883,8 @@ o
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size larger
 !
 \end_layout
 
@@ -750,12 +899,16 @@ o
 \end_layout
 
 \begin_layout ExampleBlock
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-{String.length() = 
+String.length() = 
 \backslash
 only<1>{?}
 \backslash
@@ -767,7 +920,12 @@ String.charAt(5) =
 \backslash
 only<1,2>{?}
 \backslash
-uncover<3->{u}}
+uncover<3->{u}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -793,10 +951,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Exercícios III
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -809,7 +982,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Enumerate
 Modifique o exemplo das Particulas sendo desenhadas na tela para você poder
@@ -834,9 +1007,15 @@ aceleração
 \end_layout
 
 \begin_layout Enumerate
+Faça um algoritmo que calcule se determinado número é um palíndromo (sua
+ leitura da esquerda para a direita e vice-versa obtém o mesmo resultado).
+\end_layout
+
+\begin_layout Enumerate
 Faça uma calculadora que imprima o resultado de uma equação inserida no
  console.
- Os caracteres válidos são quaisquer números, '+', '-', '*', e '/'.
+ Os caracteres válidos são quaisquer números, '+', '-', '*', e '/', sem
+ haver noção de precedência.
 \end_layout
 
 \end_inset
@@ -844,9 +1023,6 @@ Faça uma calculadora que imprima o resultado de uma equação inserida no
 
 \end_layout
 
-\begin_layout EndFrame
-
-\end_layout
-
+\end_deeper
 \end_body
 \end_document
