@@ -965,7 +965,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-Revendo o AndroiManifest...
+Revendo o AndroidManifest...
 \end_layout
 
 \end_inset
@@ -1118,7 +1118,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-Revendo o AndroiManifest...
+Revendo o AndroidManifest...
 \end_layout
 
 \end_inset
@@ -1215,29 +1215,37 @@ android:allowBackup="true/false"
 \begin_inset Formula $\rightarrow$
 \end_inset
 
- Permite backup do aplicativo no dispositivo
+ Backup do aplicativo
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-package="nome.do.pacote.java"
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
+android:icon
+\begin_inset Formula $\rightarrow$
 \end_inset
 
-<!-- Comentário XML ...
- --> 
+ Ícone 
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+android:theme
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ Tema
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+android:label
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ Descrição
 \end_layout
 
 \end_deeper
@@ -2135,7 +2143,6 @@ status open
 
 \begin_deeper
 \begin_layout Standard
-
 \begin_inset Box Frameless
 position "t"
 hor_pos "c"
@@ -2184,7 +2191,6 @@ Formatador Xml
 
 \begin_deeper
 \begin_layout Standard
-
 \begin_inset Box Frameless
 position "t"
 hor_pos "c"
