@@ -618,7 +618,7 @@ Imagem!
 status open
 
 \begin_layout Plain Layout
-Resources
+
 \end_layout
 
 \end_inset
@@ -639,7 +639,69 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+
+\size larger
+Criar Projeto
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Implementar classes e recursos
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Empacotar o Aplicativo
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Instalar, rodar e manter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
 status open
+
+\begin_layout Plain Layout
+Recursos (Resources)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
 
 \begin_layout Itemize
 
@@ -692,6 +754,262 @@ etc
 status open
 
 \begin_layout Plain Layout
+Resources
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\size larger
+\begin_inset Graphics
+	filename ../Image/QrCode-ResourcesAndroid.png
+	height 60theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+url{http://developer.android.com/guide/topics/resources/index.html}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Strings
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+
+\size larger
+Tipos
+\end_layout
+
+\begin_layout Enumerate
+
+\size larger
+Strings
+\end_layout
+
+\begin_layout Enumerate
+
+\size larger
+Array de Strings
+\end_layout
+
+\begin_layout Enumerate
+
+\size larger
+Plurais (Plurals)
+\end_layout
+
+\begin_layout ExampleBlock
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2>{
+\end_layout
+
+\end_inset
+
+
+Plurals são Strings com números.
+ Ex: "Livros", 10
+\lang brazilian
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Strings
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+
+\size larger
+Tipos: String, Array de String, Plurais
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Gravados em res/values/*.xml
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+* 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ strings, ou outro nome
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Pode conter formatação e estilo
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Formato XML
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset External
+	template XmlSourceNoLnNoFrame
+	filename ../Code/XML/UmaString.xml
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Strings
 \end_layout
 
@@ -718,7 +1036,37 @@ status open
 \begin_layout Plain Layout
 
 \size larger
-Woot!
+Acessadas em outros recursos
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+@string/nome_da_string
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+ex: @string/teste
+\end_layout
+
+\begin_layout Plain Layout
+
+\size larger
+E no código Java
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+R.string.nome_da_string
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+ex: R.string.teste
 \end_layout
 
 \end_inset
