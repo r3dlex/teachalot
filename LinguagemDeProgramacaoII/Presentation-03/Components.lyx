@@ -871,7 +871,6 @@ Plurais (Plurals)
 \end_layout
 
 \begin_layout ExampleBlock
-
 \begin_inset Argument 2
 status open
 
@@ -888,11 +887,8 @@ uncover<2>{
 
 \end_inset
 
-
 Plurals são Strings com números.
  Ex: "Livros", 10
-\lang brazilian
-
 \begin_inset ERT
 status open
 
@@ -1031,7 +1027,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1067,6 +1063,322 @@ R.string.nome_da_string
 
 \size larger
 ex: R.string.teste
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Classe R
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+
+\size larger
+Acesso Java aos 
+\emph on
+Resources
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Gerado pelo Android Studio
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Previsto no Projeto Android
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Atualização automática
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Utilização transparente
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size larger
+Não fica evidente se é XML ou etc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\size larger
+\begin_inset Graphics
+	filename ../Image/QrCode-RClass.png
+	height 60theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+url{http://developer.android.com/reference/android/R.html}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Internacionalização
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+
+\size larger
+Personalização das Strings
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Tradução para idiomas
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Padrão ficam no res/values/*
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Outras línguas em res/values-xx/*
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+xx 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ Código da língua
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+ex: pt, it, es...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Para pensar...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Exercícios I
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Enumerate
+
+\size larger
+Fazer um aplicativo que mostre Olá mundo por padrão e Hello World na versão
+ em inglês.
 \end_layout
 
 \end_inset

@@ -12,6 +12,7 @@
 \usepackage{bibentry}
 \bibliographystyle{apalike}
 \usepackage{chngcntr}
+\usepackage{multimedia}
 
 \newminted{java}{
   fontsize=\footnotesize, 
