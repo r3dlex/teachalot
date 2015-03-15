@@ -98,7 +98,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Itemize
 
@@ -224,7 +224,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Itemize
 
@@ -267,48 +267,6 @@ Mas pode mudar em telas maiores
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-Exemplo!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
 Service
 \end_layout
 
@@ -330,7 +288,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Itemize
 
@@ -598,9 +556,14 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/AndroidBuildingAndSigningApks.png
+	width 95text%
 
-\size larger
-Imagem!
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1183,7 +1146,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1309,7 +1272,7 @@ ex: pt, it, es...
 status open
 
 \begin_layout Plain Layout
-Para pensar...
+
 \end_layout
 
 \end_inset
@@ -1333,6 +1296,301 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+movie[label=show3,height=0.85
+\backslash
+textheight,poster ,showcontrols] {
+\backslash
+includegraphics[height=0.85
+\backslash
+textheight]{../Image/VideoPreview-OlaInternacionalizado.png}}{OlaInternacionalizado.
+mkv}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Para pensar...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+
+\size larger
+1.
+ Cada Activity representa uma interação única do usuário com o Android.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size larger
+R:
+\size default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2->{
+\backslash
+textcolor{red}{
+\end_layout
+
+\end_inset
+
+
+\size larger
+Verdadeiro
+\size default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+
+\size larger
+2.
+ A utilização de recursos torna a compilação mais rápida...
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size larger
+R:
+\size default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2->{
+\backslash
+textcolor{red}{
+\end_layout
+
+\end_inset
+
+
+\size larger
+Verdadeiro
+\size default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+
+\size larger
+3.
+ O aplicativo encontra-se no estado visível entre as fases do seu ciclo
+ de vida onResume() e onPause()
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size larger
+R:
+\size default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2->{
+\backslash
+textcolor{red}{
+\end_layout
+
+\end_inset
+
+
+\size larger
+Verdadeiro
+\size default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -1372,13 +1630,20 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Enumerate
 
 \size larger
-Fazer um aplicativo que mostre Olá mundo por padrão e Hello World na versão
- em inglês.
+Fazer um programa que imprima Hello World na versão em inglês e Olá Mundo
+ na versão em português.
+\end_layout
+
+\begin_layout Enumerate
+
+\size larger
+Refazer o aplicativo de usuário e senha com strings diferentes para as línguas,
+ inglês, italiano e português.
 \end_layout
 
 \end_inset
