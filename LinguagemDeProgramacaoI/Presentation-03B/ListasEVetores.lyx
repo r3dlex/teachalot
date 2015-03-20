@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass beamer
@@ -31,13 +31,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -48,15 +48,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry true
-\use_amsmath 1
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 1
 \index Index
 \shortcut idx
@@ -79,10 +88,20 @@
 
 \begin_body
 
-\begin_layout BeginPlainFrame
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Lista array
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -98,18 +117,32 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Itemize
-Similar a um array, mas tem propriedades de lista
+
+\size larger
+Similar a um array
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
+Tem propriedades de lista
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
 Cresce dinamicamente
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Mesmos índices que um array
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 package: java.util.ArrayList
 \end_layout
 
@@ -118,10 +151,25 @@ package: java.util.ArrayList
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Exemplo
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Note Note
 status open
@@ -329,38 +377,17 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Lista encadeada
-\end_layout
-
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Itemize
-Lista cujos elementos estão 
-\emph on
-encadeados
-\emph default
- entre si
-\end_layout
-
-\begin_layout Itemize
-No java denomina-se List
-\end_layout
-
-\begin_layout Itemize
-package: java.util.LinkedList
 \end_layout
 
 \end_inset
@@ -368,10 +395,7 @@ package: java.util.LinkedList
 
 \end_layout
 
-\begin_layout BeginPlainFrame
-Exemplo
-\end_layout
-
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -385,6 +409,68 @@ special "none"
 height "1in"
 height_special "totalheight"
 status open
+
+\begin_layout Itemize
+
+\size larger
+Elementos estão 
+\emph on
+encadeados
+\emph default
+ entre si
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+No java denomina-se 
+\emph on
+List
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+package: java.util.LinkedList
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Exemplo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -610,7 +696,11 @@ uncover<6->{
 
 \end_inset
 
- Qual a diferença? 
+
+\size larger
+ Qual a diferença?
+\size default
+ 
 \begin_inset ERT
 status open
 
@@ -629,10 +719,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Generics
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -645,22 +750,30 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Itemize
+
+\size larger
 Tipo genérico de dados
 \end_layout
 
 \begin_layout Itemize
-Ideal para diversas estruturas de dados, classes
+
+\size larger
+Estruturas de dados, classes
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Define um meta-tipo de dados
 \end_layout
 
 \begin_layout Itemize
-São usados com a sintaxe: 
+
+\size larger
+Sintaxe: 
 \emph on
 ClasseBase
 \emph default
@@ -676,10 +789,25 @@ Tipo
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -697,7 +825,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset External
 	template JavaSource
-	filename /home/andre/Documents/CESUSC/LinguagemDeProgramacaoI/Code/ExemploLinkedList.java
+	filename ../Code/ExemploLinkedList.java
 
 \end_inset
 
@@ -705,77 +833,16 @@ status open
 \end_layout
 
 \begin_layout ExampleBlock
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-{
-\backslash
-uncover<2->{Tamanho da lista=0 
-\backslash
-
-\backslash
- Tamanho da lista=1 
-\backslash
-
-\backslash
- Tamanho da lista=2 
-\backslash
-
-\backslash
- Tamanho da lista=3 
-\backslash
-
-\backslash
- Tamanho da lista=4} }
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout BeginPlainFrame
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
+\begin_inset Argument 2
 status collapsed
 
 \begin_layout Plain Layout
-\begin_inset External
-	template JavaSource
-	filename /home/andre/Documents/CESUSC/LinguagemDeProgramacaoI/Code/ExemploArrayList.java
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout ExampleBlock
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-{
+
 \backslash
 uncover<2->{Tamanho da lista=0 
 \backslash
@@ -793,7 +860,7 @@ uncover<2->{Tamanho da lista=0
 \backslash
 
 \backslash
- Tamanho da lista=4} }
+ Tamanho da lista=4} 
 \end_layout
 
 \end_inset
@@ -806,7 +873,110 @@ uncover<2->{Tamanho da lista=0
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSource
+	filename ../Code/ExemploArrayList.java
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2->{Tamanho da lista=0 
+\backslash
+
+\backslash
+ Tamanho da lista=1 
+\backslash
+
+\backslash
+ Tamanho da lista=2 
+\backslash
+
+\backslash
+ Tamanho da lista=3 
+\backslash
+
+\backslash
+ Tamanho da lista=4} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Exercícios III
 \begin_inset Foot
 status collapsed
@@ -821,6 +991,12 @@ Para os exercícios seguintes, só é permitido utilizar as funções de lista,
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -888,9 +1064,6 @@ Dica: Usar o código de maior e menor implementado nos exercícios de array.
 
 \end_layout
 
-\begin_layout EndFrame
-
-\end_layout
-
+\end_deeper
 \end_body
 \end_document

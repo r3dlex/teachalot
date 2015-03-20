@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass beamer
@@ -12,13 +12,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 1
@@ -29,15 +29,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry true
-\use_amsmath 1
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 1
 \index Index
 \shortcut idx
@@ -60,10 +69,20 @@
 
 \begin_body
 
-\begin_layout BeginPlainFrame
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Objeto
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -79,16 +98,22 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Itemize
+
+\size larger
 O que é um objeto?
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
+
+\size larger
 É uma abstração de dados
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
+
+\size larger
 Tente definir uma cadeira abstratamente
 \end_layout
 
@@ -107,8 +132,10 @@ uncover<2->{
 \end_inset
 
 
+\size larger
 \color red
 Número de pernas
+\size default
 \color inherit
 
 \begin_inset ERT
@@ -138,8 +165,10 @@ uncover<2->{
 \end_inset
 
 
+\size larger
 \color red
 Número de braços
+\size default
 \color inherit
 
 \begin_inset ERT
@@ -169,8 +198,10 @@ uncover<2->{
 \end_inset
 
 
+\size larger
 \color red
 Número de série
+\size default
 \color inherit
 
 \begin_inset ERT
@@ -200,8 +231,10 @@ uncover<2->{
 \end_inset
 
 
+\size larger
 \color red
 Cor
+\size default
 \color inherit
 
 \begin_inset ERT
@@ -223,10 +256,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Objeto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -242,33 +290,106 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Itemize
-Um objeto é uma instância particular de uma classe
+
+\size larger
+Instância particular de uma classe
 \end_layout
 
 \begin_layout Itemize
-Um objeto é uma combinação de 
+
+\size larger
+Combinação 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size larger
 \emph on
 atributos
-\emph default
-, 
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
 \emph on
 métodos
-\emph default
- e 
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+enumerações
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
 \emph on
 estruturas de dados
 \end_layout
 
 \begin_layout Itemize
-Um conjunto de objetos é definido por uma classe
+
+\size larger
+...
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Classe
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+
+\size larger
+Conjunto de objetos
 \end_layout
 
 \begin_layout Itemize
-As classes definem como é o comportamento
+
+\size larger
+Define comportamentos
 \end_layout
 
 \begin_layout Itemize
-E quais são os atributos
+
+\size larger
+Atributos
 \end_layout
 
 \begin_layout Plain Layout
@@ -310,10 +431,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -326,10 +462,12 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Itemize
-Para inicializar uma classe, utilizamos o operador new, como no Array
+
+\size larger
+Operador new, como no Array
 \end_layout
 
 \begin_layout Plain Layout
@@ -347,7 +485,7 @@ uncover<2->{
 
 
 \begin_inset External
-	template JavaSource
+	template JavaSourceNoLnNoFrame
 	filename ../Code/Cadeira.java
 
 \end_inset
@@ -366,7 +504,7 @@ status open
 
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -375,6 +513,8 @@ status open
 
 \backslash
 uncover<3->{
+\backslash
+textcolor{blue}{
 \end_layout
 
 \end_inset
@@ -385,7 +525,7 @@ status open
 
 \begin_layout Plain Layout
 
-}
+}}
 \end_layout
 
 \end_inset
@@ -398,106 +538,215 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
 
-\begin_layout Itemize
-Um objeto possui vários estados durante sua vida
-\end_layout
+\begin_layout Plain Layout
 
-\begin_layout Itemize
-Cada alteração do objeto muda seu estado
-\end_layout
-
-\begin_layout Itemize
-O estado de um objeto está ligado as seus atributos e métodos
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout BeginPlainFrame
-Encapsulamento
-\end_layout
-
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Itemize
-Estados de um objeto
 \end_layout
 
 \begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
 \begin_layout Itemize
+
+\size larger
+Um objeto possui estados
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Possui um tempo de vida
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Alteração do objeto muda o estado
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Alteração de atributos
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Chamada de métodos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\size larger
+Objeto: Estados
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+
+\size larger
 Devem ser 
 \emph on
 conhecidos
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Não significa que devem ser finitos
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Testes de unidade
 \end_layout
 
-\end_deeper
-\begin_layout Itemize
-O objeto controla o acesso a seus atributos
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Alterado somente por um chamada de método
-\end_layout
-
-\begin_layout Itemize
-Chamada de método pode causar uma troca de estado
-\end_layout
-
-\begin_layout Itemize
-Encapsulamento garante as duas assertivas anteriores
-\end_layout
-
-\end_deeper
 \end_inset
 
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Encapsulamento
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+
+\size larger
+O objeto controla o acesso
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Alterado somente por chamada de método
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Método pode causar troca de estado
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Encapsulamento garante ambos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -527,10 +776,25 @@ status collapsed
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Construtores
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -546,19 +810,27 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Itemize
-É um tipo especial de função
+
+\size larger
+Tipo especial de função
 \end_layout
 
 \begin_layout Itemize
-Sempre chamado ao construir um objeto
+
+\size larger
+Chamado ao construir um objeto
 \end_layout
 
 \begin_layout Itemize
-Podem haver vários distintos
+
+\size larger
+Podem haver vários
 \end_layout
 
 \begin_layout Itemize
-Inicializam os atributos do objeto
+
+\size larger
+Inicializam o objeto (atributos)
 \end_layout
 
 \end_inset
@@ -566,10 +838,25 @@ Inicializam os atributos do objeto
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -595,7 +882,11 @@ status collapsed
 \end_layout
 
 \begin_layout Itemize
-Problema? 
+
+\size larger
+Problema?
+\size default
+ 
 \begin_inset ERT
 status open
 
@@ -609,8 +900,10 @@ uncover<1->{
 \end_inset
 
 
+\size larger
 \color red
 Todos os objetos são iguais!
+\size default
 \color inherit
 
 \begin_inset ERT
@@ -631,10 +924,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -650,6 +958,8 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Itemize
+
+\size larger
 Consertando...
 \end_layout
 
@@ -668,10 +978,25 @@ Consertando...
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 This (este)
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -687,10 +1012,14 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Itemize
+
+\size larger
 Remoção de ambiguidade
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Refere-se ao escopo do objeto
 \end_layout
 
@@ -709,10 +1038,25 @@ Refere-se ao escopo do objeto
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 static
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -728,6 +1072,8 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Itemize
+
+\size larger
 Por que sem 
 \emph on
 static
@@ -748,7 +1094,11 @@ uncover<2->{
 
 \end_inset
 
-Static significa que é comum a todos objetos
+
+\size larger
+É comum a todos objetos
+\size default
+
 \begin_inset ERT
 status open
 
@@ -775,7 +1125,11 @@ uncover<2->{
 
 \end_inset
 
-Atributo ou método com comportamento estático
+
+\size larger
+comportamento estático
+\size default
+
 \begin_inset ERT
 status open
 
@@ -794,10 +1148,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -823,18 +1192,22 @@ status collapsed
 \end_layout
 
 \begin_layout ExampleBlock
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-{
+
 \backslash
 uncover<2->{umacadeira tem 5 pernas e 0 bracos 
 \backslash
 
 \backslash
- outraCadeira tem 5 pernas e 0 bracos}}
+ outraCadeira tem 5 pernas e 0 bracos}
 \end_layout
 
 \end_inset
@@ -847,10 +1220,30 @@ uncover<2->{umacadeira tem 5 pernas e 0 bracos
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Pacote
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -866,28 +1259,40 @@ height_special "totalheight"
 status collapsed
 
 \begin_layout Itemize
-A ideia é a mesma de pastas de arquivos
+
+\size larger
+"Pastas de arquivos"
 \end_layout
 
 \begin_layout Itemize
-Organizar e definir classes com o mesmo fim
+
+\size larger
+Organiza classes 
 \end_layout
 
 \begin_layout Itemize
-Definem um espaço de nomes próprios
+
+\size larger
+Define um espaço de nomes
 \end_layout
 
 \begin_layout Itemize
-Classes de mesmo nome podem ser declaradas
+
+\size larger
+Classes podem ter mesmo nome
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Mecanismo de 
 \emph on
 proteção
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Coerência e coesão
 \end_layout
 
@@ -915,10 +1320,25 @@ import
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Acesso 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -931,9 +1351,11 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Itemize
+
+\size larger
 Mas o que são private e public?
 \end_layout
 
@@ -953,9 +1375,11 @@ uncover<1>{
 \end_inset
 
 
+\size larger
 \emph default
 \color red
 Modificadores de acesso
+\size default
 \emph on
 \color inherit
 
@@ -977,10 +1401,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1005,12 +1444,12 @@ status open
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="5">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
@@ -1254,7 +1693,7 @@ Não
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Modificadores de acesso para atributos e classes
@@ -1275,10 +1714,25 @@ Modificadores de acesso para atributos e classes
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Visibilidade
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "c"
@@ -1315,12 +1769,12 @@ status open
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="5">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
@@ -1564,7 +2018,7 @@ Não
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Tabela demonstrando visibilidade da Alpha
@@ -1585,10 +2039,25 @@ Tabela demonstrando visibilidade da Alpha
 
 \end_layout
 
-\begin_layout BeginPlainFrame
-Enumerações
+\end_deeper
+\begin_layout Separator
+
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1622,7 +2091,7 @@ only<1>{
 \begin_layout Plain Layout
 \begin_inset External
 	template JavaSource
-	filename /home/andre/Documents/CESUSC/LinguagemDeProgramacaoI/Code/ExemploDiasSwitch.java
+	filename ../Code/ExemploDiasSwitch.java
 
 \end_inset
 
@@ -1660,11 +2129,9 @@ only<2>{
 \end_layout
 
 \begin_layout Itemize
-Definindo uma enumeração
-\end_layout
 
-\begin_layout Itemize
-Em arquivo próprio (como uma classe)
+\size larger
+Definindo a enumeração (.enum)
 \end_layout
 
 \begin_layout Plain Layout
@@ -1708,13 +2175,15 @@ only<3>{
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Usando na classe
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset External
 	template JavaSource
-	filename /home/andre/Documents/CESUSC/LinguagemDeProgramacaoI/Code/ExemploDiasSwitchEnum.java
+	filename ../Code/ExemploDiasSwitchEnum.java
 
 \end_inset
 
@@ -1740,10 +2209,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Exercícios I
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1813,9 +2297,6 @@ status open
 
 \end_layout
 
-\begin_layout EndFrame
-
-\end_layout
-
+\end_deeper
 \end_body
 \end_document
