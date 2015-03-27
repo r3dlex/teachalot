@@ -108,7 +108,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Itemize
 
@@ -491,14 +491,20 @@ height_special "totalheight"
 status open
 
 \begin_layout Itemize
+
+\size larger
 Retorno fica na mesma linha
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Modificadores também
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Parênteses fica junto ao nome
 \end_layout
 
@@ -541,17 +547,21 @@ height_special "totalheight"
 status open
 
 \begin_layout Itemize
+
+\size larger
 Sem espaço na definição e chamada
 \end_layout
 
 \begin_layout Itemize
 
+\size larger
 \color red
 Errado: chamadaDeFunção ( parâmetro )
 \end_layout
 
 \begin_layout Itemize
 
+\size larger
 \color cyan
 Certo: chamadaDeFunção(parâmetro)
 \end_layout

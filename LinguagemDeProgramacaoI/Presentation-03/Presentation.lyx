@@ -166,6 +166,33 @@ tableofcontents[currentsection]
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%Hides syntax errors on Minted lexer
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+expandafter
+\backslash
+def
+\backslash
+csname PY@tok@err
+\backslash
+endcsname{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Arrays e Constantes
 \end_layout

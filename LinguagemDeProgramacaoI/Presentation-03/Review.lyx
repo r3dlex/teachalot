@@ -371,20 +371,45 @@ status open
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset ERT
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
 
-
-\backslash
-only<2>{
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
 \begin_inset External
 	template CppSource
 	filename ../Code/Somatorio.c
@@ -392,12 +417,6 @@ only<2>{
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
 \end_inset
@@ -405,34 +424,43 @@ status open
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset ERT
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
 
-
-\backslash
-only<3>{
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
 \begin_inset External
 	template NasmSource
 	filename ../Code/Somatorio.s
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
 
 \end_inset
 

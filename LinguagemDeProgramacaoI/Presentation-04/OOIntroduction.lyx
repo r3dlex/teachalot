@@ -372,7 +372,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Itemize
 
@@ -390,6 +390,12 @@ Define comportamentos
 
 \size larger
 Atributos
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Métodos
 \end_layout
 
 \begin_layout Plain Layout
