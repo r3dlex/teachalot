@@ -1041,17 +1041,20 @@ status open
 
 \size larger
 \color black
-Implementar uma tela de login com "Usuário" e "Senha".
+Implementar uma tela com login "Usuário" e "Senha".
  
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 
 \size larger
 \color black
-O botão de login deve dar início a uma segunda Activity que apresenta "Login
- feito!" ou "Login inválido" se o usuário e senha corresponderem ou não
- aos esperados.
+O botão de login deve dar início a uma segunda Activity que apresenta "Olá,
+ Android!", se o usuário e senha corresponderem ou não aos esperados.
 \end_layout
 
 \end_inset
@@ -1098,14 +1101,14 @@ status collapsed
 \size larger
 \color black
 \begin_inset Graphics
-	filename ../Image/Apk-LocalDoMapaTelaInicial.png
+	filename ../Image/Apk-OlaAndroidComLogin1.png
 	height 80theight%
 
 \end_inset
 
 
 \begin_inset Graphics
-	filename ../Image/Apk-LocalDoMapa.png
+	filename ../Image/Apk-OlaAndroidComLogin2.png
 	height 80theight%
 
 \end_inset
