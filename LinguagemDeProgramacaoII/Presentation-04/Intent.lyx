@@ -635,12 +635,7 @@ status open
 \backslash
 uncover<2>{
 \backslash
-color{red}{Verdade
-\size larger
-\color red
-ira}
-\color inherit
-}
+color{red}{Verdadeira}}
 \end_layout
 
 \end_inset
@@ -764,6 +759,65 @@ status open
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+public View findViewById (int id)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size larger
+Acha a View identificada pelo id do atributo XML a qual foi processada no
+ método onCreate(Bundle).
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size larger
+Retorna a View se encontrada ou nulo (
+\emph on
+null
+\emph default
+)
 \end_layout
 
 \end_inset
@@ -937,12 +991,7 @@ status open
 \backslash
 uncover<2>{
 \backslash
-color{red}{Falso
-\size larger
-\color red
-}
-\color inherit
-}
+color{red}{Falso}}
 \end_layout
 
 \end_inset
@@ -965,7 +1014,121 @@ color{red}{Falso
 status open
 
 \begin_layout Plain Layout
+Exercício 1
+\end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size larger
+\color black
+Implementar uma tela de login com "Usuário" e "Senha".
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size larger
+\color black
+O botão de login deve dar início a uma segunda Activity que apresenta "Login
+ feito!" ou "Login inválido" se o usuário e senha corresponderem ou não
+ aos esperados.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Exercício 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\size larger
+\color black
+\begin_inset Graphics
+	filename ../Image/Apk-LocalDoMapaTelaInicial.png
+	height 80theight%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../Image/Apk-LocalDoMapa.png
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Intent geo...
 \end_layout
 
 \end_inset
@@ -1013,7 +1176,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-Exercício 1
+Exercício 2
 \end_layout
 
 \end_inset
@@ -1059,7 +1222,7 @@ Implementar o exemplo de localização que utiliza o Google Maps conforme
 status open
 
 \begin_layout Plain Layout
-Exercício 1
+Exercício 2
 \end_layout
 
 \end_inset
@@ -1080,7 +1243,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1088,14 +1251,14 @@ status open
 \size larger
 \color black
 \begin_inset Graphics
-	filename /home/home/andre/Workspace/Github/teachalot/LinguagemDeProgramacaoII/Image/Apk-LocalDoMapaTelaInicial.png
+	filename ../Image/Apk-LocalDoMapaTelaInicial.png
 	height 80theight%
 
 \end_inset
 
 
 \begin_inset Graphics
-	filename /home/home/andre/Workspace/Github/teachalot/LinguagemDeProgramacaoII/Image/Apk-LocalDoMapa.png
+	filename ../Image/Apk-LocalDoMapa.png
 	height 80theight%
 
 \end_inset
