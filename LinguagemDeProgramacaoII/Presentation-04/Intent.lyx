@@ -1179,6 +1179,72 @@ status open
 status open
 
 \begin_layout Plain Layout
+Uri (Uniform resource identifier)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+
+\size larger
+Uri 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ "geo:0,0?q=" + endereco
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+android.content.Intent.ACTION_VIEW
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Ações específicas
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Manda dados para o outro aplicativo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Exercício 2
 \end_layout
 

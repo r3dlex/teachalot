@@ -175,174 +175,21 @@ filename "Intent.lyx"
 
 \end_layout
 
+\begin_layout Section
+Bundle
+\end_layout
+
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Tarefa LTN12
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-href{http://w3.impa.br/~diego/software/luasocket/old/luasocket-2.0-beta2/ltn12.html}
-{http://w3.impa.br/~diego/software/luasocket/old/luasocket-2.0-beta2/ltn12.html}
-\end_layout
+\begin_inset CommandInset include
+LatexCommand include
+filename "Bundle.lyx"
 
 \end_inset
 
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Implementar uma corotina de downloads LTN12
-\end_layout
-
-\begin_layout Itemize
-Implementar cada uma das etapas de sink, source, filters e pump como uma
- corotina
-\end_layout
-
-\begin_layout Itemize
-Prazo: 1 semana
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Trabalho
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Plain Layout
-\align center
-\begin_inset Box Frameless
-position "c"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Itemize
-Implementar IA (3 semanas)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Box Frameless
-position "c"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Image/Pathfinder.png
-	width 60text%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Próxima aula
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Persistência de dados (DB, Serialização)
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Tabelas
-\end_layout
-
-\begin_layout Itemize
-APIs
-\end_layout
-
-\begin_layout Itemize
-XML
-\end_layout
-
-\end_deeper
-\end_deeper
-\end_inset
-
+\begin_layout Standard
 
 \end_layout
 
