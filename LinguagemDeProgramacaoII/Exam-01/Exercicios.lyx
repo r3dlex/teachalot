@@ -337,8 +337,7 @@ Gabarito
 
 \end_layout
 
-\begin_layout Enumerate
-(1,0 ponto) Assinale a alternativa correta a respeito do sistema Android:
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -346,7 +345,7 @@ status open
 
 %
 \backslash
-vspace*{8
+vspace*{
 \backslash
 baselineskip}
 \end_layout
@@ -354,6 +353,10 @@ baselineskip}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Enumerate
+(1,0 ponto) Assinale a alternativa correta a respeito do sistema Android:
 \end_layout
 
 \begin_deeper
@@ -382,39 +385,50 @@ A linguagem Java suportada pelo Android é a 1.4, não permitindo features
 \begin_layout Enumerate
 Para implementar-se um aplicativo Java deve-se implementar o método cuja
  assinatura é "public void static main(String[ ] args)".
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO - Inserir figura sobre lifecycle
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-Com relação a imagem abaixo, preencha a alternativa que preenche as lacunas
- corretamente:
+(1,0 ponto) Com relação a figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AppLifecycle"
+
+\end_inset
+
+, preencha a alternativa que preenche as as lacunas correspondentes a A,
+ B, C, D e E corretamente:
 \begin_inset Newline newline
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Note Note
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
-Ciclo de vida da activity
+\align center
+\begin_inset Graphics
+	filename ../Gen/Image/ActivityLifecycleQuestion.eps
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:AppLifecycle"
+
+\end_inset
+
+Ciclo de vida da Activity com icógnitas A, B, C, D e E
 \end_layout
 
 \end_inset
@@ -422,14 +436,106 @@ Ciclo de vida da activity
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Enumerate
-A respeito do ciclo de vida das Activities, assinale a mais correta:
+A = onCreate(), B= onStart(), C = Parando, D = onQuit() e E = onRestart().
 \end_layout
 
 \begin_layout Enumerate
-Dog survivor
+A = onStart(), B= onResume(), C = Pausado, D = onDestroy() e E = onRestart().
 \end_layout
 
+\begin_layout Enumerate
+A = onStart(), B= onRestart(), C = Parado, D = onQuit() e E = onResume().
+\end_layout
+
+\begin_layout Enumerate
+A = onPause(), B= onStart(), C = Removido, D = onQuit() e E = onRestart().
+\end_layout
+
+\begin_layout Enumerate
+A = onInit(), B= onResume(), C = Pausado, D = onQuit() e E = onRestart().
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,0 ponto) A respeito do ciclo de vida das Activities, conforme visto na
+ figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AppLifecycle"
+
+\end_inset
+
+, assinale a mais correta:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+onStart(): Nesse método são inicializados todos os itens de interface (GUI)
+ como botões, campos de textos...
+\end_layout
+
+\begin_layout Enumerate
+onStop(): A aplicação encontra-se parada e pode ser reiniciada.
+ Pode 
+\emph on
+nunca
+\emph default
+ ser chamado no caso do Android necessitar a liberação imediata de recursos.
+\end_layout
+
+\begin_layout Enumerate
+onDestroy(): A atividade chama para efetuar a liberação de recursos e Threads.
+ 
+\emph on
+Sempre
+\emph default
+ deve ser chamado.
+\end_layout
+
+\begin_layout Enumerate
+onResume(): A aplicação perde o foco e as informações persistentes são salvas.
+\end_layout
+
+\begin_layout Enumerate
+onCreate(): Depois dessa chamada o aplicativo poderá ser reiniciado a qualquer
+ momento.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Responda a respeito do Android e as opções de internacionalização
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A
+\end_layout
+
+\begin_layout Enumerate
+B
+\end_layout
+
+\begin_layout Enumerate
+C
+\end_layout
+
+\begin_layout Enumerate
+D
+\end_layout
+
+\begin_layout Enumerate
+E
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Note Note
 status open
