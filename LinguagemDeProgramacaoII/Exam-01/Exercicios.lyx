@@ -1,0 +1,1080 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{color}
+%Necessary for minted
+\definecolor{bg}{rgb}{1,1,1}
+\usepackage{minted}
+
+\newminted{java}{
+  fontsize=\footnotesize, 
+  linenos,
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+\newminted{javasnip}{
+  fontsize=\footnotesize, 
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+%Remove a numeracao das paginas
+\pagestyle{empty}% Reset page style to 'empty'
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\series bold
+CESUSC
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Disciplina: Linguagem de Programação II
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Professor: André Ferreira Bem Silva
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Data: 13/06/2015
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Aluno(a): _________________________________
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Leia atentamente as questões a seguir e responda-as.
+ Assinale somente uma alternativa correta em cada questão de múltipla escolha
+ e observe a pontuação de cada questão.
+ Boa sorte!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="8">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Questão
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gabarito
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+(1,0 ponto) Assinale a alternativa correta a respeito do sistema Android:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+vspace*{8
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Não é possível programar-se em Java utilizando a API Android.
+ Apesar disso, o Android Studio provê abstrações que permitem seu uso no
+ sistema.
+\end_layout
+
+\begin_layout Enumerate
+O Android possui ferramentas abertas de desenvolvimento e, para fazer o
+ desenvolvimento não comercial de aplicativos para ele basta ter o ambiente
+ de desenvolvimento (IDE) Android Studio e um emulador para programar aplicativo
+s.
+\end_layout
+
+\begin_layout Enumerate
+O emulador permite a execução idêntica ao dispositivo (device) que ele emula.
+\end_layout
+
+\begin_layout Enumerate
+A linguagem Java suportada pelo Android é a 1.4, não permitindo features
+ recentes da linguagem.
+\end_layout
+
+\begin_layout Enumerate
+Para implementar-se um aplicativo Java deve-se implementar o método cuja
+ assinatura é "public void static main(String[ ] args)".
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO - Inserir figura sobre lifecycle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Com relação a imagem abaixo, preencha a alternativa que preenche as lacunas
+ corretamente:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ciclo de vida da activity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+A respeito do ciclo de vida das Activities, assinale a mais correta:
+\end_layout
+
+\begin_layout Enumerate
+Dog survivor
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Enumerate
+(1,5 pontos) Assinale a questão com todas as assertivas corretas:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+vspace*{8
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Em Java, um método estático cujo modificador descriminante é a palavra-chave
+ 
+\emph on
+static
+\emph default
+, é um código comum a uma gama de objetos, isto é, pertencentes a mesma
+ classe, mas não necessitam de uma instância de objeto para serem chamados.
+\end_layout
+
+\begin_layout Enumerate
+Não é válido fazer uma iteração do tipo 
+\emph on
+while (true)
+\emph default
+, pois o compilador Java detecta que o loop será infinito em tempo de compilação
+ e a linha referente a esse código causa erro de compilação.
+\end_layout
+
+\begin_layout Enumerate
+O uso de ambientes de desenvolvimento (IDEs) como o Eclipse torna obsoleto
+ o uso de um compilador para programar-se em Java.
+\end_layout
+
+\begin_layout Enumerate
+Java é uma linguagem que executa diretamente em linguagem de máquina (
+\emph on
+Assembly
+\emph default
+), sem usar de mecanismos mais modernos, como coletores de lixo (
+\emph on
+Garbage collectors
+\emph default
+) e máquinas virtuais (
+\emph on
+VM
+\emph default
+).
+\end_layout
+
+\begin_layout Enumerate
+Não é possível que o método 
+\emph on
+main
+\emph default
+, único ponto de entrada para execução no código Java, chame um outro método
+ da mesma classe.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,5 pontos) Qual a saída correta para o código a seguir?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/OperadoresUnarios.java
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Resultado: 34
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 34
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 33
+\end_layout
+
+\begin_layout Enumerate
+Resultado: 34
+\begin_inset Newline newline
+\end_inset
+
+Resultado: ERROR!
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 34
+\end_layout
+
+\begin_layout Enumerate
+Resultado: 35
+\begin_inset Newline newline
+\end_inset
+
+Resultado: ERROR!
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 33
+\end_layout
+
+\begin_layout Enumerate
+Resultado: 35
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 34
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 33
+\end_layout
+
+\begin_layout Enumerate
+Resultado: 35
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 35
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 35
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) Responda a respeito do construtor padrão de uma classe:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O construtor padrão existe quando não há nenhum construtor declarado.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Ele existe desde que você defina uma classe.
+\end_layout
+
+\begin_layout Enumerate
+Existe quando a classe possui outros construtores declarados.
+\end_layout
+
+\begin_layout Enumerate
+Ele não existe mesmo que você declare um construtor que não receba parâmetros.
+\end_layout
+
+\begin_layout Enumerate
+O construtor padrão é qualquer método com o mesmo nome da classe.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) A respeito do comando while, assinale a alternativa correta:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+É equivalente ao bloco 
+\emph on
+if-then-else
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Executa um bloco de comandos enquanto a condição de iteração (
+\emph on
+loop
+\emph default
+) for verdadeira.
+\end_layout
+
+\begin_layout Enumerate
+Executa um bloco de comandos até que a condição de iteração (
+\emph on
+loop
+\emph default
+) seja verdadeira.
+\end_layout
+
+\begin_layout Enumerate
+É idêntico ao bloco 
+\emph on
+do-while
+\emph default
+, resultando sempre no mesmo fluxo de execução.
+\end_layout
+
+\begin_layout Enumerate
+Executa somente comandos de atribuição.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(2 pontos) Assinale a alternativa incorreta a respeito do código referente:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/Fibonacci.java
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Seria possível usar uma estrutura de 
+\emph on
+switch
+\emph default
+ no lugar dos 
+\emph on
+ifs-then-else 
+\emph default
+aninhados das linhas 2, 5 e 8, mantendo o mesmo efeito de execução.
+\end_layout
+
+\begin_layout Enumerate
+A execução do código(1,5 pontos) Assinale a questão com todas as assertivas
+ corretas:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+vspace*{8
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Em Java, um método estático cujo modificador descriminante é a palavra-chave
+ 
+\emph on
+static
+\emph default
+, é um código comum a uma gama de objetos, isto é, pertencentes a mesma
+ classe, mas não necessitam de uma instância de objeto para serem chamados.
+\end_layout
+
+\begin_layout Enumerate
+Não é válido fazer uma iteração do tipo 
+\emph on
+while (true)
+\emph default
+, pois o compilador Java detecta que o loop será infinito em tempo de compilação
+ e a linha referente a esse código causa erro de compilação.
+\end_layout
+
+\begin_layout Enumerate
+O uso de ambientes de desenvolvimento (IDEs) como o Eclipse torna obsoleto
+ o uso de um compilador para programar-se em Java.
+\end_layout
+
+\begin_layout Enumerate
+Java é uma linguagem que executa diretamente em linguagem de máquina (
+\emph on
+Assembly
+\emph default
+), sem usar de mecanismos mais modernos, como coletores de lixo (
+\emph on
+Garbage collectors
+\emph default
+) e máquinas virtuais (
+\emph on
+VM
+\emph default
+).
+\end_layout
+
+\begin_layout Enumerate
+Não é possível que o método 
+\emph on
+main
+\emph default
+, único ponto de entrada para execução no código Java, chame um outro método
+ da mesma classe.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,5 pontos) Qual a saída correta para o código a seguir?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/OperadoresUnarios.java
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Resultado: 34
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 34
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 33
+\end_layout
+
+\begin_layout Enumerate
+Resultado: 34
+\begin_inset Newline newline
+\end_inset
+
+Resultado: ERROR!
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 34
+\end_layout
+
+\begin_layout Enumerate
+Resultado: 35
+\begin_inset Newline newline
+\end_inset
+
+Resultado: ERROR!
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 33
+\end_layout
+
+\begin_layout Enumerate
+Resultado: 35
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 34
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 33
+\end_layout
+
+\begin_layout Enumerate
+Resultado: 35
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 35
+\begin_inset Newline newline
+\end_inset
+
+Resultado: 35
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) Responda a respeito do construtor padrão de uma classe:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O construtor padrão existe quando não há nenhum construtor declarado.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Ele existe desde que você defina uma classe.
+\end_layout
+
+\begin_layout Enumerate
+Existe quando a classe possui outros construtores declarados.
+\end_layout
+
+\begin_layout Enumerate
+Ele não existe mesmo que você declare um construtor que não receba parâmetros.
+\end_layout
+
+\begin_layout Enumerate
+O construtor padrão é qualquer método com o mesmo nome da classe.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) A respeito do comando while, assinale a alternativa correta:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+É equivalente ao bloco 
+\emph on
+if-then-else
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Executa um bloco de comandos enquanto a condição de iteração (
+\emph on
+loop
+\emph default
+) for verdadeira.
+\end_layout
+
+\begin_layout Enumerate
+Executa um bloco de comandos até que a condição de iteração (
+\emph on
+loop
+\emph default
+) seja verdadeira.
+\end_layout
+
+\begin_layout Enumerate
+É idêntico ao bloco 
+\emph on
+do-while
+\emph default
+, resultando sempre no mesmo fluxo de execução.
+\end_layout
+
+\begin_layout Enumerate
+Executa somente comandos de atribuição.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(2 pontos) Assinale a alternativa incorreta a respeito do código referente:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/Fibonacci.java
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Seria possível usar uma estrutura de 
+\emph on
+switch
+\emph default
+ no lugar dos 
+\emph on
+ifs-then-else 
+\emph default
+aninhados das linhas 2, 5 e 8, mantendo o mesmo efeito de execução.
+\end_layout
+
+\begin_layout Enumerate
+A execução do código para 
+\emph on
+calcular(0)
+\emph default
+, 
+\emph on
+calcular(1)
+\emph default
+ e 
+\emph on
+calcular(2)
+\emph default
+ resultam nos valores 0, 1 e 1, respectivamente.
+\end_layout
+
+\begin_layout Enumerate
+A utilização de ++i ou i++ acarretam no mesmo efeito final, na linha 13.
+ Isto é, o fluxo de execução e os valores de saída do código são idênticos
+ para ambos.
+\end_layout
+
+\begin_layout Enumerate
+O resultado de 
+\emph on
+calcular(3) 
+\emph default
+é 2, de 
+\emph on
+calcular(5
+\emph default
+) é 4 e para 
+\emph on
+calcular(6) é 5.
+\end_layout
+
+\begin_layout Enumerate
+Nesse trecho de código são utilizados operadores aritméticos, unários e
+ relacionais.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,5 pontos) A respeito de orientação objeto em Java e do código referente
+ em sequência, assinale a alternativa correta:
+\end_layout
+
+\begin_layout Enumerate
+(1,5 pontos) Qual dos seguintes códigos apresentam uma construção inválida
+ na linguagem Java?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+if (2 == 3) { System.out.println("Uma string"); }
+\end_layout
+
+\begin_layout Enumerate
+if (2 != 3) { System.out.println("Uma string"); }
+\end_layout
+
+\begin_layout Enumerate
+if (2 = 3) { System.out.println("Uma string"); }
+\end_layout
+
+\begin_layout Enumerate
+if (true) { System.out.println("Uma string"); }
+\end_layout
+
+\begin_layout Enumerate
+if (false) { System.out.println("Uma string"); }
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+para 
+\emph on
+calcular(0)
+\emph default
+, 
+\emph on
+calcular(1)
+\emph default
+ e 
+\emph on
+calcular(2)
+\emph default
+ resultam nos valores 0, 1 e 1, respectivamente.
+\end_layout
+
+\begin_layout Enumerate
+A utilização de ++i ou i++ acarretam no mesmo efeito final, na linha 13.
+ Isto é, o fluxo de execução e os valores de saída do código são idênticos
+ para ambos.
+\end_layout
+
+\begin_layout Enumerate
+O resultado de 
+\emph on
+calcular(3) 
+\emph default
+é 2, de 
+\emph on
+calcular(5
+\emph default
+) é 4 e para 
+\emph on
+calcular(6) é 5.
+\end_layout
+
+\begin_layout Enumerate
+Nesse trecho de código são utilizados operadores aritméticos, unários e
+ relacionais.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,5 pontos) A respeito de orientação objeto em Java e do código referente
+ em sequência, assinale a alternativa correta:
+\end_layout
+
+\begin_layout Enumerate
+(1,5 pontos) Qual dos seguintes códigos apresentam uma construção inválida
+ na linguagem Java?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+if (2 == 3) { System.out.println("Uma string"); }
+\end_layout
+
+\begin_layout Enumerate
+if (2 != 3) { System.out.println("Uma string"); }
+\end_layout
+
+\begin_layout Enumerate
+if (2 = 3) { System.out.println("Uma string"); }
+\end_layout
+
+\begin_layout Enumerate
+if (true) { System.out.println("Uma string"); }
+\end_layout
+
+\begin_layout Enumerate
+if (false) { System.out.println("Uma string"); }
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
