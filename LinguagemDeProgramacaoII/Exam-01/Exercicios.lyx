@@ -356,7 +356,11 @@ baselineskip}
 \end_layout
 
 \begin_layout Enumerate
-(1,0 ponto) Assinale a alternativa correta a respeito do sistema Android:
+(1,0 ponto) Assinale a alternativa 
+\series bold
+correta
+\series default
+ a respeito do sistema Android:
 \end_layout
 
 \begin_deeper
@@ -397,7 +401,11 @@ reference "fig:AppLifecycle"
 \end_inset
 
 , preencha a alternativa que preenche as as lacunas correspondentes a A,
- B, C, D e E corretamente:
+ B, C, D e E 
+\series bold
+corretamente
+\series default
+:
 \begin_inset Newline newline
 \end_inset
 
@@ -472,7 +480,11 @@ reference "fig:AppLifecycle"
 
 \end_inset
 
-, assinale a mais correta:
+, assinale a 
+\series bold
+correta
+\series default
+:
 \end_layout
 
 \begin_deeper
@@ -511,31 +523,183 @@ onCreate(): Depois dessa chamada o aplicativo poderá ser reiniciado a qualquer
 
 \end_deeper
 \begin_layout Enumerate
-Responda a respeito do Android e as opções de internacionalização
+(1,0 ponto) Ainda a respeito da figura de ciclo de vida da Activity e Android,
+ assinale a alternativa 
+\series bold
+incorreta
+\series default
+:
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-A
+Uma Activity qualquer Android que esteja executando estará necessariamente
+ em um dos estágios previstos na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AppLifecycle"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-B
+O método onCreate() não será chamado para uma mesma Activity após seu método
+ onDestroy() ter sido chamado.
 \end_layout
 
 \begin_layout Enumerate
-C
+No método onStart() a Activity encontra-se visível.
 \end_layout
 
 \begin_layout Enumerate
-D
+Os estados de uma Activity não respeitam os preceitos de orientação a objetos,
+ sendo uma ofensa direta ao princípio de encapsulamento.
 \end_layout
 
 \begin_layout Enumerate
-E
+As 
+\emph on
+callbacks
+\emph default
+ de partes interativas de interface como botões podem ser inicializadas
+ no onCreate().
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+(1,0 ponto) Assinale a alternativa 
+\series bold
+incorreta
+\series default
+ a respeito do Android e as opções de internacionalização:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O arquivo strings.xml é um arquvo XML onde diversas tags as quais referenciam
+ strings são armazenadas.
+\end_layout
+
+\begin_layout Enumerate
+Faz-se necessário a utilização de arquivos distintos para cada uma das línguas
+ a serem suportadas pelo aplicativo.
+\end_layout
+
+\begin_layout Enumerate
+A troca de língua, em um aplicativo é sempre feita de maneira semi-automática,
+ ou seja, é necessário tratar, no código Java, a língua atual utilizada.
+\end_layout
+
+\begin_layout Enumerate
+Por meio da internacionalização, pode-se suportar quantas línguas forem
+ necessárias no aplicativo.
+\end_layout
+
+\begin_layout Enumerate
+As strings contidas no arquivo strings.xml podem ser referenciadas em outros
+ arquivos como o AndroidManifest.xml e o arquivo xml do layout da Activity.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,0 ponto) Qual das seguintes classes e interfaces 
+\series bold
+não
+\series default
+ faz parte da API Android?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Intent
+\end_layout
+
+\begin_layout Enumerate
+Activity
+\end_layout
+
+\begin_layout Enumerate
+Service
+\end_layout
+
+\begin_layout Enumerate
+BroadcastReceiver
+\end_layout
+
+\begin_layout Enumerate
+JFrame
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,0 ponto) A respeito do emulador Android, assinale a alternativa 
+\series bold
+incorreta
+\series default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Simula um dispositivo real.
+\end_layout
+
+\begin_layout Enumerate
+É capaz de instalar e rodar novos aplicativos.
+\end_layout
+
+\begin_layout Enumerate
+Auxilia no desenvolvimento, tornando desnecessário a compra de um dispositivo
+ para qualquer tipo de aplicativo.
+\end_layout
+
+\begin_layout Enumerate
+Possui funcionalidades aquém daquelas encontradas em dispositivos reais,
+ uma vez que um dispositivo real possui uma gama de sensores.
+\end_layout
+
+\begin_layout Enumerate
+Os emuladores tem resolução de tela idêntica ao dispositivo que emulam para
+ que possam emular melhor as funcionalidades de um dispositivo real.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,0 ponto) O Task backstack é:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Uma pilha
+\end_layout
+
+\begin_layout Enumerate
+Uma pilha
+\end_layout
+
+\begin_layout Enumerate
+Uma pilha
+\end_layout
+
+\begin_layout Enumerate
+Uma pilha
+\end_layout
+
+\begin_layout Enumerate
+Uma pilha
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,0 ponto)
+\end_layout
+
+\begin_layout Enumerate
+(1,0 ponto)
+\end_layout
+
 \begin_layout Standard
 \begin_inset Note Note
 status open
