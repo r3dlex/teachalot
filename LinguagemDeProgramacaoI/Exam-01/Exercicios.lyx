@@ -693,7 +693,7 @@ Nesse trecho de código são utilizados operadores aritméticos, unários e
 
 \end_deeper
 \begin_layout Enumerate
-(1,5 pontos) A respeito de orientação objeto em Java e do código referente
+(1 ponto) A respeito de orientação objeto em Java e do código referente
  em sequência, assinale a alternativa 
 \series bold
 correta
@@ -780,7 +780,7 @@ F-F-F-F-F
 
 \end_deeper
 \begin_layout Enumerate
-Qual a saída esperada para o trecho em seguida?
+(1 ponto) Qual a saída esperada para o trecho em seguida?
 \begin_inset Newline newline
 \end_inset
 
@@ -817,7 +817,7 @@ Erro de acesso inválido ao array
 
 \end_deeper
 \begin_layout Enumerate
-(1,5 pontos) Qual dos seguintes códigos apresentam uma construção inválida
+(1 ponto) Qual dos seguintes códigos apresentam uma construção inválida
  na linguagem Java?
 \end_layout
 
@@ -840,10 +840,6 @@ if (true) { System.out.println("Uma string"); }
 
 \begin_layout Enumerate
 if (false) { System.out.println("Uma string"); }
-\begin_inset Newline newline
-\end_inset
-
-
 \begin_inset Newline newline
 \end_inset
 
@@ -885,6 +881,7 @@ reference "enu:BS2"
 
 \end_deeper
 \begin_layout Enumerate
+(1 ponto) 
 \begin_inset CommandInset label
 LatexCommand label
 name "enu:BS1"
@@ -946,6 +943,7 @@ O código referente funciona independentemente do tamanho do array de entrada.
 
 \end_deeper
 \begin_layout Enumerate
+(1 ponto) 
 \begin_inset CommandInset label
 LatexCommand label
 name "enu:BS2"
