@@ -1,0 +1,11 @@
+<manifest>
+  ...
+
+<!-- Define uma permissão única -->
+<permission
+      android:name="curso.exemplos.exemplodepermissao.BOOM_PERM"
+      android:description="@string/string_perm_boom"
+      android:label="@string/string_boom_descricao" >
+</permission>
+
+</manifest>

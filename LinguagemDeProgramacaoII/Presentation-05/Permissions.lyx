@@ -608,25 +608,25 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Plain Layout
+\begin_layout Itemize
 
 \size larger
 Permissão definida
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Itemize
 
 \size larger
 Controle de quem pode rodar um aplicativo
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Itemize
 
 \size larger
 Suponha uma aplicação privilegiada e/ou perigosa
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Itemize
 
 \size larger
 Pode-se definir e forçar uma permissão própria
@@ -670,16 +670,67 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Plain Layout
+\begin_layout Itemize
 
 \size larger
 Faz uma operação perigosa
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Itemize
 
 \size larger
 Só deve ser chamado com permissão
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Aplicação Boom
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\size larger
+\begin_inset Graphics
+	filename ../Image/Exemplo-Boom!.png
+	height 85theight%
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -721,9 +772,13 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
+\begin_inset External
+	template XmlSourceNoLnNoFrame
+	filename ../Code/XML/BoomPermissao.xml
 
-\size larger
-TODO AndroidManifest.xml
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -825,7 +880,6 @@ status open
 
 \begin_layout Plain Layout
 
-\size larger
 
 \backslash
 only<1>{a) <permission>}
@@ -843,9 +897,7 @@ status open
 \backslash
 only<2>{
 \backslash
-color{red}{a) <permission>
-\size larger
-}}
+color{red}{a) <permission>}}
 \end_layout
 
 \end_inset
@@ -1035,8 +1087,42 @@ status open
 
 \begin_layout Itemize
 
+\size larger
+Quais componentes podem iniciar o serviço
 \end_layout
 
+\begin_layout Itemize
+
+\size larger
+Ou se liguar a ele
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Checado em
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size larger
+Context.startService()
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Context.stopService()
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Context.bindService()
+\end_layout
+
+\end_deeper
 \end_inset
 
 
@@ -1079,6 +1165,20 @@ status open
 
 \begin_layout Itemize
 
+\size larger
+Restringe eventos
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Quais podem enviar e receber
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Permissões checadas em múltiplos métodos
 \end_layout
 
 \end_inset
@@ -1123,6 +1223,20 @@ status open
 
 \begin_layout Itemize
 
+\size larger
+Restringe escrita e leitura
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Quais podem ler
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Quais podem escrever
 \end_layout
 
 \end_inset
