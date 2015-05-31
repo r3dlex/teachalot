@@ -637,7 +637,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1378,7 +1378,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1483,6 +1483,7 @@ status open
 
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1560,6 +1561,11 @@ status open
 
 \end_inset
 
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 

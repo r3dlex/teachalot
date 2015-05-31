@@ -1,0 +1,9 @@
+<!-- Faz o uso da permissão Boom na aplicação  -->
+<application
+  android:allowBackup="true"
+  android:icon="@drawable/ic_launcher"
+  android:label="@string/string_nome_app"
+  android:permission="course.examples.permissionexample.BOOM_PERM" >
+
+  ...
+</application>

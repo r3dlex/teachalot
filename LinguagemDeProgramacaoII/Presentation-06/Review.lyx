@@ -7,7 +7,7 @@
 \maintain_unincluded_children false
 \language brazilian
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman default
 \font_sans default
@@ -69,16 +69,12 @@
 
 \begin_body
 
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Frame
+\begin_layout PlainFrame
 \begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-Última aula
+Ordem de chamadas
 \end_layout
 
 \end_inset
@@ -87,71 +83,48 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-Utilização do 
-\emph on
-luasocket
-\emph default
-
-\begin_inset ERT
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
 status open
 
-\begin_layout Plain Layout
+\begin_layout Itemize
 
-
-\backslash
-inputminted[basicstyle={
-\backslash
-small
-\backslash
-ttfamily},tabsize=2,firstline=1,lastline=1]{lua}{Lua/Download.lua}
-\end_layout
-
-\end_inset
-
-
+\size larger
+onAttach
 \end_layout
 
 \begin_layout Itemize
-LTN12: sources, sinks, filters e pump
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-
-
-\backslash
-inputminted[basicstyle={
-\backslash
-small
-\backslash
-ttfamily},tabsize=2,firstline=2,lastline=2]{lua}{Lua/LTN12Download.lua}
-\end_layout
-
-\end_inset
-
-
+\size larger
+onCreate
 \end_layout
 
 \begin_layout Itemize
-Exemplos de download (Standard HTML)
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-
-%,caption=Socket Example
+\size larger
+onCreateView
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Itemize
 
+\size larger
+onStart
+\end_layout
 
-\backslash
-inputminted[basicstyle={
-\backslash
-small
-\backslash
-ttfamily},tabsize=2,firstline=23,lastline=25]{lua}{Lua/Download.lua}
+\begin_layout Itemize
+
+\size larger
+onResume
 \end_layout
 
 \end_inset
@@ -160,6 +133,157 @@ ttfamily},tabsize=2,firstline=23,lastline=25]{lua}{Lua/Download.lua}
 \end_layout
 
 \end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Ciclo de vida
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/FragmentLifecycle.png
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fragmentos: layout (editor) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/Fragmentos-Layout.png
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fragmentos: layout (código)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/Fragmentos-LayoutCode.png
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
 \begin_layout PlainFrame
 \begin_inset Argument 4
 status open
@@ -174,7 +298,7 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Box Frameless
 position "t"
 hor_pos "c"
@@ -186,52 +310,21 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
-
-\begin_layout Block
-\begin_inset Argument 2
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-
-Socket: download}
-\end_layout
-
+1.
+ O que indica o seguinte trecho de código?
+\begin_inset Newline newline
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%,caption=Socket Example
 \end_layout
 
 \begin_layout Plain Layout
-
-
-\backslash
-inputminted[basicstyle={
-\backslash
-small
-\backslash
-ttfamily},tabsize=2,firstline=15,lastline=21]{lua}{Lua/Download.lua
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
+\begin_inset External
+	template XmlSourceNoLnNoFrame
+	filename ../Code/XML/FragmentoEstaticoLayout.xml
 
 \end_inset
 
@@ -239,155 +332,15 @@ ttfamily},tabsize=2,firstline=15,lastline=21]{lua}{Lua/Download.lua
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Note Note
 status open
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Plain Layout
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Block
-\begin_inset Argument 2
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-Socket: receber}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%,caption=Socket Example
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-inputminted[basicstyle={
-\backslash
-small
-\backslash
-ttfamily},tabsize=2,firstline=3,lastline=12]{lua}{Lua/Download.lua
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Plain Layout
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Plain Layout
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Block
-\begin_inset Argument 2
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-LTN12: Tabela}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-inputminted[basicstyle={
-\backslash
-small
-\backslash
-ttfamily},tabsize=2,firstline=7,lastline=15]{lua}{Lua/LTN12Download.lua
-\end_layout
+\align center
+\begin_inset Graphics
+	filename ../Image/Fragmentos-LayoutCode.png
+	width 99text%
 
 \end_inset
 
@@ -409,7 +362,7 @@ ttfamily},tabsize=2,firstline=7,lastline=15]{lua}{Lua/LTN12Download.lua
 
 \end_layout
 
-\begin_layout Frame
+\begin_layout PlainFrame
 \begin_inset Argument 4
 status open
 
@@ -423,7 +376,7 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Box Frameless
 position "t"
 hor_pos "c"
@@ -437,35 +390,35 @@ height "1in"
 height_special "totalheight"
 status collapsed
 
-\begin_layout Block
-\begin_inset Argument 2
-status collapsed
-
 \begin_layout Plain Layout
-\begin_inset ERT
-status open
+2.
+ O que indicam os seguintes trechos de código?
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Plain Layout
 
-LTN12: Arquivo}
 \end_layout
+
+\begin_layout Plain Layout
+\begin_inset External
+	template XmlSourceNoLnNoFrame
+	filename ../Code/XML/FragmentoEstatico.xml
 
 \end_inset
 
 
-\begin_inset ERT
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-
-\backslash
-inputminted[basicstyle={
-\backslash
-small
-\backslash
-ttfamily},tabsize=2,firstline=7,lastline=15]{lua}{Lua/LTN12DownloadToFile.lua
-\end_layout
+\align center
+\begin_inset Graphics
+	filename ../Image/Fragmentos-LayoutCode.png
+	width 99text%
 
 \end_inset
 
@@ -483,13 +436,7 @@ ttfamily},tabsize=2,firstline=7,lastline=15]{lua}{Lua/LTN12DownloadToFile.lua
 \end_layout
 
 \end_deeper
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
+\begin_layout Separator
 
 \end_layout
 
@@ -498,7 +445,7 @@ ttfamily},tabsize=2,firstline=7,lastline=15]{lua}{Lua/LTN12DownloadToFile.lua
 status open
 
 \begin_layout Plain Layout
-Ementa
+
 \end_layout
 
 \end_inset
@@ -522,6 +469,41 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
+android:layout_weight=1
+\end_layout
+
+\begin_layout Itemize
+Peso de crescimento
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset External
+	template XmlSourceNoLnNoFrame
+	filename ../Code/XML/FragmentoEstatico.xml
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/Fragmentos-LayoutCode.png
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 

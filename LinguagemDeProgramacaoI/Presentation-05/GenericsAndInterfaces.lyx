@@ -558,8 +558,19 @@ height_special "totalheight"
 status open
 
 \begin_layout Enumerate
-Fazer o mesmo que foi feito para a classe Retangulo para a classe Quadrado
- e para a Triangulo.
+Fazer o mesmo que foi feito para a classe 
+\emph on
+Retangulo
+\emph default
+ para a classe 
+\emph on
+Quadrado
+\emph default
+ e para a 
+\emph on
+Triangulo
+\emph default
+.
  Ambas devem implementar as interfaces de acordo com suas próprias fórmulas.
  
 \end_layout
@@ -581,8 +592,19 @@ Repita o exercício anterior, adicionando uma interface móvel, com a seguinte
 \begin_inset Newline newline
 \end_inset
 
-Essa classe deve ser implementada pelo RetanguloMovel, QuadradoMovel e Triangulo
-Movel, os quais agora devem ter um ponto de referência, por exemplo o 
+Essa interface deve ser implementada pelo 
+\emph on
+RetanguloMovel
+\emph default
+, 
+\emph on
+QuadradoMovel
+\emph default
+ e 
+\emph on
+TrianguloMovel
+\emph default
+, os quais agora devem ter um ponto de referência, por exemplo o 
 \emph on
 canto inferior esquerdo.
  

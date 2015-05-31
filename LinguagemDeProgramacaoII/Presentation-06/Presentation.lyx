@@ -12,6 +12,7 @@
 \usepackage{bibentry}
 \bibliographystyle{apalike}
 \usepackage{chngcntr}
+\usepackage{multimedia}
 
 \newminted{java}{
   fontsize=\footnotesize, 
@@ -34,7 +35,7 @@
 \maintain_unincluded_children false
 \language brazilian
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman default
 \font_sans default
@@ -97,11 +98,11 @@
 \begin_body
 
 \begin_layout Title (Plain Frame)
-Aula 05
+Aula 06
 \end_layout
 
 \begin_layout Subtitle
-Herança e hierarquia de classes
+Fragmentos e interface com o usuário
 \end_layout
 
 \begin_layout Author
@@ -121,147 +122,25 @@ CESUSC
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-AtBeginSection[]{
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-frame<beamer>{ 
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-frametitle{Tema}   
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-tableofcontents[currentsection] 
-\end_layout
-
-\begin_layout Plain Layout
-
-  }
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Aula anterior
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Overview - 10 slides
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "Last.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Herança
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-O que é um objeto
-\end_layout
-
-\begin_layout Plain Layout
-O que é uma classe
-\end_layout
-
-\begin_layout Plain Layout
-Exemplos
-\end_layout
-
-\begin_layout Plain Layout
-Usando os modificadores public e private
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "Heritage.lyx"
-
-\end_inset
-
-
-\begin_inset Note Note
 status open
 
-\begin_layout Section
-Polimorfismo
+\begin_layout Plain Layout
+
+%%Hides syntax errors on Minted lexer
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Note Note
-status collapsed
 
-\begin_layout Plain Layout
-Falar sobre coding style
+
+\backslash
+expandafter
+\backslash
+def
+\backslash
+csname PY@tok@err
+\backslash
+endcsname{}
 \end_layout
-
-\begin_layout Plain Layout
-If ternário
-\end_layout
-
-\begin_layout Plain Layout
-e no final sobre enumerações (switch-case - ifs)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand include
-filename "Polimorfism.lyx"
 
 \end_inset
 
@@ -269,18 +148,27 @@ filename "Polimorfism.lyx"
 \end_layout
 
 \begin_layout Section
-Generics e interfaces
+Revendo
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "GenericsAndInterfaces.lyx"
+filename "Review.lyx"
 
 \end_inset
 
 
 \end_layout
+
+\begin_layout Section
+Fragmentos
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Fragmentos.lyx"
 
 \end_inset
 

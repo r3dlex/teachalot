@@ -198,6 +198,215 @@ status open
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/Java/ExecutarIntent.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size larger
+Pergunta: O que a Task precisa fazer para continuar funcionando?
+\end_layout
+
+\begin_layout Plain Layout
+
+\size larger
+R: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2>{
+\backslash
+color{red}{Nada!}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Como assim?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/Java/OlaAndroid.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/Java/ExecutarIntent.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
 \size larger
 startActivityForResult()
 \end_layout
@@ -365,6 +574,54 @@ Tratamento de Eventos
 status open
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/Java/ExecutarIntent.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Local do Mapa
 \end_layout
 
@@ -514,7 +771,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset External
 	template JavaSourceNoLnNoFrame
-	filename ../Code/Java/EncontrarPeloId.java
+	filename ../Code/Java/ExemploOnClick.java
 
 \end_inset
 
@@ -532,6 +789,68 @@ status open
 \end_layout
 
 \begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Botão
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size larger
+\color black
+botao.setOnClickListener(OnClickListener listener);
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+\color black
+Interface OnClickListener
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+\color black
+Definição de métodos
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+\color black
+public void onClick(View v);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
@@ -540,7 +859,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-Encontrando pelo Id
+
 \end_layout
 
 \end_inset
@@ -566,77 +885,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset External
 	template JavaSourceNoLnNoFrame
-	filename ../Code/Java/EncontrarPeloId.java
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-
-\size larger
-A classe R é gerada a partir da definição do main.xml no layouts.
- A afirmação é...
-\end_layout
-
-\begin_layout Plain Layout
-
-\size larger
-R: 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<2>{
-\backslash
-color{red}{Verdadeira}}
-\end_layout
+	filename ../Code/Java/ExemploOnClick.java
 
 \end_inset
 
@@ -831,68 +1080,6 @@ null
 \end_layout
 
 \begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Botão
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-
-\size larger
-\color black
-botao.setOnClickListener(OnClickListener listener);
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-\color black
-Interface OnClickListener
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-\color black
-Definição de métodos
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-\color black
-public void onClick(View v);
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
 
 \end_layout
 
@@ -925,9 +1112,27 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-\begin_inset External
-	template JavaSourceNoLnNoFrame
-	filename ../Code/Java/ExemploOnClick.java
+
+\size larger
+A classe R é gerada a partir da definição do main.xml no layouts.
+ A afirmação é...
+\end_layout
+
+\begin_layout Plain Layout
+
+\size larger
+R: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2>{
+\backslash
+color{red}{Verdadeira}}
+\end_layout
 
 \end_inset
 
@@ -991,7 +1196,7 @@ status open
 \backslash
 uncover<2>{
 \backslash
-color{red}{Falso}}
+color{red}{Verdadeiro}}
 \end_layout
 
 \end_inset

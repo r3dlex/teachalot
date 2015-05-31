@@ -18,8 +18,4 @@ _Z9somatorioPii:
 .L3:
 	movl	-4(%rbp), %eax
 	cltq
-	leaq	0(,%rax,4), %rdx
-	movq	-24(%rbp), %rax
-	addq	%rdx, %rax
-	movl	(%rax), %eax
   ...

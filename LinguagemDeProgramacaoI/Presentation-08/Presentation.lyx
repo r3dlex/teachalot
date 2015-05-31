@@ -1,4 +1,4 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
 \lyxformat 413
 \begin_document
 \begin_header
@@ -12,7 +12,7 @@
 \usepackage{bibentry}
 \bibliographystyle{apalike}
 \usepackage{chngcntr}
-
+\usepackage{hyperref}
 \newminted{java}{
   fontsize=\footnotesize, 
   linenos,
@@ -45,6 +45,7 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -156,20 +157,65 @@ tableofcontents[currentsection]
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
 \begin_layout Section
-Aula anterior
+Trabalho
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Note Note
+\begin_layout BeginPlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
 status collapsed
 
+\begin_layout Standard
+Como funcionará
+\end_layout
+
+\begin_layout Itemize
+Até em trios
+\end_layout
+
+\begin_layout Itemize
+Utilização do 
+\begin_inset ERT
+status open
+
 \begin_layout Plain Layout
-Overview - 10 slides
+
+
+\backslash
+textcolor{blue}{
+\backslash
+href{http://www.github.com}{Git}}
+\end_layout
+
+\end_inset
+
+ (1,5 pontos)
+\end_layout
+
+\begin_layout Itemize
+Apresentação informal oral a sala 
+\end_layout
+
+\begin_layout Itemize
+Apresentação em grupo formal ao professor
+\end_layout
+
+\begin_layout Itemize
+Prazo final 05/12
 \end_layout
 
 \end_inset
@@ -177,23 +223,12 @@ Overview - 10 slides
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand include
-filename "Last.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
+\begin_layout EndFrame
 
 \end_layout
 
 \begin_layout Section
-Interface
+Interfaces (GUI)
 \end_layout
 
 \begin_layout Standard
@@ -206,35 +241,9 @@ filename "GUIBasics.lyx"
 
 \end_layout
 
-\begin_layout Section
-Outras operações
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand include
-filename "FileHandling.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout BeginPlainFrame
 
-
-
 \end_layout
-
 
 \begin_layout Standard
 \begin_inset Box Frameless
@@ -250,15 +259,26 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Plain Layout
+\begin_layout Standard
+Próxima aula
+\end_layout
 
+\begin_layout Itemize
+MVC
+\end_layout
+
+\begin_layout Itemize
+Design patterns
+\end_layout
+
+\begin_layout Itemize
+Continuação dos trabalhos
 \end_layout
 
 \end_inset
 
 
 \end_layout
-
 
 \begin_layout EndFrame
 

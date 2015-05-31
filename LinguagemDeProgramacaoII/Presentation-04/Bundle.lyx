@@ -98,7 +98,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -139,6 +139,72 @@ status open
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Bundle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+
+\size larger
+\color blue
+Classe responsável pelo Estado
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+\color blue
+Salva o Estado
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+\color blue
+Restaura-o
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+\color blue
+"Semi-automática"
 \end_layout
 
 \end_inset
@@ -239,14 +305,12 @@ Salvar informações de contexto
 Bundle.put{Tipo}(TAG, VALOR)
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 
 \size larger
 Ex: Bundle.putInt("Teste", 0);
 \end_layout
 
-\end_deeper
 \begin_layout Plain Layout
 
 \size larger
@@ -255,7 +319,6 @@ status open
 
 \begin_layout Plain Layout
 
-\size larger
 
 \backslash
 uncover<2->{
@@ -271,7 +334,6 @@ status open
 
 \begin_layout Plain Layout
 
-\size larger
 }}
 \end_layout
 
@@ -330,7 +392,6 @@ Obter informações de contexto
 Bundle.get{Tipo}(TAG)
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 
 \size larger
@@ -343,7 +404,105 @@ Retorna valor com tipo Tipo
 Ex: Bundle.getString("Teste");
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size larger
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/Java/Bundle-OnCreateRestore.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Exercício 3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size larger
+Implementar a PrimeiraActivity e SegundaActivity conforme comentários escritos
+ em 
+\color blue
+TODO
+\color inherit
+ no código exemplo no Moodle.
+\end_layout
+
 \end_inset
 
 
