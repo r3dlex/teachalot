@@ -175,5 +175,19 @@ filename "Fragmentos.lyx"
 
 \end_layout
 
+\begin_layout Section
+Interfaces de usuário
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Interfaces.lyx"
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

@@ -77,7 +77,7 @@
 status open
 
 \begin_layout Plain Layout
-Fragmentos
+GUI Android
 \end_layout
 
 \end_inset
@@ -100,28 +100,40 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Plain Layout
+\begin_layout Itemize
 
 \size larger
-Duas Possibilidades
+Parte gráfica e de eventos
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-Declarar estaticamente no Layout
+Views + eventos
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-Adicionado programaticamente
+AdapterView
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-FragmentManager!
+Layout
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Menus e ActionBar
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Diálogos
 \end_layout
 
 \end_inset
@@ -139,143 +151,7 @@ FragmentManager!
 status open
 
 \begin_layout Plain Layout
-Layout de fragmentos
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Itemize
-
-\size larger
-Porção da UI 
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Implementado/Inflado no onCreateView()
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Método deve retornar a View do fragmento
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-A View é adicionada a Activity
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Layout estático
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-movie[label=show3,width=0.85
-\backslash
-textwidth,poster,showcontrols] {
-\backslash
-includegraphics[width=0.85
-\backslash
-textwidth]{../Image/Apk-TabletVCit.png}}{TabletVCit.mkv}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
+Questão
 \end_layout
 
 \end_inset
@@ -301,603 +177,13 @@ status open
 \begin_layout Plain Layout
 
 \size larger
-Fragmento dinâmico
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Adicionar enquanto Activity roda
-\end_layout
-
-\begin_layout Plain Layout
-
-\size larger
-Como?
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Obter a referência ao FragmentManager
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Começar uma transação
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Adicionar o fragmento
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Atualizar a transação (Commit)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-
-\size larger
-FragmentManager
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Obtido com getFragmentManager()
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Presente na Activity
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-\emph on
-beginTransaction
-\emph default
-: inicia transações
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-\emph on
-add
-\emph default
-: adiciona um fragmento
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-\emph on
-commit
-\emph default
-: atualiza o FragmentTransaction
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../Image/QrCode-FragmentManager.png
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-url{http://developer.android.com/reference/android/app/FragmentManager.html}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Layout dinâmico
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Itemize
-
-\size larger
-Permite ao fragmento tomar partes da interface dinamicamente
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Torna interfaces mais fluidas e aumenta o aproveitamento do espaço de tela
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Layout dinâmico
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-movie[label=show3,width=0.85
-\backslash
-textwidth,poster,showcontrols] {
-\backslash
-includegraphics[width=0.85
-\backslash
-textwidth]{../Image/Apk-TabletVCit.png}}{TabletVCit.mkv}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-FragmentTransaction
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\begin_inset External
-	template JavaSourceNoLnNoFrame
-	filename ../Code/Java/OnListSelection.java
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../Image/QrCode-FragmentTransaction.png
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-url{http://developer.android.com/reference/android/app/FragmentTransaction.html}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
-
-\size larger
-1.
- Quando um fragmento se adiciona numa Activity, ele faz 4 passos em sequência.
- Qual dos passos abaixo é o primeiro?
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\size larger
-a.
- Atualizar (commit) a FragmentTransaction.
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\size larger
-b.
- Adicionar o fragmento.
-\end_layout
-
-\begin_layout Plain Layout
-
-\size larger
-c.
-
-\size default
- 
-\size larger
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-only<1>{Obter a referência ao FragmentManager.}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-only<2>{
-\backslash
-textcolor{red}{ Obter a referência ao FragmentManager.}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\size larger
-d.
- Começar a FragmentTransaction.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-
-\size larger
-2.
- Quando um fragmento é adicionado programaticamente a uma Activity, por
- padrão o Android adiciona o mesmo ao Task Backstack.
-\begin_inset Newline newline
-\end_inset
-
-
+Uma interface de usuário pode incluir mais do que somente componentes visuais?
 \end_layout
 
 \begin_layout Plain Layout
 
 \size larger
 R: 
-\size default
-
 \begin_inset ERT
 status open
 
@@ -912,9 +198,7 @@ textcolor{red}{
 
 \end_inset
 
-
-\size larger
-Falso!
+Verdadeiro
 \begin_inset ERT
 status open
 
@@ -943,7 +227,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-Mudanças de configuração
+View
 \end_layout
 
 \end_inset
@@ -966,28 +250,16 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Plain Layout
-
-\size larger
-OnDestroy
+\begin_layout Itemize
+Espaço retangular na tela
 \end_layout
 
 \begin_layout Itemize
-
-\size larger
-Destrói a configuração atual
+Desenháveis (tratamento)
 \end_layout
 
 \begin_layout Itemize
-
-\size larger
-Pode ser evitada
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-setRetainInstance(boolean)
+Tratam eventos 
 \end_layout
 
 \end_inset
@@ -1005,7 +277,7 @@ setRetainInstance(boolean)
 status open
 
 \begin_layout Plain Layout
-Exercício: Fragmentos
+Questão
 \end_layout
 
 \end_inset
@@ -1031,9 +303,93 @@ status open
 \begin_layout Plain Layout
 
 \size larger
-Implementar o exercício de fragmentos estáticos com a manutenção das configuraçõ
-es mesmo com a destruição de configurações segundo esqueleto que consta
- no Moodle.
+Qual a melhor definição para uma View?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2>{
+\backslash
+textcolor{red}{V}}
+\end_layout
+
+\end_inset
+
+) Parte básica de toda interface com usuário
+\end_layout
+
+\begin_layout Plain Layout
+
+\size larger
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2>{
+\backslash
+textcolor{red}{V}}
+\end_layout
+
+\end_inset
+
+) Deve tratar os eventos direcionados a ela
+\end_layout
+
+\begin_layout Plain Layout
+
+\size larger
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2>{
+\backslash
+textcolor{red}{F}}
+\end_layout
+
+\end_inset
+
+) Um polígono arbitrário em tela
+\end_layout
+
+\begin_layout Plain Layout
+
+\size larger
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2>{
+\backslash
+textcolor{red}{V}}
+\end_layout
+
+\end_inset
+
+) Uma View é responsável por desenhar a si mesmo
 \end_layout
 
 \end_inset
@@ -1051,7 +407,131 @@ es mesmo com a destruição de configurações segundo esqueleto que consta
 status open
 
 \begin_layout Plain Layout
-Exercício: Fragmentos
+Tipos de elementos gráficos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+
+\size larger
+Botões (Button)
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Botão com estado (ToggleButton)
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Caixa de seleção (Checkbox)
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Barra de avaliação (RatingBar)
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+AutoCompleteTextView
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Button
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+
+\size larger
+Classe já conhecida
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+View Clicável
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Faz uma ação
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -1075,10 +555,157 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/QrCode-Buttons.png
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{http://developer.android.com/guide/topics/ui/controls/button.html}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+ToggleButton
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
 
 \size larger
-Implementar o exercício de fragmentos dinâmicos segundo esqueleto que consta
- no Moodle.
+Possui 2 estados
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Pressionado / Não pressionado
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Clique altera o estado
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Indicador de estado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/QrCode-ToggleButton.png
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{http://developer.android.com/guide/topics/ui/controls/togglebutton.html}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
