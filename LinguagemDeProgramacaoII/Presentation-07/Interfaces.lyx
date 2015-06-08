@@ -251,20 +251,14 @@ height_special "totalheight"
 status open
 
 \begin_layout Itemize
-
-\size larger
 Espaço retangular na tela
 \end_layout
 
 \begin_layout Itemize
-
-\size larger
 Desenháveis (tratamento)
 \end_layout
 
 \begin_layout Itemize
-
-\size larger
 Tratam eventos 
 \end_layout
 
@@ -561,80 +555,6 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-movie[label=show3,width=0.85
-\backslash
-textwidth,poster,showcontrols] {
-\backslash
-includegraphics[width=0.85
-\backslash
-textwidth]{../Image/App-Button.png}}{Button.mkv}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename ../Image/QrCode-Buttons.png
@@ -786,125 +706,6 @@ url{http://developer.android.com/guide/topics/ui/controls/togglebutton.html}
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-movie[label=show3,width=0.85
-\backslash
-textwidth,poster,showcontrols] {
-\backslash
-includegraphics[width=0.85
-\backslash
-textwidth]{../Image/App-ToggleButton.png}}{ToggleButton.mkv}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Exercício: Interfaces
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-
-\size larger
-Implementar os aplicativos (Button e ToggleButton) conforme demonstrados
- em vídeo nos slides anteriores.
 \end_layout
 
 \end_inset
