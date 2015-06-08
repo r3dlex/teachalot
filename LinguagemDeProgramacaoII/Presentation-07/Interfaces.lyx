@@ -77,7 +77,7 @@
 status open
 
 \begin_layout Plain Layout
-GUI Android
+RatingBar
 \end_layout
 
 \end_inset
@@ -100,40 +100,39 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Itemize
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/UI-RatingsBar.png
+	width 35text%
 
-\size larger
-Parte gráfica e de eventos
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-Views + eventos
+Barra de score
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-AdapterView
+Avaliação de algo 
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-Layout
+Típico de mobile
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-Menus e ActionBar
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Diálogos
+Uso com texto
 \end_layout
 
 \end_inset
@@ -151,7 +150,7 @@ Diálogos
 status open
 
 \begin_layout Plain Layout
-Questão
+
 \end_layout
 
 \end_inset
@@ -175,37 +174,10 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-
-\size larger
-Uma interface de usuário pode incluir mais do que somente componentes visuais?
-\end_layout
-
-\begin_layout Plain Layout
-
-\size larger
-R: 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<2>{
-\backslash
-textcolor{red}{
-\end_layout
-
-\end_inset
-
-Verdadeiro
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}}
-\end_layout
+\align center
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/Java/OnRatingChanged.java
 
 \end_inset
 
@@ -227,7 +199,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-View
+
 \end_layout
 
 \end_inset
@@ -250,16 +222,9 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Itemize
-Espaço retangular na tela
-\end_layout
-
-\begin_layout Itemize
-Desenháveis (tratamento)
-\end_layout
-
-\begin_layout Itemize
-Tratam eventos 
+\begin_layout Plain Layout
+\align center
+TODO - Vídeo
 \end_layout
 
 \end_inset
@@ -277,7 +242,7 @@ Tratam eventos
 status open
 
 \begin_layout Plain Layout
-Questão
+Checkbox
 \end_layout
 
 \end_inset
@@ -300,96 +265,28 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Plain Layout
+\begin_layout Itemize
 
 \size larger
-Qual a melhor definição para uma View?
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-(
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<2>{
-\backslash
-textcolor{red}{V}}
+Caixa de checagem
 \end_layout
 
-\end_inset
-
-) Parte básica de toda interface com usuário
-\end_layout
-
-\begin_layout Plain Layout
+\begin_layout Itemize
 
 \size larger
-(
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<2>{
-\backslash
-textcolor{red}{V}}
+Seleção de item
 \end_layout
 
-\end_inset
-
-) Deve tratar os eventos direcionados a ela
-\end_layout
-
-\begin_layout Plain Layout
+\begin_layout Itemize
 
 \size larger
-(
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<2>{
-\backslash
-textcolor{red}{F}}
+2 estados
 \end_layout
 
-\end_inset
-
-) Um polígono arbitrário em tela
-\end_layout
-
-\begin_layout Plain Layout
+\begin_layout Itemize
 
 \size larger
-(
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<2>{
-\backslash
-textcolor{red}{V}}
-\end_layout
-
-\end_inset
-
-) Uma View é responsável por desenhar a si mesmo
+ToggleButton?
 \end_layout
 
 \end_inset
@@ -407,7 +304,7 @@ textcolor{red}{V}}
 status open
 
 \begin_layout Plain Layout
-Tipos de elementos gráficos
+
 \end_layout
 
 \end_inset
@@ -430,33 +327,75 @@ height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Itemize
+\begin_layout Plain Layout
+\align center
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/Java/OnRatingChanged.java
 
-\size larger
-Botões (Button)
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
+\end_inset
 
-\size larger
-Botão com estado (ToggleButton)
+
 \end_layout
 
-\begin_layout Itemize
+\end_deeper
+\begin_layout Separator
 
-\size larger
-Caixa de seleção (Checkbox)
 \end_layout
 
-\begin_layout Itemize
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
 
-\size larger
-Barra de avaliação (RatingBar)
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Itemize
+\end_inset
 
-\size larger
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+TODO - Vídeo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 AutoCompleteTextView
 \end_layout
 
@@ -465,24 +404,6 @@ AutoCompleteTextView
 
 \end_layout
 
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Button
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
@@ -501,19 +422,25 @@ status open
 \begin_layout Itemize
 
 \size larger
-Classe já conhecida
+Campo de texto
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-View Clicável
+Lista de respostas
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-Faz uma ação
+Completude automática
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Inserção de caracteres
 \end_layout
 
 \end_inset
@@ -556,156 +483,7 @@ status open
 
 \begin_layout Plain Layout
 \align center
-\begin_inset Graphics
-	filename ../Image/QrCode-Buttons.png
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-url{http://developer.android.com/guide/topics/ui/controls/button.html}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-ToggleButton
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Itemize
-
-\size larger
-Possui 2 estados
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Pressionado / Não pressionado
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Clique altera o estado
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Indicador de estado
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../Image/QrCode-ToggleButton.png
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-url{http://developer.android.com/guide/topics/ui/controls/togglebutton.html}
-\end_layout
-
-\end_inset
-
-
+TODO - Vídeo
 \end_layout
 
 \end_inset

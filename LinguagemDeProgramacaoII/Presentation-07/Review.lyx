@@ -290,7 +290,39 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-//TODO - Vídeo
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+movie[label=show3,width=0.85
+\backslash
+textwidth,poster,showcontrols] {
+\backslash
+includegraphics[width=0.85
+\backslash
+textwidth]{../Image/App-Button.png}}{Button.mkv}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -332,7 +364,39 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-//TODO - Vídeo
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+movie[label=show3,width=0.85
+\backslash
+textwidth,poster,showcontrols] {
+\backslash
+includegraphics[width=0.85
+\backslash
+textwidth]{../Image/App-ToggleButton.png}}{ToggleButton.mkv}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
