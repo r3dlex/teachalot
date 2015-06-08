@@ -495,7 +495,37 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-TODO - 
+
+\size larger
+A utilização de Listeners é prevista no livro Design Patterns Elements of
+ Reusable Object-Oriented Code, dos autores gang of four.
+ Sua utilização implica na utilização de uma classe para instalar e tratar
+ eventos as quais ela se refere como o OnKeyListener.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size larger
+R: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2>{
+\backslash
+textcolor{red}{Verdadeiro}}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -603,7 +633,7 @@ status open
 \begin_layout Plain Layout
 
 \size larger
-onMeasure
+onMeasure()
 \end_layout
 
 \begin_layout Itemize
@@ -621,7 +651,7 @@ E das Views filhas
 \begin_layout Plain Layout
 
 \size larger
-onLayout
+onLayout()
 \end_layout
 
 \begin_layout Itemize
@@ -843,7 +873,7 @@ textcolor{red}{F}}
 status open
 
 \begin_layout Plain Layout
-Implementando
+Exercício
 \end_layout
 
 \end_inset

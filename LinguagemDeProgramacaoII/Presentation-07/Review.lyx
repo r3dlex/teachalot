@@ -172,14 +172,20 @@ height_special "totalheight"
 status open
 
 \begin_layout Itemize
+
+\size larger
 Espaço retangular na tela
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Desenháveis (tratamento)
 \end_layout
 
 \begin_layout Itemize
+
+\size larger
 Tratam eventos 
 \end_layout
 
