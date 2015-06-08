@@ -223,8 +223,39 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-\align center
-TODO - Vídeo
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+movie[label=show3,height=0.85
+\backslash
+textheight,poster,showcontrols] {
+\backslash
+includegraphics[height=0.85
+\backslash
+textheight]{../Image/App-BarraDeScore.png}}{BarraDeScore.mkv}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -377,8 +408,39 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-\align center
-TODO - Vídeo
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+movie[label=show3,height=0.85
+\backslash
+textheight,poster,showcontrols] {
+\backslash
+includegraphics[height=0.85
+\backslash
+textheight]{../Image/App-CheckBox.png}}{CheckBox.mkv}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -482,8 +544,39 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-\align center
-TODO - Vídeo
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+movie[label=show3,height=0.85
+\backslash
+textheight,poster,showcontrols] {
+\backslash
+includegraphics[height=0.85
+\backslash
+textheight]{../Image/App-AutoComplete.png}}{AutoComplete.mkv}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
