@@ -77,7 +77,7 @@
 status open
 
 \begin_layout Plain Layout
-GUI Android
+ViewGroup
 \end_layout
 
 \end_inset
@@ -103,37 +103,31 @@ status open
 \begin_layout Itemize
 
 \size larger
-Parte gráfica e de eventos
+Invisível
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-Views + eventos
+Contém outras
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-AdapterView
+Comportamento Complexo
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-Layout
+Grupos & organização
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-Menus e ActionBar
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Diálogos
+Classe base para Containers & Layouts
 \end_layout
 
 \end_inset
@@ -151,83 +145,7 @@ Diálogos
 status open
 
 \begin_layout Plain Layout
-Questão
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-
-\size larger
-Uma interface de usuário pode incluir mais do que somente componentes visuais?
-\end_layout
-
-\begin_layout Plain Layout
-
-\size larger
-R: 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<2>{
-\backslash
-textcolor{red}{
-\end_layout
-
-\end_inset
-
-Verdadeiro
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-View
+Exemplos
 \end_layout
 
 \end_inset
@@ -253,19 +171,43 @@ status open
 \begin_layout Itemize
 
 \size larger
-Espaço retangular na tela
+RadioGroup
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-Desenháveis (tratamento)
+TimePicker
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-Tratam eventos 
+DatePicker
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+WebView
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+MapView
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Gallery
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Spinner
 \end_layout
 
 \end_inset
@@ -283,7 +225,7 @@ Tratam eventos
 status open
 
 \begin_layout Plain Layout
-Questão
+Exemplos
 \end_layout
 
 \end_inset
@@ -307,17 +249,20 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
+\align center
 
 \size larger
-Qual a melhor definição para uma View?
-\begin_inset Newline newline
+\begin_inset Graphics
+	filename ../Image/QrCode-Webview.png
+	height 40theight%
+
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
-(
+\begin_layout Plain Layout
+\align center
 \begin_inset ERT
 status open
 
@@ -325,77 +270,12 @@ status open
 
 
 \backslash
-uncover<2>{
-\backslash
-textcolor{red}{V}}
+url{http://developer.android.com/reference/android/view/ViewGroup.html}
 \end_layout
 
 \end_inset
 
-) Parte básica de toda interface com usuário
-\end_layout
 
-\begin_layout Plain Layout
-
-\size larger
-(
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<2>{
-\backslash
-textcolor{red}{V}}
-\end_layout
-
-\end_inset
-
-) Deve tratar os eventos direcionados a ela
-\end_layout
-
-\begin_layout Plain Layout
-
-\size larger
-(
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<2>{
-\backslash
-textcolor{red}{F}}
-\end_layout
-
-\end_inset
-
-) Um polígono arbitrário em tela
-\end_layout
-
-\begin_layout Plain Layout
-
-\size larger
-(
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<2>{
-\backslash
-textcolor{red}{V}}
-\end_layout
-
-\end_inset
-
-) Uma View é responsável por desenhar a si mesmo
 \end_layout
 
 \end_inset
@@ -409,11 +289,15 @@ textcolor{red}{V}}
 \end_layout
 
 \begin_layout PlainFrame
+
+\end_layout
+
+\begin_layout PlainFrame
 \begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-Tipos de elementos gráficos
+RadioGroup
 \end_layout
 
 \end_inset
@@ -439,31 +323,19 @@ status open
 \begin_layout Itemize
 
 \size larger
-Botões (Button)
+Grupo de RadioButton
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-Botão com estado (ToggleButton)
+Similar a Checkboxes
 \end_layout
 
 \begin_layout Itemize
 
 \size larger
-Caixa de seleção (Checkbox)
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Barra de avaliação (RatingBar)
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-AutoCompleteTextView
+Um selecionado por vez
 \end_layout
 
 \end_inset
@@ -477,58 +349,6 @@ AutoCompleteTextView
 \end_layout
 
 \begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Button
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Itemize
-
-\size larger
-Classe já conhecida
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-View Clicável
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Faz uma ação
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
 
 \end_layout
 
@@ -537,7 +357,7 @@ Faz uma ação
 status open
 
 \begin_layout Plain Layout
-
+RadioGroup
 \end_layout
 
 \end_inset
@@ -575,13 +395,13 @@ begin{center}
 
 
 \backslash
-movie[label=show3,width=0.85
+movie[label=show3,height=0.85
 \backslash
-textwidth,poster,showcontrols] {
+textheight,poster,showcontrols] {
 \backslash
-includegraphics[width=0.85
+includegraphics[height=0.85
 \backslash
-textwidth]{../Image/App-Button.png}}{Button.mkv}
+textheight]{../Image/App-RadioGroup.png}}{RadioGroup.mkv}
 \end_layout
 
 \begin_layout Plain Layout
@@ -637,8 +457,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../Image/QrCode-Buttons.png
-	width 40text%
+	filename ../Image/QrCode-RadioGroup.png
+	height 40theight%
 
 \end_inset
 
@@ -653,7 +473,7 @@ status open
 
 
 \backslash
-url{http://developer.android.com/guide/topics/ui/controls/button.html}
+url{https://developer.android.com/reference/android/widget/RadioGroup.html}
 \end_layout
 
 \end_inset
@@ -672,64 +492,6 @@ url{http://developer.android.com/guide/topics/ui/controls/button.html}
 \end_layout
 
 \begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-ToggleButton
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Itemize
-
-\size larger
-Possui 2 estados
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Pressionado / Não pressionado
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Clique altera o estado
-\end_layout
-
-\begin_layout Itemize
-
-\size larger
-Indicador de estado
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
 
 \end_layout
 
@@ -738,72 +500,7 @@ Indicador de estado
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../Image/QrCode-ToggleButton.png
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-url{http://developer.android.com/guide/topics/ui/controls/togglebutton.html}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout PlainFrame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
+Obter tempo
 \end_layout
 
 \end_inset
@@ -841,13 +538,13 @@ begin{center}
 
 
 \backslash
-movie[label=show3,width=0.85
+movie[label=show3,height=0.85
 \backslash
-textwidth,poster,showcontrols] {
+textheight,poster,showcontrols] {
 \backslash
-includegraphics[width=0.85
+includegraphics[height=0.85
 \backslash
-textwidth]{../Image/App-ToggleButton.png}}{ToggleButton.mkv}
+textheight]{../Image/App-TempoEData.png}}{TempoEData.mkv}
 \end_layout
 
 \begin_layout Plain Layout
@@ -877,7 +574,7 @@ end{center}
 status open
 
 \begin_layout Plain Layout
-Exercício: Interfaces
+Obter tempo
 \end_layout
 
 \end_inset
@@ -901,10 +598,296 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/QrCode-DatePickerDialog.png
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{http://developer.android.com/reference/android/app/DatePickerDialog.html}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Obter tempo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/QrCode-TimePickerDialog.png
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{http://developer.android.com/reference/android/app/TimePickerDialog.html}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+WebView
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
 
 \size larger
-Implementar os aplicativos (Button e ToggleButton) conforme demonstrados
- em vídeo nos slides anteriores.
+GroupView
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Interação Web
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Visualização e carregamento
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Javascript
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+WebView
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+movie[label=show3,height=0.85
+\backslash
+textheight,poster,showcontrols] {
+\backslash
+includegraphics[height=0.85
+\backslash
+textheight]{../Image/App-WebView.png}}{WebView.mkv}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+WebView
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/QrCode-WebView.png
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{http://developer.android.com/reference/android/webkit/WebView.html}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
