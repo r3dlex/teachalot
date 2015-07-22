@@ -1,0 +1,2182 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass abntex2
+\begin_preamble
+% ---
+% Pacotes fundamentais
+% ---
+\usepackage{cmap}                               % Mapear caracteres especiais no PDF
+\usepackage{lmodern}                    % Usa a fonte Latin Modern
+\usepackage{makeidx}            % Cria o indice
+\usepackage{hyperref}                   % Controla a formação do índice
+\usepackage{lastpage}                   % Usado pela Ficha catalográfica
+\usepackage{indentfirst}                % Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}                              % Controle das cores
+\usepackage{graphicx}                   % Inclusão de gráficos
+\usepackage{xcolor}
+\usepackage{minted}               		
+% ---
+
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+\usepackage{lipsum}                             % para geração de dummy text
+% ---
+
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}     % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}   % Citações padrão ABNT
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+        \ifcase #1 %
+                Nenhuma citação no texto.%
+        \or
+                Citado na página #2.%
+        \else
+                Citado #1 vezes nas páginas #2.%
+        \fi}%
+% ---
+
+% ---
+% Minted - Source code
+% ---
+\newminted{java}{
+  fontsize=\footnotesize, 
+  linenos,
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+% ---
+
+\newminted{javasnip}{
+  fontsize=\footnotesize, 
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+\definecolor{bg}{rgb}{1.0,1.0,1.0}
+%%Hides syntax errors on Minted lexer
+\expandafter\def\csname PY@tok@err\endcsname{}
+
+% ---
+% Espaçamentos entre linhas e parágrafos
+% ---
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+% ---
+
+% Variáveis relacionadas a Apostila
+\titulo{LINGUAGEM DE PROGRAMAÇÃO C}
+\autor{André Ferreira Bem Silva}
+\instituicao{CESUSC}
+\tipotrabalho{Apostila}
+\data{2015}
+% ---
+
+% ---
+% compila o indice
+% ---
+\makeindex
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% informações do PDF
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypersetup{
+\end_layout
+
+\begin_layout Plain Layout
+
+        %pagebackref=true,
+\end_layout
+
+\begin_layout Plain Layout
+
+                pdftitle={
+\backslash
+imprimirtitulo},
+\end_layout
+
+\begin_layout Plain Layout
+
+                pdfauthor={
+\backslash
+imprimirautor},
+\end_layout
+
+\begin_layout Plain Layout
+
+        pdfsubject={
+\backslash
+imprimirpreambulo},
+\end_layout
+
+\begin_layout Plain Layout
+
+                pdfkeywords={PALAVRAS}{CHAVES}{abnt}{abntex}{abntex2},
+\end_layout
+
+\begin_layout Plain Layout
+
+            pdfproducer={LaTeX with abnTeX2},   % producer of the document
+\end_layout
+
+\begin_layout Plain Layout
+
+            pdfcreator={
+\backslash
+imprimirautor},
+\end_layout
+
+\begin_layout Plain Layout
+
+        colorlinks=true,                % false: boxed links; true: colored
+ links
+\end_layout
+
+\begin_layout Plain Layout
+
+        linkcolor=blue,                 % color of internal links
+\end_layout
+
+\begin_layout Plain Layout
+
+        citecolor=blue,                 % color of links to bibliography
+\end_layout
+
+\begin_layout Plain Layout
+
+        filecolor=magenta,                      % color of file links
+\end_layout
+
+\begin_layout Plain Layout
+
+                urlcolor=blue,
+\end_layout
+
+\begin_layout Plain Layout
+
+                bookmarksdepth=4
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+% Capa
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+imprimircapa
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+% Folha de rosto
+\end_layout
+
+\begin_layout Plain Layout
+
+% (o * indica que haverá a ficha bibliográfica)
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+imprimirfolhaderosto*
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+% inserir o sumario
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pdfbookmark[0]{
+\backslash
+contentsname}{toc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tableofcontents*
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cleardoublepage
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introdução a C
+\end_layout
+
+\begin_layout Standard
+Denis Ritchie define, em 1970, uma linguagem a partir do BCPL nos laboratórios
+ da Bell Telephones Inc.
+ Esta linguagem foi chamada de B.
+ Já em 1978, Brian Kerningham em conjunto com Ritchie aprimorou a linguagem.
+ A nova versão passou a chama-se de C.
+ Pelas suas características de portabilidade e estruturação já se tornou
+ popular entre os programadores.
+ Em 1980, a linguagem é padronizada pelo American National Standard Institute.
+ Surge a linguagem ANSI C.
+ Mais recentemente:
+\end_layout
+
+\begin_layout Itemize
+1990: A Borland International Co.
+ fabricante de compiladores profissionais escolhe o C e o Pascal como linguagens
+ de trabalho para o seu Integrated Development Enviroment (Ambiente Integrado
+ de Desenvolvimento).
+ Surge a linguagem Turbo C.
+ 
+\end_layout
+
+\begin_layout Itemize
+1992: O C se torna ponto de concordância entre teóricos do desenvolvimento
+ da teoria de Object - Oriented Programming (programação orientada a objetos).
+ Surge a linguagem C++.
+\end_layout
+
+\begin_layout Section
+Caraterísticas
+\end_layout
+
+\begin_layout Standard
+\align left
+Linguagem de Nível Médio (combina recursos do Alto e Baixo Nível):
+\end_layout
+
+\begin_layout Itemize
+Bastante Portátil
+\end_layout
+
+\begin_layout Itemize
+Não é fortemente tipada;
+\end_layout
+
+\begin_layout Itemize
+Permite a manipulação de bits, byte e endereços;
+\end_layout
+
+\begin_layout Itemize
+Estruturada.
+\end_layout
+
+\begin_layout Section
+Estrutura de um Programa
+\end_layout
+
+\begin_layout Standard
+Todo programa C segue uma estrutura bem definida de símbolos léxicos, sintáticos
+ e semânticos.
+ Sendo assim, o estudo desses símbolos é de interesse para a compreensão
+ da linguagem.
+ 
+\end_layout
+
+\begin_layout Subsection
+Identificadores
+\end_layout
+
+\begin_layout Standard
+São nomes usados para se fazer referencia a variáveis, funções, rótulos
+ e vários outros objetos definidos pelo usuário.
+ Regras:
+\end_layout
+
+\begin_layout Itemize
+O primeiro caracter deve ser letra ou sublinha( _ ).
+ 
+\end_layout
+
+\begin_layout Itemize
+Os caracteres seguintes devem ser letras, números ou sublinha.
+ 
+\end_layout
+
+\begin_layout Itemize
+Os primeiros 32 (default) caracteres são significativos.
+\end_layout
+
+\begin_layout Subsection
+Comentários
+\end_layout
+
+\begin_layout Standard
+Os comentários do programador são feito da seguinte maneira:
+\end_layout
+
+\begin_layout Standard
+/* Isto é um comentário */
+\end_layout
+
+\begin_layout Standard
+// ou Isto
+\end_layout
+
+\begin_layout Subsection
+Regras Gerais 
+\end_layout
+
+\begin_layout Standard
+Um programa em "C" é constituído de uma ou mais funções delimitadas por
+ chaves, onde uma é obrigatoriamente chamada main().
+ 
+\end_layout
+
+\begin_layout Itemize
+Letras maiúsculas e minúsculas são tratadas como caracteres diferentes.
+\end_layout
+
+\begin_layout Itemize
+O formato do texto é livre.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+main() 
+\emph default
+especifica a função por onde o programa começar a ser executado.
+ 
+\end_layout
+
+\begin_layout Itemize
+Todos os comandos são terminados por ponto e vírgula.
+ 
+\end_layout
+
+\begin_layout Itemize
+Todas as variáveis devem ser declaradas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/A01/dia_mes_ano.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Programa que faz a impressão de dia, mês e ano no console
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Palavras reservadas
+\end_layout
+
+\begin_layout Standard
+Estas palavras não podem ser utilizadas como nome de variáveis: 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+auto double if static const asm pascal break else int struct enum _ss _es
+ case entry long switch signed interrupt huge chiar externa registre typedef
+ void _cs continue float return union volatile cdecl default for sizeof
+ unsigned near do goto short while _ds 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/A01/declarando_var.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cálculo de potência 
+\begin_inset Formula $x^{y}$
+\end_inset
+
+ em C
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Declaração de variáveis
+\end_layout
+
+\begin_layout Standard
+\align left
+Sintaxe: TIPO lista_variáveis, onde:
+\end_layout
+
+\begin_layout Itemize
+TIPO: deve ser um tipo de dado válido.
+\end_layout
+
+\begin_layout Itemize
+lista_variáveis: um ou mais identificadores separados por vírgula.
+\end_layout
+
+\begin_layout Standard
+\align left
+Onde as variáveis são declaradas:
+\end_layout
+
+\begin_layout Itemize
+Definidas fora de todas as funções, incluindo a função 
+\emph on
+main()
+\emph default
+ são chamadas de Variáveis Globais e podem ser usadas em qualquer parte
+ do programa.
+\end_layout
+
+\begin_layout Itemize
+Definidas dentro de uma função são chamadas de Variáveis Locais e só podem
+ ser usadas dentro desta função.
+\end_layout
+
+\begin_layout Itemize
+Na declaração de parâmetros formais de uma função.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/A01/potencia.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Declarações de tipos inteiros
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Inicialização de variáveis
+\end_layout
+
+\begin_layout Standard
+Em C é possível fornecermos valores para as variáveis ao mesmo tempo que
+ as declaramos, colocando um sinal de igual e uma constante após o nome
+ da variável:
+\end_layout
+
+\begin_layout Standard
+\align center
+TIPO nome_variável = constante; 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/A01/var_init.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Declarações de tipos inteiros
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Constantes
+\end_layout
+
+\begin_layout Standard
+Valores fixos que o programa não pode alterar.
+ As constantes podem ser de qualquer tipo básico e podem aparecer em expressões
+ diversas.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tipo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exemplos de constantes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+'a' 'n' '9' 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+char
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1, 123, 2100 -234
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+float
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+123.23, 4.34e-3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+char*
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+"C99", "Ola Mundo"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exemplos de constantes de cada tipo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Constantes hexadecimais e octais
+\end_layout
+
+\begin_layout Standard
+C permite especificar constantes inteiras em hexadecimal ou octal.
+ Uma constante octal (base 8) começa com um zero e uma Hexadecimal (base
+ 16) por 0x.
+ Ex:
+\end_layout
+
+\begin_layout Standard
+int hex = 0xFF; /* 255 em decimal */ 
+\end_layout
+
+\begin_layout Standard
+int oct = 011; /* 9 em decimal */
+\end_layout
+
+\begin_layout Subsubsection
+Constantes strings 
+\end_layout
+
+\begin_layout Standard
+Uma string é um conjunto de caracteres que aparecem dentro de aspas duplas.
+ 
+\end_layout
+
+\begin_layout Standard
+Exemplo: string = "C11" 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assim, a memória total ocupada por "C11" é 4 bytes, e não 3 bytes como parece
+ num primeiro instante.
+ Outras observações: 
+\end_layout
+
+\begin_layout Itemize
+'a' diferente de "a", uma vez que é "a" é 
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Assim, "a" ocupa 2 bytes na memória
+\end_layout
+
+\begin_layout Itemize
+Toda "string" é terminada por "
+\backslash
+0"
+\end_layout
+
+\begin_layout Subsubsection
+Constantes especiais
+\end_layout
+
+\begin_layout Standard
+Algumas constantes que são impossíveis de inserir pelo teclado e que possuem
+ efeito especial ou significado especial.
+ A lista:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="14" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Constante
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Significado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Retrocesso (
+\emph on
+backspace
+\emph default
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+f 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alimentação de formulário
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+n 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nova linha
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+r 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Retorno de Carro 
+\emph on
+<CR> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+t 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tabulação horizontal (
+\emph on
+tab
+\emph default
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+"
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aspas duplas
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aspas simples
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zero
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Barra invertida
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+v
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tabulação vertical (
+\emph on
+tab
+\emph default
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alerta
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+o
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Constante octal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Constante hexadecimal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Tipos de dados
+\end_layout
+
+\begin_layout Standard
+Existem alguns tipos básicos de dados, os quais definem as variáveis 
+\emph on
+nativas
+\emph default
+.
+ Esses tipos são inteiros, pontos flutuantes, caracteres ou sem tipo (
+\emph on
+void
+\emph default
+).
+ Estão enumerados, assim como seus valores admitos, na tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:TiposDeDados"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tipo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bits
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bytes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Faixa de valor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+char
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[-128,127]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+short (int)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[-32768,32767]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[\text{–}2.147.483.648,2.147.483.647]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+long (int)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[\text{–}2.147.483.648,2.147.483.647]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+long long (int)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+64
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[\text{–}9.223.372.036.854.775.808,9.223.372.036.854.775.807$
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+float
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[-3.4E-38,3.4E+38]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+double
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+64
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[1.7E-308,1.7E+308]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sem valor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:TiposDeDados"
+
+\end_inset
+
+Tipos básicos e seus respectivos tamanhos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Modificadores de tipo
+\end_layout
+
+\begin_layout Standard
+Um modificador é uma palavra-chave que pode ser usada para alterar o significado
+ do tipo base para que ele se adapte conforme algumas necessidades específicas.
+ Na tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:ModificadoresDeTipo"
+
+\end_inset
+
+, demonstram-se os modificadores de tipos, aplicáveis aqueles da tabela
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:TiposDeDados"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modificador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Significado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+signed
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+com sinal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+unsigned
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sem sinal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+long
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+valor longo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+short
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+valor curto
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:ModificadoresDeTipo"
+
+\end_inset
+
+Modificadores de tipo aplicáveis aos tipos básicos, da tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:TiposDeDados"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Preprocessador C
+\end_layout
+
+\begin_layout Standard
+O pré-processador C é um programa que examina o programa fonte escrito em
+ C e executa certas modificações nele, baseado nas diretivas de compilação
+ (ou diretivas do pré-processador).
+ As diretivas de compilação são comandos que não são compilados, sendo dirigidos
+ ao pré-processador, executado pelo compilador antes da execução do processo
+ de compilação propriamente dito.
+\end_layout
+
+\begin_layout Standard
+Portanto, o pré-processador modifica o programa fonte, que ainda não estaria
+ pronto para ser entregue ao compilador.
+ Todas as diretivas de compilação são iniciadas pelo caractere 
+\emph on
+#
+\emph default
+ (hashtag, sharp, jogo-da-velha).
+ As diretivas podem ser colocadas em qualquer parte do programa, mas não
+ podem ser colocadas na mesma linha que outra diretiva ou instrução.
+ As principais diretivas de compilação são:
+\end_layout
+
+\begin_layout Itemize
+#include
+\end_layout
+
+\begin_layout Itemize
+#define
+\end_layout
+
+\begin_layout Itemize
+#undef
+\end_layout
+
+\begin_layout Itemize
+#ifdef
+\end_layout
+
+\begin_layout Itemize
+#ifndef
+\end_layout
+
+\begin_layout Itemize
+#if
+\end_layout
+
+\begin_layout Itemize
+#else
+\end_layout
+
+\begin_layout Itemize
+#elif
+\end_layout
+
+\begin_layout Itemize
+#endif
+\end_layout
+
+\begin_layout Section
+Diretivas em tempo de compilação
+\end_layout
+
+\begin_layout Standard
+Algumas diretivas tem influência direta sobre o resultado da compilação.
+ Nessa seção define-se algumas delas.
+\end_layout
+
+\begin_layout Subsection
+#include
+\end_layout
+
+\begin_layout Standard
+A diretiva #include diz ao pré-processador para incluir naquele ponto um
+ arquivo especificado.
+ Sua sintaxe é:
+\end_layout
+
+\begin_layout Standard
+\align center
+#include "nome_do_arquivo" 
+\end_layout
+
+\begin_layout Standard
+\align center
+#include <nome_do_arquivo>
+\end_layout
+
+\begin_layout Standard
+A diferença entre se usar "" e <> é somente a ordem de procura nos diretórios
+ pelo arquivo especificado.
+ Se o arquivo tiver caminho completo, ou se o arquivo estiver em um diretório
+ de trabalho relativo, usa-se a notação com aspas.
+ Senão, se o arquivo estiver nos caminhos de procura pré-especificados do
+ compilador, isto é, se ele for um arquivo do próprio sistema (como é o
+ caso de arquivos como stdio.h, string.h, etc...), usa-se <arquivo>.
+\end_layout
+
+\begin_layout Subsection
+#define
+\end_layout
+
+\begin_layout Subsection
+#undef
+\end_layout
+
+\begin_layout Subsection
+#ifdef
+\end_layout
+
+\begin_layout Subsection
+#ifndef
+\end_layout
+
+\begin_layout Subsection
+#elif
+\end_layout
+
+\begin_layout Chapter
+Funções e estruturas da Linguagem C
+\end_layout
+
+\begin_layout Chapter
+Structs, ponteiros
+\end_layout
+
+\begin_layout Chapter
+Funções e funcionalidades
+\end_layout
+
+\end_body
+\end_document
