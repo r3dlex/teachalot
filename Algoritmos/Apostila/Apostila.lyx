@@ -70,8 +70,7 @@
 } 
 
 \definecolor{bg}{rgb}{1.0,1.0,1.0}
-%%Hides syntax errors on Minted lexer
-\expandafter\def\csname PY@tok@err\endcsname{}
+
 
 % ---
 % Espaçamentos entre linhas e parágrafos
@@ -387,6 +386,33 @@ cleardoublepage
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%%Hides syntax errors on Minted lexer
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+expandafter
+\backslash
+def
+\backslash
+csname PY@tok@err
+\backslash
+endcsname{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Introdução a C
 \end_layout
@@ -453,7 +479,66 @@ Todo programa C segue uma estrutura bem definida de símbolos léxicos, sintáti
  e semânticos.
  Sendo assim, o estudo desses símbolos é de interesse para a compreensão
  da linguagem.
- 
+ Como foi desenvolvida como uma linguagem para programação de sistemas (
+\emph on
+Unix
+\emph default
+), o C é uma linguagem que possui diretivas simples para acesso a entrada
+ e saída o que fica evidente nas poucas linhas do 
+\emph on
+hello world 
+\emph default
+escrito usando as funções da linguagem, no algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:HelloWorld"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/A01/ola_mundo.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:HelloWorld"
+
+\end_inset
+
+O "Olá, Mundo!" (
+\emph on
+Hello World
+\emph default
+) em C.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2045,8 +2130,1488 @@ reference "tab:TiposDeDados"
 
 \end_layout
 
+\begin_layout Section
+Operadores
+\end_layout
+
+\begin_layout Standard
+Os operadores são parte inerente das expressões e podem ser lógicos, relacionais
+ ou aritméticos.
+\end_layout
+
+\begin_layout Subsection
+Operadores Lógicos
+\end_layout
+
+\begin_layout Standard
+As operações lógicas no C, são aquelas referentes a lógica clássica ou a
+ lógica booleana.
+ Apresenta operadores como o E, OU e a NEGAÇÃO.
+ Sendo assim, são:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="45text%">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Função
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exemplo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+&&
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Se ambos os operandos são verdade, retorna 1, senão 0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a && b
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+||
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Se um dos operandos é verdade, retorna 1, senão 0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a || b
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+!
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nega o valor atual, se for diferente de 0, retorna 1, senão 0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+!a
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Operadores Relacionais
+\end_layout
+
+\begin_layout Standard
+Os operadores relacionais tem como resultado valores booleanos, portanto
+ 0 ou 1.
+ Eles dependem de quais valores estão sendo comparados ou relacionados.
+ As operações menor que, igual a, diferente de e maior possuem as seguintes
+ sintaxes:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ação
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+> 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maior que
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+>=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maior ou igual a
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+menor que
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+menor ou igua
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+==
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+igual a
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+!=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+diferente de
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Operadores Binários
+\end_layout
+
+\begin_layout Standard
+Os operadores binários tem operação sobre bits, e sendo assim estão associados
+ aos tamanhos das representações em questão.
+ Levando em consideração, as variáveis p e q, ambas de 1 bit somente o resultado
+ para um operador binário para os possíveis operadores para essas variáveis
+ seria:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+p
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+q
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+p & q
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+p | q
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+p ˆ q
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ação
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exemplos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Resultado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+subtração
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5 - 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+adição
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2 + 7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+*
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+multiplicação
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2 * -3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+/
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+divisão
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10 / 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+módulo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10 % 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+--
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+decremento
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3--
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3*
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+++
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+incremento
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+++3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4*
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+*Quando pós-fixado, isto é, após o número ou símbolo, o operador retorna
+ o valor atual, senão retorna já alterado.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:OperadoresAritmeticos"
+
+\end_inset
+
+Tabela de operadores na linguagem C.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Operadores Aritméticos
+\end_layout
+
+\begin_layout Standard
+Os operadores aritméticos atuam sobre tipos inteiros e de ponto flutuante.
+ Os operadores básicos de multiplicação, divisão, subtração, adição, módulo,
+ incremento e decremento podem ser vistos na tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:OperadoresAritmeticos"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Os operadores são executados de acordo com as regras disponíveis na linguagem.
+ A ordem que acontecem define a chamada 
+\emph on
+precedência
+\emph default
+ dos operadores.
+ A precedência é importante para saber-se se determinada expressão necessidade
+ de parênteses ou não para que a ordem desejada seja a que está efetivamente
+ implementada.
+ Por exemplo, o operador de soma possui precedência menor que o operador
+ de multiplicação, o que pode indicar a necessidade de parênteses para preservar
+ determinadas ordens de cálculo.
+ A precedência, no C, pode ser observada na tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:PrecedenciaDeOperadores"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Precedência
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operações
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Símbolo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parênteses
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+( e )
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Função
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+f(p1, p2, ...)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Incremento ou Decremento
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+++ ou --
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Unária
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+- ou +
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Multiplicação, Divisão ou Módulo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+*, / ou %
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Soma ou Diferença
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++ ou -
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:PrecedenciaDeOperadores"
+
+\end_inset
+
+Tabela de operadores na linguagem C.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Operadores especiais: casting e sizeof
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5.6 - O operador sizeof
+\end_layout
+
+\begin_layout Plain Layout
+Retorna o tamanho (em bytes) da variável ou do tipo que esta em seu operando.
+\end_layout
+
+\begin_layout Plain Layout
+Programa Exemplo 4:
+\end_layout
+
+\begin_layout Plain Layout
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+#include <conio.h>
+\end_layout
+
+\begin_layout Plain Layout
+void main(void)
+\end_layout
+
+\begin_layout Plain Layout
+{ 
+\end_layout
+
+\begin_layout Plain Layout
+int x,y;
+\end_layout
+
+\begin_layout Plain Layout
+clrscr();
+\end_layout
+
+\begin_layout Plain Layout
+x = sizeof(float); /* x vale 4 */ 
+\end_layout
+
+\begin_layout Plain Layout
+printf("%d
+\backslash
+n%d",x,sizeof(y)); 
+\end_layout
+
+\begin_layout Plain Layout
+getch();
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\begin_layout Plain Layout
+5.7 - Casts
+\end_layout
+
+\begin_layout Plain Layout
+É possível forçarmos o resultado de uma expressão ser de um determinado
+ tipo usando uma construção chamada "cast".
+\end_layout
+
+\begin_layout Plain Layout
+variável = (tipo) expressão
+\end_layout
+
+\begin_layout Plain Layout
+Progrma Exemplo 5:
+\end_layout
+
+\begin_layout Plain Layout
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+#include <conio.h>
+\end_layout
+
+\begin_layout Plain Layout
+void main(void)
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+int x,y;
+\end_layout
+
+\begin_layout Plain Layout
+float resp;
+\end_layout
+
+\begin_layout Plain Layout
+clrscr;
+\end_layout
+
+\begin_layout Plain Layout
+printf("x = ");
+\end_layout
+
+\begin_layout Plain Layout
+scanf("%d",&x);
+\end_layout
+
+\begin_layout Plain Layout
+printf("y = ");
+\end_layout
+
+\begin_layout Plain Layout
+scanf("%d",&y);
+\end_layout
+
+\begin_layout Plain Layout
+resp = (float) x / y; /* cast (float) */
+\end_layout
+
+\begin_layout Plain Layout
+printf("Divisao = %5.2f
+\backslash
+n",resp);
+\end_layout
+
+\begin_layout Plain Layout
+getch();
+\end_layout
+
+\begin_layout Plain Layout
+} 
+\end_layout
+
+\begin_layout Plain Layout
+Observação: Como "C" converte uma expressão para o maior tipo, ou seja,
+ inteiro (int) / inteiro (int) resultado inteiro (int), mas como no programa
+ acima deseja-se a resposta real (float) deve-se usar um "cast" float.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Expressões
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+*Atribuição
+\end_layout
+
+\begin_layout Plain Layout
+O operador de atribuirão é o sinal de igual "=".
+\end_layout
+
+\begin_layout Plain Layout
+Programa exemplo 3:
+\end_layout
+
+\begin_layout Plain Layout
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+#include <conio.h>
+\end_layout
+
+\begin_layout Plain Layout
+void main(void)
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+int idade,ano_atual,ano_nasceu;
+\end_layout
+
+\begin_layout Plain Layout
+clrscr();
+\end_layout
+
+\begin_layout Plain Layout
+printf("Ano ATUAL = "); 
+\end_layout
+
+\begin_layout Plain Layout
+scanf("%d",&ano_atual);
+\end_layout
+
+\begin_layout Plain Layout
+printf("Ano em que NASCEU = "); 
+\end_layout
+
+\begin_layout Plain Layout
+scanf("%d",&ano_nasceu);
+\end_layout
+
+\begin_layout Plain Layout
+idade = ano_atual - ano_nasceu; /* Atribuição */
+\end_layout
+
+\begin_layout Plain Layout
+printf("Sua IDADE e
+\backslash
+' %d
+\backslash
+n",idade);
+\end_layout
+
+\begin_layout Plain Layout
+getch();
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\begin_layout Plain Layout
+O C permite usarmos o operador de atribuição em expressões que também envolvem
+ outros operadores.
+\end_layout
+
+\begin_layout Plain Layout
+if ((produto = x * y) < 0)
+\end_layout
+
+\begin_layout Plain Layout
+- Primeiro "C" atribui o valor x * y ao produto, para depois avaliar a expressão.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
-Preprocessador C
+Pré-processador C
 \end_layout
 
 \begin_layout Standard
@@ -2174,7 +3739,7 @@ Macro: #define nome_da_macro(parâmetros) expressão_de_substituição
 \begin_inset Float algorithm
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -2190,6 +3755,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:MacroPI"
+
+\end_inset
+
 Exemplo de utilização de macro para utilização de constantes.
 \end_layout
 
@@ -2207,7 +3778,7 @@ Exemplo de utilização de macro para utilização de constantes.
 \begin_inset Float algorithm
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -2223,6 +3794,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:MacroMinMax"
+
+\end_inset
+
 Exemplo de definição de macro.
 \end_layout
 
@@ -2240,28 +3817,926 @@ Exemplo de definição de macro.
 #undef
 \end_layout
 
+\begin_layout Standard
+Ela faz com que a macro de nome 
+\emph on
+nome_da_macro
+\emph default
+ seja apagada da tabela interna que guarda as macros.
+ O compilador passa a partir deste ponto a não conhecer mais esta macro.
+ A sintaxe é:
+\end_layout
+
+\begin_layout Standard
+\align center
+#undef nome_da_macro
+\end_layout
+
+\begin_layout Standard
+O resultado dessa macro afeta diretamente o resultado das macros 
+\emph on
+#ifdef
+\emph default
+ e 
+\emph on
+#ifndef
+\emph default
+.
+\end_layout
+
 \begin_layout Subsection
 #ifdef
+\end_layout
+
+\begin_layout Standard
+O #ifdef é uma estrutura condicional e fazem parte das estruturas condicionais
+ de pré-processamento o 
+\emph on
+#ifdef, #ifndef, #else, #elif 
+\emph default
+e o
+\emph on
+ #endif
+\emph default
+.
+ Essas diretivas são processadas antes do início da compilação em si, então
+ pode-se usá-las como condições para expressões que envolvam constantes
+ e símbolos de pré-processamento.
+ A sintaxe fica: 
+\end_layout
+
+\begin_layout Standard
+\align center
+#ifdef nome_do_símbolo
+\end_layout
+
+\begin_layout Standard
+O código entre as duas diretivas só será compilado se o símbolo (ou constante)
+ nome_do_símbolo já tiver sido definido.
+ Há também a estrutura 
+\emph on
+#ifndef
+\emph default
+, que executa o código se o símbolo não tiver sido definido.
+\end_layout
+
+\begin_layout Standard
+Lembre que o símbolo deve ter sido definido através da diretiva 
+\emph on
+#define
+\emph default
+.
 \end_layout
 
 \begin_layout Subsection
 #ifndef
 \end_layout
 
+\begin_layout Standard
+A diretiva #ifndef é utilizada para checar se a macro em questão está ou
+ não definida.
+ É usada da seguinte forma:
+\end_layout
+
+\begin_layout Standard
+\align center
+
+#ifndef nome_da_macro
+\end_layout
+
+\begin_layout Standard
+Se a constatação for verdadeira, então o código dentro do trecho será executado,
+ senão se houver trecho de 
+\emph on
+#else
+\emph default
+ ou 
+\emph on
+#elif,
+\emph default
+ referente a essa expressão, então esse trecho será executado.
+\end_layout
+
+\begin_layout Subsection
+#else
+\end_layout
+
+\begin_layout Standard
+A diretiva #else funciona como na estrutura de bloco if (condição) {...} else
+ {...}:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#ifdef WINDOWS
+\end_layout
+
+\begin_layout Plain Layout
+
+/* será executado se a expressão for verdadeira */
+\end_layout
+
+\begin_layout Plain Layout
+
+#define CABECALHO "windows_io.h"
+\end_layout
+
+\begin_layout Plain Layout
+
+#else
+\end_layout
+
+\begin_layout Plain Layout
+
+/* será executado se a expressão for falsa */
+\end_layout
+
+\begin_layout Plain Layout
+
+#define CABECALHO "unix_io.h"
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif
+\end_layout
+
+\begin_layout Plain Layout
+
+#include CABECALHO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 #elif
 \end_layout
 
-\begin_layout Chapter
-Funções e estruturas da Linguagem C
+\begin_layout Standard
+A diretiva 
+\emph on
+#elif
+\emph default
+ é uma abreviação para 
+\emph on
+else if 
+\emph default
+e funciona como uma estrutura condicional desse tipo.
+ A sintaxe é:
+\end_layout
+
+\begin_layout Standard
+\align center
+#elif expressão
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#if expressão_1 
+\end_layout
+
+\begin_layout Plain Layout
+
+//código...
+\end_layout
+
+\begin_layout Plain Layout
+
+#elif expressão_2 
+\end_layout
+
+\begin_layout Plain Layout
+
+//código...
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pode-se também utilizá-la com as demais diretivas como 
+\emph on
+#else
+\emph default
+.
+ Só deve-se utilizar uma diretiva do tipo 
+\emph on
+#else
+\emph default
+ se ela deve for a última expressão da cadeia de expressões.
+\end_layout
+
+\begin_layout Section
+
+\emph on
+Header file
+\emph default
+: arquivo cabeçalho
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/A02/header_exemplo.h
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:HeaderGuard"
+
+\end_inset
+
+Exemplo de utilização das macros condicionais para definir um 
+\emph on
+header guard
+\emph default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A header file is a file with extension .h which contains C function declarations
+ and macro definitions and to be shared between several source files.
+ There are two types of header files: the files that the programmer writes
+ and the files that come with your compiler.
+\end_layout
+
+\begin_layout Plain Layout
+You request the use of a header file in your program by including it, with
+ the C preprocessing directive #include like you have seen inclusion of
+ stdio.h header file, which comes along with your compiler.
+\end_layout
+
+\begin_layout Plain Layout
+Including a header file is equal to copying the content of the header file
+ but we do not do it because it will be very much error-prone and it is
+ not a good idea to copy the content of header file in the source files,
+ specially if we have multiple source file comprising our program.
+\end_layout
+
+\begin_layout Plain Layout
+A simple practice in C or C++ programs is that we keep all the constants,
+ macros, system wide global variables, and function prototypes in header
+ files and include that header file wherever it is required.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um arquivo de header ou cabeçalho é um arquivo com extensão 
+\emph on
+.h 
+\emph default
+que contém declarações de funções C, de macros e de recursos a serem compartilha
+dos por vários arquivos fontes 
+\emph on
+.c
+\emph default
+.
+ Há dois tipos de arquivos de cabeçalho: os arquivos que são escritos pelo
+ desenvolvedor e aqueles que vem junto ao compilador e fazem parte da biblioteca
+ básica da linguagem.
+\end_layout
+
+\begin_layout Standard
+O arquivo header é utilizado no programa ao pedir-se para o pré-processador
+ incluir o arquivo desejado, com a diretiva de pré-processamento 
+\emph on
+#include
+\emph default
+.
+ Um exemplo de inclusão comum é o arquivo 
+\emph on
+stdio.h
+\emph default
+, conforme visto nos algoritmos 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:MacroPI"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:MacroMinMax"
+
+\end_inset
+
+, para utilização de funções de entrada e saída como as funções, 
+\emph on
+scanf
+\emph default
+ e 
+\emph on
+printf
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Ao incluir-se um arquivo de cabeçalho, a ação esperada é como se o código
+ fonte fosse copiado do arquivo original e colado no código fonte em questão.
+ Não fazemos isso explicitamente porque essa atividade seria muito propícia
+ a erros e não é uma boa ideia sair espalhando o conteúdo de cabeçalhos
+ diversos por códigos fontes que os utilizam.
+ 
+\end_layout
+
+\begin_layout Standard
+Uma boa prática é manter constantes, macros, funções e variáveis globais
+ definidas em 
+\emph on
+headers 
+\emph default
+e incluí-lo sempre que for necessário utilizar essa variável.
+ Para tal, faz-se necessário usar as estruturas 
+\emph on
+#ifndef
+\emph default
+, 
+\emph on
+#define
+\emph default
+ e 
+\emph on
+#endif
+\emph default
+, denominada 
+\emph on
+header guard
+\emph default
+, vista no algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:HeaderGuard"
+
+\end_inset
+
+.
+ Nesse exemplo o MEU_HEADER_EXEMPLO_H_ é uma macro que serve como defensor
+ (
+\emph on
+guard
+\emph default
+) desse header, para que se múltiplos arquivos o incluam, as variáveis,
+ funções e estruturas que ali se encontram não seja definida múltiplas vezes
+ no mesmo programa ou biblioteca, o que poderia mais tarde ocasionar erros
+ de ligação do mesmo.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO - botar referência as páginas de ligação depois
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Concatenação de strings
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/A02/macro_substitui_string.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:MacroSubstituiPorString"
+
+\end_inset
+
+Exemplo de utilização de substituição de parâmetro pela string que o representa,
+ utilizando-se #.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O pré-processador C permite manipular uma cadeia de caracteres, isto é,
+ strings.
+ Isso se dá pela utilização dos operadores 
+\emph on
+#
+\emph default
+ e 
+\emph on
+##
+\emph default
+, os quais permitem substituir a grafia de um parâmetro e concatenar dois
+ parâmetros, respectivamente.
+ 
+\end_layout
+
+\begin_layout Standard
+A utilização do operador # na macro pode ser vista no código do algoritmo
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:MacroSubstituiPorString"
+
+\end_inset
+
+, o qual apresentará como saída no console "Estou aqui".
+ Isso, porque o valor que é passado por parâmetro é convertido a string
+ por meio da utilização do operador.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template JavaSourceNoLnNoFrame
+	filename ../Code/A02/macro_concat.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:MacroConcatParametros"
+
+\end_inset
+
+Demonstração de concatenação de símbolos pelo operador ##, na forma da macro
+ CONCAT.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O operador ## por sua vez, faz a concatenação de dois parâmetros na forma
+ de um único símbolo.
+ No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:MacroConcatParametros"
+
+\end_inset
+
+, a variável 
+\emph on
+teste 
+\emph default
+é declarada com o valor 
+\emph on
+1000.
+ 
+\emph default
+No 
+\emph on
+printf
+\emph default
+ é utilizado a macro CONCAT com os parâmetros 
+\emph on
+tes 
+\emph default
+e 
+\emph on
+te
+\emph default
+.
+ A concatenação dos dois símbolos em um só gera 
+\emph on
+teste
+\emph default
+, que coincide com o inteiro já definido anteriormente.
+ Assim, o valor na saída de console impresso será "1000".
 \end_layout
 
 \begin_layout Chapter
-Structs, ponteiros
+Funções e estruturas da linguagem C
 \end_layout
 
 \begin_layout Chapter
-Funções e funcionalidades
+Structs & ponteiros
+\end_layout
+
+\begin_layout Chapter
+Funções & funcionalidades
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6.1 - abs (Valor Absoluto Inteiro)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: int abs (int x);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: math.h
+\end_layout
+
+\begin_layout Plain Layout
+stdlib.h
+\end_layout
+
+\begin_layout Plain Layout
+6.2 - fabs (Valor Absoluto Real)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: float fabs (float x);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: math.h
+\end_layout
+
+\begin_layout Plain Layout
+stdlib.h
+\end_layout
+
+\begin_layout Plain Layout
+6.3 - asin (Arco Seno)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: double asin (double x);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: math.h
+\end_layout
+
+\begin_layout Plain Layout
+Faixa: -pi/2 pi/2 /* resposta em radianos */
+\end_layout
+
+\begin_layout Plain Layout
+6.4 - acos (Arco Cosseno)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: double acos (double x);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: math.h
+\end_layout
+
+\begin_layout Plain Layout
+Faixa: 0 pi /* resposta em radianos */
+\end_layout
+
+\begin_layout Plain Layout
+6.5 - atan (Arco Tangente)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: double atan (double x);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: math.h
+\end_layout
+
+\begin_layout Plain Layout
+Faixa: -pi/2 pi/2
+\end_layout
+
+\begin_layout Plain Layout
+6.6 - cos (Cosseno)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: double cos (double x); x em radianos
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: math.h 
+\end_layout
+
+\begin_layout Plain Layout
+Faixa: -1 1 
+\end_layout
+
+\begin_layout Plain Layout
+6.7 - sin (Seno)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: double sin (double x); x em radianos
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: math.h
+\end_layout
+
+\begin_layout Plain Layout
+Faixa: -1 1
+\end_layout
+
+\begin_layout Plain Layout
+6.8 - exp (Expoente - e ) 
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: double exp (double x);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: math.h
+\end_layout
+
+\begin_layout Plain Layout
+6.9 - pow (Potência)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: double pow (double x, double y);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: math.h
+\end_layout
+
+\begin_layout Plain Layout
+6.10 - sqrt (Raiz Quadrada)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: double sqrt (double x);'
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: math.h
+\end_layout
+
+\begin_layout Plain Layout
+6.11 - log (Logarítmo Natural)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: double log (double x);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype math.h
+\end_layout
+
+\begin_layout Plain Layout
+6.12 - atof (Converte String em Ponto Flutuante)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: double atof (const char *s);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: math.h e stdlib.h
+\end_layout
+
+\begin_layout Plain Layout
+6.13 - atoi (Converte String em Inteiro)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: int atoi (const char *s);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Plain Layout
+6.14 - atol (Converte String em Inteiro Longo)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: long int atol (const char *s);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Plain Layout
+6.15 - log10 (Logarítmo na Base 10)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: double log10 (double x);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: math.h
+\end_layout
+
+\begin_layout Plain Layout
+6.16 - tan (Tangente)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: double tan (double x); x em radianos
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: math.h
+\end_layout
+
+\begin_layout Plain Layout
+6.17 - max (Valor Máximo)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: int max (int a, int b);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Plain Layout
+6.18 - min (Valor Mínimo)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: int min (int a, int b);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Plain Layout
+6.19 - rand (Numero Aleatório)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: int rand (void);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Plain Layout
+Faixa: 0 32767
+\end_layout
+
+\begin_layout Plain Layout
+6.20 - random (Número Aleatório)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: int random (int limite);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Plain Layout
+Faixa: 0 (limite - 1)
+\end_layout
+
+\begin_layout Plain Layout
+6.21 - randomize (Inicializa a Geração de Números Aleatórios)
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: void randomize (void);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Plain Layout
+6.22 - system (Executa Comandos e Arquivos .COM e .EXE do Sistema Operacional)
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Sintaxe: int system (const char *comando);
+\end_layout
+
+\begin_layout Plain Layout
+Prototype: process.h e stdlib.h
+\end_layout
+
+\begin_layout Plain Layout
+Retorna: 0 ok e -1 erro
+\end_layout
+
+\begin_layout Plain Layout
+Exemplos: system ("dir"); 
+\end_layout
+
+\begin_layout Plain Layout
+system ("sk");
+\end_layout
+
+\begin_layout Plain Layout
+system ("dir *.c");
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
