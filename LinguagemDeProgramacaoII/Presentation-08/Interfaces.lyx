@@ -492,6 +492,51 @@ url{https://developer.android.com/reference/android/widget/RadioGroup.html}
 \end_layout
 
 \begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/Java/RadioGroup.java
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
@@ -500,7 +545,85 @@ url{https://developer.android.com/reference/android/widget/RadioGroup.html}
 status open
 
 \begin_layout Plain Layout
-Obter tempo
+RadioGroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+movie[label=show3,height=0.85
+\backslash
+textheight,poster,showcontrols] {
+\backslash
+includegraphics[height=0.85
+\backslash
+textheight]{../Image/App-RadioGroup.png}}{Spinner.mkv}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Obter data
 \end_layout
 
 \end_inset
@@ -574,7 +697,7 @@ end{center}
 status open
 
 \begin_layout Plain Layout
-Obter tempo
+
 \end_layout
 
 \end_inset
@@ -819,6 +942,55 @@ textheight]{../Image/App-WebView.png}}{WebView.mkv}
 \backslash
 end{center}
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/Java/WebView.java
 
 \end_inset
 
