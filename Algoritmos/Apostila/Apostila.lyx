@@ -3419,7 +3419,7 @@ tem ambos 4 bytes.
 \begin_inset Float algorithm
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -4339,7 +4339,7 @@ e funciona como uma estrutura condicional desse tipo.
 
 \begin_layout Standard
 \begin_inset listings
-lstparams "language=C,tabsize=4,extendedchars=true"
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
 inline false
 status open
 
@@ -4752,12 +4752,848 @@ o.
 If-then-else
 \end_layout
 
-\begin_layout Section
-Estruturas de repetição
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:If-then-else"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/par_ou_impar.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:ParOuImpar"
+
+\end_inset
+
+Exemplo de programa que checa se determinado número inteiro de entrada é
+ par ou ímpar.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Gen/Image/Condition.eps
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LógicaDeCondicao"
+
+\end_inset
+
+Estrutura lógica de um if-then-else.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A estrutura condicional do C é o if-then-else, traduzindo se-então-senão
+ pode ser vista logicamente na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LógicaDeLoop"
+
+\end_inset
+
+.
+ Essa estrutura serve para alterar o fluxo dependendo de expressões condicionais
+, ou seja, depende possivelmente de um valor obtido em tempo de execução.
+ A linguagem de programação C assume que qualquer valor não zero é verdade,
+ enquanto um valor zero (nulo) é assumido como falso.
+ A sintaxe básica do if-then-else é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if (expressão_1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Executa se expressão_1 for verdade
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+else if(expressão_2) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Executa se expressão_2 for verdade e
+\end_layout
+
+\begin_layout Plain Layout
+
+	//expressão_1 for mentira
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+else {
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Executa se expressão_1 e a
+\end_layout
+
+\begin_layout Plain Layout
+
+	//expressão_2 for mentira
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:ParOuImpar"
+
+\end_inset
+
+, demonstra-se um exemplo de utilização dessas estruturas.
+ Nesse caso, o algoritmo é utilizado para checar se determinado número é
+ par, uma vez que o resto da divisão de um número par por 2 é sempre 0 por
+ definição, então se "numero % 2 == 0" ele é par e cairá na saída de "eh
+ par", senão cairá em "eh impar".
+\end_layout
+
+\begin_layout Subsection
+If ternário
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The ? : Operator:
+\end_layout
+
+\begin_layout Plain Layout
+We have covered conditional operator ? : in previous chapter which can be
+ used to replace if...else statements.
+ It has the following general form:
+\end_layout
+
+\begin_layout Plain Layout
+Exp1 ? Exp2 : Exp3;
+\end_layout
+
+\begin_layout Plain Layout
+Where Exp1, Exp2, and Exp3 are expressions.
+ Notice the use and placement of the colon.
+\end_layout
+
+\begin_layout Plain Layout
+The value of a ? expression is determined like this: Exp1 is evaluated.
+ If it is true, then Exp2 is evaluated and becomes the value of the entire
+ ? expression.
+ If Exp1 is false, then Exp3 is evaluated and its value becomes the value
+ of the expression.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Switch-case
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+switch (variável)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	case constante_1 : //comandos;
+\end_layout
+
+\begin_layout Plain Layout
+
+	break;
+\end_layout
+
+\begin_layout Plain Layout
+
+	case constante_2 : //comandos;
+\end_layout
+
+\begin_layout Plain Layout
+
+	break;
+\end_layout
+
+\begin_layout Plain Layout
+
+	default : //comandos;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/switch_nota.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Indicativo"
+
+\end_inset
+
+Exemplo de utilização de 
+\emph on
+switch
+\emph default
+ para avaliação de uma nota indicativa.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+No switch-case, tem-se uma variável cujo valor é testado com uma lista sucessiva
+ e exasutiva de constantes inteiras ou caracteres.
+ Ao encontrar uma coincidência, executa-se o comando ou blocos de comandos
+ que estejam associados aquela constante.
+ O comando obrigatório 
+\emph on
+default
+\emph default
+ é executado se não houver nenhuma coincidência.
+ O comando 
+\emph on
+break
+\emph default
+ é usado para obrigar a saída do comando switch.
+ 
+\end_layout
+
+\begin_layout Standard
+No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Indicativo"
+
+\end_inset
+
+, tem-se um indicativo de nota que pode assumir os valores qualitativos
+ A, B, C, D ou F.
+ Esses valores não estão associados diretamente a um conceito ou valor,
+ mas eles indicam um determinado 
+\emph on
+rank
+\emph default
+ ou 
+\emph on
+score
+\emph default
+, sendo o melhor A e o pior F.
+ Sendo assim, o programa referido imprime uma mensagem na saída de console
+ de acordo com a nota obtida, caso-a-caso, usando uma estrutura de switch
+ para tal.
+ Nesse trecho, o valor da nota indicativa obtida foi 'B', portanto a saída
+ obtida no console será "Muito bem!".
+\end_layout
+
+\begin_layout Section
+Estruturas de repetição
+\end_layout
+
+\begin_layout Standard
+Podem haver situações em que um bloco de código deve executar várias vezes.
+ Uma estrutura de repetição, ou loop, possui comandos os quais são executados
+ sequencialmentes.
+ O primeiro comando em uma função é executado primeiro, seguido pelo segundo
+ e assim por diante.
+\end_layout
+
+\begin_layout Standard
+Linguagens de programação providenciam várias estruturas de controle que
+ permitem alterar o fluxo de execução.
+ Um comando desse tipo já visto é o if-then-else, na seção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:If-then-else"
+
+\end_inset
+
+.
+ Existem outros comandos que alteram diretamente o fluxo de execução e eles
+ serão vistos nessa seção também.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Gen/Image/Loops.eps
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LógicaDeLoop"
+
+\end_inset
+
+Estrutura lógica de um loop expresso na forma de um grafo orientado.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um loop vai possuir uma estrutura de execução conforme visto na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LógicaDeLoop"
+
+\end_inset
+
+.
+ A partir dessa lógica básica, existirão três tipos de estruturas de repetição:
+ for, while, do-while.
+\end_layout
+
+\begin_layout Subsection
+While
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/while.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:While"
+
+\end_inset
+
+Exemplo de utilização 
+\emph on
+while.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um loop que executa comandos enquanto a condição básica for verdade.
+ A sintaxe é:
+\end_layout
+
+\begin_layout Standard
+\align center
+while (condição) { comandos; }
+\end_layout
+
+\begin_layout Standard
+Os 
+\emph on
+comandos 
+\emph default
+podem ser um ou mais comandos e inclusive blocos de comandos.
+ A condição é qualquer expressão que retorne um valor inteiro, seja ele
+ zero (falso) ou não zero (verdade).
+ Nota-se que um loop 
+\emph on
+while 
+\emph default
+pode jamais rodar, uma vez que se a condição não for verdade na primeira
+ execução, o loop sequer executará seu bloco de código, conforme visto na
+ figura XXTODOXX.
+ No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:While"
+
+\end_inset
+
+, a saída esperada será:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a: 10
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 11
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 12
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 13
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 14
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 15
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 16
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 17
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 18
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 19
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Do-while
+\end_layout
+
+\begin_layout Standard
+Ao contrário o while que testa o loop antes de executar a iteração, o 
+\emph on
+do-while
+\emph default
+ executa o corpo do loop antes mesmo de fazer qualquer checagem condicional.
+ A checagem será feita somente após o último comando de cada loop.
+ Este efeito pode ser observado na figura XXTODOXX, a qual demonstra a lógica
+ de execução do 
+\emph on
+do-while
+\emph default
+.
+ A sintaxe é:
+\end_layout
+
+\begin_layout Standard
+\align center
+do { comandos; } while (condição);
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/do_while.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:DoWhile"
+
+\end_inset
+
+Exemplo de utilização 
+\emph on
+do-while.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nota-se que a condição aparece no final do loop então se a condição for
+ verdadeira, o fluxo retorna ao começo do corpo e continua a execução até
+ que a condição seja falsa.
+ No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:DoWhile"
+
+\end_inset
+
+, vê-se um exemplo de utilização do do-while.
+ Nesse caso, o resultado é idêntico aquele obtido com o while, isto é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a: 10
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 11
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 12
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 13
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 14
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 15
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 16
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 17
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 18
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 19
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+For
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A for loop is a repetition control structure that allows you to efficiently
+ write a loop that needs to execute a specific number of times.
+\end_layout
+
+\begin_layout Plain Layout
+Syntax:
+\end_layout
+
+\begin_layout Plain Layout
+The syntax of a for loop in C programming language is:
+\end_layout
+
+\begin_layout Plain Layout
+for ( init; condition; increment )
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+statement(s);
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\begin_layout Plain Layout
+Here is the flow of control in a for loop:
+\end_layout
+
+\begin_layout Plain Layout
+The init step is executed first, and only once.
+ This step allows you to declare and initialize any loop control variables.
+ You are not required to put a statement here, as long as a semicolon appears.
+\end_layout
+
+\begin_layout Plain Layout
+Next, the condition is evaluated.
+ If it is true, the body of the loop is executed.
+ If it is false, the body of the loop does not execute and flow of control
+ jumps to the next statement just after the for loop.
+\end_layout
+
+\begin_layout Plain Layout
+After the body of the for loop executes, the flow of control jumps back
+ up to the increment statement.
+ This statement allows you to update any loop control variables.
+ This statement can be left blank, as long as a semicolon appears after
+ the condition.
+\end_layout
+
+\begin_layout Plain Layout
+The condition is now evaluated again.
+ If it is true, the loop executes and the process repeats itself (body of
+ loop, then increment step, and then again condition).
+ After the condition becomes false, the for loop terminates.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+break
+\end_layout
+
+\begin_layout Subsection
+continue
+\end_layout
+
+\begin_layout Subsection
+return
+\end_layout
+
+\begin_layout Subsection
+goto
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+There may be a situation, when you need to execute a block of code several
+ number of times.
+ In general, statements are executed sequentially: The first statement in
+ a function is executed first, followed by the second, and so on.
+\end_layout
+
+\begin_layout Plain Layout
+Programming languages provide various control structures that allow for
+ more complicated execution paths.
+\end_layout
+
+\begin_layout Plain Layout
+A loop statement allows us to execute a statement or group of statements
+ multiple times and following is the general form of a loop statement in
+ most of the programming languages:
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -4773,7 +5609,7 @@ Structs & ponteiros
 \end_layout
 
 \begin_layout Chapter
-Funções & funcionalidades
+Entrada e saída
 \end_layout
 
 \begin_layout Standard
