@@ -506,7 +506,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset External
-	template JavaSourceNoLnNoFrame
+	template CSourceNoLnNoFrame
 	filename ../Code/A01/ola_mundo.c
 
 \end_inset
@@ -626,7 +626,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
-	template JavaSourceNoLnNoFrame
+	template CSourceNoLnNoFrame
 	filename ../Code/A01/dia_mes_ano.c
 
 \end_inset
@@ -677,7 +677,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset External
-	template JavaSourceNoLnNoFrame
+	template CSourceNoLnNoFrame
 	filename ../Code/A01/declarando_var.c
 
 \end_inset
@@ -754,7 +754,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
-	template JavaSourceNoLnNoFrame
+	template CSourceNoLnNoFrame
 	filename ../Code/A01/potencia.c
 
 \end_inset
@@ -802,7 +802,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
-	template JavaSourceNoLnNoFrame
+	template CSourceNoLnNoFrame
 	filename ../Code/A01/var_init.c
 
 \end_inset
@@ -3361,146 +3361,91 @@ Operadores especiais: casting e sizeof
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+Existem dois operadores especiais na linguagem C que podem ser usados junto
+ a outras expressões: 
+\emph on
+sizeof 
+\emph default
+e 
+\emph on
+casting
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+A função nativa da linguagem C 
+\emph on
+sizeof
+\emph default
+, retorna o tamanho (em bytes) da variável ou do tipo que esta em seu operando.
+ Pode ser aplicado a 
+\emph on
+structs
+\emph default
+, 
+\emph on
+unions
+\emph default
+ e 
+\emph on
+enums.
+ 
+\emph default
+No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:SizeOf"
+
+\end_inset
+
+ demonstra-se a operação de 
+\emph on
+sizeof
+\emph default
+.
+ Os valores que serão impressos são ambos 4, uma vez que os tipos 
+\emph on
+int 
+\emph default
+e 
+\emph on
+float 
+\emph default
+tem ambos 4 bytes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-5.6 - O operador sizeof
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A01/operador_sizeof.c
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
-Retorna o tamanho (em bytes) da variável ou do tipo que esta em seu operando.
-\end_layout
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Programa Exemplo 4:
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:SizeOf"
 
-\begin_layout Plain Layout
-#include <stdio.h>
-\end_layout
+\end_inset
 
-\begin_layout Plain Layout
-#include <conio.h>
-\end_layout
-
-\begin_layout Plain Layout
-void main(void)
-\end_layout
-
-\begin_layout Plain Layout
-{ 
-\end_layout
-
-\begin_layout Plain Layout
-int x,y;
-\end_layout
-
-\begin_layout Plain Layout
-clrscr();
-\end_layout
-
-\begin_layout Plain Layout
-x = sizeof(float); /* x vale 4 */ 
-\end_layout
-
-\begin_layout Plain Layout
-printf("%d
-\backslash
-n%d",x,sizeof(y)); 
-\end_layout
-
-\begin_layout Plain Layout
-getch();
-\end_layout
-
-\begin_layout Plain Layout
-}
-\end_layout
-
-\begin_layout Plain Layout
-5.7 - Casts
-\end_layout
-
-\begin_layout Plain Layout
-É possível forçarmos o resultado de uma expressão ser de um determinado
- tipo usando uma construção chamada "cast".
-\end_layout
-
-\begin_layout Plain Layout
-variável = (tipo) expressão
-\end_layout
-
-\begin_layout Plain Layout
-Progrma Exemplo 5:
-\end_layout
-
-\begin_layout Plain Layout
-#include <stdio.h>
-\end_layout
-
-\begin_layout Plain Layout
-#include <conio.h>
-\end_layout
-
-\begin_layout Plain Layout
-void main(void)
-\end_layout
-
-\begin_layout Plain Layout
-{
-\end_layout
-
-\begin_layout Plain Layout
-int x,y;
-\end_layout
-
-\begin_layout Plain Layout
-float resp;
-\end_layout
-
-\begin_layout Plain Layout
-clrscr;
-\end_layout
-
-\begin_layout Plain Layout
-printf("x = ");
-\end_layout
-
-\begin_layout Plain Layout
-scanf("%d",&x);
-\end_layout
-
-\begin_layout Plain Layout
-printf("y = ");
-\end_layout
-
-\begin_layout Plain Layout
-scanf("%d",&y);
-\end_layout
-
-\begin_layout Plain Layout
-resp = (float) x / y; /* cast (float) */
-\end_layout
-
-\begin_layout Plain Layout
-printf("Divisao = %5.2f
-\backslash
-n",resp);
-\end_layout
-
-\begin_layout Plain Layout
-getch();
-\end_layout
-
-\begin_layout Plain Layout
-} 
-\end_layout
-
-\begin_layout Plain Layout
-Observação: Como "C" converte uma expressão para o maior tipo, ou seja,
- inteiro (int) / inteiro (int) resultado inteiro (int), mas como no programa
- acima deseja-se a resposta real (float) deve-se usar um "cast" float.
+Exemplo de utilização da função 
+\emph on
+sizeof
+\emph default
+.
 \end_layout
 
 \end_inset
@@ -3508,8 +3453,402 @@ Observação: Como "C" converte uma expressão para o maior tipo, ou seja,
 
 \end_layout
 
-\begin_layout Section
-Expressões
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Type casting is a way to convert a variable from one data type to another
+ data type.
+ For example, if you want to store a long value into a simple integer then
+ you can type cast long to int.
+ You can convert values from one type to another explicitly using the cast
+ operator as follows:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Já a operação de casting pode é uma maneira de converter um tipo de dado
+ em outro tipo qualuqer.
+ Por exemplo, quando queremos guardar um valor 
+\emph on
+long long 
+\emph default
+em um 
+\emph on
+int 
+\emph default
+podemes simplesmente fazer o casting de 
+\emph on
+long long 
+\emph default
+para 
+\emph on
+int 
+\emph default
+e a conversão é feita de maneira automática, por truncamento.
+ Pode-se converter de um tipo para outro com a seguinte sintaxe:
+\end_layout
+
+\begin_layout Standard
+\align center
+(tipo) expressão
+\end_layout
+
+\begin_layout Standard
+Um exemplo concreto de utilização do 
+\emph on
+casting 
+\emph default
+é visto no algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Casting"
+
+\end_inset
+
+.
+ A saída no console desse programa será "media = 3.4", uma vez que ao fazer-se
+ o casting para double da soma, ela torna-se double e a divisão do valor
+ em ponto flutuante por um inteiro resultará em outro valor em ponto flutuante.
+ A conversão para um tipo menor (ex: double
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+int) sempre terá que ser feita por casting, uma vez que a perda de precisão,
+ em alguns casos pode significar um 
+\emph on
+bug
+\emph default
+!
+\end_layout
+
+\begin_layout Standard
+Para calcular-se o tamanho de uma string qualquer, deve-se utilizar a função
+ 
+\emph on
+strlen
+\emph default
+ junto a 
+\emph on
+sizeof(char).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A01/operador_cast.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Casting"
+
+\end_inset
+
+Exemplo de operação de 
+\emph on
+casting
+\emph default
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Atribuição
+\end_layout
+
+\begin_layout Standard
+As atribuições são mecanismos que alteram uma determinada variável alvo
+ com o valor de uma expressão a qual possivelmente utiliza a própria variável
+ como fonte.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descrição
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Atribuição
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+*=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Multiplica
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+/=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Divide
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+%=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Módulo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Soma
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Diferença
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<<=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Shift para esquerda
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+>>=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Shift para direita
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+&=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E binário
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+^=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OU EXCLUSIVO binário
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+|=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OU binário
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3521,7 +3860,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-O operador de atribuirão é o sinal de igual "=".
+O operador de atribuição é o sinal de igual "=".
 \end_layout
 
 \begin_layout Plain Layout
@@ -3743,7 +4082,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
-	template JavaSourceNoLnNoFrame
+	template CSourceNoLnNoFrame
 	filename ../Code/A02/pi.c
 
 \end_inset
@@ -3782,7 +4121,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
-	template JavaSourceNoLnNoFrame
+	template CSourceNoLnNoFrame
 	filename ../Code/A02/min_max_macro.c
 
 \end_inset
@@ -3900,7 +4239,6 @@ A diretiva #ifndef é utilizada para checar se a macro em questão está ou
 
 \begin_layout Standard
 \align center
-
 #ifndef nome_da_macro
 \end_layout
 
@@ -4064,7 +4402,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset External
-	template JavaSourceNoLnNoFrame
+	template CSourceNoLnNoFrame
 	filename ../Code/A02/header_exemplo.h
 
 \end_inset
@@ -4259,7 +4597,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
-	template JavaSourceNoLnNoFrame
+	template CSourceNoLnNoFrame
 	filename ../Code/A02/macro_substitui_string.c
 
 \end_inset
@@ -4329,7 +4667,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
-	template JavaSourceNoLnNoFrame
+	template CSourceNoLnNoFrame
 	filename ../Code/A02/macro_concat.c
 
 \end_inset
@@ -4403,6 +4741,31 @@ teste
 
 \begin_layout Chapter
 Funções e estruturas da linguagem C
+\end_layout
+
+\begin_layout Standard
+Nesse capítulo, fala-se sobre estruturas sintáticas e sua semântica de utilizaçã
+o.
+\end_layout
+
+\begin_layout Section
+If-then-else
+\end_layout
+
+\begin_layout Section
+Estruturas de repetição
+\end_layout
+
+\begin_layout Section
+Switch-case
+\end_layout
+
+\begin_layout Section
+Arrays
+\end_layout
+
+\begin_layout Section
+Funções
 \end_layout
 
 \begin_layout Chapter
