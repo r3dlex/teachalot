@@ -4982,6 +4982,16 @@ Switch-case
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:SwitchCase"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset listings
 lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
 inline false
@@ -5170,7 +5180,11 @@ name "fig:LógicaDeLoop"
 
 \end_inset
 
-Estrutura lógica de um loop expresso na forma de um grafo orientado.
+Estrutura lógica de um loop 
+\emph on
+while
+\emph default
+ expresso na forma de um grafo orientado.
 \end_layout
 
 \end_inset
@@ -5204,7 +5218,7 @@ While
 \begin_inset Float algorithm
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -5265,7 +5279,14 @@ while
 \emph default
 pode jamais rodar, uma vez que se a condição não for verdade na primeira
  execução, o loop sequer executará seu bloco de código, conforme visto na
- figura XXTODOXX.
+ figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LógicaDeLoop"
+
+\end_inset
+
+.
  No algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5348,8 +5369,14 @@ do-while
 \emph default
  executa o corpo do loop antes mesmo de fazer qualquer checagem condicional.
  A checagem será feita somente após o último comando de cada loop.
- Este efeito pode ser observado na figura XXTODOXX, a qual demonstra a lógica
- de execução do 
+ Este efeito pode ser observado na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LógicaDoWhile"
+
+\end_inset
+
+, a qual demonstra a lógica de execução do 
 \emph on
 do-while
 \emph default
@@ -5358,15 +5385,82 @@ do-while
 \end_layout
 
 \begin_layout Standard
-\align center
-do { comandos; } while (condição);
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+do 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	códigos;
+\end_layout
+
+\begin_layout Plain Layout
+
+} while (condição);
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float algorithm
+\begin_inset Float figure
 wide false
 sideways false
 status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Gen/Image/DoWhile.eps
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LógicaDoWhile"
+
+\end_inset
+
+Estrutura lógica de um loop 
+\emph on
+do-while
+\emph default
+ expresso na forma de um grafo orientado.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -5484,68 +5578,44 @@ For
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
-A for loop is a repetition control structure that allows you to efficiently
- write a loop that needs to execute a specific number of times.
+\align center
+\begin_inset Graphics
+	filename ../Gen/Image/For.eps
+	width 60text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
-Syntax:
-\end_layout
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
-The syntax of a for loop in C programming language is:
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LógicaDoFor"
 
-\begin_layout Plain Layout
-for ( init; condition; increment )
-\end_layout
+\end_inset
 
-\begin_layout Plain Layout
-{
-\end_layout
-
-\begin_layout Plain Layout
-statement(s);
-\end_layout
-
-\begin_layout Plain Layout
-}
-\end_layout
-
-\begin_layout Plain Layout
-Here is the flow of control in a for loop:
-\end_layout
-
-\begin_layout Plain Layout
-The init step is executed first, and only once.
- This step allows you to declare and initialize any loop control variables.
- You are not required to put a statement here, as long as a semicolon appears.
-\end_layout
-
-\begin_layout Plain Layout
-Next, the condition is evaluated.
- If it is true, the body of the loop is executed.
- If it is false, the body of the loop does not execute and flow of control
- jumps to the next statement just after the for loop.
-\end_layout
-
-\begin_layout Plain Layout
-After the body of the for loop executes, the flow of control jumps back
- up to the increment statement.
- This statement allows you to update any loop control variables.
- This statement can be left blank, as long as a semicolon appears after
- the condition.
-\end_layout
-
-\begin_layout Plain Layout
-The condition is now evaluated again.
- If it is true, the loop executes and the process repeats itself (body of
- loop, then increment step, and then again condition).
- After the condition becomes false, the for loop terminates.
+Estrutura lógica de um loop 
+\emph on
+for
+\emph default
+ expresso na forma de um grafo orientado.
+ A estrutura é mais complexa em função do 
+\emph on
+início
+\emph default
+ e 
+\emph on
+incremento.
 \end_layout
 
 \end_inset
@@ -5553,19 +5623,392 @@ The condition is now evaluated again.
 
 \end_layout
 
-\begin_layout Subsection
+\end_inset
+
+
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/for.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:For"
+
+\end_inset
+
+Exemplo de utilização 
+\emph on
+for
+\emph default
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O loop for é uma estrutura de repetição a qual permite que o loop seja escrito
+ de maneira a executar um número específico de vezes pela sua sintaxe.
+ É ela:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+for (iníncio; condição; incremento)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	código;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O fluxo de controle do loop, visto na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LógicaDoFor"
+
+\end_inset
+
+, funciona da seguinte forma: primeiramente, o passo inicial é executado,
+ somente uma vez.
+ Esse passo permite a declaração e controle das variáveis de loop, que inclusive
+ podem ser usadas nas outras expressões do loop, como a 
+\emph on
+condição 
+\emph default
+e o 
+\emph on
+incremento
+\emph default
+.
+ Essa expressão é opcional e pode ser omitida, mantendo-se apenas o ';'.
+ Depois, a condição é validade e se verdade, executa-se o corpo do for,
+ com todas as declarações em sequência.
+ Se falso, o controle vai direto para o primeiro comando após o loop.
+\end_layout
+
+\begin_layout Standard
+Ao término da execução do corpo da iteração, o condicional é checado novamente
+ e, se verdade, ocorre o 
+\emph on
+incremento
+\emph default
+.
+ Esse último, permite que quaisquer variáveis do loop sejam controladas
+ e pode, assim como o 
+\emph on
+início
+\emph default
+, ser omitido.
+ Nesse caso, não é necessário deixar um ';', mas cada declaração desse bloco
+ devem ser separadas por ';', como de costume.
+ Quando a condição torna-se falsa, o loop termina e pula-se para próxima
+ instrução após o loop.
+\end_layout
+
+\begin_layout Standard
+No algorimo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:For"
+
+\end_inset
+
+, tem-se o mesmo resultado obtido para os 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:DoWhile"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:While"
+
+\end_inset
+
+.
+ A impressão da variável a de 10 a 19:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a: 10
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 11
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 12
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 13
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 14
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 15
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 16
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 17
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 18
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 19
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 break
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+A instrução e palavra-chave 
+\emph on
+break 
+\emph default
+podeser usado em dois contextos bem definidos:
+\end_layout
+
+\begin_layout Enumerate
+Dentro de um loop, causando o término imediato do mesmo e indo para a próxima
+ instrução depois do fim do loop.
+\end_layout
+
+\begin_layout Enumerate
+Terminar um 
+\emph on
+case
+\emph default
+, específico, no switch-case, visto na seção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:SwitchCase"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/break.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Break"
+
+\end_inset
+
+Exemplo de utilização 
+\emph on
+break
+\emph default
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se o loop relativo ao break for um loop 
+\emph on
+aninhado
+\emph default
+ (interno a outro), então somente a execução do mais interno será parada
+ e começará a execucão da próxima linha de código do loop externo logo após
+ do bloco de código referente ao loop aninhado.
+ Um exemplo de utilização do break pode ser visto no código 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Break"
+
+\end_inset
+
+, o resultado final da execução do loop é afetado, uma vez que o controle
+ não é mais o mesmo, fazendo com que o resultado da saída seja:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a: 10
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 11
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 12
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 13
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 14
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 15
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The break statement in C programming language has the following two usages:
+\end_layout
+
+\begin_layout Plain Layout
+When the break statement is encountered inside a loop, the loop is immediately
+ terminated and program control resumes at the next statement following
+ the loop.
+\end_layout
+
+\begin_layout Plain Layout
+It can be used to terminate a case in the switch statement (covered in the
+ next chapter).
+\end_layout
+
+\begin_layout Plain Layout
+If you are using nested loops (i.e., one loop inside another loop), the break
+ statement will stop the execution of the innermost loop and start executing
+ the next line of code after the block.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 continue
 \end_layout
 
-\begin_layout Subsection
-return
-\end_layout
-
-\begin_layout Subsection
+\begin_layout Section
 goto
 \end_layout
 
