@@ -6,7 +6,7 @@
 int main ()
 {
   /* Array de N_LINHAS linhas e N_COLUNAS colunas */
-  int a[N_LINHAS][N_COLUNAS] = { {0,0}, {1,2}, {2,4}, {3,6},{4,8}};
+  int a[N_LINHAS][N_COLUNAS] = {{0,0}, {1,2}, {2,4}, {3,6},{4,8}};
 
   int i, j;
 
