@@ -5578,6 +5578,16 @@ For
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:For"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -5838,8 +5848,18 @@ a: 19
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 break
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Break"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5874,7 +5894,7 @@ reference "sec:SwitchCase"
 \begin_inset Float algorithm
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -5974,29 +5994,42 @@ a: 15
 
 \end_layout
 
+\begin_layout Subsection
+continue
+\end_layout
+
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset Float algorithm
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-The break statement in C programming language has the following two usages:
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/continue.c
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
-When the break statement is encountered inside a loop, the loop is immediately
- terminated and program control resumes at the next statement following
- the loop.
-\end_layout
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
-It can be used to terminate a case in the switch statement (covered in the
- next chapter).
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Continue"
 
-\begin_layout Plain Layout
-If you are using nested loops (i.e., one loop inside another loop), the break
- statement will stop the execution of the innermost loop and start executing
- the next line of code after the block.
+\end_inset
+
+Exemplo de utilização 
+\emph on
+continue
+\emph default
+.
+ 
 \end_layout
 
 \end_inset
@@ -6004,12 +6037,123 @@ If you are using nested loops (i.e., one loop inside another loop), the break
 
 \end_layout
 
-\begin_layout Section
-continue
+\end_inset
+
+
 \end_layout
 
-\begin_layout Section
-goto
+\begin_layout Standard
+O 
+\emph on
+continue
+\emph default
+ é uma instrução que funciona de maneira similar ao 
+\emph on
+break
+\emph default
+, da seção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Break"
+
+\end_inset
+
+.
+ Porém, ao invés de forçar o término do loop ele força que o loop vá para
+ a próxima iteração, pulando todo o código referente aos demais blocos de
+ execução até então.
+ Para o loop 
+\emph on
+for
+\emph default
+, seção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:For"
+
+\end_inset
+
+, o continue faz com que o teste condicional e de incremento sejam executados,
+ enquanto para os 
+\emph on
+while 
+\emph default
+e 
+\emph on
+do-while
+\emph default
+, ele passa o controle do programa para os testes condicionais.
+ 
+\end_layout
+
+\begin_layout Standard
+No código do algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Continue"
+
+\end_inset
+
+, temos a instrução condicional checando se o valor de a é igual a 15, nesse
+ caso, pula-se a iteração, adicionando um ao valor de a e usando o continue,
+ pulando os comandos abaixo (incluindo o printf).
+ Por isso, o resultado final, na saída de console, fica:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a: 10
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 11
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 12
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 13
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 14
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 16
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 17
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 18
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 19
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6017,21 +6161,189 @@ goto
 status open
 
 \begin_layout Plain Layout
-There may be a situation, when you need to execute a block of code several
- number of times.
- In general, statements are executed sequentially: The first statement in
- a function is executed first, followed by the second, and so on.
+The continue statement in C programming language works somewhat like the
+ break statement.
+ Instead of forcing termination, however, continue forces the next iteration
+ of the loop to take place, skipping any code in between.
 \end_layout
 
 \begin_layout Plain Layout
-Programming languages provide various control structures that allow for
- more complicated execution paths.
+For the for loop, continue statement causes the conditional test and increment
+ portions of the loop to execute.
+ For the while and do...while loops, continue statement causes the program
+ control passes to the conditional tests.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+goto
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/goto.c
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
-A loop statement allows us to execute a statement or group of statements
- multiple times and following is the general form of a loop statement in
- most of the programming languages:
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:GoTo"
+
+\end_inset
+
+Exemplo de utilização 
+\emph on
+goto
+\emph default
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pode-se existir uma situação em que faz-se necessário a utilização de uma
+ quebra de fluxo incondicional, o chamado 
+\emph on
+pulo.
+ 
+\emph default
+Nesse caso, pode-se utilizar o 
+\emph on
+goto
+\emph default
+.
+ Porém, por motivos de entendimento e de manutenção da legibilidade de código,
+ essa instrução deve-se ser utilizada com muita cautela.
+ Uma grande sequência de pulos pode tornar o programa simplesmente muito
+ difícil de compreender e dar manutenção! Além disso, qualquer programa
+ que use um goto pode ser escrito por outras instruções equivalentes e portanto
+ não usá-lo.
+\end_layout
+
+\begin_layout Standard
+No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:GoTo"
+
+\end_inset
+
+, utiliza-se a label LOOP para referenciar o começo do loop.
+ Checa-se o caso da variável a ser 15 e pula-se a iteração pela utilização
+ do goto para a label.
+ Isso é, tem-se o mesmo resultado que o obtido pela utilização do 
+\emph on
+continue
+\emph default
+, do algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Continue"
+
+\end_inset
+
+.
+ O resultado fica portanto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a: 10
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 11
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 12
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 13
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 14
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 16
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 17
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 18
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 19
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A goto statement in C programming language provides an unconditional jump
+ from the goto to a labeled statement in the same function.
+\end_layout
+
+\begin_layout Plain Layout
+NOTE: Use of goto statement is highly discouraged in any programming language
+ because it makes difficult to trace the control flow of a program, making
+ the program hard to understand and hard to modify.
+ Any program that uses a goto can be rewritten so that it doesn't need the
+ goto.
 \end_layout
 
 \end_inset
@@ -6041,6 +6353,1062 @@ A loop statement allows us to execute a statement or group of statements
 
 \begin_layout Section
 Arrays
+\end_layout
+
+\begin_layout Standard
+No C, tem-se uma estrutura de dados básica da linguagem, chamada de 
+\emph on
+array
+\emph default
+ ou 
+\emph on
+arranjos
+\emph default
+.
+ Nela pode-se guardar uma coleção de tamanho fixo, sequencial, de elementos
+ do mesmo tipo.
+ O array é usado para guardar uma coleção de dados, mas costuma ser mais
+ fácil pensar em array como uma maneira de guardar um conjunto de variáveis
+ do mesmo tipo.
+ Isto é, ao invés de utlizar-se variáveis como 
+\emph on
+numero0, numero1, ...., numeroN
+\emph default
+, declara-se somente uma variável e utiliza-se 
+\emph on
+numeros 
+\emph default
+por meio de um índice sequencial de acesso para representar individualmente
+ as variáveis.
+ Fica assim: 
+\emph on
+numero[0], numero[1], ..., numero[N]
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Todos os arrays consistem em elementos contíguos (contínuos e íntegros)
+ em endereços de memória.
+ O menor endereço corresponde ao primeiro elemento enquanto o endereço de
+ memória mais alto corresponde ao último endereço:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="6">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Índice
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Acesso
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+numero[0]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+numero[1]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+numero[2]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+numero[N]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Declaração
+\end_layout
+
+\begin_layout Standard
+Para declarar-se um array basta usar a sintaxe:
+\end_layout
+
+\begin_layout Standard
+\align center
+tipo nomeDoArray[tamanhoDoArray];
+\end_layout
+
+\begin_layout Standard
+Isso funciona para o chamado array unidimensional.
+ O 
+\emph on
+tamanhoDoArray
+\emph default
+ deve ser um inteiro positivo constante maior que 0.
+ O 
+\emph on
+tipo 
+\emph default
+pode ser qualquer um válido no C.
+ Como exemplo concreto, imagine que seja declarado um array de tamanho 10
+ de double, chamado balancete.
+ Em código:
+\end_layout
+
+\begin_layout Standard
+\align center
+double balancete[10];
+\end_layout
+
+\begin_layout Standard
+A partir dessa instrução, 
+\emph on
+balancete 
+\emph default
+será uma variável acessível no escopo e que pode armazenar até 10 variáveis
+ doubles.
+\end_layout
+
+\begin_layout Subsection
+Inicialização
+\end_layout
+
+\begin_layout Standard
+O array pode ser inicializado numa só instrução:
+\end_layout
+
+\begin_layout Standard
+\align center
+double balancete[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
+\end_layout
+
+\begin_layout Standard
+Na inicialização o número de valores entre as chaves não podem ser maior
+ do que o número de elementos declarados como tamanho, entre os colchetes.
+ Se o tamanho do array for omitido, um de tamanho grande o suficiente para
+ armazenar as variáveis declaradas será criado.
+ Assim, escreve-se:
+\end_layout
+
+\begin_layout Standard
+\align center
+double balancete[] = {1000.0, 2.0, 3.4, 7.0, 50.0};
+\end_layout
+
+\begin_layout Standard
+Nesse caso, os dois arrays serão idênticos.
+ Uma outra possibilidade, é definir-se somente um elemento do array:
+\end_layout
+
+\begin_layout Standard
+\align center
+balancete[4] = 52.0;
+\end_layout
+
+\begin_layout Standard
+A atribuição acima fará com que o quinto elemento do array 
+\emph on
+balancete 
+\emph default
+receba o valor 50.0.
+ Todos os arrays tem 0 como seu primeiro índice e seu tamanho total decrescido
+ de 1 como o último.
+ Seguindo a representação anterior, após o comando te atribuição ao índice
+ 4, o array fica:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="6">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Índice
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+52.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Acesso
+\end_layout
+
+\begin_layout Standard
+Um elemento é acessado por meio do seu índice referente e o nome da variável
+ array.
+ Isso é feito utilizando-se o nome do array e o índice entre colchetes logo
+ após.
+ Por exemplo:
+\end_layout
+
+\begin_layout Standard
+\align center
+double valor = balancete[9];
+\end_layout
+
+\begin_layout Standard
+Essa instrução irá obter o décimo elemento do array 
+\emph on
+balancete 
+\emph default
+e atribuir a variável double declarada na instrução, denominada 
+\emph on
+valor
+\emph default
+.
+ Um exemplo mais complexo pode ser observado no algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Array"
+
+\end_inset
+
+.
+ Nesse caso, o array é acessado em todas as suas posições, sendo que cada
+ uma delas receberá a soma de seu índice mais 128.
+ No final, todos os valores do array são impressos, um por linha, com 
+\emph on
+printf
+\emph default
+.
+ O resultado no console é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/array.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Array"
+
+\end_inset
+
+Exemplo de iteração sobre um 
+\emph on
+array
+\emph default
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+n[0] = 128
+\end_layout
+
+\begin_layout Plain Layout
+
+n[1] = 129
+\end_layout
+
+\begin_layout Plain Layout
+
+n[2] = 130
+\end_layout
+
+\begin_layout Plain Layout
+
+n[3] = 131
+\end_layout
+
+\begin_layout Plain Layout
+
+n[4] = 132
+\end_layout
+
+\begin_layout Plain Layout
+
+n[5] = 133
+\end_layout
+
+\begin_layout Plain Layout
+
+n[6] = 134
+\end_layout
+
+\begin_layout Plain Layout
+
+n[7] = 135
+\end_layout
+
+\begin_layout Plain Layout
+
+n[8] = 136
+\end_layout
+
+\begin_layout Plain Layout
+
+n[9] = 137
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Arrays n-dimensionais
+\end_layout
+
+\begin_layout Standard
+C aceita arrays de múltiplas dimensões.
+ Em sua forma geral, declara-se eles da seguinte forma:
+\end_layout
+
+\begin_layout Standard
+\align center
+tipo nomeDoArray[tamanho1][tamanho2]...[tamanhoN];
+\end_layout
+
+\begin_layout Standard
+Por exemplo, a declaração de um array quadridimensional seria algo como:
+\end_layout
+
+\begin_layout Standard
+\align center
+int quadri[10][2][5][18];
+\end_layout
+
+\begin_layout Standard
+Para acessá-los, deve-se usar o número de índices entre colchetes referentes
+ a sua dimensionalidade.
+\end_layout
+
+\begin_layout Section
+Arrays bi-dimensionais
+\end_layout
+
+\begin_layout Standard
+A forma mais simple de array multi-dimensional é a bi-dimensional.
+ Um array bi-dimensional é, em sua essência, uma lista de arrays uni-dimensionai
+s.
+ Para declarar-se um array desse tipo, deve-se usar duas constantes distintas
+ de tamanho, as quais podem inclusive assumir valores idênticos:
+\end_layout
+
+\begin_layout Standard
+\align center
+tipo nomeDoArray[x][y];
+\end_layout
+
+\begin_layout Subsection
+Inicialização
+\end_layout
+
+\begin_layout Standard
+Qualquer tipo válido para um array de uma dimensão será valido para o bi-dimensi
+onal.
+ Pode-se pensar nele como uma tabela com 
+\emph on
+x
+\emph default
+ linhas e 
+\emph on
+y
+\emph default
+ colunas.
+ Assim, essa é uma estrutura natural para tudo que possa ser representado
+ por tabelas e matrizes.
+ Um array com 3 linhas e 4 colunas seria algo como:
+\end_layout
+
+\begin_layout Standard
+\align center
+int a[3][4];
+\end_layout
+
+\begin_layout Standard
+A inicialização desse array, como no caso de somente uma dimensão, será
+ também por meio de valores entre chaves.
+ Assim, pode-se inicializar 
+\emph on
+a
+\emph default
+ como um array de arrays, ou seja:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int a[3][4] = { 
+\end_layout
+
+\begin_layout Plain Layout
+
+	{0, 1, 2, 3} , /* linha 0 */
+\end_layout
+
+\begin_layout Plain Layout
+
+	{4, 5, 6, 7} , /* linha 1 */
+\end_layout
+
+\begin_layout Plain Layout
+
+	{8, 9, 10, 11} /* linha 2 */
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As chaves internas são extras, ou seja, opcionais.
+ Elas estão ali somente para facilitar o entendimento do que está acontecendo.
+ Essa mesma inicialização poderia dar-se da seguinte forma, obtendo-se o
+ mesmo resultado:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int a[3][4] = {0,1,2,3,4,5,6,7,8,9,10,11};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Acesso
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/bi_array.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:BiArray"
+
+\end_inset
+
+Exemplo de iteração sobre um 
+\emph on
+array
+\emph default
+ 
+\emph on
+bidimensional
+\emph default
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uma variável de um array 2-dimensional pode ser acessada pela utilização
+ de índices subescritos, i.
+ e., índice de linha e de coluna em sequência.
+ Por exemplo:
+\end_layout
+
+\begin_layout Standard
+\align center
+int valor = a[10][24];
+\end_layout
+
+\begin_layout Standard
+Assim, o elemento da linha 10, coluna 24 do array seria atribuído a variável
+ valor.
+ No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:BiArray"
+
+\end_inset
+
+, tem-se a inicialização e iteração de um array.
+ A saída do programa é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a[0][0] = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+a[0][1] = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+a[1][0] = 1
+\end_layout
+
+\begin_layout Plain Layout
+
+a[1][1] = 2
+\end_layout
+
+\begin_layout Plain Layout
+
+a[2][0] = 2
+\end_layout
+
+\begin_layout Plain Layout
+
+a[2][1] = 4
+\end_layout
+
+\begin_layout Plain Layout
+
+a[3][0] = 3
+\end_layout
+
+\begin_layout Plain Layout
+
+a[3][1] = 6
+\end_layout
+
+\begin_layout Plain Layout
+
+a[4][0] = 4
+\end_layout
+
+\begin_layout Plain Layout
+
+a[4][1] = 8
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+C programming language allows multidimensional arrays.
+ Here is the general form of a multidimensional array declaration:
+\end_layout
+
+\begin_layout Plain Layout
+type name[size1][size2]...[sizeN];
+\end_layout
+
+\begin_layout Plain Layout
+For example, the following declaration creates a three dimensional 5 .
+ 10 .
+ 4 integer array:
+\end_layout
+
+\begin_layout Plain Layout
+int threedim[5][10][4];
+\end_layout
+
+\begin_layout Plain Layout
+Two-Dimensional Arrays:
+\end_layout
+
+\begin_layout Plain Layout
+The simplest form of the multidimensional array is the two-dimensional array.
+ A two-dimensional array is, in essence, a list of one-dimensional arrays.
+ To declare a two-dimensional integer array of size x,y you would write
+ something as follows:
+\end_layout
+
+\begin_layout Plain Layout
+type arrayName [ x ][ y ];
+\end_layout
+
+\begin_layout Plain Layout
+Where type can be any valid C data type and arrayName will be a valid C
+ identifier.
+ A two-dimensional array can be think as a table which will have x number
+ of rows and y number of columns.
+ A 2-dimensional array a, which contains three rows and four columns can
+ be shown as below:
+\end_layout
+
+\begin_layout Plain Layout
+Two Dimensional Arrays in C
+\end_layout
+
+\begin_layout Plain Layout
+Thus, every element in array a is identified by an element name of the form
+ a[ i ][ j ], where a is the name of the array, and i and j are the subscripts
+ that uniquely identify each element in a.
+\end_layout
+
+\begin_layout Plain Layout
+Initializing Two-Dimensional Arrays:
+\end_layout
+
+\begin_layout Plain Layout
+Multidimensional arrays may be initialized by specifying bracketed values
+ for each row.
+ Following is an array with 3 rows and each row has 4 columns.
+\end_layout
+
+\begin_layout Plain Layout
+int a[3][4] = { 
+\end_layout
+
+\begin_layout Plain Layout
+{0, 1, 2, 3} , /* initializers for row indexed by 0 */
+\end_layout
+
+\begin_layout Plain Layout
+{4, 5, 6, 7} , /* initializers for row indexed by 1 */
+\end_layout
+
+\begin_layout Plain Layout
+{8, 9, 10, 11} /* initializers for row indexed by 2 */
+\end_layout
+
+\begin_layout Plain Layout
+};
+\end_layout
+
+\begin_layout Plain Layout
+The nested braces, which indicate the intended row, are optional.
+ The following initialization is equivalent to previous example:
+\end_layout
+
+\begin_layout Plain Layout
+int a[3][4] = {0,1,2,3,4,5,6,7,8,9,10,11};
+\end_layout
+
+\begin_layout Plain Layout
+Accessing Two-Dimensional Array Elements:
+\end_layout
+
+\begin_layout Plain Layout
+An element in 2-dimensional array is accessed by using the subscripts, i.e.,
+ row index and column index of the array.
+ For example:
+\end_layout
+
+\begin_layout Plain Layout
+int val = a[2][3];
+\end_layout
+
+\begin_layout Plain Layout
+The above statement will take 4th element from the 3rd row of the array.
+ You can verify it in the above diagram.
+ Let us check below program where we have used nested loop to handle a two
+ dimensional array:
+\end_layout
+
+\begin_layout Plain Layout
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+int main ()
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+/* an array with 5 rows and 2 columns*/
+\end_layout
+
+\begin_layout Plain Layout
+int a[5][2] = { {0,0}, {1,2}, {2,4}, {3,6},{4,8}};
+\end_layout
+
+\begin_layout Plain Layout
+int i, j;
+\end_layout
+
+\begin_layout Plain Layout
+/* output each array element's value */
+\end_layout
+
+\begin_layout Plain Layout
+for ( i = 0; i < 5; i++ )
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+for ( j = 0; j < 2; j++ )
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+printf("a[%d][%d] = %d
+\backslash
+n", i,j, a[i][j] );
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\begin_layout Plain Layout
+return 0;
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\begin_layout Plain Layout
+When the above code is compiled and executed, it produces the following
+ result:
+\end_layout
+
+\begin_layout Plain Layout
+a[0][0]: 0
+\end_layout
+
+\begin_layout Plain Layout
+a[0][1]: 0
+\end_layout
+
+\begin_layout Plain Layout
+a[1][0]: 1
+\end_layout
+
+\begin_layout Plain Layout
+a[1][1]: 2
+\end_layout
+
+\begin_layout Plain Layout
+a[2][0]: 2
+\end_layout
+
+\begin_layout Plain Layout
+a[2][1]: 4
+\end_layout
+
+\begin_layout Plain Layout
+a[3][0]: 3
+\end_layout
+
+\begin_layout Plain Layout
+a[3][1]: 6
+\end_layout
+
+\begin_layout Plain Layout
+a[4][0]: 4
+\end_layout
+
+\begin_layout Plain Layout
+a[4][1]: 8
+\end_layout
+
+\begin_layout Plain Layout
+As explained above, you can have arrays with any number of dimensions, although
+ it is likely that most of the arrays you create will be of one or two dimension
+s.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
