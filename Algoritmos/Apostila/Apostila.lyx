@@ -7172,238 +7172,51 @@ a[4][1] = 8
 
 \end_layout
 
+\begin_layout Section
+Funções
+\end_layout
+
 \begin_layout Standard
-\begin_inset Note Note
+Uma função em C é um grupo de instruções que fazem algum tipo de tarefa
+ ou 
+\emph on
+rotina
+\emph default
+.
+ Por isso, elas também são chamadas de rotinas.
+ Mesmo o programa C mais trivial sempre terá pelo menos uma função, a 
+\emph on
+main
+\emph default
+.
+ Mesmo programas triviais podem definir várias funções.
+ A sintaxe para a definição de função é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
 status open
 
 \begin_layout Plain Layout
-C programming language allows multidimensional arrays.
- Here is the general form of a multidimensional array declaration:
+
+tipo_de_retorno nome_da_funcao(lista_de_parametros) 
 \end_layout
 
 \begin_layout Plain Layout
-type name[size1][size2]...[sizeN];
-\end_layout
 
-\begin_layout Plain Layout
-For example, the following declaration creates a three dimensional 5 .
- 10 .
- 4 integer array:
-\end_layout
-
-\begin_layout Plain Layout
-int threedim[5][10][4];
-\end_layout
-
-\begin_layout Plain Layout
-Two-Dimensional Arrays:
-\end_layout
-
-\begin_layout Plain Layout
-The simplest form of the multidimensional array is the two-dimensional array.
- A two-dimensional array is, in essence, a list of one-dimensional arrays.
- To declare a two-dimensional integer array of size x,y you would write
- something as follows:
-\end_layout
-
-\begin_layout Plain Layout
-type arrayName [ x ][ y ];
-\end_layout
-
-\begin_layout Plain Layout
-Where type can be any valid C data type and arrayName will be a valid C
- identifier.
- A two-dimensional array can be think as a table which will have x number
- of rows and y number of columns.
- A 2-dimensional array a, which contains three rows and four columns can
- be shown as below:
-\end_layout
-
-\begin_layout Plain Layout
-Two Dimensional Arrays in C
-\end_layout
-
-\begin_layout Plain Layout
-Thus, every element in array a is identified by an element name of the form
- a[ i ][ j ], where a is the name of the array, and i and j are the subscripts
- that uniquely identify each element in a.
-\end_layout
-
-\begin_layout Plain Layout
-Initializing Two-Dimensional Arrays:
-\end_layout
-
-\begin_layout Plain Layout
-Multidimensional arrays may be initialized by specifying bracketed values
- for each row.
- Following is an array with 3 rows and each row has 4 columns.
-\end_layout
-
-\begin_layout Plain Layout
-int a[3][4] = { 
-\end_layout
-
-\begin_layout Plain Layout
-{0, 1, 2, 3} , /* initializers for row indexed by 0 */
-\end_layout
-
-\begin_layout Plain Layout
-{4, 5, 6, 7} , /* initializers for row indexed by 1 */
-\end_layout
-
-\begin_layout Plain Layout
-{8, 9, 10, 11} /* initializers for row indexed by 2 */
-\end_layout
-
-\begin_layout Plain Layout
-};
-\end_layout
-
-\begin_layout Plain Layout
-The nested braces, which indicate the intended row, are optional.
- The following initialization is equivalent to previous example:
-\end_layout
-
-\begin_layout Plain Layout
-int a[3][4] = {0,1,2,3,4,5,6,7,8,9,10,11};
-\end_layout
-
-\begin_layout Plain Layout
-Accessing Two-Dimensional Array Elements:
-\end_layout
-
-\begin_layout Plain Layout
-An element in 2-dimensional array is accessed by using the subscripts, i.e.,
- row index and column index of the array.
- For example:
-\end_layout
-
-\begin_layout Plain Layout
-int val = a[2][3];
-\end_layout
-
-\begin_layout Plain Layout
-The above statement will take 4th element from the 3rd row of the array.
- You can verify it in the above diagram.
- Let us check below program where we have used nested loop to handle a two
- dimensional array:
-\end_layout
-
-\begin_layout Plain Layout
-#include <stdio.h>
-\end_layout
-
-\begin_layout Plain Layout
-int main ()
-\end_layout
-
-\begin_layout Plain Layout
 {
 \end_layout
 
 \begin_layout Plain Layout
-/* an array with 5 rows and 2 columns*/
+
+	codigo_da_funcao;
 \end_layout
 
 \begin_layout Plain Layout
-int a[5][2] = { {0,0}, {1,2}, {2,4}, {3,6},{4,8}};
-\end_layout
 
-\begin_layout Plain Layout
-int i, j;
-\end_layout
-
-\begin_layout Plain Layout
-/* output each array element's value */
-\end_layout
-
-\begin_layout Plain Layout
-for ( i = 0; i < 5; i++ )
-\end_layout
-
-\begin_layout Plain Layout
-{
-\end_layout
-
-\begin_layout Plain Layout
-for ( j = 0; j < 2; j++ )
-\end_layout
-
-\begin_layout Plain Layout
-{
-\end_layout
-
-\begin_layout Plain Layout
-printf("a[%d][%d] = %d
-\backslash
-n", i,j, a[i][j] );
-\end_layout
-
-\begin_layout Plain Layout
 }
-\end_layout
-
-\begin_layout Plain Layout
-}
-\end_layout
-
-\begin_layout Plain Layout
-return 0;
-\end_layout
-
-\begin_layout Plain Layout
-}
-\end_layout
-
-\begin_layout Plain Layout
-When the above code is compiled and executed, it produces the following
- result:
-\end_layout
-
-\begin_layout Plain Layout
-a[0][0]: 0
-\end_layout
-
-\begin_layout Plain Layout
-a[0][1]: 0
-\end_layout
-
-\begin_layout Plain Layout
-a[1][0]: 1
-\end_layout
-
-\begin_layout Plain Layout
-a[1][1]: 2
-\end_layout
-
-\begin_layout Plain Layout
-a[2][0]: 2
-\end_layout
-
-\begin_layout Plain Layout
-a[2][1]: 4
-\end_layout
-
-\begin_layout Plain Layout
-a[3][0]: 3
-\end_layout
-
-\begin_layout Plain Layout
-a[3][1]: 6
-\end_layout
-
-\begin_layout Plain Layout
-a[4][0]: 4
-\end_layout
-
-\begin_layout Plain Layout
-a[4][1]: 8
-\end_layout
-
-\begin_layout Plain Layout
-As explained above, you can have arrays with any number of dimensions, although
- it is likely that most of the arrays you create will be of one or two dimension
-s.
 \end_layout
 
 \end_inset
@@ -7411,16 +7224,546 @@ s.
 
 \end_layout
 
+\begin_layout Itemize
+
+\series bold
+tipo_de_retorno:
+\series default
+ Uma função pode ou não retornar um valor.
+ O tipo_de_retorno é um valor retornado pela função e pode assumir qualquer
+ tipo de dado válido em C o qual deve ser retornado usando a palavra-chave
+ 
+\emph on
+return.
+ 
+\emph default
+Uma função que não retorne nenhum valor deve retornar o tipo 
+\emph on
+void
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+nome_da_funcao:
+\series default
+ Function Name: This is the actual name of the function.
+ The function name and the parameter list together constitute the function
+ signature.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+lista_de_parametros:
+\series default
+ Um parâmetro é um espaço reservado.
+ Quando uma função é invocada, passa-se o valor por parâmetro.
+ O valor passado é o valor que o parâmetro assume na função.
+ A esse valor dá-se o nome de 
+\emph on
+argumento
+\emph default
+ da função.
+ A lista de parâmetros se refere ao tipo, ordem e número de parâmetros que
+ será passada a função.
+ Parâmetros são opcionais e separados por vírgula.
+ Uma função pode não ter nenhum parâmetro.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+codigo_da_funcao: 
+\series default
+O corpo da função contém todas as declarações que definem o que a função
+ faz.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/maximo.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Maximo"
+
+\end_inset
+
+ Função que calcula o valor 
+\emph on
+máximo
+\emph default
+ entre dois números inteiros.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Declaração
+\end_layout
+
+\begin_layout Standard
+A declaração de uma função diz ao compilador como chamar uma função.
+ O corpo da função pode ser definido separadamente.
+ Assim, a declaração pode estar em um arquivo de 
+\emph on
+cabeçalho
+\emph default
+ enquanto o corpo está em um código fonte, por exemplo.
+ Isso é considerada uma ótima prática de programação C.
+ Uma declaração tem as seguintes partes:
+\end_layout
+
+\begin_layout Standard
+\align center
+tipo_de_retorno nome_da_funcao(lista_de_parametros);
+\end_layout
+
+\begin_layout Standard
+Levando-se em consideração o algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Maximo"
+
+\end_inset
+
+, a definição da função 
+\emph on
+maximo 
+\emph default
+poderia ser:
+\end_layout
+
+\begin_layout Standard
+\align center
+int maximo(int n1, int n2);
+\end_layout
+
+\begin_layout Standard
+Como na declaração os nomes de parâmetros não são importantes, mas só seus
+ tipos o são, a seguinte declaração possui o mesmo efeito também:
+\end_layout
+
+\begin_layout Standard
+\align center
+int maximo(int, int);
+\end_layout
+
+\begin_layout Standard
+Toda vez que você define uma função em um arquivo fonte e quer utilizá-lo
+ em outro, a função deve ser declarada, normalmente num 
+\emph on
+cabeçalho
+\emph default
+.
+ Também, é possível colocar a declaração logo acima da função a qual a está
+ chamando.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/maximo_main.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:MaximoMain"
+
+\end_inset
+
+ Main que utiliza a função máximo, definida no algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Maximo"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Chamada
+\end_layout
+
+\begin_layout Standard
+Para usar uma função, é necessário chamá-la de forma a ela fazer a tarefa
+ para qual ela foi definida.
+ Uma função, ao ser chamada, executará suas instruções e quando uma palavra-chav
+e return for executada ou quando chegar no final de seu escopo, o controle
+ da execução retorna para aquela que a chamou.
+\end_layout
+
+\begin_layout Standard
+Para chamar uma função, deve-se simplesmente passar todos os parâmetros
+ requeridos junto ao nome da mesma e se a função retornar um valor é possível
+ armazéna-lo e utilizá-lo como qualquer variável.
+ No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:MaximoMain"
+
+\end_inset
+
+ vemos um exemplo desse caso, uma vez que a função máximo é chamada e usada
+ no printf como se fosse uma variável no escopo da expressão.
+ O resultado final impresso no console será:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Maior: 200 
+\end_layout
+
+\begin_layout Plain Layout
+
+Maior: 200
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Argumentos
+\end_layout
+
+\begin_layout Standard
+Se uma função irá usar arguemtnso, deve-se declarar as variáveis (nomes)
+ as quais aceitem valores do tipo definido como argumento.
+ Essas variáveis são os chamados parâmetros formais da função e podem ser
+ usados no escopo como qualquer outra variável, porém não podem ser acessados
+ fora do escopo da função, isto é, são destruídos na saída.
+ Enquanto chama-se uma função há duas maneiras as quais pode-se passar valores:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+valor: 
+\series default
+Este método copia o valor de um argumento e passa como parâmetro formal
+ a função.
+ Sendo assim, as mudanças a esse parâmetro dentro da função em nada influenciam
+ o valor original, passado por parâmetro, uma vez que o mesmo foi copiado
+ para um outro endereço de memória.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+referência: 
+\series default
+Com esse método, copia-se o endereço de memória (ponteiro) do parâmetro
+ formal ao invés de seu valor.
+ Dentro da função, o endereço é usado para acessar o argumento passado na
+ chamada.
+ Isso significa que mudanças ao argumento, dentro da função, afetam o valor
+ original passado por referência.
+\end_layout
+
+\begin_layout Standard
+Por padrão, o C usa a 
+\emph on
+chamada por valor 
+\emph default
+para passar argumentos.
+ Em geral, isso significa que o código dentro de uma função não pode alterar
+ os argumentos usados na chamada de função, como na chamada do 
+\emph on
+máximo
+\emph default
+, no algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:MaximoMain"
+
+\end_inset
+
+.
+ Isso será discutido novamente ao falar-se de ponteiros.
+\end_layout
+
 \begin_layout Section
-Funções
+Ponteiros
 \end_layout
 
-\begin_layout Chapter
-Structs & ponteiros
+\begin_layout Standard
+Algumas tarefas de programação vão exigir a necessidade de trabalhar-se
+ com endereços de memória ao invés de variáveis em si.
+ Isso acontece no caso de alocação dinâmica de memória (
+\emph on
+malloc/free
+\emph default
+), strings e algumas outras estruturas que podem ser consideradas básicas
+ na linguagem C.
+ 
 \end_layout
 
-\begin_layout Chapter
-Entrada e saída
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/imprimir_ponteiro.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:ImprimirPonteiro"
+
+\end_inset
+
+ Impressão de endereços de memória das variáveis 
+\emph on
+var1 
+\emph default
+e 
+\emph on
+var2
+\emph default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Toda variável está associada a uma região de memória e toda região de memória
+ tem um endereço.
+ O endereço de uma variável qualquer pode ser acessado por meio do operador
+ '&', denotando um endereço de memória.
+ Esse endereço é o ponteiro de uma variável.
+ No código 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:ImprimirPonteiro"
+
+\end_inset
+
+, nota-se a utilização do operador & o qual obtém o ponteiro da variável.
+ O resultado para esse algoritmo será um endereço do tipo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Endereco de memoria var1: 503bc3e4
+\end_layout
+
+\begin_layout Plain Layout
+
+Endereco de memoria var2: 503bc3ee
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O valor em si pode mudar de acordo com a execução, pois nem sempre será
+ a mesma região de memória alocada para as variáveis, porém sempre apontarão
+ para o endereço de onde estão as variáveis...
+\end_layout
+
+\begin_layout Subsection
+Declaração
+\end_layout
+
+\begin_layout Standard
+Um ponteiro é uma variável que é o endereço de uma outra variável, isto
+ é, provê o acesso direto a um local na memória.
+ Como qualquer outra variável ou constante, deve também ser declarada e
+ armazenada em uma variável.
+ A sintaxe é:
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\align center
+tipo *nome_da_variavel;
+\end_layout
+
+\begin_layout Standard
+O 
+\emph on
+tipo
+\emph default
+ deve ser um válidoe o nome da variável é o nome que será utilizado para
+ acessar o ponteiro.
+ O operador asterisco, '*', utilizado para declarar o ponteiro é também
+ utilizado para multiplicação, porém o compilador entende o primeiro como
+ um ponteiro pelo contexto que ele se encontra.
+ As seguintes declarações de ponteiro são válidas:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+/* ponteiro para um inteiro */
+\end_layout
+
+\begin_layout Plain Layout
+
+int *ip; 
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ponteiro para um double */
+\end_layout
+
+\begin_layout Plain Layout
+
+double *dp; 
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ponteiro para um float */
+\end_layout
+
+\begin_layout Plain Layout
+
+float *fp; 
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ponteiro para um caracter (string) */
+\end_layout
+
+\begin_layout Plain Layout
+
+char *ch;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+The actual data type of the value of all pointers, whether integer, float,
+ character, or otherwise, is the same, a long hexadecimal number that represents
+ a memory address.
+ The only difference between pointers of different data types is the data
+ type of the variable or constant that the pointer points to.
+\begin_inset Note Note
+status open
+
+\begin_layout Subsection
+Memória, arrays e ponteiro NULL
+\end_layout
+
+\begin_layout Subsection
+Ponteiros de função
+\end_layout
+
+\begin_layout Section
+Structs 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
