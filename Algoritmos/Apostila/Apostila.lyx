@@ -7554,13 +7554,351 @@ reference "alg:MaximoMain"
  Isso será discutido novamente ao falar-se de ponteiros.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
 \begin_layout Section
 Struct 
 \end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Struct"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Às vezes, enquanto programamos, precisamos passar como argumento para funções
+ e guardar várias vezes as mesmas informações.
+ Essas informações normalmente tem algum tipo de conexão semântica.
+ Por exemplo, é possível que queiramos representar em um programa de uma
+ determinada biblioteca, um livro.
+ O livro tem:
+\end_layout
+
+\begin_layout Itemize
+Número de Identificação
+\end_layout
+
+\begin_layout Itemize
+Título
+\end_layout
+
+\begin_layout Itemize
+Autor
+\end_layout
+
+\begin_layout Itemize
+Assunto
+\end_layout
+
+\begin_layout Itemize
+Editora
+\end_layout
+
+\begin_layout Standard
+Imagine que queiramos criar uma abstração livro no nosso código.
+ Isso pode ser feito usando uma 
+\emph on
+struct
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+Declaração
+\end_layout
+
+\begin_layout Standard
+Ao definir-se uma estrutura, define-se também um novo tipo de dado com o
+ nome 
+\emph on
+nome_da_struct
+\emph default
+.
+ Para identificar as structs facilmente no código uma prática comum é usar
+ nomes maiúsculos para elas em notação camelo.
+ Assim 
+\emph on
+nome_da_struct 
+\emph default
+seria escrito como NomeDaStruct.
+ Exemplo de definição:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},showstringspaces=false,tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+struct NomeDaStruct
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	definicao_de_membro1;
+\end_layout
+
+\begin_layout Plain Layout
+
+	definicao_de_membro2;
+\end_layout
+
+\begin_layout Plain Layout
+
+	...
+\end_layout
+
+\begin_layout Plain Layout
+
+	definicao_de_membron;
+\end_layout
+
+\begin_layout Plain Layout
+
+} (nome_da_variavel); 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uma struct pode ter um número infinito de variáveis membros, ou seja, um
+ tamanho e número de variáveis arbitrários.
+ Essa flexibilidade é o que torna as structs um mecanismo bastante poderoso
+ na linguagem C.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/livro.h
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:LivroHeader"
+
+\end_inset
+
+Definição de uma 
+\emph on
+struct Livro
+\emph default
+ a qual poderá ser utilizada por quem incluir o cabeçalho.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/livro.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:LivroMain"
+
+\end_inset
+
+Exemplo de utilização da 
+\emph on
+struct Livro
+\emph default
+, conforme definida no código do algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:LivroHeader"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O 
+\emph on
+nome_da_variavel 
+\emph default
+é opcional, uma vez que uma struct pode ser definida sem estar associada
+ a uma variável.
+ A partir do momento de sua definição, toda vez que aparecer 
+\emph on
+struct NomeDaStruct 
+\emph default
+no código, o tipo será remetido ao da declaração, ou seja da estrutura em
+ si e pode ser usado para criar variáveis desse tipo, por exemplo.
+\end_layout
+
+\begin_layout Standard
+No cabeçalho do código 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:LivroHeader"
+
+\end_inset
+
+, tem-se a definição de um 
+\emph on
+Livro
+\emph default
+, conforme descrito na seção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Struct"
+
+\end_inset
+
+.
+ Já no algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:LivroMain"
+
+\end_inset
+
+, tem-se a impressão de duas estruturas de livro, inicializadas.
+ Por meio do 
+\emph on
+strcpy
+\emph default
+, as strings são copiadas para o espaço reservado nas structs a elas.
+ O resultado da execução fica:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+====Livro====
+\end_layout
+
+\begin_layout Plain Layout
+
+Titulo: A Guerra dos Tronos
+\end_layout
+
+\begin_layout Plain Layout
+
+Autor: George R Martin
+\end_layout
+
+\begin_layout Plain Layout
+
+Assunto: Fantasia
+\end_layout
+
+\begin_layout Plain Layout
+
+Id: 3121
+\end_layout
+
+\begin_layout Plain Layout
+
+=============
+\end_layout
+
+\begin_layout Plain Layout
+
+====Livro====
+\end_layout
+
+\begin_layout Plain Layout
+
+Titulo: Senhor dos Aneis
+\end_layout
+
+\begin_layout Plain Layout
+
+Autor: J R R Tolkien
+\end_layout
+
+\begin_layout Plain Layout
+
+Assunto: Fantasia
+\end_layout
+
+\begin_layout Plain Layout
+
+Id: 95021
+\end_layout
+
+\begin_layout Plain Layout
+
+=============
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
 
 \begin_layout Section
 Union
@@ -8020,7 +8358,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-Essa operaçõa é também chamada de 
+Essa operação é também chamada de 
 \emph on
 escrita
 \emph default
