@@ -1175,7 +1175,17 @@ Toda "string" é terminada por "
 \end_layout
 
 \begin_layout Subsubsection
-Constantes especiais
+Constantes e caracteres especiais
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:CaracteresEspeciais"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7544,6 +7554,23 @@ reference "alg:MaximoMain"
  Isso será discutido novamente ao falar-se de ponteiros.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Section
+Struct 
+\end_layout
+
+\begin_layout Section
+Union
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Ponteiros
 \end_layout
@@ -7649,6 +7676,56 @@ Endereco de memoria var2: 503bc3ee
 O valor em si pode mudar de acordo com a execução, pois nem sempre será
  a mesma região de memória alocada para as variáveis, porém sempre apontarão
  para o endereço de onde estão as variáveis...
+ isso pode ser visto na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PonteiroFoo"
+
+\end_inset
+
+.
+ O ponteiro, tipo int* e o valor tipo int vão estar em duas regiões distintas
+ de memória.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/Ponteiro.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PonteiroFoo"
+
+\end_inset
+
+Esquematização de como funciona uma variável ponteiro.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -7664,10 +7741,6 @@ Um ponteiro é uma variável que é o endereço de uma outra variável, isto
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
 \align center
 tipo *nome_da_variavel;
 \end_layout
@@ -7677,7 +7750,7 @@ O
 \emph on
 tipo
 \emph default
- deve ser um válidoe o nome da variável é o nome que será utilizado para
+ deve ser um válido e o nome da variável é o nome que será utilizado para
  acessar o ponteiro.
  O operador asterisco, '*', utilizado para declarar o ponteiro é também
  utilizado para multiplicação, porém o compilador entende o primeiro como
@@ -7737,33 +7810,822 @@ char *ch;
 \end_layout
 
 \begin_layout Standard
-
+Nota-se que o tipo ponteiro, '*', está junto a declaração do nome da variável.
+ Se for necessário declarar duas variáveis na mesma linha, é perfeitamente
+ possível fazê-lo, da seguinte forma:
 \end_layout
 
 \begin_layout Standard
-The actual data type of the value of all pointers, whether integer, float,
- character, or otherwise, is the same, a long hexadecimal number that represents
- a memory address.
- The only difference between pointers of different data types is the data
- type of the variable or constant that the pointer points to.
-\begin_inset Note Note
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
 status open
 
-\begin_layout Subsection
-Memória, arrays e ponteiro NULL
-\end_layout
+\begin_layout Plain Layout
 
-\begin_layout Subsection
-Ponteiros de função
-\end_layout
-
-\begin_layout Section
-Structs 
+int *ptr_a, *ptr_b; 
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Não há nada de inválido com essa declaração! Também, C permite a utilização
+ de parênteses ao redor do nome de uma variável, assim como asterisco:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int ((nao_sou_ponteiro)), (*ptr_a), (((*ptr_b))); 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Essa sintaxe não apresenta utilidade, e somente é utilizada na declaração
+ de ponteiros de funções.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO - visto na seção X
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/ponteiro_int.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:PonteiroInt"
+
+\end_inset
+
+ Exemplo de utilização de uma variável 
+\emph on
+ponteiro
+\emph default
+ int.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Atribuição e dereferenciação
+\end_layout
+
+\begin_layout Standard
+É natural fazer a seguinte pergunta de como colocar um valor de endereço
+ de memória 
+\emph on
+int 
+\emph default
+em uma variável ponteiro como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int* ptr;
+\end_layout
+
+\begin_layout Plain Layout
+
+ptr = 21;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Porém, essa definição está errada.
+ Qualquer definição a uma variável ponteiro irá mudar o endereço para o
+ qual ela está apontando.
+ Nesse exemplo, a posição 42 de memória seria para onde o ponteiro estaria
+ apontando, após a execução dessa instrução.
+ Mas não se sabe se esse endereço aponta realmente para uma região válida
+ ou para algo e provavelmente não irá.
+ Tentar acessar esse endereço deve provavelmente resultar em uma falha de
+ segmentação (erro de acesso a memória inválida).
+ Alguns compiladores, vão inclusive emitir avisos (
+\emph on
+warnings)
+\emph default
+ ao perceber a utilização errada do ponteiro.
+ 
+\end_layout
+
+\begin_layout Standard
+Como se faz para acessar um ponteiro? Dereferenciação: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int valor = *ptr;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nessa declaração, o operador de dereferência, '*', o qual não deve ser confundid
+o com o operador de multiplicação, serve para obter-se o valor referente
+ ao endereço.
+ Essa operação é chamada de 
+\emph on
+leitura
+\emph default
+ ou 
+\emph on
+carregamento
+\emph default
+ do ponteiro.
+\end_layout
+
+\begin_layout Standard
+É também possível escrever a operação de dereferênciação como uma expressão
+ desse tipo, isso é uma atribuição de dereferência:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+*ptr = 21
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Essa operaçõa é também chamada de 
+\emph on
+escrita
+\emph default
+ ou 
+\emph on
+armazenamento
+\emph default
+ da variável apontada pelo ponteiro.
+\end_layout
+
+\begin_layout Subsection
+Acesso 
+\end_layout
+
+\begin_layout Standard
+O valor desses ponteiros é sempre um valor de endereço de memória, o qual
+ pode ser representado por um número hexadecimal.
+ A única diferença ponteiros de diversos tipos é o tipo do dado para o qual
+ ele aponta.
+ A grosso modo, os ponteiros são todos tipos inteiros, com valor máximo
+ dependente da plataforma na qual se está rodando.
+ 
+\end_layout
+
+\begin_layout Standard
+Existem algumas operações importantes, usadas com frequência, que facilitam
+ a utilização de ponteiros.
+ São elas:
+\end_layout
+
+\begin_layout Itemize
+A definição de uma variável ponteiro, conforme já demonstrada.
+\end_layout
+
+\begin_layout Itemize
+A atribuição de uma variável ponteiro e;
+\end_layout
+
+\begin_layout Itemize
+O acesso ao endereço apontado por um ponteiro.
+\end_layout
+
+\begin_layout Standard
+Esse último, é feito pela utilização do operador unário *, o qual retorna
+ o valor da variável alocada pelo endereço de memória.
+ No código 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:PonteiroInt"
+
+\end_inset
+
+, fica evidente a utilização do operador para obter-se o conteúdo da variável
+ 
+\emph on
+valor
+\emph default
+.
+ Uma possível saída para esse código seria:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Endereco de valor (&): 5a37a408
+\end_layout
+
+\begin_layout Plain Layout
+
+ip: 5a37a408
+\end_layout
+
+\begin_layout Plain Layout
+
+valor de *ip: 13
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Novamente, os endereços de memória são meramente ilustrativos, já que podem
+ ser diferentes em cada execução.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Subsection
+Memória e arrays
+\end_layout
+
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Ponteiro NULL
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/ponteiro_null.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:PonteiroNull"
+
+\end_inset
+
+ Exemplo de utilização do 
+\emph on
+NULL
+\emph default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+É sempre uma boa prática, ao inicializar um ponteiro, usar o valor NULL.
+ Esse valor significa que aquele ponteiro ainda não tem um valor exato,
+ ou seja, não foi atribuído.
+ Um ponteiro o qual tenha sido atribuído o valor NULL é denominado um 
+\emph on
+ponteiro nulo
+\emph default
+.
+ Esse valor vem definido na biblioteca padrão C.
+\end_layout
+
+\begin_layout Standard
+No código 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:PonteiroNull"
+
+\end_inset
+
+, tem-se a impressão do valor de um ponteiro NULL.
+ O resultado será, normalmente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ptr: 0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mas por que será que o ponteiro NULL é definido como 0? Isso acontece porque
+ a região 0 da memória é tipicamente reservada para o sistema operacional
+ e não está acessível a programas de usuário, ou seja, qualquer aplicação
+ rodando no sistema.
+ Esse valor sinaliza que o ponteiro está apontando para nada e também possibilit
+a a checagem de inicialização ou não do ponteiro.
+ Exemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ /* Verdade, se o ponteiro não for NULL */
+\end_layout
+
+\begin_layout Plain Layout
+
+if (ptr)
+\end_layout
+
+\begin_layout Plain Layout
+
+/* Verdade, se o ponteiro for NULL */
+\end_layout
+
+\begin_layout Plain Layout
+
+if (!ptr)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ainda assim, esse tipo de checagem é desencorajada, uma vez que o mais correto
+ é tornar evidente o que se está testando, de modo a não possibilitar um
+ erro, caso o valor do NULL na plataforma seja diferente de 0:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ /* Verdade, se o ponteiro não for NULL */
+\end_layout
+
+\begin_layout Plain Layout
+
+if (ptr != NULL)
+\end_layout
+
+\begin_layout Plain Layout
+
+/* Verdade, se o ponteiro for NULL */
+\end_layout
+
+\begin_layout Plain Layout
+
+if (ptr == NULL)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Múltipla indireção
+\end_layout
+
+\begin_layout Standard
+Um ponteiro apresenta um nível de indireção em relação a variável que o
+ representa, porém é possível obter o endereço para um endereço de memória
+ o qual aponta para uma variável e assim por diante.
+ Exemplo: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int a = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+int *b = &a;
+\end_layout
+
+\begin_layout Plain Layout
+
+int **c = &b;
+\end_layout
+
+\begin_layout Plain Layout
+
+int ***d = &c;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tendo esse exemplo como base, as seguintes constataçõe são verdade:
+\end_layout
+
+\begin_layout Itemize
+*d == c; Dereferenciando um int*** obtem-se um int**
+\end_layout
+
+\begin_layout Itemize
+**d == *c == b; Dereferenciando um int*** duas vezes e um int** uma vez,
+ obtem-se em ambos os casos um int*
+\end_layout
+
+\begin_layout Itemize
+***d == **c == *b == a == 3; Dereferenciando um int*** três vezes e um int**
+ duas vezes, e um int* uma vez, obtem-se nos três casos um valor de 
+\emph on
+a
+\emph default
+ que é 1
+\end_layout
+
+\begin_layout Subsection
+Contantes (const)
+\end_layout
+
+\begin_layout Standard
+A palavra chave 
+\emph on
+const
+\emph default
+ pode ser usada para identificar um ponteiro constante.
+ As seguintes declarações são equivalentes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+const int *ptr_a;
+\end_layout
+
+\begin_layout Plain Layout
+
+int const *ptr_a;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Porém, isso não acontece para as seguintes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int const *ptr_a;
+\end_layout
+
+\begin_layout Plain Layout
+
+int *const ptr_b;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No primeiro caso, o valor apontado pelo ponteiro é um valor constante, ou
+ seja uma operação do tipo *ptr_a = 10 é inválida.
+ No segundo, o ponteiro em si é constante e portanto imutável.
+ O valor para o qual ele aponta pode ser modificado livremente, porém jamais
+ será possível atribuir um valor diferente ou mesmo usar um operador de
+ incremento e decremento no próprio ponteiro.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Subsection
+Ponteiros de função
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:PonteiroDeFuncao"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Strings
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/strlen_ptr.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:StrlenPtrImpl"
+
+\end_inset
+
+Implementação possível para 
+\emph on
+strlen
+\emph default
+ usando ponteiro em C.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/strlen_for.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:StrlenForImpl"
+
+\end_inset
+
+Implementação possível para 
+\emph on
+strlen
+\emph default
+ usando 
+\emph on
+for
+\emph default
+ em C.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uma string em C é um array de caracteres, e portanto, um ponteiro para um
+ conjunto de elementos.
+ Isso mesmo, uma string é também um ponteiro, nesse caso, para 
+\emph on
+char
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+O conceito por trás da string em C é abstrato, uma vez que não há um tipo
+ nativo string.
+ São somente arrays de caracteres.
+ Exemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},showstringspaces=false,tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+char[] string = "Sou uma string no C";
+\end_layout
+
+\end_inset
+
+Esse array tem 20 bytes ou 20 
+\emph on
+char
+\emph default
+: 19 para os caracteres "Sou uma String no C" e mais um caracter, que é
+ o caracter que sinaliza o final de uma string, o '
+\backslash
+0'.
+ Em outras palavras, é assim que se sabe onde termina uma string qualquer.
+ Ou seja, o cálculo para obter-se o tamanho de uma string exige com que
+ se passe por todos seus caracteres procurando o '
+\backslash
+0'.
+\end_layout
+
+\begin_layout Standard
+Existe um idioma em C para trabalhar-se com strings, com literais conhecidos,
+ vistos na seção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:CaracteresEspeciais"
+
+\end_inset
+
+, e o suporte da biblioteca básica C por meio do cabeçalho "string.h".
+ Mas como há um cabeçalho se não há um tipo nativo string? Nesse caso, trabalha-
+se com ponteiros.
+ O algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:StrlenPtrImpl"
+
+\end_inset
+
+, demonstra uma possível implementação para 
+\emph on
+strlen
+\emph default
+.
+ Observa-se nesse trecho a utilização do operador de dereferência para acessar
+ a string o que demonstra que ela é, nada mais que um ponteiro para uma
+ cadeia de caracteres.
+ Uma outra possível implementação, dessa vez usando índices, pode ser vista
+ em 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:StrlenForImpl"
+
+\end_inset
+
+.
+ O resultado final será o mesmo.
 \end_layout
 
 \begin_layout Standard
