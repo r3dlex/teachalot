@@ -8795,56 +8795,6 @@ struct Livro
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float algorithm
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset External
-	template CSourceNoLnNoFrame
-	filename ../Code/A03/livro.c
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "alg:LivroMain"
-
-\end_inset
-
-Exemplo de utilização da 
-\emph on
-struct Livro
-\emph default
-, conforme definida no código do algoritmo 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "alg:LivroHeader"
-
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 O 
 \emph on
 nome_da_variavel 
@@ -9000,10 +8950,94 @@ Ponteiros para structs
 \end_layout
 
 \begin_layout Standard
-You can pass a structure as a function argument in very similar way as you
- pass any other variable or pointer.
- You would access structure variables in the similar way as you have accessed
- in the above example:
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/livro.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:LivroMain"
+
+\end_inset
+
+Exemplo de utilização da 
+\emph on
+struct Livro
+\emph default
+, conforme definida no código do algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:LivroHeader"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Em uma maneira similar a qualquer outro tipo de ponteiro, é possível utilizar
+ os ponteiros para structs.
+ Ao invés de acessar uma com o operador '.', quando acessa-se direto a variável
+ da struct, utiliza-se o operador de deferenciação e acesso, o '->'.
+ No exemplo do código 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:LivroMain"
+
+\end_inset
+
+, utiliza-se no corpo do 
+\emph on
+imprimirLivro 
+\emph default
+o ponteiro 
+\emph on
+livro 
+\emph default
+de tipo "struct Livro*".
+ Para acessar a variável 
+\emph on
+titulo 
+\emph default
+da struct no corpo da função, utiliza-se "livro->titulo".
+ Nota-se nesse caso a utilização do '->' como mecanismo de acesso ao ponteiro
+ da struct.
+ Esse operador derefeência a struct e acessa um valor nela ao mesmo tempo
+ e pode ser utilizado sempre que se tratar de um ponteiro para uma 
+\emph on
+struct
+\emph default
+ ou 
+\emph on
+union
+\emph default
+.
+ 
 \end_layout
 
 \begin_layout Standard
