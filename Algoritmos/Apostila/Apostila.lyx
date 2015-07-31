@@ -9040,330 +9040,817 @@ union
  
 \end_layout
 
+\begin_layout Section
+Union
+\end_layout
+
 \begin_layout Standard
-\begin_inset Note Note
+Uma union é um tipo especial de dados que permite armazenar múltiplos dados
+ numa mesma região de memória.
+ Você pode definir uma union com muitos membros, mas somente um membro contém
+ o valor por vez.
+ Assim, ao alterar um valor de um membro, altera-se o de todos.
+ Union é uma maneira eficiente de usar a mesma região de memória para múltiplos
+ propósitos.
+\end_layout
+
+\begin_layout Subsection
+Declaração
+\end_layout
+
+\begin_layout Standard
+Para definir-se uma union, utiliza-se uma sintaxe muito similar a de uma
+ struct, vista na seção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Struct"
+
+\end_inset
+
+.
+ Assim como na struct, a declaração de uma union define um novo tipo que
+ pode ser utilizado por todo o seu programa.
+ O formato de declaração é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},showstringspaces=false,tabsize=4,extendedchars=true"
+inline false
 status open
 
 \begin_layout Plain Layout
-6.1 - abs (Valor Absoluto Inteiro)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: int abs (int x);
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: math.h
-\end_layout
-
-\begin_layout Plain Layout
-stdlib.h
-\end_layout
-
-\begin_layout Plain Layout
-6.2 - fabs (Valor Absoluto Real)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: float fabs (float x);
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: math.h
-\end_layout
-
-\begin_layout Plain Layout
-stdlib.h
-\end_layout
-
-\begin_layout Plain Layout
-6.3 - asin (Arco Seno)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: double asin (double x);
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: math.h
-\end_layout
-
-\begin_layout Plain Layout
-Faixa: -pi/2 pi/2 /* resposta em radianos */
-\end_layout
-
-\begin_layout Plain Layout
-6.4 - acos (Arco Cosseno)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: double acos (double x);
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: math.h
-\end_layout
-
-\begin_layout Plain Layout
-Faixa: 0 pi /* resposta em radianos */
-\end_layout
-
-\begin_layout Plain Layout
-6.5 - atan (Arco Tangente)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: double atan (double x);
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: math.h
-\end_layout
-
-\begin_layout Plain Layout
-Faixa: -pi/2 pi/2
-\end_layout
-
-\begin_layout Plain Layout
-6.6 - cos (Cosseno)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: double cos (double x); x em radianos
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: math.h 
-\end_layout
-
-\begin_layout Plain Layout
-Faixa: -1 1 
-\end_layout
-
-\begin_layout Plain Layout
-6.7 - sin (Seno)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: double sin (double x); x em radianos
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: math.h
-\end_layout
-
-\begin_layout Plain Layout
-Faixa: -1 1
-\end_layout
-
-\begin_layout Plain Layout
-6.8 - exp (Expoente - e ) 
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: double exp (double x);
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: math.h
-\end_layout
-
-\begin_layout Plain Layout
-6.9 - pow (Potência)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: double pow (double x, double y);
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: math.h
-\end_layout
-
-\begin_layout Plain Layout
-6.10 - sqrt (Raiz Quadrada)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: double sqrt (double x);'
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: math.h
-\end_layout
-
-\begin_layout Plain Layout
-6.11 - log (Logarítmo Natural)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: double log (double x);
-\end_layout
-
-\begin_layout Plain Layout
-Prototype math.h
-\end_layout
-
-\begin_layout Plain Layout
-6.12 - atof (Converte String em Ponto Flutuante)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: double atof (const char *s);
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: math.h e stdlib.h
-\end_layout
-
-\begin_layout Plain Layout
-6.13 - atoi (Converte String em Inteiro)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: int atoi (const char *s);
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: stdlib.h
-\end_layout
-
-\begin_layout Plain Layout
-6.14 - atol (Converte String em Inteiro Longo)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: long int atol (const char *s);
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: stdlib.h
-\end_layout
-
-\begin_layout Plain Layout
-6.15 - log10 (Logarítmo na Base 10)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: double log10 (double x);
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: math.h
-\end_layout
-
-\begin_layout Plain Layout
-6.16 - tan (Tangente)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: double tan (double x); x em radianos
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: math.h
-\end_layout
-
-\begin_layout Plain Layout
-6.17 - max (Valor Máximo)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: int max (int a, int b);
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: stdlib.h
-\end_layout
-
-\begin_layout Plain Layout
-6.18 - min (Valor Mínimo)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: int min (int a, int b);
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: stdlib.h
-\end_layout
-
-\begin_layout Plain Layout
-6.19 - rand (Numero Aleatório)
-\end_layout
-
-\begin_layout Plain Layout
-Sintaxe: int rand (void);
-\end_layout
-
-\begin_layout Plain Layout
-Prototype: stdlib.h
-\end_layout
-
-\begin_layout Plain Layout
-Faixa: 0 32767
-\end_layout
-
-\begin_layout Plain Layout
-6.20 - random (Número Aleatório)
-\end_layout
 
-\begin_layout Plain Layout
-Sintaxe: int random (int limite);
+union NomeDaStruct
 \end_layout
 
 \begin_layout Plain Layout
-Prototype: stdlib.h
-\end_layout
 
-\begin_layout Plain Layout
-Faixa: 0 (limite - 1)
+{
 \end_layout
 
 \begin_layout Plain Layout
-6.21 - randomize (Inicializa a Geração de Números Aleatórios)
-\end_layout
 
-\begin_layout Plain Layout
-Sintaxe: void randomize (void);
+	definicao_de_membro1;
 \end_layout
 
 \begin_layout Plain Layout
-Prototype: stdlib.h
-\end_layout
 
-\begin_layout Plain Layout
-6.22 - system (Executa Comandos e Arquivos .COM e .EXE do Sistema Operacional)
- 
+	definicao_de_membro2;
 \end_layout
 
 \begin_layout Plain Layout
-Sintaxe: int system (const char *comando);
-\end_layout
 
-\begin_layout Plain Layout
-Prototype: process.h e stdlib.h
+	...
 \end_layout
 
 \begin_layout Plain Layout
-Retorna: 0 ok e -1 erro
-\end_layout
 
-\begin_layout Plain Layout
-Exemplos: system ("dir"); 
+	definicao_de_membron;
 \end_layout
 
 \begin_layout Plain Layout
-system ("sk");
-\end_layout
 
-\begin_layout Plain Layout
-system ("dir *.c");
+} (nome_da_variavel); 
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+O 
+\emph on
+nome_da_variavel 
+\emph default
+é opcional, uma vez que uma 
+\emph on
+struct
+\emph default
+ pode ser definida sem estar associada a uma variável.
+ A partir do momento de sua definição, toda vez que aparecer 
+\emph on
+struct NomeDaStruct 
+\emph default
+no código, o tipo será remetido ao da declaração, ou seja da estrutura em
+ si e pode ser usado para criar variáveis desse tipo, por exemplo.
+ No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:UnionDados"
+
+\end_inset
+
+, define-se uma 
+\emph on
+union 
+\emph default
+de nome (tipo) 
+\emph on
+Dados
+\emph default
+ que define três membros diferentes, i, f e str.
+ Nota-se que em uma union qualquer, seu tamanho será o maior tamanho dentre
+ as variáveis membros da union.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/dados.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:UnionDados"
+
+\end_inset
+
+Implementação possível para 
+\emph on
+strlen
+\emph default
+ usando 
+\emph on
+for
+\emph default
+ em C.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO - Falar sobre acesso, etc
+\end_layout
+
+\begin_layout Plain Layout
+Now, a variable of Data type can store an integer, a floating-point number,
+ or a string of characters.
+ This means that a single variable ie.
+ same memory location can be used to store multiple types of data.
+ You can use any built-in or user defined data types inside a union based
+ on your requirement.
+\end_layout
+
+\begin_layout Plain Layout
+The memory occupied by a union will be large enough to hold the largest
+ member of the union.
+ For example, in above example Data type will occupy 20 bytes of memory
+ space because this is the maximum space which can be occupied by character
+ string.
+ Following is the example which will display total memory size occupied
+ by the above union:
+\end_layout
+
+\begin_layout Plain Layout
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+#include <string.h>
+\end_layout
+
+\begin_layout Plain Layout
+union Data
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+int i;
+\end_layout
+
+\begin_layout Plain Layout
+float f;
+\end_layout
+
+\begin_layout Plain Layout
+char str[20];
+\end_layout
+
+\begin_layout Plain Layout
+};
+\end_layout
+
+\begin_layout Plain Layout
+int main( )
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+union Data data; 
+\end_layout
+
+\begin_layout Plain Layout
+printf( "Memory size occupied by data : %d
+\backslash
+n", sizeof(data));
+\end_layout
+
+\begin_layout Plain Layout
+return 0;
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\begin_layout Plain Layout
+When the above code is compiled and executed, it produces the following
+ result:
+\end_layout
+
+\begin_layout Plain Layout
+Memory size occupied by data : 20
+\end_layout
+
+\begin_layout Plain Layout
+Accessing Union Members
+\end_layout
+
+\begin_layout Plain Layout
+To access any member of a union, we use the member access operator (.).
+ The member access operator is coded as a period between the union variable
+ name and the union member that we wish to access.
+ You would use union keyword to define variables of union type.
+ Following is the example to explain usage of union:
+\end_layout
+
+\begin_layout Plain Layout
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+#include <string.h>
+\end_layout
+
+\begin_layout Plain Layout
+union Data
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+int i;
+\end_layout
+
+\begin_layout Plain Layout
+float f;
+\end_layout
+
+\begin_layout Plain Layout
+char str[20];
+\end_layout
+
+\begin_layout Plain Layout
+};
+\end_layout
+
+\begin_layout Plain Layout
+int main( )
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+union Data data; 
+\end_layout
+
+\begin_layout Plain Layout
+data.i = 10;
+\end_layout
+
+\begin_layout Plain Layout
+data.f = 220.5;
+\end_layout
+
+\begin_layout Plain Layout
+strcpy( data.str, "C Programming");
+\end_layout
+
+\begin_layout Plain Layout
+printf( "data.i : %d
+\backslash
+n", data.i);
+\end_layout
+
+\begin_layout Plain Layout
+printf( "data.f : %f
+\backslash
+n", data.f);
+\end_layout
+
+\begin_layout Plain Layout
+printf( "data.str : %s
+\backslash
+n", data.str);
+\end_layout
+
+\begin_layout Plain Layout
+return 0;
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\begin_layout Plain Layout
+When the above code is compiled and executed, it produces the following
+ result:
+\end_layout
+
+\begin_layout Plain Layout
+data.i : 1917853763
+\end_layout
+
+\begin_layout Plain Layout
+data.f : 4122360580327794860452759994368.000000
+\end_layout
+
+\begin_layout Plain Layout
+data.str : C Programming
+\end_layout
+
+\begin_layout Plain Layout
+Here, we can see that values of i and f members of union got corrupted because
+ final value assigned to the variable has occupied the memory location and
+ this is the reason that the value if str member is getting printed very
+ well.
+ Now let's look into the same example once again where we will use one variable
+ at a time which is the main purpose of having union:
+\end_layout
+
+\begin_layout Plain Layout
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+#include <string.h>
+\end_layout
+
+\begin_layout Plain Layout
+union Data
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+int i;
+\end_layout
+
+\begin_layout Plain Layout
+float f;
+\end_layout
+
+\begin_layout Plain Layout
+char str[20];
+\end_layout
+
+\begin_layout Plain Layout
+};
+\end_layout
+
+\begin_layout Plain Layout
+int main( )
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+union Data data; 
+\end_layout
+
+\begin_layout Plain Layout
+data.i = 10;
+\end_layout
+
+\begin_layout Plain Layout
+printf( "data.i : %d
+\backslash
+n", data.i);
+\end_layout
+
+\begin_layout Plain Layout
+data.f = 220.5;
+\end_layout
+
+\begin_layout Plain Layout
+printf( "data.f : %f
+\backslash
+n", data.f);
+\end_layout
+
+\begin_layout Plain Layout
+strcpy( data.str, "C Programming");
+\end_layout
+
+\begin_layout Plain Layout
+printf( "data.str : %s
+\backslash
+n", data.str);
+\end_layout
+
+\begin_layout Plain Layout
+return 0;
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\begin_layout Plain Layout
+When the above code is compiled and executed, it produces the following
+ result:
+\end_layout
+
+\begin_layout Plain Layout
+data.i : 10
+\end_layout
+
+\begin_layout Plain Layout
+data.f : 220.500000
+\end_layout
+
+\begin_layout Plain Layout
+data.str : C Programming
+\end_layout
+
+\begin_layout Plain Layout
+Here, all the members are getting printed very well because one member is
+ being used at a time.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Anexos
+\end_layout
+
+\begin_layout Section
+Funções da libc
+\end_layout
+
+\begin_layout Subsection
+abs (Valor Absoluto Inteiro)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: int abs (int x);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Standard
+stdlib.h
+\end_layout
+
+\begin_layout Subsection
+fabs (Valor Absoluto Real)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: float fabs (float x);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Standard
+stdlib.h
+\end_layout
+
+\begin_layout Subsection
+asin (Arco Seno)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double asin (double x);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Standard
+Faixa: -pi/2 pi/2 /* resposta em radianos */
+\end_layout
+
+\begin_layout Subsection
+acos (Arco Cosseno)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double acos (double x);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Standard
+Faixa: 0 pi /* resposta em radianos */
+\end_layout
+
+\begin_layout Subsection
+atan (Arco Tangente)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double atan (double x);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Standard
+Faixa: -pi/2 pi/2
+\end_layout
+
+\begin_layout Subsection
+cos (Cosseno)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double cos (double x); x em radianos
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h 
+\end_layout
+
+\begin_layout Standard
+Faixa: -1 1 
+\end_layout
+
+\begin_layout Subsection
+sin (Seno)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double sin (double x); x em radianos
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Standard
+Faixa: -1 1
+\end_layout
+
+\begin_layout Subsection
+exp (Expoente - e ) 
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double exp (double x);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Subsection
+pow (Potência)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double pow (double x, double y);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Subsection
+sqrt (Raiz Quadrada)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double sqrt (double x);'
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Subsection
+log (Logarítmo Natural)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double log (double x);
+\end_layout
+
+\begin_layout Standard
+Prototype math.h
+\end_layout
+
+\begin_layout Subsection
+atof (Converte String em Ponto Flutuante)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double atof (const char *s);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h e stdlib.h
+\end_layout
+
+\begin_layout Subsection
+atoi (Converte String em Inteiro)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: int atoi (const char *s);
+\end_layout
+
+\begin_layout Standard
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Subsection
+atol (Converte String em Inteiro Longo)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: long int atol (const char *s);
+\end_layout
+
+\begin_layout Standard
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Subsection
+log10 (Logarítmo na Base 10)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double log10 (double x);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Subsection
+tan (Tangente)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double tan (double x); x em radianos
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Subsection
+max (Valor Máximo)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: int max (int a, int b);
+\end_layout
+
+\begin_layout Standard
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Subsection
+min (Valor Mínimo)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: int min (int a, int b);
+\end_layout
+
+\begin_layout Standard
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Subsection
+rand (Numero Aleatório)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: int rand (void);
+\end_layout
+
+\begin_layout Standard
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Standard
+Faixa: 0 32767
+\end_layout
+
+\begin_layout Subsection
+random (Número Aleatório)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: int random (int limite);
+\end_layout
+
+\begin_layout Standard
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Standard
+Faixa: 0 (limite - 1)
+\end_layout
+
+\begin_layout Subsection
+randomize (Inicializa a Geração de Números Aleatórios)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: void randomize (void);
+\end_layout
+
+\begin_layout Standard
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Subsection
+system (Executa Comandos e Arquivos .COM e .EXE do Sistema Operacional) 
+\end_layout
+
+\begin_layout Standard
+Sintaxe: int system (const char *comando);
+\end_layout
+
+\begin_layout Standard
+Prototype: process.h e stdlib.h
+\end_layout
+
+\begin_layout Standard
+Retorna: 0 ok e -1 erro
+\end_layout
+
+\begin_layout Standard
+Exemplos: 
+\end_layout
+
+\begin_layout Itemize
+system("dir"); 
+\end_layout
+
+\begin_layout Itemize
+system("sk");
+\end_layout
+
+\begin_layout Itemize
+system("dir *.c");
 \end_layout
 
 \end_body
