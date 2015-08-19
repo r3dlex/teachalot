@@ -12,23 +12,6 @@
 \usepackage{bibentry}
 \bibliographystyle{apalike}
 \usepackage{chngcntr}
-
-\newminted{java}{
-  fontsize=\footnotesize, 
-  linenos,
-  frame=lines,
-  bgcolor=bg,
-  baselinestretch=1,
-  tabsize=2
-} 
-
-\newminted{javasnip}{
-  fontsize=\footnotesize, 
-  frame=lines,
-  bgcolor=bg,
-  baselinestretch=1,
-  tabsize=2
-} 
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false

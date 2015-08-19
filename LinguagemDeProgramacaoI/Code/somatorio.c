@@ -1,1 +1,1 @@
-somatorio.c
+Somatorio.c

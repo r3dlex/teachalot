@@ -932,13 +932,13 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Enumerate
 Escreva uma função que retorne uma String com o nome do mês referente utilizando
  a construção switch-case.
  Os meses do ano devem ser mapeados de 0 a 11 ("Janeiro" a "Dezembro").
- Como parâmetro, a função deve receber um inteiro representano o mês.
+ Como parâmetro, a função deve receber um inteiro representando o mês.
 \end_layout
 
 \begin_layout Enumerate
