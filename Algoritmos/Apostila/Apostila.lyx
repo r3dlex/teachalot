@@ -689,11 +689,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Cálculo de potência 
-\begin_inset Formula $x^{y}$
-\end_inset
-
- em C
+Programa com declaração de variáveis inteiras.
 \end_layout
 
 \end_inset
@@ -798,7 +794,7 @@ TIPO nome_variável = constante;
 \begin_inset Float algorithm
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset External
