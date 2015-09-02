@@ -1,41 +1,43 @@
 #include <iostream>
 
-int contador = 0;
-
-class Ave 
+class Passaro 
 {
 public:
-	Ave(std::string nome)
+  static int CONTADOR;
+
+	Passaro(std::string nome)
 		: nome(nome)
 	{
 		std::cout << nome << " criado." << std::endl;
 	}
 	
-	~Ave() 
+	~Passaro() 
   {
 		std::cout << nome << " destruido." << std::endl;
 	}
 
 	void voar() 
   {
-		++contador;
+		++CONTADOR;
 	}
 
 private:
 	std::string nome;
 };
 
+int Passaro::CONTADOR = 0;
+
 int main() 
 {
 	std::cout << "----" << std::endl;
 
-	Ave a("Tobi"), b("Rex");
-	Ave c("Falcon");
+	Passaro a("Tobi"), b("Rex");
+	Passaro c("Falcon");
 
 	a.voar();
 	c.voar();
 	
-	std::cout << contador << " aves voaram." << std::endl;
+	std::cout << Passaro::CONTADOR << " aves voaram." << std::endl;
 
 	return 0;
 }

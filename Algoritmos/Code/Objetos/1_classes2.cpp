@@ -6,18 +6,18 @@ public:
 	Roda() 
   { }
 
-	Roda(std::string marca, std::string cor)
-		: marca(marca), cor(cor)
+	Roda(std::string _marca, std::string _cor)
+		: _marca(_marca), _cor(_cor)
 	{ }
 	
 	std::string getMarca() const 
   {
-		return marca;
+		return _marca;
 	}
 	
 private:
-	std::string marca;
-	std::string cor;
+	std::string _marca;
+	std::string _cor;
 };
 
 class Carro 

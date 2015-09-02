@@ -3,14 +3,14 @@
 class Pessoa 
 {
 public:
-	Pessoa(std::string nome) : nome(nome) 
+	Pessoa(std::string _nome) : _nome(_nome) 
   { }
 	
 	std::string getNome() 
-  { return nome; }
+  { return _nome; }
 	
 private:
-	std::string nome;
+	std::string _nome;
 };
 
 int main() 
