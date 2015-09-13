@@ -96,15 +96,44 @@
 \begin_body
 
 \begin_layout Standard
+\align block
+\begin_inset Graphics
+	filename ../Image/Logo-FaculdadesCesusc.png
+	height 10theight%
 
-\series bold
-Faculdade de Ciências Sociais de Florianópolis
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-Disciplina: Linguagem de Programação I
+Faculdade CESUSC
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Disciplina: Algoritmos
 \end_layout
 
 \begin_layout Standard
@@ -675,7 +704,7 @@ Uma expressão lógica ou relacional pode ser usada como condição de iteraçã
 
 \begin_layout Enumerate
 O número de instruções executadas em um loop será sempre o mesmo para os
- loops for e while, dado que a condição do mesmo seja idêntica.
+ loops for, while e do-while, dado que a condição do mesmo seja idêntica.
 \end_layout
 
 \begin_layout Enumerate
@@ -683,7 +712,7 @@ Ao declarar-se a
 \emph on
 funcaoX
 \emph default
-, em qualquer após a declaração que utilize-se o identificador 
+, em qualquer chamada após sua declaração que utilize-se 
 \emph on
 funcaoX
 \emph default
@@ -695,7 +724,7 @@ argumento
 \emph on
 argumento
 \emph default
- é um número inteiro o compilador sabe que nesse ponto haverá uma chamada
+ é um número inteiro, o compilador sabe que nesse ponto haverá uma chamada
  de função para a 
 \emph on
 funcaoX
@@ -1006,9 +1035,17 @@ fat(2) = 2
 \end_inset
 
 fat(3) = 6
+\begin_inset Newline newline
+\end_inset
+
+fat(4)=24
 \end_layout
 
 \begin_layout Enumerate
+fat(0)=1
+\begin_inset Newline newline
+\end_inset
+
 fat(1) = 1
 \begin_inset Newline newline
 \end_inset
@@ -1025,6 +1062,10 @@ fat(4) = 24
 \end_layout
 
 \begin_layout Enumerate
+fat(1)=1
+\begin_inset Newline newline
+\end_inset
+
 fat(2) = 2
 \begin_inset Newline newline
 \end_inset
@@ -1070,6 +1111,10 @@ fat(2) = 1
 \end_inset
 
 fat(3) = 3
+\begin_inset Newline newline
+\end_inset
+
+fat(4) = 12
 \end_layout
 
 \end_deeper
