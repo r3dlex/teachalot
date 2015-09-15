@@ -133,7 +133,7 @@ Faculdade CESUSC
 \begin_layout Standard
 
 \series bold
-Disciplina: Algoritmos
+Disciplina: Linguagem de Programação III
 \end_layout
 
 \begin_layout Standard
@@ -201,9 +201,8 @@ Leia atentamente as questões a seguir e responda-as.
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="14">
+<lyxtabular version="3" rows="2" columns="13">
 <features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -331,15 +330,6 @@ Questão
 
 \begin_layout Plain Layout
 12
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-13
 \end_layout
 
 \end_inset
@@ -539,43 +529,25 @@ a
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 -
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -670,7 +642,7 @@ reference "enu:Soma3"
 
 \begin_layout Standard
 \begin_inset External
-	template CSource
+	template CppSource
 	filename ../../Algoritmos/Code/E01/soma.c
 
 \end_inset
@@ -909,7 +881,7 @@ baselineskip}
 
 \begin_layout Standard
 \begin_inset External
-	template CSource
+	template CppSource
 	filename ../../Algoritmos/Code/E01/fatorial.c
 
 \end_inset
@@ -1297,61 +1269,6 @@ long
 
 \begin_layout Enumerate
 float
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace*{2
-\backslash
-baselineskip}
-\end_layout
-
-\end_inset
-
-
-\begin_inset External
-	template CSource
-	filename ../../Algoritmos/Code/Objetos/2_classes_array.cpp
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace*{
-\backslash
-baselineskip}
-\end_layout
-
-\end_inset
-
-A respeito do programa acima, responda as questões 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:Pessoa1"
-
-\end_inset
-
- e 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:Pessoa2"
-
-\end_inset
-
-:
 \end_layout
 
 \end_deeper
@@ -1397,6 +1314,61 @@ corretamente
 \end_inset
 
 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\begin_inset External
+	template CppSource
+	filename ../../Algoritmos/Code/Objetos/2_classes_array.cpp
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+A respeito do programa acima, responda as questões 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Pessoa1"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Pessoa2"
+
+\end_inset
+
+:
 \end_layout
 
 \end_deeper
