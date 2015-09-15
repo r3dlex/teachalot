@@ -592,6 +592,53 @@ TODO
 Preâmbulo
 \end_layout
 
+\begin_layout Standard
+Considere as seguintes instruções MIPS:
+\end_layout
+
+\begin_layout Itemize
+lw $a, i($b)
+\begin_inset Newline newline
+\end_inset
+
+Ex: lw $5, 2($3).
+ Carregar (load) no registrador de número 5 uma word (4 bytes ou 32 bits)
+ que está na memória começando no endereço armazenado no registrador de
+ número 3, somando 2 a esse endereço
+\end_layout
+
+\begin_layout Itemize
+muli $a, $b, $c
+\begin_inset Newline newline
+\end_inset
+
+Ex: muli $2, $5, 5.
+ Multiplicar por 5 o valor no registrador número 5 e salvar no registrador
+ número 2
+\end_layout
+
+\begin_layout Itemize
+add $a, $b, $c 
+\begin_inset Newline newline
+\end_inset
+
+Ex: add $2, $5, $4.
+ Somar os valores nos registradores número 5 e número 4 e colocar o resultado
+ no registrador número 2 
+\end_layout
+
+\begin_layout Itemize
+sw $a, i($b).
+ 
+\begin_inset Newline newline
+\end_inset
+
+Ex: sw $2, 4($1).
+ Armazenar (store) o conteúdo do registrador de número 2 (4 bytes ou 32
+ bits) na memória na posição do endereço armazenado no registrador de número
+ 1, somando 4 a esse endereço 
+\end_layout
+
 \begin_layout Section
 Questões
 \end_layout
@@ -921,7 +968,7 @@ name "enu:Fat1"
 
 \end_inset
 
-(0,5 ponto) Quanto a função 
+(1 ponto) Quanto a função 
 \emph on
 fatorial
 \emph default
@@ -1250,6 +1297,61 @@ long
 
 \begin_layout Enumerate
 float
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\begin_inset External
+	template CSource
+	filename ../../Algoritmos/Code/Objetos/2_classes_array.cpp
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+A respeito do programa acima, responda as questões 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Pessoa1"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Pessoa2"
+
+\end_inset
+
+:
 \end_layout
 
 \end_deeper
@@ -1299,363 +1401,89 @@ corretamente
 
 \end_deeper
 \begin_layout Enumerate
-(1,0 ponto) Levando em consideração conjunto de instruções 
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Pessoa1"
+
+\end_inset
+
+(0,5 ponto) 
 \series bold
-MIPS
+Não
 \series default
- definido no prêmabulo da prova:
+ é verdade, a respeito do referido código:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A classe Pessoa possui um atributo que é a variável 
+\emph on
+_nome
+\emph default
+, do tipo 
+\emph on
+std::string
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Cada instância do objeto pessoa possui um atributo denominado _
+\emph on
+nome
+\emph default
+, cujo método 
+\emph on
+getNome
+\emph default
+ torna publicamente acessível para leitura.
+\end_layout
+
+\begin_layout Enumerate
+Se imaginarmos que uma determinada variável p referencia uma instância de
+ pessoa, então 
+\emph on
+p.getNome() = "Roberto";
+\emph default
+ modifica o valor do atributo interno _
+\emph on
+nome
+\emph default
+ desse objeto para Roberto.
+\end_layout
+
+\begin_layout Enumerate
+Os setores public e private identificam métodos, atributos e definições
+ acessíveis no escopo global e no escopo da classe, respectivamente.
+\end_layout
+
+\begin_layout Enumerate
+O construtor de Pessoa é público e recebe uma std::string como parâmetro,
+ enquanto o destrutor padrão, mesmo sem ser declarado, existe.
+ Isto é, a destruição desse objeto não gera um 
+\emph on
+vazamento de memória
+\emph default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Pessoa2"
+
+\end_inset
+
+(1,0 ponto) Qual a 
+\series bold
+saída de console
+\series default
+ esperada para a execução do main?
 \begin_inset Newline newline
 \end_inset
 
-
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset listings
-lstparams "showstringspaces=false,tabsize=4"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-muli $2, $5, 4
-\end_layout
-
-\begin_layout Plain Layout
-
-add $2, $4, $2
-\end_layout
-
-\begin_layout Plain Layout
-
-lw $15, 0($2)
-\end_layout
-
-\begin_layout Plain Layout
-
-lw $16, 4($2)
-\end_layout
-
-\begin_layout Plain Layout
-
-sw $16, 0($2)
-\end_layout
-
-\begin_layout Plain Layout
-
-sw $15, 4($2)
-\end_layout
-
-\begin_layout Plain Layout
-
-jr $31
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-sabendo-se que a memória está originalmente organizada da seguinte forma:
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="2">
-<features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Endereço 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Conteúdo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-10
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-8
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-14
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-18
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-22
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-21
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-26
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-e que o conteúdo do registrador 31 é o endereço de memória referente ao
- endereço de retorno da função chamante e que portanto essa função só executa
- uma vez, preencha as tabelas abaixo com o resultado final:
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="2">
-<features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Registrador 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Conteúdo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-10
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-15
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-16
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-(1,0 ponto) ?
-\end_layout
-
-\begin_layout Enumerate
-(1,0 ponto) ? 
+R:
 \end_layout
 
 \end_body
