@@ -675,7 +675,7 @@ Ao declarar-se a
 \emph on
 funcaoX
 \emph default
-, em qualquer após a declaração que utilize-se o identificador 
+, em qualquer chamada após a declaração que utilize-se o identificador 
 \emph on
 funcaoX
 \emph default
@@ -683,12 +683,12 @@ funcaoX
 \emph on
 argumento
 \emph default
-), onde 
+), o 
 \emph on
 argumento
 \emph default
- é um número inteiro o compilador sabe que nesse ponto haverá uma chamada
- de função para a 
+ é um número inteiro.
+ O compilador sabe que nesse ponto haverá uma chamada de função para a 
 \emph on
 funcaoX
 \emph default
