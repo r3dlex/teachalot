@@ -738,7 +738,7 @@ A memória do ponto de vista teórica é algo infinito para um algoritmo, o
  que não é mapeado como verdade em uma máquina discreta como o computador.
  No computador, as instruções malloc e free servem para indicar ao sistema
  a necessidade de alocação e desalocação de memória, respectivamente.
- As duas requisições devem sempre ser atendidas.
+ 
 \end_layout
 
 \begin_layout Enumerate
