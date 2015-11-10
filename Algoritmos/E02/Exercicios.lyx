@@ -201,8 +201,9 @@ Leia atentamente as questões a seguir e responda-as.
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="11">
+<lyxtabular version="3" rows="2" columns="12">
 <features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -305,11 +306,20 @@ Questão
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
 \end_layout
 
 \end_inset
@@ -428,7 +438,7 @@ e
 
 \end_inset
 
-
+X
 \end_layout
 
 \end_inset
@@ -446,7 +456,7 @@ e
 
 \end_inset
 
-
+X
 \end_layout
 
 \end_inset
@@ -487,7 +497,7 @@ c
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -505,6 +515,15 @@ a
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
 </row>
 </lyxtabular>
 
@@ -514,7 +533,7 @@ a
 \end_layout
 
 \begin_layout Standard
-A respeito do trecho em sequência, responda as questões 
+A respeito dos trechos em sequência, responda as questões 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "enu:Pessoa1"
@@ -542,6 +561,16 @@ reference "enu:PessoaDinamica1"
 \begin_inset External
 	template CSource
 	filename ../Code/E02/uma_pessoa.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset External
+	template CSource
+	filename ../Code/E02/uma_pessoa_dinamica.c
 
 \end_inset
 
@@ -682,39 +711,6 @@ Sempre que for utilizar-se um ponteiro para uma struct, essa utilização
 free
 \emph default
 .
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace*{
-\backslash
-baselineskip}
-\end_layout
-
-\end_inset
-
-
-\begin_inset External
-	template CSource
-	filename ../Code/E02/uma_pessoa_dinamica.c
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-A respeito do trecho, responda a questão 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:PessoaDinamica1"
-
-\end_inset
-
-.
 \end_layout
 
 \end_deeper
@@ -786,7 +782,7 @@ free
 
 \end_deeper
 \begin_layout Enumerate
-(1 ponto) Qual das seguintes funções 
+(0,5 ponto) Qual das seguintes funções 
 \series bold
 não
 \series default
@@ -822,7 +818,7 @@ name "enu:File1"
 
 \end_inset
 
-(1 ponto) Qual das seguintes diretivas 
+(0,5 ponto) Qual das seguintes diretivas 
 \series bold
 não
 \series default
@@ -965,16 +961,63 @@ está disponível para utilização mediante inclusão do cabeçalho padrão
 "math.h":
 \emph default
 
-\begin_inset ERT
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
+\begin_inset External
+	template CSource
+	filename ../Code/E02/int_array_entrada_min_max.c
+
+\end_inset
 
 
-\backslash
-vspace*{15
-\backslash
-baselineskip}
+\end_layout
+
+\begin_layout Plain Layout
+Com relação a este código, responda as questões 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:ArrayDeEntrada"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:minMax"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:contagemDeElementos"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:IcognitasDoAlgoritmo"
+
+\end_inset
+
+:
 \end_layout
 
 \end_inset
@@ -985,114 +1028,133 @@ baselineskip}
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "enu:Fat4"
+name "enu:ArrayDeEntrada"
 
 \end_inset
 
-(1 ponto) Qual a saída esperada para o programa se o 
+(1 ponto) Qual a função do 
 \emph on
-n
+metodoX
 \emph default
- assumir o valor 4? (Ao omitir-se a saída "Entre com um valor:")
+ no escopo do trecho no qual é utilizado na função 
+\emph on
+main
+\emph default
+?
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-fat(0) = 1
-\begin_inset Newline newline
-\end_inset
-
-fat(1) = 1
-\begin_inset Newline newline
-\end_inset
-
-fat(2) = 2
-\begin_inset Newline newline
-\end_inset
-
-fat(3) = 6
-\begin_inset Newline newline
-\end_inset
-
-fat(4)=24
+Obter NUMERO_DE_INTEIROS entradas de console os quais serão colocados no
+ array_int de saída.
 \end_layout
 
 \begin_layout Enumerate
-fat(0)=1
-\begin_inset Newline newline
-\end_inset
-
-fat(1) = 1
-\begin_inset Newline newline
-\end_inset
-
-fat(2) = 2
-\begin_inset Newline newline
-\end_inset
-
-fat(3) = 6
-\begin_inset Newline newline
-\end_inset
-
-fat(4) = 24
+Obter até NUMERO_DE_INTEIROS entradas de console os quais serão colocados
+ no array_int de saída.
 \end_layout
 
 \begin_layout Enumerate
-fat(1)=1
-\begin_inset Newline newline
-\end_inset
-
-fat(2) = 2
-\begin_inset Newline newline
-\end_inset
-
-fat(3) = 6
-\begin_inset Newline newline
-\end_inset
-
-fat(4) = 24
-\begin_inset Newline newline
-\end_inset
-
-fat(5) = 120
+Obter no mínimo NUMERO_DE_INTEIROS entradas de console os quais serão colocados
+ no array_int de saída.
 \end_layout
 
 \begin_layout Enumerate
-fat(0) = 1
-\begin_inset Newline newline
-\end_inset
-
-fat(1) = 2
-\begin_inset Newline newline
-\end_inset
-
-fat(2) = 2
-\begin_inset Newline newline
-\end_inset
-
-fat(3) = 6
+Obter entre um e no máximo NUMERO_DE_INTEIROS entradas de console os quais
+ serão colocados no array_int de saída.
 \end_layout
 
 \begin_layout Enumerate
-fat(0) = 1
-\begin_inset Newline newline
-\end_inset
-
-fat(1) = 1
-\begin_inset Newline newline
-\end_inset
-
-fat(2) = 1
-\begin_inset Newline newline
-\end_inset
-
-fat(3) = 3
-\begin_inset Newline newline
-\end_inset
-
-fat(4) = 12
+Obter um array de inteiros de tamanho arbitrário da entrada de console.
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:minMax"
+
+\end_inset
+
+(1 ponto) O algoritmo da linha 22 a 34 é responsável por:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A ordenação dos elementos no array_int.
+\end_layout
+
+\begin_layout Enumerate
+Encontra os elementos mínimos e máximos no array_int e imprime-os.
+\end_layout
+
+\begin_layout Enumerate
+Seleciona dois números que encontrem-se repetidas vezes no array.
+\end_layout
+
+\begin_layout Enumerate
+Faz a contagem do número de vezes que cada número ocorre no array_int de
+ entrada.
+\end_layout
+
+\begin_layout Enumerate
+Encontra os dois maiores elementos do array_int e imprime-os.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:contagemDeElementos"
+
+\end_inset
+
+(1 ponto) O trecho de código da linha 38 a 49 executa uma sequência de passos
+ que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Identifica qual o número de ocorrências no array de cada elemento presente
+ no array_int de entrada, associando uma posição ao número de ocorrências
+ do elemento e também ao próprio elemento e faz isso utilizando-se de um
+ array bi-dimensional com tamanho NUMERO_DE_INTEIROS.
+\end_layout
+
+\begin_layout Enumerate
+O algoritmo identificado por esse trecho é resposável por encontrar os elementos
+ mínimos e máximos do array_int e percorre ele para esse fim.
+\end_layout
+
+\begin_layout Enumerate
+Faz a ordenação de elementos na ordem decrescente e utiliza um array bi-dimensio
+nal como suporte para fazê-lo.
+\end_layout
+
+\begin_layout Enumerate
+Encontra todas as ocorrências de elementos repetidos e guarda-os num array
+ bi-dimensional que pode variar de tamanho.
+\end_layout
+
+\begin_layout Enumerate
+Utiliza um array alocado em memória dinâmica para fazer uma cópia de segurança
+ do array_int de entrada.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:IcognitasDoAlgoritmo"
+
+\end_inset
+
+(1 ponto) Assumindo que o array_int é inicializado com os valores 
+\begin_inset Formula $\{0,1,5,5,1,3,4,1,1,5\}$
+\end_inset
+
+, qual o resultado para as variáveis A, B, C e D? Justifique.
+\end_layout
+
 \end_body
 \end_document
