@@ -494,7 +494,7 @@ d
 
 \begin_layout Plain Layout
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 c
@@ -558,13 +558,14 @@ c
 \end_inset
 
 
-\end_layout
+\begin_inset Note Note
+status open
 
 \begin_layout Section
 Preâmbulo
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Considere as seguintes instruções MIPS:
 \end_layout
 
@@ -613,6 +614,11 @@ Ex: sw $2, 4($1).
 
 \begin_layout Section
 Questões
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
