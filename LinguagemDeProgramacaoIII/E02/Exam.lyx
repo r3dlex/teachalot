@@ -533,6 +533,31 @@ X
 \end_layout
 
 \begin_layout Standard
+A respeito dos trechos em sequência, responda as questões 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Pessoa1"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Pessoa2"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:PessoaDinamica1"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status collapsed
 
@@ -790,6 +815,279 @@ free
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CppSource
+	filename ../Code/Alocacao/0_alocacao.cpp
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Alloc"
+
+\end_inset
+
+(1,0 ponto) Assumindo que o o retorno da instrução "new int(5)" é o endereço
+ de memória 
+\emph on
+0xFE, 
+\emph default
+Uma possível saída para o algoritmo é:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+a == 5
+\begin_inset Newline newline
+\end_inset
+
+b == 5
+\begin_inset Newline newline
+\end_inset
+
+b == 5
+\end_layout
+
+\begin_layout Enumerate
+a == 0xFE
+\begin_inset Newline newline
+\end_inset
+
+b == 5
+\begin_inset Newline newline
+\end_inset
+
+b == 5
+\end_layout
+
+\begin_layout Enumerate
+a == 5
+\begin_inset Newline newline
+\end_inset
+
+b == 0xFE
+\begin_inset Newline newline
+\end_inset
+
+b == 5
+\end_layout
+
+\begin_layout Enumerate
+a == 5
+\begin_inset Newline newline
+\end_inset
+
+b == 5
+\begin_inset Newline newline
+\end_inset
+
+b == 0xFE
+\end_layout
+
+\begin_layout Enumerate
+a == 5
+\begin_inset Newline newline
+\end_inset
+
+b == 0xFE
+\begin_inset Newline newline
+\end_inset
+
+b == 0xFE
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSource
+	filename ../Code/Alocacao/1_alocacao.cpp
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Alloc-1"
+
+\end_inset
+
+(1,0 ponto) Com relação as diretivas 
+\emph on
+new
+\emph default
+ e 
+\emph on
+delete
+\emph default
+, assinale a alternativa 
+\series bold
+incorreta
+\series default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A expressão delete sempre efetuará uma chamada ao destrutor do objeto referente
+ a instrução o qual está em memória dinâmica.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+new
+\emph default
+ pode ser utilizado para instanciar tanto arrays como objetos únicos.
+ No caso de arrays, a sintaxe é "new Tipo[TAMANHO];" onde Tipo é o tipo
+ a ser instanciado e TAMANHO uma constante inteira.
+\end_layout
+
+\begin_layout Enumerate
+As diretivas 
+\emph on
+new
+\emph default
+ e 
+\emph on
+delete
+\emph default
+ tratam de memória dinâmica e portanto são diretivas que sempre devem ser
+ atendidas pelo sistema operacional, isto é, sempre executam com sucesso.
+\end_layout
+
+\begin_layout Enumerate
+No trecho relacionado a diretiva new aloca e constrói a classe referente,
+ nessa ordem.
+\end_layout
+
+\begin_layout Enumerate
+No trecho, a diretiva delete destrói e desaloca a classe referente, nessa
+ ordem.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,0 ponto) Qual a saída de console para a execução do trecho, sabendo que
+ o o ponteiro a aponta para o endereço de memória 
+\emph on
+0xAFE
+\emph default
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A criado
+\begin_inset Newline newline
+\end_inset
+
+a == 0xAFE
+\begin_inset Newline newline
+\end_inset
+
+Ola
+\begin_inset Newline newline
+\end_inset
+
+Ola
+\begin_inset Newline newline
+\end_inset
+
+A destruido
+\end_layout
+
+\begin_layout Enumerate
+A criado
+\begin_inset Newline newline
+\end_inset
+
+a == 0xAFE
+\begin_inset Newline newline
+\end_inset
+
+Ola
+\begin_inset Newline newline
+\end_inset
+
+A destruido
+\end_layout
+
+\begin_layout Enumerate
+a == 0xAFE
+\begin_inset Newline newline
+\end_inset
+
+Ola
+\begin_inset Newline newline
+\end_inset
+
+Ola
+\end_layout
+
+\begin_layout Enumerate
+A criado
+\begin_inset Newline newline
+\end_inset
+
+a == 0xAFE
+\begin_inset Newline newline
+\end_inset
+
+Ola
+\begin_inset Newline newline
+\end_inset
+
+Ola
+\end_layout
+
+\begin_layout Enumerate
+a == 0xAFE
+\begin_inset Newline newline
+\end_inset
+
+Ola
+\begin_inset Newline newline
+\end_inset
+
+Ola
+\begin_inset Newline newline
+\end_inset
+
+A destruido
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 (0,5 ponto) Qual das seguintes funções 
 \series bold
@@ -1017,9 +1315,18 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset External
 	template CSource
 	filename ../Code/E02/int_array_entrada_min_max.c
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
