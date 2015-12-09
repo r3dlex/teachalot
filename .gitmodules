@@ -1,0 +1,3 @@
+[submodule "LinguagemDeProgramacaoII/ThirdParty/coursera-android"]
+	path = LinguagemDeProgramacaoII/ThirdParty/coursera-android
+	url = https://github.com/r3dlex/coursera-android
