@@ -1,1 +1,0 @@
-Somatorio.c
