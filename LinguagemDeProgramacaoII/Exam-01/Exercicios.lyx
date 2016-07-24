@@ -1,0 +1,771 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{color}
+%Necessary for minted
+\definecolor{bg}{rgb}{1,1,1}
+\usepackage{minted}
+
+\newminted{java}{
+  fontsize=\footnotesize, 
+  linenos,
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+\newminted{javasnip}{
+  fontsize=\footnotesize, 
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+%Remove a numeracao das paginas
+\pagestyle{empty}% Reset page style to 'empty'
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\series bold
+CESUSC
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Disciplina: Linguagem de Programação II
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Professor: André Ferreira Bem Silva
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Data: 13/06/2015
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Aluno(a): _________________________________
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Leia atentamente as questões a seguir e responda-as.
+ Assinale somente uma alternativa correta em cada questão de múltipla escolha
+ e observe a pontuação de cada questão.
+ Boa sorte!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="8">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Questão
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gabarito
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+(1,0 ponto) Assinale a alternativa 
+\series bold
+correta
+\series default
+ a respeito do sistema Android:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Não é possível programar-se em Java utilizando a API Android.
+ Apesar disso, o Android Studio provê abstrações que permitem seu uso no
+ sistema.
+\end_layout
+
+\begin_layout Enumerate
+O Android possui ferramentas abertas de desenvolvimento e, para fazer o
+ desenvolvimento não comercial de aplicativos para ele basta ter o ambiente
+ de desenvolvimento (IDE) Android Studio e um emulador para programar aplicativo
+s.
+\end_layout
+
+\begin_layout Enumerate
+O emulador permite a execução idêntica ao dispositivo (device) que ele emula.
+\end_layout
+
+\begin_layout Enumerate
+A linguagem Java suportada pelo Android é a 1.4, não permitindo features
+ recentes da linguagem.
+\end_layout
+
+\begin_layout Enumerate
+Para implementar-se um aplicativo Java deve-se implementar o método cuja
+ assinatura é "public void static main(String[ ] args)".
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,0 ponto) Com relação a figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AppLifecycle"
+
+\end_inset
+
+, preencha a alternativa que preenche as as lacunas correspondentes a A,
+ B, C, D e E 
+\series bold
+corretamente
+\series default
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+R
+\begin_inset Graphics
+	filename ../Gen/Image/ActivityLifecycleQuestion.eps
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:AppLifecycle"
+
+\end_inset
+
+Ciclo de vida da Activity com icógnitas A, B, C, D e E
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A = onCreate(), B= onStart(), C = Parando, D = onQuit() e E = onRestart().
+\end_layout
+
+\begin_layout Enumerate
+A = onStart(), B= onResume(), C = Pausado, D = onDestroy() e E = onRestart().
+\end_layout
+
+\begin_layout Enumerate
+A = onStart(), B= onRestart(), C = Parado, D = onQuit() e E = onResume().
+\end_layout
+
+\begin_layout Enumerate
+A = onPause(), B= onStart(), C = Removido, D = onQuit() e E = onRestart().
+\end_layout
+
+\begin_layout Enumerate
+A = onInit(), B= onResume(), C = Pausado, D = onQuit() e E = onRestart().
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,0 ponto) A respeito do ciclo de vida das Activities, conforme visto na
+ figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AppLifecycle"
+
+\end_inset
+
+, assinale a 
+\series bold
+correta
+\series default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+onStart(): Nesse método são inicializados todos os itens de interface (GUI)
+ como botões, campos de textos...
+\end_layout
+
+\begin_layout Enumerate
+onStop(): A aplicação encontra-se parada e pode ser reiniciada.
+ Pode 
+\emph on
+nunca
+\emph default
+ ser chamado no caso do Android necessitar a liberação imediata de recursos.
+\end_layout
+
+\begin_layout Enumerate
+onDestroy(): A atividade chama para efetuar a liberação de recursos e Threads.
+ 
+\emph on
+Sempre
+\emph default
+ deve ser chamado.
+\end_layout
+
+\begin_layout Enumerate
+onResume(): A aplicação perde o foco e as informações persistentes são salvas.
+\end_layout
+
+\begin_layout Enumerate
+onCreate(): Depois dessa chamada o aplicativo poderá ser reiniciado a qualquer
+ momento.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,0 ponto) Ainda a respeito da figura de ciclo de vida da Activity e Android,
+ assinale a alternativa 
+\series bold
+incorreta
+\series default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Uma Activity qualquer Android que esteja executando estará necessariamente
+ em um dos estágios previstos na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AppLifecycle"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+O método onCreate() não será chamado para uma mesma Activity após seu método
+ onDestroy() ter sido chamado.
+\end_layout
+
+\begin_layout Enumerate
+No método onStart() a Activity encontra-se visível.
+\end_layout
+
+\begin_layout Enumerate
+Os estados de uma Activity não respeitam os preceitos de orientação a objetos,
+ sendo uma ofensa direta ao princípio de encapsulamento.
+\end_layout
+
+\begin_layout Enumerate
+As 
+\emph on
+callbacks
+\emph default
+ de partes interativas de interface como botões podem ser inicializadas
+ no onCreate().
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,0 ponto) Assinale a alternativa 
+\series bold
+incorreta
+\series default
+ a respeito do Android e as opções de internacionalização:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+O arquivo strings.xml é um arquvo XML onde diversas tags as quais referenciam
+ strings são armazenadas.
+\end_layout
+
+\begin_layout Enumerate
+Faz-se necessário a utilização de arquivos distintos para cada uma das línguas
+ a serem suportadas pelo aplicativo.
+\end_layout
+
+\begin_layout Enumerate
+A troca de língua, em um aplicativo é sempre feita de maneira semi-automática,
+ ou seja, é necessário tratar, no código Java, a língua atual utilizada.
+\end_layout
+
+\begin_layout Enumerate
+Por meio da internacionalização, pode-se suportar quantas línguas forem
+ necessárias no aplicativo.
+\end_layout
+
+\begin_layout Enumerate
+As strings contidas no arquivo strings.xml podem ser referenciadas em outros
+ arquivos como o AndroidManifest.xml e o arquivo xml do layout da Activity.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,0 ponto) Qual das seguintes classes e interfaces 
+\series bold
+não
+\series default
+ faz parte da API Android?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Intent
+\end_layout
+
+\begin_layout Enumerate
+Activity
+\end_layout
+
+\begin_layout Enumerate
+Service
+\end_layout
+
+\begin_layout Enumerate
+BroadcastReceiver
+\end_layout
+
+\begin_layout Enumerate
+JFrame
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,0 ponto) A respeito do emulador Android, assinale a alternativa 
+\series bold
+incorreta
+\series default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Simula um dispositivo real.
+\end_layout
+
+\begin_layout Enumerate
+É capaz de instalar e rodar novos aplicativos.
+\end_layout
+
+\begin_layout Enumerate
+Auxilia no desenvolvimento, tornando desnecessário a compra de um dispositivo
+ para qualquer tipo de aplicativo.
+\end_layout
+
+\begin_layout Enumerate
+Possui funcionalidades aquém daquelas encontradas em dispositivos reais,
+ uma vez que um dispositivo real possui uma gama de sensores.
+\end_layout
+
+\begin_layout Enumerate
+Os emuladores tem resolução de tela idêntica ao dispositivo que emulam para
+ que possam emular melhor as funcionalidades de um dispositivo real.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,0 ponto) O Task backstack é:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Uma fila de Activities onde elas são adicionadas no final da fila, e, quando
+ removidas, são de seu início.
+\end_layout
+
+\begin_layout Enumerate
+Um conceito do Linux portado para o Android, uma vez que o ambiente Linux
+ também roda aplicativos e Activities.
+\end_layout
+
+\begin_layout Enumerate
+Uma pilha onde Activities mais recentes estão no topo e também são as primeiras
+ a serem removidas da pilha, caso o usuário aperte o botão BACK em seu dispositi
+vo.
+\end_layout
+
+\begin_layout Enumerate
+Uma lista de Activities que podem ser alternadas entre si.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Uma lista duplamente encadeada de Activities que podem ser alternadas entre
+ si.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,0 ponto) Assinale a alternativa correta a respeito do trecho de código
+ em sequência:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template XmlSource
+	filename ../Code/XML/AndroidManifest.xml
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+As tags das linhas 14 e 15 indicam que a Activity de nome HelloWorldActivity
+ será iniciada ao clicar-se no ícone da mesma.
+\end_layout
+
+\begin_layout Enumerate
+Por esse trecho de XML é impossível saber qual o nome do pacote referente
+ ao aplicativo em questão.
+\end_layout
+
+\begin_layout Enumerate
+O nome que aparecerá na barra de título do aplicativo é "@string/app_name".
+\end_layout
+
+\begin_layout Enumerate
+Os nomes application, activity, intent-filter e category indicam atributos
+ XML.
+\end_layout
+
+\begin_layout Enumerate
+A linha 1 identifica somente a versão XML sendo utilizada.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1,0 ponto) Qual das alternativas não apresenta um nível de logging do logcat,
+ o qual é acessado por meio da classe android.util.Log?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(a) ASSERT
+\end_layout
+
+\begin_layout Standard
+(b) DEBUG
+\end_layout
+
+\begin_layout Standard
+(c) INFO
+\end_layout
+
+\begin_layout Standard
+(d) ERROR
+\end_layout
+
+\begin_layout Standard
+(e) MAXIMUM
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

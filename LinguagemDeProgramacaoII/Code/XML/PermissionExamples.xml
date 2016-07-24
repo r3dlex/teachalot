@@ -1,0 +1,20 @@
+<manifest>
+  ...
+
+  <!-- Permissao para navegacao web -->
+  <uses-permission android:name = 
+    ”android.permission.INTERNET” />
+
+  <!-- Permissao para acessar a camera -->
+  <uses-permission android:name = 
+    ”android.permission.CAMERA” />
+
+  <!-- Permissao para geolocalizacao precisa -->
+  <uses-permission android:name = 
+    ”android.permission.ACCESS_FINE_LOCATION” />
+
+  <!-- Permissao para ler contatos -->
+  <uses-permission android:name = 
+    ”android.permission.READ_CONTACTS” />
+
+</manifest>

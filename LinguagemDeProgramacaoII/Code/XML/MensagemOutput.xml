@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mensagens numero="2">
+  <mensagem data="20150102_180333">
+    <titulo>Ola</titulo>
+    <corpo>Ola Mundo!</corpo>
+  </mensagem>
+  <mensagem data="20150102_180333">
+    <titulo>Android</titulo>
+    <corpo>Android XML é fácil!</corpo>
+  </mensagem>
+</mensagens>

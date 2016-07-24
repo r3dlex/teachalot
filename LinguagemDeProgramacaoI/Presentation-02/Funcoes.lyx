@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass beamer
@@ -12,13 +12,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 1
@@ -29,15 +29,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry true
-\use_amsmath 1
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 1
 \index Index
 \shortcut idx
@@ -60,10 +69,20 @@
 
 \begin_body
 
-\begin_layout BeginPlainFrame
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Paradigma estrutural
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -76,7 +95,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -136,10 +155,7 @@ uncover<2->{
 
 \end_inset
 
-
 Programas possuem milhares de linhas de código
-\lang brazilian
-
 \begin_inset ERT
 status open
 
@@ -158,10 +174,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -199,10 +230,25 @@ Ambas as definições são duas importantes para o paradigma estrutural
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Função Java
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -373,10 +419,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Revisitando fatorial
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -437,10 +498,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Final
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -470,10 +546,25 @@ status collapsed
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Exercícios I
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -554,10 +645,25 @@ status collapsed
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Até agora
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -603,10 +709,25 @@ Definindo uma função
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 While
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Note Note
 status open
@@ -653,12 +774,16 @@ while (condição) { corpo }
 \end_layout
 
 \begin_layout ExampleBlock
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-{
+
 \backslash
 uncover<2->{0
 \backslash
@@ -676,7 +801,7 @@ uncover<2->{0
 \backslash
 
 \backslash
-99}}
+99}
 \end_layout
 
 \end_inset
@@ -689,16 +814,22 @@ uncover<2->{0
 
 \end_layout
 
-\begin_layout BeginPlainFrame
-Do-while
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-Exemplo do-while
+Do-while
 \end_layout
 
 \end_inset
@@ -706,6 +837,7 @@ Exemplo do-while
 
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -718,7 +850,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Itemize
 FAÇA-ENQUANTO
@@ -739,14 +871,18 @@ do { corpo } while (condição)
 \end_layout
 
 \begin_layout ExampleBlock
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-{
+
 \backslash
-uncover<2->{0
+uncover<2>{0
 \backslash
 
 \backslash
@@ -762,7 +898,7 @@ uncover<2->{0
 \backslash
 
 \backslash
-99}}
+99}
 \end_layout
 
 \end_inset
@@ -775,10 +911,30 @@ uncover<2->{0
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_inset
+
 
 \end_layout
 
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -791,7 +947,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Itemize
 Resultados iguais? 
@@ -802,7 +958,7 @@ status open
 
 
 \backslash
-uncover<2->{
+uncover<2>{
 \end_layout
 
 \end_inset
@@ -850,10 +1006,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -866,9 +1037,9 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
-\begin_layout Itemize
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -917,10 +1088,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -933,7 +1119,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset External
@@ -1047,10 +1233,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 break, continue e return
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1086,16 +1287,17 @@ Ao encontrá-la, o código sempre retorna para quem o chamou
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-EXPLICACAO - FLUXO DE EXECUCAO
-\end_layout
-
-\begin_layout Plain Layout
-EXEMPLOS
+return
 \end_layout
 
 \end_inset
@@ -1103,10 +1305,7 @@ EXEMPLOS
 
 \end_layout
 
-\begin_layout BeginPlainFrame
-return
-\end_layout
-
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1138,10 +1337,25 @@ qualquer
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1167,12 +1381,16 @@ status collapsed
 \end_layout
 
 \begin_layout ExampleBlock
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-{
+
 \backslash
 uncover<2->{i = 2100 m3 = 2100
 \backslash
@@ -1190,7 +1408,7 @@ i = 2103 m3 = 2103
 \backslash
 
 \backslash
-i = 2104 m3 = 2106}}
+i = 2104 m3 = 2106}
 \end_layout
 
 \end_inset
@@ -1203,10 +1421,30 @@ i = 2104 m3 = 2106}}
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 break
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1234,10 +1472,25 @@ Pula para próxima instrução após o loop
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1263,14 +1516,18 @@ status collapsed
 \end_layout
 
 \begin_layout ExampleBlock
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-{
+
 \backslash
-uncover<2>{j = 300 i = 200}}
+uncover<2>{j = 300 i = 200}
 \end_layout
 
 \end_inset
@@ -1283,10 +1540,30 @@ uncover<2>{j = 300 i = 200}}
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 continue
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1314,10 +1591,25 @@ Pula para a próxima iteração
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1343,14 +1635,18 @@ status collapsed
 \end_layout
 
 \begin_layout ExampleBlock
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-{
+
 \backslash
-uncover<2>{j = 300 i = 200}}
+uncover<2>{j = 300 i = 200}
 \end_layout
 
 \end_inset
@@ -1363,10 +1659,30 @@ uncover<2>{j = 300 i = 200}}
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_inset
+
 
 \end_layout
 
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1423,10 +1739,25 @@ status open
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Box Frameless
 position "t"
@@ -1456,10 +1787,25 @@ status collapsed
 
 \end_layout
 
-\begin_layout BeginPlainFrame
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Exercícios II
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 
 \emph on
@@ -1511,9 +1857,6 @@ Dica: Um número primo é somente divisível por 1 e ele mesmo.
 
 \end_layout
 
-\begin_layout EndFrame
-
-\end_layout
-
+\end_deeper
 \end_body
 \end_document

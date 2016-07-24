@@ -1,0 +1,9853 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass abntex2
+\begin_preamble
+% ---
+% Pacotes fundamentais
+% ---
+\usepackage{cmap}                               % Mapear caracteres especiais no PDF
+\usepackage{lmodern}                    % Usa a fonte Latin Modern
+\usepackage{makeidx}            % Cria o indice
+\usepackage{hyperref}                   % Controla a formação do índice
+\usepackage{lastpage}                   % Usado pela Ficha catalográfica
+\usepackage{indentfirst}                % Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}                              % Controle das cores
+\usepackage{graphicx}                   % Inclusão de gráficos
+\usepackage{xcolor}
+\usepackage{minted}               		
+% ---
+
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+\usepackage{lipsum}                             % para geração de dummy text
+% ---
+
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}     % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}   % Citações padrão ABNT
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+        \ifcase #1 %
+                Nenhuma citação no texto.%
+        \or
+                Citado na página #2.%
+        \else
+                Citado #1 vezes nas páginas #2.%
+        \fi}%
+% ---
+
+% ---
+% Minted - Source code
+% ---
+\newminted{java}{
+  fontsize=\footnotesize, 
+  linenos,
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+% ---
+
+\newminted{javasnip}{
+  fontsize=\footnotesize, 
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+\definecolor{bg}{rgb}{1.0,1.0,1.0}
+
+
+% ---
+% Espaçamentos entre linhas e parágrafos
+% ---
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+% ---
+
+% Variáveis relacionadas a Apostila
+\titulo{LINGUAGEM DE PROGRAMAÇÃO C}
+\autor{André Ferreira Bem Silva}
+\instituicao{CESUSC}
+\tipotrabalho{Apostila}
+\data{2015}
+% ---
+
+% ---
+% compila o indice
+% ---
+\makeindex
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% informações do PDF
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypersetup{
+\end_layout
+
+\begin_layout Plain Layout
+
+        %pagebackref=true,
+\end_layout
+
+\begin_layout Plain Layout
+
+                pdftitle={
+\backslash
+imprimirtitulo},
+\end_layout
+
+\begin_layout Plain Layout
+
+                pdfauthor={
+\backslash
+imprimirautor},
+\end_layout
+
+\begin_layout Plain Layout
+
+        pdfsubject={
+\backslash
+imprimirpreambulo},
+\end_layout
+
+\begin_layout Plain Layout
+
+                pdfkeywords={PALAVRAS}{CHAVES}{abnt}{abntex}{abntex2},
+\end_layout
+
+\begin_layout Plain Layout
+
+            pdfproducer={LaTeX with abnTeX2},   % producer of the document
+\end_layout
+
+\begin_layout Plain Layout
+
+            pdfcreator={
+\backslash
+imprimirautor},
+\end_layout
+
+\begin_layout Plain Layout
+
+        colorlinks=true,                % false: boxed links; true: colored
+ links
+\end_layout
+
+\begin_layout Plain Layout
+
+        linkcolor=blue,                 % color of internal links
+\end_layout
+
+\begin_layout Plain Layout
+
+        citecolor=blue,                 % color of links to bibliography
+\end_layout
+
+\begin_layout Plain Layout
+
+        filecolor=magenta,                      % color of file links
+\end_layout
+
+\begin_layout Plain Layout
+
+                urlcolor=blue,
+\end_layout
+
+\begin_layout Plain Layout
+
+                bookmarksdepth=4
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+% Capa
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+imprimircapa
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+% Folha de rosto
+\end_layout
+
+\begin_layout Plain Layout
+
+% (o * indica que haverá a ficha bibliográfica)
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+imprimirfolhaderosto*
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+% inserir o sumario
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pdfbookmark[0]{
+\backslash
+contentsname}{toc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tableofcontents*
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cleardoublepage
+\end_layout
+
+\begin_layout Plain Layout
+
+% ---
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%%Hides syntax errors on Minted lexer
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+expandafter
+\backslash
+def
+\backslash
+csname PY@tok@err
+\backslash
+endcsname{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introdução a C
+\end_layout
+
+\begin_layout Standard
+Denis Ritchie define, em 1970, uma linguagem a partir do BCPL nos laboratórios
+ da Bell Telephones Inc.
+ Esta linguagem foi chamada de B.
+ Já em 1978, Brian Kerningham em conjunto com Ritchie aprimorou a linguagem.
+ A nova versão passou a chama-se de C.
+ Pelas suas características de portabilidade e estruturação já se tornou
+ popular entre os programadores.
+ Em 1980, a linguagem é padronizada pelo American National Standard Institute.
+ Surge a linguagem ANSI C.
+ Mais recentemente:
+\end_layout
+
+\begin_layout Itemize
+1990: A Borland International Co.
+ fabricante de compiladores profissionais escolhe o C e o Pascal como linguagens
+ de trabalho para o seu Integrated Development Enviroment (Ambiente Integrado
+ de Desenvolvimento).
+ Surge a linguagem Turbo C.
+ 
+\end_layout
+
+\begin_layout Itemize
+1992: O C se torna ponto de concordância entre teóricos do desenvolvimento
+ da teoria de Object - Oriented Programming (programação orientada a objetos).
+ Surge a linguagem C++.
+\end_layout
+
+\begin_layout Section
+Caraterísticas
+\end_layout
+
+\begin_layout Standard
+\align left
+Linguagem de Nível Médio (combina recursos do Alto e Baixo Nível):
+\end_layout
+
+\begin_layout Itemize
+Bastante Portátil
+\end_layout
+
+\begin_layout Itemize
+Não é fortemente tipada;
+\end_layout
+
+\begin_layout Itemize
+Permite a manipulação de bits, byte e endereços;
+\end_layout
+
+\begin_layout Itemize
+Estruturada.
+\end_layout
+
+\begin_layout Section
+Estrutura de um Programa
+\end_layout
+
+\begin_layout Standard
+Todo programa C segue uma estrutura bem definida de símbolos léxicos, sintáticos
+ e semânticos.
+ Sendo assim, o estudo desses símbolos é de interesse para a compreensão
+ da linguagem.
+ Como foi desenvolvida como uma linguagem para programação de sistemas (
+\emph on
+Unix
+\emph default
+), o C é uma linguagem que possui diretivas simples para acesso a entrada
+ e saída o que fica evidente nas poucas linhas do 
+\emph on
+hello world 
+\emph default
+escrito usando as funções da linguagem, no algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:HelloWorld"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A01/ola_mundo.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:HelloWorld"
+
+\end_inset
+
+O "Olá, Mundo!" (
+\emph on
+Hello World
+\emph default
+) em C.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Identificadores
+\end_layout
+
+\begin_layout Standard
+São nomes usados para se fazer referencia a variáveis, funções, rótulos
+ e vários outros objetos definidos pelo usuário.
+ Regras:
+\end_layout
+
+\begin_layout Itemize
+O primeiro caracter deve ser letra ou sublinha( _ ).
+ 
+\end_layout
+
+\begin_layout Itemize
+Os caracteres seguintes devem ser letras, números ou sublinha.
+ 
+\end_layout
+
+\begin_layout Itemize
+Os primeiros 32 (default) caracteres são significativos.
+\end_layout
+
+\begin_layout Subsection
+Comentários
+\end_layout
+
+\begin_layout Standard
+Os comentários do programador são feito da seguinte maneira:
+\end_layout
+
+\begin_layout Standard
+/* Isto é um comentário */
+\end_layout
+
+\begin_layout Standard
+// ou Isto
+\end_layout
+
+\begin_layout Subsection
+Regras Gerais 
+\end_layout
+
+\begin_layout Standard
+Um programa em "C" é constituído de uma ou mais funções delimitadas por
+ chaves, onde uma é obrigatoriamente chamada main().
+ 
+\end_layout
+
+\begin_layout Itemize
+Letras maiúsculas e minúsculas são tratadas como caracteres diferentes.
+\end_layout
+
+\begin_layout Itemize
+O formato do texto é livre.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+main() 
+\emph default
+especifica a função por onde o programa começar a ser executado.
+ 
+\end_layout
+
+\begin_layout Itemize
+Todos os comandos são terminados por ponto e vírgula.
+ 
+\end_layout
+
+\begin_layout Itemize
+Todas as variáveis devem ser declaradas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A01/dia_mes_ano.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Programa que faz a impressão de dia, mês e ano no console
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Palavras reservadas
+\end_layout
+
+\begin_layout Standard
+Estas palavras não podem ser utilizadas como nome de variáveis: 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+auto double if static const asm pascal break else int struct enum _ss _es
+ case entry long switch signed interrupt huge chiar externa registre typedef
+ void _cs continue float return union volatile cdecl default for sizeof
+ unsigned near do goto short while _ds 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A01/declarando_var.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Programa com declaração de variáveis inteiras.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Declaração de variáveis
+\end_layout
+
+\begin_layout Standard
+\align left
+Sintaxe: TIPO lista_variáveis, onde:
+\end_layout
+
+\begin_layout Itemize
+TIPO: deve ser um tipo de dado válido.
+\end_layout
+
+\begin_layout Itemize
+lista_variáveis: um ou mais identificadores separados por vírgula.
+\end_layout
+
+\begin_layout Standard
+\align left
+Onde as variáveis são declaradas:
+\end_layout
+
+\begin_layout Itemize
+Definidas fora de todas as funções, incluindo a função 
+\emph on
+main()
+\emph default
+ são chamadas de Variáveis Globais e podem ser usadas em qualquer parte
+ do programa.
+\end_layout
+
+\begin_layout Itemize
+Definidas dentro de uma função são chamadas de Variáveis Locais e só podem
+ ser usadas dentro desta função.
+\end_layout
+
+\begin_layout Itemize
+Na declaração de parâmetros formais de uma função.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A01/potencia.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Declarações de tipos inteiros
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Inicialização de variáveis
+\end_layout
+
+\begin_layout Standard
+Em C é possível fornecermos valores para as variáveis ao mesmo tempo que
+ as declaramos, colocando um sinal de igual e uma constante após o nome
+ da variável:
+\end_layout
+
+\begin_layout Standard
+\align center
+TIPO nome_variável = constante; 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A01/var_init.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Declarações de tipos inteiros
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Constantes
+\end_layout
+
+\begin_layout Standard
+Valores fixos que o programa não pode alterar.
+ As constantes podem ser de qualquer tipo básico e podem aparecer em expressões
+ diversas.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tipo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exemplos de constantes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+'a' 'n' '9' 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+char
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1, 123, 2100 -234
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+float
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+123.23, 4.34e-3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+char*
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+"C99", "Ola Mundo"
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exemplos de constantes de cada tipo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Constantes hexadecimais e octais
+\end_layout
+
+\begin_layout Standard
+C permite especificar constantes inteiras em hexadecimal ou octal.
+ Uma constante octal (base 8) começa com um zero e uma Hexadecimal (base
+ 16) por 0x.
+ Ex:
+\end_layout
+
+\begin_layout Standard
+int hex = 0xFF; /* 255 em decimal */ 
+\end_layout
+
+\begin_layout Standard
+int oct = 011; /* 9 em decimal */
+\end_layout
+
+\begin_layout Subsubsection
+Constantes strings 
+\end_layout
+
+\begin_layout Standard
+Uma string é um conjunto de caracteres que aparecem dentro de aspas duplas.
+ 
+\end_layout
+
+\begin_layout Standard
+Exemplo: string = "C11" 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assim, a memória total ocupada por "C11" é 4 bytes, e não 3 bytes como parece
+ num primeiro instante.
+ Outras observações: 
+\end_layout
+
+\begin_layout Itemize
+'a' diferente de "a", uma vez que é "a" é 
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Assim, "a" ocupa 2 bytes na memória
+\end_layout
+
+\begin_layout Itemize
+Toda "string" é terminada por "
+\backslash
+0"
+\end_layout
+
+\begin_layout Subsubsection
+Constantes e caracteres especiais
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:CaracteresEspeciais"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Algumas constantes que são impossíveis de inserir pelo teclado e que possuem
+ efeito especial ou significado especial.
+ A lista:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="14" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Constante
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Significado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Retrocesso (
+\emph on
+backspace
+\emph default
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+f 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alimentação de formulário
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+n 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nova linha
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+r 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Retorno de Carro 
+\emph on
+<CR> 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+t 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tabulação horizontal (
+\emph on
+tab
+\emph default
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+"
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aspas duplas
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aspas simples
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zero
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Barra invertida
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+v
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tabulação vertical (
+\emph on
+tab
+\emph default
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alerta
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+o
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Constante octal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\backslash
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Constante hexadecimal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Tipos de dados
+\end_layout
+
+\begin_layout Standard
+Existem alguns tipos básicos de dados, os quais definem as variáveis 
+\emph on
+nativas
+\emph default
+.
+ Esses tipos são inteiros, pontos flutuantes, caracteres ou sem tipo (
+\emph on
+void
+\emph default
+).
+ Estão enumerados, assim como seus valores admitos, na tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:TiposDeDados"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tipo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bits
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bytes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Faixa de valor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+char
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[-128,127]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+short (int)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[-32768,32767]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[\text{–}2.147.483.648,2.147.483.647]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+long (int)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[\text{–}2.147.483.648,2.147.483.647]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+long long (int)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+64
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[\text{–}9.223.372.036.854.775.808,9.223.372.036.854.775.807$
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+float
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[-3.4E-38,3.4E+38]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+double
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+64
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[1.7E-308,1.7E+308]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+void
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sem valor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:TiposDeDados"
+
+\end_inset
+
+Tipos básicos e seus respectivos tamanhos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Modificadores de tipo
+\end_layout
+
+\begin_layout Standard
+Um modificador é uma palavra-chave que pode ser usada para alterar o significado
+ do tipo base para que ele se adapte conforme algumas necessidades específicas.
+ Na tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:ModificadoresDeTipo"
+
+\end_inset
+
+, demonstram-se os modificadores de tipos, aplicáveis aqueles da tabela
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:TiposDeDados"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modificador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Significado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+signed
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+com sinal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+unsigned
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sem sinal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+long
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+valor longo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+short
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+valor curto
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:ModificadoresDeTipo"
+
+\end_inset
+
+Modificadores de tipo aplicáveis aos tipos básicos, da tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:TiposDeDados"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Operadores
+\end_layout
+
+\begin_layout Standard
+Os operadores são parte inerente das expressões e podem ser lógicos, relacionais
+ ou aritméticos.
+\end_layout
+
+\begin_layout Subsection
+Operadores Lógicos
+\end_layout
+
+\begin_layout Standard
+As operações lógicas no C, são aquelas referentes a lógica clássica ou a
+ lógica booleana.
+ Apresenta operadores como o E, OU e a NEGAÇÃO.
+ Sendo assim, são:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="45text%">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Função
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exemplo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+&&
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Se ambos os operandos são verdade, retorna 1, senão 0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a && b
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+||
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Se um dos operandos é verdade, retorna 1, senão 0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a || b
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+!
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nega o valor atual, se for diferente de 0, retorna 1, senão 0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+!a
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Operadores Relacionais
+\end_layout
+
+\begin_layout Standard
+Os operadores relacionais tem como resultado valores booleanos, portanto
+ 0 ou 1.
+ Eles dependem de quais valores estão sendo comparados ou relacionados.
+ As operações menor que, igual a, diferente de e maior possuem as seguintes
+ sintaxes:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ação
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+> 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maior que
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+>=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maior ou igual a
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+menor que
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+menor ou igua
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+==
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+igual a
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+!=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+diferente de
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Operadores Binários
+\end_layout
+
+\begin_layout Standard
+Os operadores binários tem operação sobre bits, e sendo assim estão associados
+ aos tamanhos das representações em questão.
+ Levando em consideração, as variáveis p e q, ambas de 1 bit somente o resultado
+ para um operador binário para os possíveis operadores para essas variáveis
+ seria:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+p
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+q
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+p & q
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+p | q
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+p ˆ q
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ação
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exemplos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Resultado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+subtração
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5 - 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+adição
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2 + 7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+*
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+multiplicação
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2 * -3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+/
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+divisão
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10 / 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+módulo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10 % 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+--
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+decremento
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3--
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3*
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+++
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+incremento
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+++3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4*
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+*Quando pós-fixado, isto é, após o número ou símbolo, o operador retorna
+ o valor atual, senão retorna já alterado.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:OperadoresAritmeticos"
+
+\end_inset
+
+Tabela de operadores na linguagem C.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Operadores Aritméticos
+\end_layout
+
+\begin_layout Standard
+Os operadores aritméticos atuam sobre tipos inteiros e de ponto flutuante.
+ Os operadores básicos de multiplicação, divisão, subtração, adição, módulo,
+ incremento e decremento podem ser vistos na tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:OperadoresAritmeticos"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Os operadores são executados de acordo com as regras disponíveis na linguagem.
+ A ordem que acontecem define a chamada 
+\emph on
+precedência
+\emph default
+ dos operadores.
+ A precedência é importante para saber-se se determinada expressão necessidade
+ de parênteses ou não para que a ordem desejada seja a que está efetivamente
+ implementada.
+ Por exemplo, o operador de soma possui precedência menor que o operador
+ de multiplicação, o que pode indicar a necessidade de parênteses para preservar
+ determinadas ordens de cálculo.
+ A precedência, no C, pode ser observada na tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:PrecedenciaDeOperadores"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Precedência
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operações
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Símbolo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parênteses
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+( e )
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Função
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+f(p1, p2, ...)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Incremento ou Decremento
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+++ ou --
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Unária
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+- ou +
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Multiplicação, Divisão ou Módulo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+*, / ou %
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Soma ou Diferença
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++ ou -
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:PrecedenciaDeOperadores"
+
+\end_inset
+
+Tabela de operadores na linguagem C.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Operadores especiais: casting e sizeof
+\end_layout
+
+\begin_layout Standard
+Existem dois operadores especiais na linguagem C que podem ser usados junto
+ a outras expressões: 
+\emph on
+sizeof 
+\emph default
+e 
+\emph on
+casting
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+A função nativa da linguagem C 
+\emph on
+sizeof
+\emph default
+, retorna o tamanho (em bytes) da variável ou do tipo que esta em seu operando.
+ Pode ser aplicado a 
+\emph on
+structs
+\emph default
+, 
+\emph on
+unions
+\emph default
+ e 
+\emph on
+enums.
+ 
+\emph default
+No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:SizeOf"
+
+\end_inset
+
+ demonstra-se a operação de 
+\emph on
+sizeof
+\emph default
+.
+ Os valores que serão impressos são ambos 4, uma vez que os tipos 
+\emph on
+int 
+\emph default
+e 
+\emph on
+float 
+\emph default
+tem ambos 4 bytes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A01/operador_sizeof.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:SizeOf"
+
+\end_inset
+
+Exemplo de utilização da função 
+\emph on
+sizeof
+\emph default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Type casting is a way to convert a variable from one data type to another
+ data type.
+ For example, if you want to store a long value into a simple integer then
+ you can type cast long to int.
+ You can convert values from one type to another explicitly using the cast
+ operator as follows:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Já a operação de casting pode é uma maneira de converter um tipo de dado
+ em outro tipo qualuqer.
+ Por exemplo, quando queremos guardar um valor 
+\emph on
+long long 
+\emph default
+em um 
+\emph on
+int 
+\emph default
+podemes simplesmente fazer o casting de 
+\emph on
+long long 
+\emph default
+para 
+\emph on
+int 
+\emph default
+e a conversão é feita de maneira automática, por truncamento.
+ Pode-se converter de um tipo para outro com a seguinte sintaxe:
+\end_layout
+
+\begin_layout Standard
+\align center
+(tipo) expressão
+\end_layout
+
+\begin_layout Standard
+Um exemplo concreto de utilização do 
+\emph on
+casting 
+\emph default
+é visto no algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Casting"
+
+\end_inset
+
+.
+ A saída no console desse programa será "media = 3.4", uma vez que ao fazer-se
+ o casting para double da soma, ela torna-se double e a divisão do valor
+ em ponto flutuante por um inteiro resultará em outro valor em ponto flutuante.
+ A conversão para um tipo menor (ex: double
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+int) sempre terá que ser feita por casting, uma vez que a perda de precisão,
+ em alguns casos pode significar um 
+\emph on
+bug
+\emph default
+!
+\end_layout
+
+\begin_layout Standard
+Para calcular-se o tamanho de uma string qualquer, deve-se utilizar a função
+ 
+\emph on
+strlen
+\emph default
+ junto a 
+\emph on
+sizeof(char).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A01/operador_cast.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Casting"
+
+\end_inset
+
+Exemplo de operação de 
+\emph on
+casting
+\emph default
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Atribuição
+\end_layout
+
+\begin_layout Standard
+As atribuições são mecanismos que alteram uma determinada variável alvo
+ com o valor de uma expressão a qual possivelmente utiliza a própria variável
+ como fonte.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descrição
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Atribuição
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+*=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Multiplica
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+/=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Divide
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+%=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Módulo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Soma
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Diferença
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<<=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Shift para esquerda
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+>>=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Shift para direita
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+&=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E binário
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+^=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OU EXCLUSIVO binário
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+|=
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OU binário
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+*Atribuição
+\end_layout
+
+\begin_layout Plain Layout
+O operador de atribuição é o sinal de igual "=".
+\end_layout
+
+\begin_layout Plain Layout
+Programa exemplo 3:
+\end_layout
+
+\begin_layout Plain Layout
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+#include <conio.h>
+\end_layout
+
+\begin_layout Plain Layout
+void main(void)
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+int idade,ano_atual,ano_nasceu;
+\end_layout
+
+\begin_layout Plain Layout
+clrscr();
+\end_layout
+
+\begin_layout Plain Layout
+printf("Ano ATUAL = "); 
+\end_layout
+
+\begin_layout Plain Layout
+scanf("%d",&ano_atual);
+\end_layout
+
+\begin_layout Plain Layout
+printf("Ano em que NASCEU = "); 
+\end_layout
+
+\begin_layout Plain Layout
+scanf("%d",&ano_nasceu);
+\end_layout
+
+\begin_layout Plain Layout
+idade = ano_atual - ano_nasceu; /* Atribuição */
+\end_layout
+
+\begin_layout Plain Layout
+printf("Sua IDADE e
+\backslash
+' %d
+\backslash
+n",idade);
+\end_layout
+
+\begin_layout Plain Layout
+getch();
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\begin_layout Plain Layout
+O C permite usarmos o operador de atribuição em expressões que também envolvem
+ outros operadores.
+\end_layout
+
+\begin_layout Plain Layout
+if ((produto = x * y) < 0)
+\end_layout
+
+\begin_layout Plain Layout
+- Primeiro "C" atribui o valor x * y ao produto, para depois avaliar a expressão.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Pré-processador C
+\end_layout
+
+\begin_layout Standard
+O pré-processador C é um programa que examina o programa fonte escrito em
+ C e executa certas modificações nele, baseado nas diretivas de compilação
+ (ou diretivas do pré-processador).
+ As diretivas de compilação são comandos que não são compilados, sendo dirigidos
+ ao pré-processador, executado pelo compilador antes da execução do processo
+ de compilação propriamente dito.
+\end_layout
+
+\begin_layout Standard
+Portanto, o pré-processador modifica o programa fonte, que ainda não estaria
+ pronto para ser entregue ao compilador.
+ Todas as diretivas de compilação são iniciadas pelo caractere 
+\emph on
+#
+\emph default
+ (hashtag, sharp, jogo-da-velha).
+ As diretivas podem ser colocadas em qualquer parte do programa, mas não
+ podem ser colocadas na mesma linha que outra diretiva ou instrução.
+ As principais diretivas de compilação são:
+\end_layout
+
+\begin_layout Itemize
+#include
+\end_layout
+
+\begin_layout Itemize
+#define
+\end_layout
+
+\begin_layout Itemize
+#undef
+\end_layout
+
+\begin_layout Itemize
+#ifdef
+\end_layout
+
+\begin_layout Itemize
+#ifndef
+\end_layout
+
+\begin_layout Itemize
+#if
+\end_layout
+
+\begin_layout Itemize
+#else
+\end_layout
+
+\begin_layout Itemize
+#elif
+\end_layout
+
+\begin_layout Itemize
+#endif
+\end_layout
+
+\begin_layout Section
+Diretivas em tempo de compilação
+\end_layout
+
+\begin_layout Standard
+Algumas diretivas tem influência direta sobre o resultado da compilação.
+ Nessa seção define-se algumas delas.
+\end_layout
+
+\begin_layout Subsection
+#include
+\end_layout
+
+\begin_layout Standard
+A diretiva #include diz ao pré-processador para incluir naquele ponto um
+ arquivo especificado.
+ Sua sintaxe é:
+\end_layout
+
+\begin_layout Standard
+\align center
+#include "nome_do_arquivo" 
+\end_layout
+
+\begin_layout Standard
+\align center
+#include <nome_do_arquivo>
+\end_layout
+
+\begin_layout Standard
+A diferença entre se usar "" e <> é somente a ordem de procura nos diretórios
+ pelo arquivo especificado.
+ Se o arquivo tiver caminho completo, ou se o arquivo estiver em um diretório
+ de trabalho relativo, usa-se a notação com aspas.
+ Senão, se o arquivo estiver nos caminhos de procura pré-especificados do
+ compilador, isto é, se ele for um arquivo do próprio sistema (como é o
+ caso de arquivos como stdio.h, string.h, etc...), usa-se <arquivo>.
+\end_layout
+
+\begin_layout Subsection
+#define
+\end_layout
+
+\begin_layout Standard
+A diretiva #define pode ser usada em três escopos distintos.
+ Um delae é para definir um símbolo o qual possa ser testado mais tarde.
+ Um segundo, é para definir-se uma costante.
+ E o terceiro e último escopo é para definir-se uma macro com parâmetros.
+ Sendo assim, a sintaxe fica:
+\end_layout
+
+\begin_layout Itemize
+Símbolo: #define nome_do_símbolo
+\end_layout
+
+\begin_layout Itemize
+Constante: #define nome_da_constante valor_da_constante
+\end_layout
+
+\begin_layout Itemize
+Macro: #define nome_da_macro(parâmetros) expressão_de_substituição
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A02/pi.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:MacroPI"
+
+\end_inset
+
+Exemplo de utilização de macro para utilização de constantes.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A02/min_max_macro.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:MacroMinMax"
+
+\end_inset
+
+Exemplo de definição de macro.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+#undef
+\end_layout
+
+\begin_layout Standard
+Ela faz com que a macro de nome 
+\emph on
+nome_da_macro
+\emph default
+ seja apagada da tabela interna que guarda as macros.
+ O compilador passa a partir deste ponto a não conhecer mais esta macro.
+ A sintaxe é:
+\end_layout
+
+\begin_layout Standard
+\align center
+#undef nome_da_macro
+\end_layout
+
+\begin_layout Standard
+O resultado dessa macro afeta diretamente o resultado das macros 
+\emph on
+#ifdef
+\emph default
+ e 
+\emph on
+#ifndef
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+#ifdef
+\end_layout
+
+\begin_layout Standard
+O #ifdef é uma estrutura condicional e fazem parte das estruturas condicionais
+ de pré-processamento o 
+\emph on
+#ifdef, #ifndef, #else, #elif 
+\emph default
+e o
+\emph on
+ #endif
+\emph default
+.
+ Essas diretivas são processadas antes do início da compilação em si, então
+ pode-se usá-las como condições para expressões que envolvam constantes
+ e símbolos de pré-processamento.
+ A sintaxe fica: 
+\end_layout
+
+\begin_layout Standard
+\align center
+#ifdef nome_do_símbolo
+\end_layout
+
+\begin_layout Standard
+O código entre as duas diretivas só será compilado se o símbolo (ou constante)
+ nome_do_símbolo já tiver sido definido.
+ Há também a estrutura 
+\emph on
+#ifndef
+\emph default
+, que executa o código se o símbolo não tiver sido definido.
+\end_layout
+
+\begin_layout Standard
+Lembre que o símbolo deve ter sido definido através da diretiva 
+\emph on
+#define
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+#ifndef
+\end_layout
+
+\begin_layout Standard
+A diretiva #ifndef é utilizada para checar se a macro em questão está ou
+ não definida.
+ É usada da seguinte forma:
+\end_layout
+
+\begin_layout Standard
+\align center
+#ifndef nome_da_macro
+\end_layout
+
+\begin_layout Standard
+Se a constatação for verdadeira, então o código dentro do trecho será executado,
+ senão se houver trecho de 
+\emph on
+#else
+\emph default
+ ou 
+\emph on
+#elif,
+\emph default
+ referente a essa expressão, então esse trecho será executado.
+\end_layout
+
+\begin_layout Subsection
+#else
+\end_layout
+
+\begin_layout Standard
+A diretiva #else funciona como na estrutura de bloco if (condição) {...} else
+ {...}:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#ifdef WINDOWS
+\end_layout
+
+\begin_layout Plain Layout
+
+/* será executado se a expressão for verdadeira */
+\end_layout
+
+\begin_layout Plain Layout
+
+#define CABECALHO "windows_io.h"
+\end_layout
+
+\begin_layout Plain Layout
+
+#else
+\end_layout
+
+\begin_layout Plain Layout
+
+/* será executado se a expressão for falsa */
+\end_layout
+
+\begin_layout Plain Layout
+
+#define CABECALHO "unix_io.h"
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif
+\end_layout
+
+\begin_layout Plain Layout
+
+#include CABECALHO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+#elif
+\end_layout
+
+\begin_layout Standard
+A diretiva 
+\emph on
+#elif
+\emph default
+ é uma abreviação para 
+\emph on
+else if 
+\emph default
+e funciona como uma estrutura condicional desse tipo.
+ A sintaxe é:
+\end_layout
+
+\begin_layout Standard
+\align center
+#elif expressão
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#if expressão_1 
+\end_layout
+
+\begin_layout Plain Layout
+
+//código...
+\end_layout
+
+\begin_layout Plain Layout
+
+#elif expressão_2 
+\end_layout
+
+\begin_layout Plain Layout
+
+//código...
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pode-se também utilizá-la com as demais diretivas como 
+\emph on
+#else
+\emph default
+.
+ Só deve-se utilizar uma diretiva do tipo 
+\emph on
+#else
+\emph default
+ se ela deve for a última expressão da cadeia de expressões.
+\end_layout
+
+\begin_layout Section
+
+\emph on
+Header file
+\emph default
+: arquivo cabeçalho
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A02/header_exemplo.h
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:HeaderGuard"
+
+\end_inset
+
+Exemplo de utilização das macros condicionais para definir um 
+\emph on
+header guard
+\emph default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A header file is a file with extension .h which contains C function declarations
+ and macro definitions and to be shared between several source files.
+ There are two types of header files: the files that the programmer writes
+ and the files that come with your compiler.
+\end_layout
+
+\begin_layout Plain Layout
+You request the use of a header file in your program by including it, with
+ the C preprocessing directive #include like you have seen inclusion of
+ stdio.h header file, which comes along with your compiler.
+\end_layout
+
+\begin_layout Plain Layout
+Including a header file is equal to copying the content of the header file
+ but we do not do it because it will be very much error-prone and it is
+ not a good idea to copy the content of header file in the source files,
+ specially if we have multiple source file comprising our program.
+\end_layout
+
+\begin_layout Plain Layout
+A simple practice in C or C++ programs is that we keep all the constants,
+ macros, system wide global variables, and function prototypes in header
+ files and include that header file wherever it is required.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um arquivo de header ou cabeçalho é um arquivo com extensão 
+\emph on
+.h 
+\emph default
+que contém declarações de funções C, de macros e de recursos a serem compartilha
+dos por vários arquivos fontes 
+\emph on
+.c
+\emph default
+.
+ Há dois tipos de arquivos de cabeçalho: os arquivos que são escritos pelo
+ desenvolvedor e aqueles que vem junto ao compilador e fazem parte da biblioteca
+ básica da linguagem.
+\end_layout
+
+\begin_layout Standard
+O arquivo header é utilizado no programa ao pedir-se para o pré-processador
+ incluir o arquivo desejado, com a diretiva de pré-processamento 
+\emph on
+#include
+\emph default
+.
+ Um exemplo de inclusão comum é o arquivo 
+\emph on
+stdio.h
+\emph default
+, conforme visto nos algoritmos 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:MacroPI"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:MacroMinMax"
+
+\end_inset
+
+, para utilização de funções de entrada e saída como as funções, 
+\emph on
+scanf
+\emph default
+ e 
+\emph on
+printf
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Ao incluir-se um arquivo de cabeçalho, a ação esperada é como se o código
+ fonte fosse copiado do arquivo original e colado no código fonte em questão.
+ Não fazemos isso explicitamente porque essa atividade seria muito propícia
+ a erros e não é uma boa ideia sair espalhando o conteúdo de cabeçalhos
+ diversos por códigos fontes que os utilizam.
+ 
+\end_layout
+
+\begin_layout Standard
+Uma boa prática é manter constantes, macros, funções e variáveis globais
+ definidas em 
+\emph on
+headers 
+\emph default
+e incluí-lo sempre que for necessário utilizar essa variável.
+ Para tal, faz-se necessário usar as estruturas 
+\emph on
+#ifndef
+\emph default
+, 
+\emph on
+#define
+\emph default
+ e 
+\emph on
+#endif
+\emph default
+, denominada 
+\emph on
+header guard
+\emph default
+, vista no algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:HeaderGuard"
+
+\end_inset
+
+.
+ Nesse exemplo o MEU_HEADER_EXEMPLO_H_ é uma macro que serve como defensor
+ (
+\emph on
+guard
+\emph default
+) desse header, para que se múltiplos arquivos o incluam, as variáveis,
+ funções e estruturas que ali se encontram não seja definida múltiplas vezes
+ no mesmo programa ou biblioteca, o que poderia mais tarde ocasionar erros
+ de ligação do mesmo.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO - botar referência as páginas de ligação depois
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Concatenação de strings
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A02/macro_substitui_string.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:MacroSubstituiPorString"
+
+\end_inset
+
+Exemplo de utilização de substituição de parâmetro pela string que o representa,
+ utilizando-se #.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O pré-processador C permite manipular uma cadeia de caracteres, isto é,
+ strings.
+ Isso se dá pela utilização dos operadores 
+\emph on
+#
+\emph default
+ e 
+\emph on
+##
+\emph default
+, os quais permitem substituir a grafia de um parâmetro e concatenar dois
+ parâmetros, respectivamente.
+ 
+\end_layout
+
+\begin_layout Standard
+A utilização do operador # na macro pode ser vista no código do algoritmo
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:MacroSubstituiPorString"
+
+\end_inset
+
+, o qual apresentará como saída no console "Estou aqui".
+ Isso, porque o valor que é passado por parâmetro é convertido a string
+ por meio da utilização do operador.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A02/macro_concat.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:MacroConcatParametros"
+
+\end_inset
+
+Demonstração de concatenação de símbolos pelo operador ##, na forma da macro
+ CONCAT.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O operador ## por sua vez, faz a concatenação de dois parâmetros na forma
+ de um único símbolo.
+ No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:MacroConcatParametros"
+
+\end_inset
+
+, a variável 
+\emph on
+teste 
+\emph default
+é declarada com o valor 
+\emph on
+1000.
+ 
+\emph default
+No 
+\emph on
+printf
+\emph default
+ é utilizado a macro CONCAT com os parâmetros 
+\emph on
+tes 
+\emph default
+e 
+\emph on
+te
+\emph default
+.
+ A concatenação dos dois símbolos em um só gera 
+\emph on
+teste
+\emph default
+, que coincide com o inteiro já definido anteriormente.
+ Assim, o valor na saída de console impresso será "1000".
+\end_layout
+
+\begin_layout Chapter
+Funções e estruturas da linguagem C
+\end_layout
+
+\begin_layout Standard
+Nesse capítulo, fala-se sobre estruturas sintáticas e sua semântica de utilizaçã
+o.
+\end_layout
+
+\begin_layout Section
+If-then-else
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:If-then-else"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/par_ou_impar.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:ParOuImpar"
+
+\end_inset
+
+Exemplo de programa que checa se determinado número inteiro de entrada é
+ par ou ímpar.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Gen/Image/Condition.eps
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LógicaDeCondicao"
+
+\end_inset
+
+Estrutura lógica de um if-then-else.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A estrutura condicional do C é o if-then-else, traduzindo se-então-senão
+ pode ser vista logicamente na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LógicaDeLoop"
+
+\end_inset
+
+.
+ Essa estrutura serve para alterar o fluxo dependendo de expressões condicionais
+, ou seja, depende possivelmente de um valor obtido em tempo de execução.
+ A linguagem de programação C assume que qualquer valor não zero é verdade,
+ enquanto um valor zero (nulo) é assumido como falso.
+ A sintaxe básica do if-then-else é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if (expressão_1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Executa se expressão_1 for verdade
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+else if(expressão_2) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Executa se expressão_2 for verdade e
+\end_layout
+
+\begin_layout Plain Layout
+
+	//expressão_1 for mentira
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+else {
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Executa se expressão_1 e a
+\end_layout
+
+\begin_layout Plain Layout
+
+	//expressão_2 for mentira
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:ParOuImpar"
+
+\end_inset
+
+, demonstra-se um exemplo de utilização dessas estruturas.
+ Nesse caso, o algoritmo é utilizado para checar se determinado número é
+ par, uma vez que o resto da divisão de um número par por 2 é sempre 0 por
+ definição, então se "numero % 2 == 0" ele é par e cairá na saída de "eh
+ par", senão cairá em "eh impar".
+\end_layout
+
+\begin_layout Subsection
+If ternário
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The ? : Operator:
+\end_layout
+
+\begin_layout Plain Layout
+We have covered conditional operator ? : in previous chapter which can be
+ used to replace if...else statements.
+ It has the following general form:
+\end_layout
+
+\begin_layout Plain Layout
+Exp1 ? Exp2 : Exp3;
+\end_layout
+
+\begin_layout Plain Layout
+Where Exp1, Exp2, and Exp3 are expressions.
+ Notice the use and placement of the colon.
+\end_layout
+
+\begin_layout Plain Layout
+The value of a ? expression is determined like this: Exp1 is evaluated.
+ If it is true, then Exp2 is evaluated and becomes the value of the entire
+ ? expression.
+ If Exp1 is false, then Exp3 is evaluated and its value becomes the value
+ of the expression.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Switch-case
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:SwitchCase"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+switch (variável)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	case constante_1 : //comandos;
+\end_layout
+
+\begin_layout Plain Layout
+
+	break;
+\end_layout
+
+\begin_layout Plain Layout
+
+	case constante_2 : //comandos;
+\end_layout
+
+\begin_layout Plain Layout
+
+	break;
+\end_layout
+
+\begin_layout Plain Layout
+
+	default : //comandos;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/switch_nota.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Indicativo"
+
+\end_inset
+
+Exemplo de utilização de 
+\emph on
+switch
+\emph default
+ para avaliação de uma nota indicativa.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+No switch-case, tem-se uma variável cujo valor é testado com uma lista sucessiva
+ e exasutiva de constantes inteiras ou caracteres.
+ Ao encontrar uma coincidência, executa-se o comando ou blocos de comandos
+ que estejam associados aquela constante.
+ O comando obrigatório 
+\emph on
+default
+\emph default
+ é executado se não houver nenhuma coincidência.
+ O comando 
+\emph on
+break
+\emph default
+ é usado para obrigar a saída do comando switch.
+ 
+\end_layout
+
+\begin_layout Standard
+No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Indicativo"
+
+\end_inset
+
+, tem-se um indicativo de nota que pode assumir os valores qualitativos
+ A, B, C, D ou F.
+ Esses valores não estão associados diretamente a um conceito ou valor,
+ mas eles indicam um determinado 
+\emph on
+rank
+\emph default
+ ou 
+\emph on
+score
+\emph default
+, sendo o melhor A e o pior F.
+ Sendo assim, o programa referido imprime uma mensagem na saída de console
+ de acordo com a nota obtida, caso-a-caso, usando uma estrutura de switch
+ para tal.
+ Nesse trecho, o valor da nota indicativa obtida foi 'B', portanto a saída
+ obtida no console será "Muito bem!".
+\end_layout
+
+\begin_layout Section
+Estruturas de repetição
+\end_layout
+
+\begin_layout Standard
+Podem haver situações em que um bloco de código deve executar várias vezes.
+ Uma estrutura de repetição, ou loop, possui comandos os quais são executados
+ sequencialmentes.
+ O primeiro comando em uma função é executado primeiro, seguido pelo segundo
+ e assim por diante.
+\end_layout
+
+\begin_layout Standard
+Linguagens de programação providenciam várias estruturas de controle que
+ permitem alterar o fluxo de execução.
+ Um comando desse tipo já visto é o if-then-else, na seção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:If-then-else"
+
+\end_inset
+
+.
+ Existem outros comandos que alteram diretamente o fluxo de execução e eles
+ serão vistos nessa seção também.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Gen/Image/Loops.eps
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LógicaDeLoop"
+
+\end_inset
+
+Estrutura lógica de um loop 
+\emph on
+while
+\emph default
+ expresso na forma de um grafo orientado.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um loop vai possuir uma estrutura de execução conforme visto na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LógicaDeLoop"
+
+\end_inset
+
+.
+ A partir dessa lógica básica, existirão três tipos de estruturas de repetição:
+ for, while, do-while.
+\end_layout
+
+\begin_layout Subsection
+While
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/while.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:While"
+
+\end_inset
+
+Exemplo de utilização 
+\emph on
+while.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um loop que executa comandos enquanto a condição básica for verdade.
+ A sintaxe é:
+\end_layout
+
+\begin_layout Standard
+\align center
+while (condição) { comandos; }
+\end_layout
+
+\begin_layout Standard
+Os 
+\emph on
+comandos 
+\emph default
+podem ser um ou mais comandos e inclusive blocos de comandos.
+ A condição é qualquer expressão que retorne um valor inteiro, seja ele
+ zero (falso) ou não zero (verdade).
+ Nota-se que um loop 
+\emph on
+while 
+\emph default
+pode jamais rodar, uma vez que se a condição não for verdade na primeira
+ execução, o loop sequer executará seu bloco de código, conforme visto na
+ figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LógicaDeLoop"
+
+\end_inset
+
+.
+ No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:While"
+
+\end_inset
+
+, a saída esperada será:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a: 10
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 11
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 12
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 13
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 14
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 15
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 16
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 17
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 18
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 19
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Do-while
+\end_layout
+
+\begin_layout Standard
+Ao contrário o while que testa o loop antes de executar a iteração, o 
+\emph on
+do-while
+\emph default
+ executa o corpo do loop antes mesmo de fazer qualquer checagem condicional.
+ A checagem será feita somente após o último comando de cada loop.
+ Este efeito pode ser observado na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LógicaDoWhile"
+
+\end_inset
+
+, a qual demonstra a lógica de execução do 
+\emph on
+do-while
+\emph default
+.
+ A sintaxe é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+do 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	códigos;
+\end_layout
+
+\begin_layout Plain Layout
+
+} while (condição);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Gen/Image/DoWhile.eps
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LógicaDoWhile"
+
+\end_inset
+
+Estrutura lógica de um loop 
+\emph on
+do-while
+\emph default
+ expresso na forma de um grafo orientado.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/do_while.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:DoWhile"
+
+\end_inset
+
+Exemplo de utilização 
+\emph on
+do-while.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nota-se que a condição aparece no final do loop então se a condição for
+ verdadeira, o fluxo retorna ao começo do corpo e continua a execução até
+ que a condição seja falsa.
+ No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:DoWhile"
+
+\end_inset
+
+, vê-se um exemplo de utilização do do-while.
+ Nesse caso, o resultado é idêntico aquele obtido com o while, isto é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a: 10
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 11
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 12
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 13
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 14
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 15
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 16
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 17
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 18
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 19
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+For
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:For"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Gen/Image/For.eps
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LógicaDoFor"
+
+\end_inset
+
+Estrutura lógica de um loop 
+\emph on
+for
+\emph default
+ expresso na forma de um grafo orientado.
+ A estrutura é mais complexa em função do 
+\emph on
+início
+\emph default
+ e 
+\emph on
+incremento.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/for.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:For"
+
+\end_inset
+
+Exemplo de utilização 
+\emph on
+for
+\emph default
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O loop for é uma estrutura de repetição a qual permite que o loop seja escrito
+ de maneira a executar um número específico de vezes pela sua sintaxe.
+ É ela:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+for (iníncio; condição; incremento)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	código;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O fluxo de controle do loop, visto na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:LógicaDoFor"
+
+\end_inset
+
+, funciona da seguinte forma: primeiramente, o passo inicial é executado,
+ somente uma vez.
+ Esse passo permite a declaração e controle das variáveis de loop, que inclusive
+ podem ser usadas nas outras expressões do loop, como a 
+\emph on
+condição 
+\emph default
+e o 
+\emph on
+incremento
+\emph default
+.
+ Essa expressão é opcional e pode ser omitida, mantendo-se apenas o ';'.
+ Depois, a condição é validade e se verdade, executa-se o corpo do for,
+ com todas as declarações em sequência.
+ Se falso, o controle vai direto para o primeiro comando após o loop.
+\end_layout
+
+\begin_layout Standard
+Ao término da execução do corpo da iteração, o condicional é checado novamente
+ e, se verdade, ocorre o 
+\emph on
+incremento
+\emph default
+.
+ Esse último, permite que quaisquer variáveis do loop sejam controladas
+ e pode, assim como o 
+\emph on
+início
+\emph default
+, ser omitido.
+ Nesse caso, não é necessário deixar um ';', mas cada declaração desse bloco
+ devem ser separadas por ';', como de costume.
+ Quando a condição torna-se falsa, o loop termina e pula-se para próxima
+ instrução após o loop.
+\end_layout
+
+\begin_layout Standard
+No algorimo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:For"
+
+\end_inset
+
+, tem-se o mesmo resultado obtido para os 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:DoWhile"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:While"
+
+\end_inset
+
+.
+ A impressão da variável a de 10 a 19:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a: 10
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 11
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 12
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 13
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 14
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 15
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 16
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 17
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 18
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 19
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+break
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Break"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A instrução e palavra-chave 
+\emph on
+break 
+\emph default
+podeser usado em dois contextos bem definidos:
+\end_layout
+
+\begin_layout Enumerate
+Dentro de um loop, causando o término imediato do mesmo e indo para a próxima
+ instrução depois do fim do loop.
+\end_layout
+
+\begin_layout Enumerate
+Terminar um 
+\emph on
+case
+\emph default
+, específico, no switch-case, visto na seção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:SwitchCase"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/break.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Break"
+
+\end_inset
+
+Exemplo de utilização 
+\emph on
+break
+\emph default
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se o loop relativo ao break for um loop 
+\emph on
+aninhado
+\emph default
+ (interno a outro), então somente a execução do mais interno será parada
+ e começará a execucão da próxima linha de código do loop externo logo após
+ do bloco de código referente ao loop aninhado.
+ Um exemplo de utilização do break pode ser visto no código 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Break"
+
+\end_inset
+
+, o resultado final da execução do loop é afetado, uma vez que o controle
+ não é mais o mesmo, fazendo com que o resultado da saída seja:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a: 10
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 11
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 12
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 13
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 14
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 15
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+continue
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/continue.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Continue"
+
+\end_inset
+
+Exemplo de utilização 
+\emph on
+continue
+\emph default
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O 
+\emph on
+continue
+\emph default
+ é uma instrução que funciona de maneira similar ao 
+\emph on
+break
+\emph default
+, da seção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Break"
+
+\end_inset
+
+.
+ Porém, ao invés de forçar o término do loop ele força que o loop vá para
+ a próxima iteração, pulando todo o código referente aos demais blocos de
+ execução até então.
+ Para o loop 
+\emph on
+for
+\emph default
+, seção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:For"
+
+\end_inset
+
+, o continue faz com que o teste condicional e de incremento sejam executados,
+ enquanto para os 
+\emph on
+while 
+\emph default
+e 
+\emph on
+do-while
+\emph default
+, ele passa o controle do programa para os testes condicionais.
+ 
+\end_layout
+
+\begin_layout Standard
+No código do algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Continue"
+
+\end_inset
+
+, temos a instrução condicional checando se o valor de a é igual a 15, nesse
+ caso, pula-se a iteração, adicionando um ao valor de a e usando o continue,
+ pulando os comandos abaixo (incluindo o printf).
+ Por isso, o resultado final, na saída de console, fica:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a: 10
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 11
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 12
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 13
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 14
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 16
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 17
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 18
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 19
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The continue statement in C programming language works somewhat like the
+ break statement.
+ Instead of forcing termination, however, continue forces the next iteration
+ of the loop to take place, skipping any code in between.
+\end_layout
+
+\begin_layout Plain Layout
+For the for loop, continue statement causes the conditional test and increment
+ portions of the loop to execute.
+ For the while and do...while loops, continue statement causes the program
+ control passes to the conditional tests.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+goto
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/goto.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:GoTo"
+
+\end_inset
+
+Exemplo de utilização 
+\emph on
+goto
+\emph default
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pode-se existir uma situação em que faz-se necessário a utilização de uma
+ quebra de fluxo incondicional, o chamado 
+\emph on
+pulo.
+ 
+\emph default
+Nesse caso, pode-se utilizar o 
+\emph on
+goto
+\emph default
+.
+ Porém, por motivos de entendimento e de manutenção da legibilidade de código,
+ essa instrução deve-se ser utilizada com muita cautela.
+ Uma grande sequência de pulos pode tornar o programa simplesmente muito
+ difícil de compreender e dar manutenção! Além disso, qualquer programa
+ que use um goto pode ser escrito por outras instruções equivalentes e portanto
+ não usá-lo.
+\end_layout
+
+\begin_layout Standard
+No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:GoTo"
+
+\end_inset
+
+, utiliza-se a label LOOP para referenciar o começo do loop.
+ Checa-se o caso da variável a ser 15 e pula-se a iteração pela utilização
+ do goto para a label.
+ Isso é, tem-se o mesmo resultado que o obtido pela utilização do 
+\emph on
+continue
+\emph default
+, do algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Continue"
+
+\end_inset
+
+.
+ O resultado fica portanto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a: 10
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 11
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 12
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 13
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 14
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 16
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 17
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 18
+\end_layout
+
+\begin_layout Plain Layout
+
+a: 19
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A goto statement in C programming language provides an unconditional jump
+ from the goto to a labeled statement in the same function.
+\end_layout
+
+\begin_layout Plain Layout
+NOTE: Use of goto statement is highly discouraged in any programming language
+ because it makes difficult to trace the control flow of a program, making
+ the program hard to understand and hard to modify.
+ Any program that uses a goto can be rewritten so that it doesn't need the
+ goto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Arrays
+\end_layout
+
+\begin_layout Standard
+No C, tem-se uma estrutura de dados básica da linguagem, chamada de 
+\emph on
+array
+\emph default
+ ou 
+\emph on
+arranjos
+\emph default
+.
+ Nela pode-se guardar uma coleção de tamanho fixo, sequencial, de elementos
+ do mesmo tipo.
+ O array é usado para guardar uma coleção de dados, mas costuma ser mais
+ fácil pensar em array como uma maneira de guardar um conjunto de variáveis
+ do mesmo tipo.
+ Isto é, ao invés de utlizar-se variáveis como 
+\emph on
+numero0, numero1, ...., numeroN
+\emph default
+, declara-se somente uma variável e utiliza-se 
+\emph on
+numeros 
+\emph default
+por meio de um índice sequencial de acesso para representar individualmente
+ as variáveis.
+ Fica assim: 
+\emph on
+numero[0], numero[1], ..., numero[N]
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Todos os arrays consistem em elementos contíguos (contínuos e íntegros)
+ em endereços de memória.
+ O menor endereço corresponde ao primeiro elemento enquanto o endereço de
+ memória mais alto corresponde ao último endereço:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="6">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Índice
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Acesso
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+numero[0]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+numero[1]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+numero[2]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+numero[N]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Declaração
+\end_layout
+
+\begin_layout Standard
+Para declarar-se um array basta usar a sintaxe:
+\end_layout
+
+\begin_layout Standard
+\align center
+tipo nomeDoArray[tamanhoDoArray];
+\end_layout
+
+\begin_layout Standard
+Isso funciona para o chamado array unidimensional.
+ O 
+\emph on
+tamanhoDoArray
+\emph default
+ deve ser um inteiro positivo constante maior que 0.
+ O 
+\emph on
+tipo 
+\emph default
+pode ser qualquer um válido no C.
+ Como exemplo concreto, imagine que seja declarado um array de tamanho 10
+ de double, chamado balancete.
+ Em código:
+\end_layout
+
+\begin_layout Standard
+\align center
+double balancete[10];
+\end_layout
+
+\begin_layout Standard
+A partir dessa instrução, 
+\emph on
+balancete 
+\emph default
+será uma variável acessível no escopo e que pode armazenar até 10 variáveis
+ doubles.
+\end_layout
+
+\begin_layout Subsection
+Inicialização
+\end_layout
+
+\begin_layout Standard
+O array pode ser inicializado numa só instrução:
+\end_layout
+
+\begin_layout Standard
+\align center
+double balancete[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
+\end_layout
+
+\begin_layout Standard
+Na inicialização o número de valores entre as chaves não podem ser maior
+ do que o número de elementos declarados como tamanho, entre os colchetes.
+ Se o tamanho do array for omitido, um de tamanho grande o suficiente para
+ armazenar as variáveis declaradas será criado.
+ Assim, escreve-se:
+\end_layout
+
+\begin_layout Standard
+\align center
+double balancete[] = {1000.0, 2.0, 3.4, 7.0, 50.0};
+\end_layout
+
+\begin_layout Standard
+Nesse caso, os dois arrays serão idênticos.
+ Uma outra possibilidade, é definir-se somente um elemento do array:
+\end_layout
+
+\begin_layout Standard
+\align center
+balancete[4] = 52.0;
+\end_layout
+
+\begin_layout Standard
+A atribuição acima fará com que o quinto elemento do array 
+\emph on
+balancete 
+\emph default
+receba o valor 50.0.
+ Todos os arrays tem 0 como seu primeiro índice e seu tamanho total decrescido
+ de 1 como o último.
+ Seguindo a representação anterior, após o comando te atribuição ao índice
+ 4, o array fica:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="6">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Índice
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+52.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Acesso
+\end_layout
+
+\begin_layout Standard
+Um elemento é acessado por meio do seu índice referente e o nome da variável
+ array.
+ Isso é feito utilizando-se o nome do array e o índice entre colchetes logo
+ após.
+ Por exemplo:
+\end_layout
+
+\begin_layout Standard
+\align center
+double valor = balancete[9];
+\end_layout
+
+\begin_layout Standard
+Essa instrução irá obter o décimo elemento do array 
+\emph on
+balancete 
+\emph default
+e atribuir a variável double declarada na instrução, denominada 
+\emph on
+valor
+\emph default
+.
+ Um exemplo mais complexo pode ser observado no algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Array"
+
+\end_inset
+
+.
+ Nesse caso, o array é acessado em todas as suas posições, sendo que cada
+ uma delas receberá a soma de seu índice mais 128.
+ No final, todos os valores do array são impressos, um por linha, com 
+\emph on
+printf
+\emph default
+.
+ O resultado no console é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/array.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Array"
+
+\end_inset
+
+Exemplo de iteração sobre um 
+\emph on
+array
+\emph default
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+n[0] = 128
+\end_layout
+
+\begin_layout Plain Layout
+
+n[1] = 129
+\end_layout
+
+\begin_layout Plain Layout
+
+n[2] = 130
+\end_layout
+
+\begin_layout Plain Layout
+
+n[3] = 131
+\end_layout
+
+\begin_layout Plain Layout
+
+n[4] = 132
+\end_layout
+
+\begin_layout Plain Layout
+
+n[5] = 133
+\end_layout
+
+\begin_layout Plain Layout
+
+n[6] = 134
+\end_layout
+
+\begin_layout Plain Layout
+
+n[7] = 135
+\end_layout
+
+\begin_layout Plain Layout
+
+n[8] = 136
+\end_layout
+
+\begin_layout Plain Layout
+
+n[9] = 137
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Arrays n-dimensionais
+\end_layout
+
+\begin_layout Standard
+C aceita arrays de múltiplas dimensões.
+ Em sua forma geral, declara-se eles da seguinte forma:
+\end_layout
+
+\begin_layout Standard
+\align center
+tipo nomeDoArray[tamanho1][tamanho2]...[tamanhoN];
+\end_layout
+
+\begin_layout Standard
+Por exemplo, a declaração de um array quadridimensional seria algo como:
+\end_layout
+
+\begin_layout Standard
+\align center
+int quadri[10][2][5][18];
+\end_layout
+
+\begin_layout Standard
+Para acessá-los, deve-se usar o número de índices entre colchetes referentes
+ a sua dimensionalidade.
+\end_layout
+
+\begin_layout Section
+Arrays bi-dimensionais
+\end_layout
+
+\begin_layout Standard
+A forma mais simple de array multi-dimensional é a bi-dimensional.
+ Um array bi-dimensional é, em sua essência, uma lista de arrays uni-dimensionai
+s.
+ Para declarar-se um array desse tipo, deve-se usar duas constantes distintas
+ de tamanho, as quais podem inclusive assumir valores idênticos:
+\end_layout
+
+\begin_layout Standard
+\align center
+tipo nomeDoArray[x][y];
+\end_layout
+
+\begin_layout Subsection
+Inicialização
+\end_layout
+
+\begin_layout Standard
+Qualquer tipo válido para um array de uma dimensão será valido para o bi-dimensi
+onal.
+ Pode-se pensar nele como uma tabela com 
+\emph on
+x
+\emph default
+ linhas e 
+\emph on
+y
+\emph default
+ colunas.
+ Assim, essa é uma estrutura natural para tudo que possa ser representado
+ por tabelas e matrizes.
+ Um array com 3 linhas e 4 colunas seria algo como:
+\end_layout
+
+\begin_layout Standard
+\align center
+int a[3][4];
+\end_layout
+
+\begin_layout Standard
+A inicialização desse array, como no caso de somente uma dimensão, será
+ também por meio de valores entre chaves.
+ Assim, pode-se inicializar 
+\emph on
+a
+\emph default
+ como um array de arrays, ou seja:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int a[3][4] = { 
+\end_layout
+
+\begin_layout Plain Layout
+
+	{0, 1, 2, 3} , /* linha 0 */
+\end_layout
+
+\begin_layout Plain Layout
+
+	{4, 5, 6, 7} , /* linha 1 */
+\end_layout
+
+\begin_layout Plain Layout
+
+	{8, 9, 10, 11} /* linha 2 */
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As chaves internas são extras, ou seja, opcionais.
+ Elas estão ali somente para facilitar o entendimento do que está acontecendo.
+ Essa mesma inicialização poderia dar-se da seguinte forma, obtendo-se o
+ mesmo resultado:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int a[3][4] = {0,1,2,3,4,5,6,7,8,9,10,11};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Acesso
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/bi_array.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:BiArray"
+
+\end_inset
+
+Exemplo de iteração sobre um 
+\emph on
+array
+\emph default
+ 
+\emph on
+bidimensional
+\emph default
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uma variável de um array 2-dimensional pode ser acessada pela utilização
+ de índices subescritos, i.
+ e., índice de linha e de coluna em sequência.
+ Por exemplo:
+\end_layout
+
+\begin_layout Standard
+\align center
+int valor = a[10][24];
+\end_layout
+
+\begin_layout Standard
+Assim, o elemento da linha 10, coluna 24 do array seria atribuído a variável
+ valor.
+ No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:BiArray"
+
+\end_inset
+
+, tem-se a inicialização e iteração de um array.
+ A saída do programa é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a[0][0] = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+a[0][1] = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+a[1][0] = 1
+\end_layout
+
+\begin_layout Plain Layout
+
+a[1][1] = 2
+\end_layout
+
+\begin_layout Plain Layout
+
+a[2][0] = 2
+\end_layout
+
+\begin_layout Plain Layout
+
+a[2][1] = 4
+\end_layout
+
+\begin_layout Plain Layout
+
+a[3][0] = 3
+\end_layout
+
+\begin_layout Plain Layout
+
+a[3][1] = 6
+\end_layout
+
+\begin_layout Plain Layout
+
+a[4][0] = 4
+\end_layout
+
+\begin_layout Plain Layout
+
+a[4][1] = 8
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Funções
+\end_layout
+
+\begin_layout Standard
+Uma função em C é um grupo de instruções que fazem algum tipo de tarefa
+ ou 
+\emph on
+rotina
+\emph default
+.
+ Por isso, elas também são chamadas de rotinas.
+ Mesmo o programa C mais trivial sempre terá pelo menos uma função, a 
+\emph on
+main
+\emph default
+.
+ Mesmo programas triviais podem definir várias funções.
+ A sintaxe para a definição de função é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+tipo_de_retorno nome_da_funcao(lista_de_parametros) 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	codigo_da_funcao;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+tipo_de_retorno:
+\series default
+ Uma função pode ou não retornar um valor.
+ O tipo_de_retorno é um valor retornado pela função e pode assumir qualquer
+ tipo de dado válido em C o qual deve ser retornado usando a palavra-chave
+ 
+\emph on
+return.
+ 
+\emph default
+Uma função que não retorne nenhum valor deve retornar o tipo 
+\emph on
+void
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+nome_da_funcao:
+\series default
+ Function Name: This is the actual name of the function.
+ The function name and the parameter list together constitute the function
+ signature.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+lista_de_parametros:
+\series default
+ Um parâmetro é um espaço reservado.
+ Quando uma função é invocada, passa-se o valor por parâmetro.
+ O valor passado é o valor que o parâmetro assume na função.
+ A esse valor dá-se o nome de 
+\emph on
+argumento
+\emph default
+ da função.
+ A lista de parâmetros se refere ao tipo, ordem e número de parâmetros que
+ será passada a função.
+ Parâmetros são opcionais e separados por vírgula.
+ Uma função pode não ter nenhum parâmetro.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+codigo_da_funcao: 
+\series default
+O corpo da função contém todas as declarações que definem o que a função
+ faz.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/maximo.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Maximo"
+
+\end_inset
+
+ Função que calcula o valor 
+\emph on
+máximo
+\emph default
+ entre dois números inteiros.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Declaração
+\end_layout
+
+\begin_layout Standard
+A declaração de uma função diz ao compilador como chamar uma função.
+ O corpo da função pode ser definido separadamente.
+ Assim, a declaração pode estar em um arquivo de 
+\emph on
+cabeçalho
+\emph default
+ enquanto o corpo está em um código fonte, por exemplo.
+ Isso é considerada uma ótima prática de programação C.
+ Uma declaração tem as seguintes partes:
+\end_layout
+
+\begin_layout Standard
+\align center
+tipo_de_retorno nome_da_funcao(lista_de_parametros);
+\end_layout
+
+\begin_layout Standard
+Levando-se em consideração o algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Maximo"
+
+\end_inset
+
+, a definição da função 
+\emph on
+maximo 
+\emph default
+poderia ser:
+\end_layout
+
+\begin_layout Standard
+\align center
+int maximo(int n1, int n2);
+\end_layout
+
+\begin_layout Standard
+Como na declaração os nomes de parâmetros não são importantes, mas só seus
+ tipos o são, a seguinte declaração possui o mesmo efeito também:
+\end_layout
+
+\begin_layout Standard
+\align center
+int maximo(int, int);
+\end_layout
+
+\begin_layout Standard
+Toda vez que você define uma função em um arquivo fonte e quer utilizá-lo
+ em outro, a função deve ser declarada, normalmente num 
+\emph on
+cabeçalho
+\emph default
+.
+ Também, é possível colocar a declaração logo acima da função a qual a está
+ chamando.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/maximo_main.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:MaximoMain"
+
+\end_inset
+
+ Main que utiliza a função máximo, definida no algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Maximo"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Chamada
+\end_layout
+
+\begin_layout Standard
+Para usar uma função, é necessário chamá-la de forma a ela fazer a tarefa
+ para qual ela foi definida.
+ Uma função, ao ser chamada, executará suas instruções e quando uma palavra-chav
+e return for executada ou quando chegar no final de seu escopo, o controle
+ da execução retorna para aquela que a chamou.
+\end_layout
+
+\begin_layout Standard
+Para chamar uma função, deve-se simplesmente passar todos os parâmetros
+ requeridos junto ao nome da mesma e se a função retornar um valor é possível
+ armazéna-lo e utilizá-lo como qualquer variável.
+ No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:MaximoMain"
+
+\end_inset
+
+ vemos um exemplo desse caso, uma vez que a função máximo é chamada e usada
+ no printf como se fosse uma variável no escopo da expressão.
+ O resultado final impresso no console será:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Maior: 200 
+\end_layout
+
+\begin_layout Plain Layout
+
+Maior: 200
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Argumentos
+\end_layout
+
+\begin_layout Standard
+Se uma função irá usar arguemtnso, deve-se declarar as variáveis (nomes)
+ as quais aceitem valores do tipo definido como argumento.
+ Essas variáveis são os chamados parâmetros formais da função e podem ser
+ usados no escopo como qualquer outra variável, porém não podem ser acessados
+ fora do escopo da função, isto é, são destruídos na saída.
+ Enquanto chama-se uma função há duas maneiras as quais pode-se passar valores:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+valor: 
+\series default
+Este método copia o valor de um argumento e passa como parâmetro formal
+ a função.
+ Sendo assim, as mudanças a esse parâmetro dentro da função em nada influenciam
+ o valor original, passado por parâmetro, uma vez que o mesmo foi copiado
+ para um outro endereço de memória.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+referência: 
+\series default
+Com esse método, copia-se o endereço de memória (ponteiro) do parâmetro
+ formal ao invés de seu valor.
+ Dentro da função, o endereço é usado para acessar o argumento passado na
+ chamada.
+ Isso significa que mudanças ao argumento, dentro da função, afetam o valor
+ original passado por referência.
+\end_layout
+
+\begin_layout Standard
+Por padrão, o C usa a 
+\emph on
+chamada por valor 
+\emph default
+para passar argumentos.
+ Em geral, isso significa que o código dentro de uma função não pode alterar
+ os argumentos usados na chamada de função, como na chamada do 
+\emph on
+máximo
+\emph default
+, no algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:MaximoMain"
+
+\end_inset
+
+.
+ Isso será discutido novamente ao falar-se de ponteiros.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Section
+Union
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ponteiros
+\end_layout
+
+\begin_layout Standard
+Algumas tarefas de programação vão exigir a necessidade de trabalhar-se
+ com endereços de memória ao invés de variáveis em si.
+ Isso acontece no caso de alocação dinâmica de memória (
+\emph on
+malloc/free
+\emph default
+), strings e algumas outras estruturas que podem ser consideradas básicas
+ na linguagem C.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/imprimir_ponteiro.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:ImprimirPonteiro"
+
+\end_inset
+
+ Impressão de endereços de memória das variáveis 
+\emph on
+var1 
+\emph default
+e 
+\emph on
+var2
+\emph default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Toda variável está associada a uma região de memória e toda região de memória
+ tem um endereço.
+ O endereço de uma variável qualquer pode ser acessado por meio do operador
+ '&', denotando um endereço de memória.
+ Esse endereço é o ponteiro de uma variável.
+ No código 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:ImprimirPonteiro"
+
+\end_inset
+
+, nota-se a utilização do operador & o qual obtém o ponteiro da variável.
+ O resultado para esse algoritmo será um endereço do tipo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Endereco de memoria var1: 503bc3e4
+\end_layout
+
+\begin_layout Plain Layout
+
+Endereco de memoria var2: 503bc3ee
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O valor em si pode mudar de acordo com a execução, pois nem sempre será
+ a mesma região de memória alocada para as variáveis, porém sempre apontarão
+ para o endereço de onde estão as variáveis...
+ isso pode ser visto na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PonteiroFoo"
+
+\end_inset
+
+.
+ O ponteiro, tipo int* e o valor tipo int vão estar em duas regiões distintas
+ de memória.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Image/Ponteiro.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PonteiroFoo"
+
+\end_inset
+
+Esquematização de como funciona uma variável ponteiro.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Declaração
+\end_layout
+
+\begin_layout Standard
+Um ponteiro é uma variável que é o endereço de uma outra variável, isto
+ é, provê o acesso direto a um local na memória.
+ Como qualquer outra variável ou constante, deve também ser declarada e
+ armazenada em uma variável.
+ A sintaxe é:
+\end_layout
+
+\begin_layout Standard
+\align center
+tipo *nome_da_variavel;
+\end_layout
+
+\begin_layout Standard
+O 
+\emph on
+tipo
+\emph default
+ deve ser um válido e o nome da variável é o nome que será utilizado para
+ acessar o ponteiro.
+ O operador asterisco, '*', utilizado para declarar o ponteiro é também
+ utilizado para multiplicação, porém o compilador entende o primeiro como
+ um ponteiro pelo contexto que ele se encontra.
+ As seguintes declarações de ponteiro são válidas:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+/* ponteiro para um inteiro */
+\end_layout
+
+\begin_layout Plain Layout
+
+int *ip; 
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ponteiro para um double */
+\end_layout
+
+\begin_layout Plain Layout
+
+double *dp; 
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ponteiro para um float */
+\end_layout
+
+\begin_layout Plain Layout
+
+float *fp; 
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ponteiro para um caracter (string) */
+\end_layout
+
+\begin_layout Plain Layout
+
+char *ch;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nota-se que o tipo ponteiro, '*', está junto a declaração do nome da variável.
+ Se for necessário declarar duas variáveis na mesma linha, é perfeitamente
+ possível fazê-lo, da seguinte forma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int *ptr_a, *ptr_b; 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Não há nada de inválido com essa declaração! Também, C permite a utilização
+ de parênteses ao redor do nome de uma variável, assim como asterisco:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int ((nao_sou_ponteiro)), (*ptr_a), (((*ptr_b))); 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Essa sintaxe não apresenta utilidade, e somente é utilizada na declaração
+ de ponteiros de funções.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO - visto na seção X
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/ponteiro_int.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:PonteiroInt"
+
+\end_inset
+
+ Exemplo de utilização de uma variável 
+\emph on
+ponteiro
+\emph default
+ int.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Atribuição e dereferenciação
+\end_layout
+
+\begin_layout Standard
+É natural fazer a seguinte pergunta de como colocar um valor de endereço
+ de memória 
+\emph on
+int 
+\emph default
+em uma variável ponteiro como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int* ptr;
+\end_layout
+
+\begin_layout Plain Layout
+
+ptr = 21;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Porém, essa definição está errada.
+ Qualquer definição a uma variável ponteiro irá mudar o endereço para o
+ qual ela está apontando.
+ Nesse exemplo, a posição 42 de memória seria para onde o ponteiro estaria
+ apontando, após a execução dessa instrução.
+ Mas não se sabe se esse endereço aponta realmente para uma região válida
+ ou para algo e provavelmente não irá.
+ Tentar acessar esse endereço deve provavelmente resultar em uma falha de
+ segmentação (erro de acesso a memória inválida).
+ Alguns compiladores, vão inclusive emitir avisos (
+\emph on
+warnings)
+\emph default
+ ao perceber a utilização errada do ponteiro.
+ 
+\end_layout
+
+\begin_layout Standard
+Como se faz para acessar um ponteiro? Dereferenciação: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int valor = *ptr;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nessa declaração, o operador de dereferência, '*', o qual não deve ser confundid
+o com o operador de multiplicação, serve para obter-se o valor referente
+ ao endereço.
+ Essa operação é chamada de 
+\emph on
+leitura
+\emph default
+ ou 
+\emph on
+carregamento
+\emph default
+ do ponteiro.
+\end_layout
+
+\begin_layout Standard
+É também possível escrever a operação de dereferênciação como uma expressão
+ desse tipo, isso é uma atribuição de dereferência:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+*ptr = 21
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Essa operação é também chamada de 
+\emph on
+escrita
+\emph default
+ ou 
+\emph on
+armazenamento
+\emph default
+ da variável apontada pelo ponteiro.
+\end_layout
+
+\begin_layout Subsection
+Acesso 
+\end_layout
+
+\begin_layout Standard
+O valor desses ponteiros é sempre um valor de endereço de memória, o qual
+ pode ser representado por um número hexadecimal.
+ A única diferença ponteiros de diversos tipos é o tipo do dado para o qual
+ ele aponta.
+ A grosso modo, os ponteiros são todos tipos inteiros, com valor máximo
+ dependente da plataforma na qual se está rodando.
+ 
+\end_layout
+
+\begin_layout Standard
+Existem algumas operações importantes, usadas com frequência, que facilitam
+ a utilização de ponteiros.
+ São elas:
+\end_layout
+
+\begin_layout Itemize
+A definição de uma variável ponteiro, conforme já demonstrada.
+\end_layout
+
+\begin_layout Itemize
+A atribuição de uma variável ponteiro e;
+\end_layout
+
+\begin_layout Itemize
+O acesso ao endereço apontado por um ponteiro.
+\end_layout
+
+\begin_layout Standard
+Esse último, é feito pela utilização do operador unário *, o qual retorna
+ o valor da variável alocada pelo endereço de memória.
+ No código 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:PonteiroInt"
+
+\end_inset
+
+, fica evidente a utilização do operador para obter-se o conteúdo da variável
+ 
+\emph on
+valor
+\emph default
+.
+ Uma possível saída para esse código seria:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Endereco de valor (&): 5a37a408
+\end_layout
+
+\begin_layout Plain Layout
+
+ip: 5a37a408
+\end_layout
+
+\begin_layout Plain Layout
+
+valor de *ip: 13
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Novamente, os endereços de memória são meramente ilustrativos, já que podem
+ ser diferentes em cada execução.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Subsection
+Memória e arrays
+\end_layout
+
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Ponteiro NULL
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/ponteiro_null.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:PonteiroNull"
+
+\end_inset
+
+ Exemplo de utilização do 
+\emph on
+NULL
+\emph default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+É sempre uma boa prática, ao inicializar um ponteiro, usar o valor NULL.
+ Esse valor significa que aquele ponteiro ainda não tem um valor exato,
+ ou seja, não foi atribuído.
+ Um ponteiro o qual tenha sido atribuído o valor NULL é denominado um 
+\emph on
+ponteiro nulo
+\emph default
+.
+ Esse valor vem definido na biblioteca padrão C.
+\end_layout
+
+\begin_layout Standard
+No código 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:PonteiroNull"
+
+\end_inset
+
+, tem-se a impressão do valor de um ponteiro NULL.
+ O resultado será, normalmente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ptr: 0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mas por que será que o ponteiro NULL é definido como 0? Isso acontece porque
+ a região 0 da memória é tipicamente reservada para o sistema operacional
+ e não está acessível a programas de usuário, ou seja, qualquer aplicação
+ rodando no sistema.
+ Esse valor sinaliza que o ponteiro está apontando para nada e também possibilit
+a a checagem de inicialização ou não do ponteiro.
+ Exemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ /* Verdade, se o ponteiro não for NULL */
+\end_layout
+
+\begin_layout Plain Layout
+
+if (ptr)
+\end_layout
+
+\begin_layout Plain Layout
+
+/* Verdade, se o ponteiro for NULL */
+\end_layout
+
+\begin_layout Plain Layout
+
+if (!ptr)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ainda assim, esse tipo de checagem é desencorajada, uma vez que o mais correto
+ é tornar evidente o que se está testando, de modo a não possibilitar um
+ erro, caso o valor do NULL na plataforma seja diferente de 0:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ /* Verdade, se o ponteiro não for NULL */
+\end_layout
+
+\begin_layout Plain Layout
+
+if (ptr != NULL)
+\end_layout
+
+\begin_layout Plain Layout
+
+/* Verdade, se o ponteiro for NULL */
+\end_layout
+
+\begin_layout Plain Layout
+
+if (ptr == NULL)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Múltipla indireção
+\end_layout
+
+\begin_layout Standard
+Um ponteiro apresenta um nível de indireção em relação a variável que o
+ representa, porém é possível obter o endereço para um endereço de memória
+ o qual aponta para uma variável e assim por diante.
+ Exemplo: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int a = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+int *b = &a;
+\end_layout
+
+\begin_layout Plain Layout
+
+int **c = &b;
+\end_layout
+
+\begin_layout Plain Layout
+
+int ***d = &c;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tendo esse exemplo como base, as seguintes constataçõe são verdade:
+\end_layout
+
+\begin_layout Itemize
+*d == c; Dereferenciando um int*** obtem-se um int**
+\end_layout
+
+\begin_layout Itemize
+**d == *c == b; Dereferenciando um int*** duas vezes e um int** uma vez,
+ obtem-se em ambos os casos um int*
+\end_layout
+
+\begin_layout Itemize
+***d == **c == *b == a == 3; Dereferenciando um int*** três vezes e um int**
+ duas vezes, e um int* uma vez, obtem-se nos três casos um valor de 
+\emph on
+a
+\emph default
+ que é 1
+\end_layout
+
+\begin_layout Subsection
+Contantes (const)
+\end_layout
+
+\begin_layout Standard
+A palavra chave 
+\emph on
+const
+\emph default
+ pode ser usada para identificar um ponteiro constante.
+ As seguintes declarações são equivalentes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+const int *ptr_a;
+\end_layout
+
+\begin_layout Plain Layout
+
+int const *ptr_a;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Porém, isso não acontece para as seguintes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int const *ptr_a;
+\end_layout
+
+\begin_layout Plain Layout
+
+int *const ptr_b;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No primeiro caso, o valor apontado pelo ponteiro é um valor constante, ou
+ seja uma operação do tipo *ptr_a = 10 é inválida.
+ No segundo, o ponteiro em si é constante e portanto imutável.
+ O valor para o qual ele aponta pode ser modificado livremente, porém jamais
+ será possível atribuir um valor diferente ou mesmo usar um operador de
+ incremento e decremento no próprio ponteiro.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Subsection
+Ponteiros de função
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:PonteiroDeFuncao"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Strings
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/strlen_ptr.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:StrlenPtrImpl"
+
+\end_inset
+
+Implementação possível para 
+\emph on
+strlen
+\emph default
+ usando ponteiro em C.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/strlen_for.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:StrlenForImpl"
+
+\end_inset
+
+Implementação possível para 
+\emph on
+strlen
+\emph default
+ usando 
+\emph on
+for
+\emph default
+ em C.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uma string em C é um array de caracteres, e portanto, um ponteiro para um
+ conjunto de elementos.
+ Isso mesmo, uma string é também um ponteiro, nesse caso, para 
+\emph on
+char
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+O conceito por trás da string em C é abstrato, uma vez que não há um tipo
+ nativo string.
+ São somente arrays de caracteres.
+ Exemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},showstringspaces=false,tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+char[] string = "Sou uma string no C";
+\end_layout
+
+\end_inset
+
+Esse array tem 20 bytes ou 20 
+\emph on
+char
+\emph default
+: 19 para os caracteres "Sou uma String no C" e mais um caracter, que é
+ o caracter que sinaliza o final de uma string, o '
+\backslash
+0'.
+ Em outras palavras, é assim que se sabe onde termina uma string qualquer.
+ Ou seja, o cálculo para obter-se o tamanho de uma string exige com que
+ se passe por todos seus caracteres procurando o '
+\backslash
+0'.
+\end_layout
+
+\begin_layout Standard
+Existe um idioma em C para trabalhar-se com strings, com literais conhecidos,
+ vistos na seção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:CaracteresEspeciais"
+
+\end_inset
+
+, e o suporte da biblioteca básica C por meio do cabeçalho "string.h".
+ Mas como há um cabeçalho se não há um tipo nativo string? Nesse caso, trabalha-
+se com ponteiros.
+ O algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:StrlenPtrImpl"
+
+\end_inset
+
+, demonstra uma possível implementação para 
+\emph on
+strlen
+\emph default
+.
+ Observa-se nesse trecho a utilização do operador de dereferência para acessar
+ a string o que demonstra que ela é, nada mais que um ponteiro para uma
+ cadeia de caracteres.
+ Uma outra possível implementação, dessa vez usando índices, pode ser vista
+ em 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:StrlenForImpl"
+
+\end_inset
+
+.
+ O resultado final será o mesmo.
+\end_layout
+
+\begin_layout Section
+Struct 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Struct"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Às vezes, enquanto programamos, precisamos passar como argumento para funções
+ e guardar várias vezes as mesmas informações.
+ Essas informações normalmente tem algum tipo de conexão semântica.
+ Por exemplo, é possível que queiramos representar em um programa de uma
+ determinada biblioteca, um livro.
+ O livro tem:
+\end_layout
+
+\begin_layout Itemize
+Número de Identificação
+\end_layout
+
+\begin_layout Itemize
+Título
+\end_layout
+
+\begin_layout Itemize
+Autor
+\end_layout
+
+\begin_layout Itemize
+Assunto
+\end_layout
+
+\begin_layout Itemize
+Editora
+\end_layout
+
+\begin_layout Standard
+Imagine que queiramos criar uma abstração livro no nosso código.
+ Isso pode ser feito usando uma 
+\emph on
+struct
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+Declaração e inicialização
+\end_layout
+
+\begin_layout Standard
+Ao definir-se uma estrutura, define-se também um novo tipo de dado com o
+ nome 
+\emph on
+nome_da_struct
+\emph default
+.
+ Para identificar as structs facilmente no código uma prática comum é usar
+ nomes maiúsculos para elas em notação camelo.
+ Assim 
+\emph on
+nome_da_struct 
+\emph default
+seria escrito como NomeDaStruct.
+ Exemplo de definição:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},showstringspaces=false,tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+struct NomeDaStruct
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	definicao_de_membro1;
+\end_layout
+
+\begin_layout Plain Layout
+
+	definicao_de_membro2;
+\end_layout
+
+\begin_layout Plain Layout
+
+	...
+\end_layout
+
+\begin_layout Plain Layout
+
+	definicao_de_membron;
+\end_layout
+
+\begin_layout Plain Layout
+
+} (nome_da_variavel); 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uma struct pode ter um número infinito de variáveis membros, ou seja, um
+ tamanho e número de variáveis arbitrários.
+ Essa flexibilidade é o que torna as structs um mecanismo bastante poderoso
+ na linguagem C.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/livro.h
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:LivroHeader"
+
+\end_inset
+
+Definição de uma 
+\emph on
+struct Livro
+\emph default
+ a qual poderá ser utilizada por quem incluir o cabeçalho.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O 
+\emph on
+nome_da_variavel 
+\emph default
+é opcional, uma vez que uma struct pode ser definida sem estar associada
+ a uma variável.
+ A partir do momento de sua definição, toda vez que aparecer 
+\emph on
+struct NomeDaStruct 
+\emph default
+no código, o tipo será remetido ao da declaração, ou seja da estrutura em
+ si e pode ser usado para criar variáveis desse tipo, por exemplo.
+\end_layout
+
+\begin_layout Standard
+No cabeçalho do código 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:LivroHeader"
+
+\end_inset
+
+, tem-se a definição de um 
+\emph on
+Livro
+\emph default
+, conforme descrito na seção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Struct"
+
+\end_inset
+
+.
+ Já no algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:LivroMain"
+
+\end_inset
+
+, tem-se a impressão de duas estruturas de livro, inicializadas por meio
+ do 
+\emph on
+strcpy
+\emph default
+, as strings são copiadas para o espaço reservado nas structs a elas.
+ O resultado da execução fica:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+====Livro====
+\end_layout
+
+\begin_layout Plain Layout
+
+Titulo: A Guerra dos Tronos
+\end_layout
+
+\begin_layout Plain Layout
+
+Autor: George R Martin
+\end_layout
+
+\begin_layout Plain Layout
+
+Assunto: Fantasia
+\end_layout
+
+\begin_layout Plain Layout
+
+Id: 3121
+\end_layout
+
+\begin_layout Plain Layout
+
+=============
+\end_layout
+
+\begin_layout Plain Layout
+
+====Livro====
+\end_layout
+
+\begin_layout Plain Layout
+
+Titulo: Senhor dos Aneis
+\end_layout
+
+\begin_layout Plain Layout
+
+Autor: J R R Tolkien
+\end_layout
+
+\begin_layout Plain Layout
+
+Assunto: Fantasia
+\end_layout
+
+\begin_layout Plain Layout
+
+Id: 95021
+\end_layout
+
+\begin_layout Plain Layout
+
+=============
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Observa-se que a função 
+\emph on
+imprimirLivro 
+\emph default
+recebe um ponteiro de struct por parâmetro, sendo assim possível usar um
+ ponteiro para struct.
+ Isso só é possível uma vez que uma struct definida vira, a partir de sua
+ declaração um novo tipo válido em C.
+ Passando a struct por ponteiro, evita-se a cópia de todos os seus elementos,
+ ou seja, copia-se somente um valor de endereço ao invés de copiar todas
+ as variáveis membros da struct.
+\end_layout
+
+\begin_layout Standard
+No caso do 
+\emph on
+Livro,
+\emph default
+ seria feito a cópia de todas as strings.
+ Se assumirmos a cópia de um elemento como um valor constante, teremos que
+ a cópia da struct 
+\emph on
+Livro 
+\emph default
+levaria 205 (51 de cada string mais um do identificador) unidades de custo,
+ enquanto a cópia do ponteiro custaria somente 1.
+\end_layout
+
+\begin_layout Subsection
+Ponteiros para structs
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/livro.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:LivroMain"
+
+\end_inset
+
+Exemplo de utilização da 
+\emph on
+struct Livro
+\emph default
+, conforme definida no código do algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:LivroHeader"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Em uma maneira similar a qualquer outro tipo de ponteiro, é possível utilizar
+ os ponteiros para structs.
+ Ao invés de acessar uma com o operador '.', quando acessa-se direto a variável
+ da struct, utiliza-se o operador de deferenciação e acesso, o '->'.
+ No exemplo do código 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:LivroMain"
+
+\end_inset
+
+, utiliza-se no corpo do 
+\emph on
+imprimirLivro 
+\emph default
+o ponteiro 
+\emph on
+livro 
+\emph default
+de tipo "struct Livro*".
+ Para acessar a variável 
+\emph on
+titulo 
+\emph default
+da struct no corpo da função, utiliza-se "livro->titulo".
+ Nota-se nesse caso a utilização do '->' como mecanismo de acesso ao ponteiro
+ da struct.
+ Esse operador derefeência a struct e acessa um valor nela ao mesmo tempo
+ e pode ser utilizado sempre que se tratar de um ponteiro para uma 
+\emph on
+struct
+\emph default
+ ou 
+\emph on
+union
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Section
+Union
+\end_layout
+
+\begin_layout Standard
+Uma union é um tipo especial de dados que permite armazenar múltiplos dados
+ numa mesma região de memória.
+ Você pode definir uma union com muitos membros, mas somente um membro contém
+ o valor por vez.
+ Assim, ao alterar um valor de um membro, altera-se o de todos.
+ Union é uma maneira eficiente de usar a mesma região de memória para múltiplos
+ propósitos.
+\end_layout
+
+\begin_layout Subsection
+Declaração
+\end_layout
+
+\begin_layout Standard
+Para definir-se uma union, utiliza-se uma sintaxe muito similar a de uma
+ struct, vista na seção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Struct"
+
+\end_inset
+
+.
+ Assim como na struct, a declaração de uma union define um novo tipo que
+ pode ser utilizado por todo o seu programa.
+ O formato de declaração é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,basicstyle={\small},showstringspaces=false,tabsize=4,extendedchars=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+union NomeDaStruct
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	definicao_de_membro1;
+\end_layout
+
+\begin_layout Plain Layout
+
+	definicao_de_membro2;
+\end_layout
+
+\begin_layout Plain Layout
+
+	...
+\end_layout
+
+\begin_layout Plain Layout
+
+	definicao_de_membron;
+\end_layout
+
+\begin_layout Plain Layout
+
+} (nome_da_variavel); 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O 
+\emph on
+nome_da_variavel 
+\emph default
+é opcional, uma vez que uma 
+\emph on
+struct
+\emph default
+ pode ser definida sem estar associada a uma variável.
+ A partir do momento de sua definição, toda vez que aparecer 
+\emph on
+struct NomeDaStruct 
+\emph default
+no código, o tipo será remetido ao da declaração, ou seja da estrutura em
+ si e pode ser usado para criar variáveis desse tipo, por exemplo.
+ No algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:UnionDados"
+
+\end_inset
+
+, define-se uma 
+\emph on
+union 
+\emph default
+de nome (tipo) 
+\emph on
+Dados
+\emph default
+ que define três membros diferentes, i, f e str.
+ Nota-se que em uma union qualquer, seu tamanho será o maior tamanho dentre
+ as variáveis membros da union.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset External
+	template CSourceNoLnNoFrame
+	filename ../Code/A03/dados.c
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:UnionDados"
+
+\end_inset
+
+Implementação possível para 
+\emph on
+strlen
+\emph default
+ usando 
+\emph on
+for
+\emph default
+ em C.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO - Falar sobre acesso, etc
+\end_layout
+
+\begin_layout Plain Layout
+Now, a variable of Data type can store an integer, a floating-point number,
+ or a string of characters.
+ This means that a single variable ie.
+ same memory location can be used to store multiple types of data.
+ You can use any built-in or user defined data types inside a union based
+ on your requirement.
+\end_layout
+
+\begin_layout Plain Layout
+The memory occupied by a union will be large enough to hold the largest
+ member of the union.
+ For example, in above example Data type will occupy 20 bytes of memory
+ space because this is the maximum space which can be occupied by character
+ string.
+ Following is the example which will display total memory size occupied
+ by the above union:
+\end_layout
+
+\begin_layout Plain Layout
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+#include <string.h>
+\end_layout
+
+\begin_layout Plain Layout
+union Data
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+int i;
+\end_layout
+
+\begin_layout Plain Layout
+float f;
+\end_layout
+
+\begin_layout Plain Layout
+char str[20];
+\end_layout
+
+\begin_layout Plain Layout
+};
+\end_layout
+
+\begin_layout Plain Layout
+int main( )
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+union Data data; 
+\end_layout
+
+\begin_layout Plain Layout
+printf( "Memory size occupied by data : %d
+\backslash
+n", sizeof(data));
+\end_layout
+
+\begin_layout Plain Layout
+return 0;
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\begin_layout Plain Layout
+When the above code is compiled and executed, it produces the following
+ result:
+\end_layout
+
+\begin_layout Plain Layout
+Memory size occupied by data : 20
+\end_layout
+
+\begin_layout Plain Layout
+Accessing Union Members
+\end_layout
+
+\begin_layout Plain Layout
+To access any member of a union, we use the member access operator (.).
+ The member access operator is coded as a period between the union variable
+ name and the union member that we wish to access.
+ You would use union keyword to define variables of union type.
+ Following is the example to explain usage of union:
+\end_layout
+
+\begin_layout Plain Layout
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+#include <string.h>
+\end_layout
+
+\begin_layout Plain Layout
+union Data
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+int i;
+\end_layout
+
+\begin_layout Plain Layout
+float f;
+\end_layout
+
+\begin_layout Plain Layout
+char str[20];
+\end_layout
+
+\begin_layout Plain Layout
+};
+\end_layout
+
+\begin_layout Plain Layout
+int main( )
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+union Data data; 
+\end_layout
+
+\begin_layout Plain Layout
+data.i = 10;
+\end_layout
+
+\begin_layout Plain Layout
+data.f = 220.5;
+\end_layout
+
+\begin_layout Plain Layout
+strcpy( data.str, "C Programming");
+\end_layout
+
+\begin_layout Plain Layout
+printf( "data.i : %d
+\backslash
+n", data.i);
+\end_layout
+
+\begin_layout Plain Layout
+printf( "data.f : %f
+\backslash
+n", data.f);
+\end_layout
+
+\begin_layout Plain Layout
+printf( "data.str : %s
+\backslash
+n", data.str);
+\end_layout
+
+\begin_layout Plain Layout
+return 0;
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\begin_layout Plain Layout
+When the above code is compiled and executed, it produces the following
+ result:
+\end_layout
+
+\begin_layout Plain Layout
+data.i : 1917853763
+\end_layout
+
+\begin_layout Plain Layout
+data.f : 4122360580327794860452759994368.000000
+\end_layout
+
+\begin_layout Plain Layout
+data.str : C Programming
+\end_layout
+
+\begin_layout Plain Layout
+Here, we can see that values of i and f members of union got corrupted because
+ final value assigned to the variable has occupied the memory location and
+ this is the reason that the value if str member is getting printed very
+ well.
+ Now let's look into the same example once again where we will use one variable
+ at a time which is the main purpose of having union:
+\end_layout
+
+\begin_layout Plain Layout
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+#include <string.h>
+\end_layout
+
+\begin_layout Plain Layout
+union Data
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+int i;
+\end_layout
+
+\begin_layout Plain Layout
+float f;
+\end_layout
+
+\begin_layout Plain Layout
+char str[20];
+\end_layout
+
+\begin_layout Plain Layout
+};
+\end_layout
+
+\begin_layout Plain Layout
+int main( )
+\end_layout
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\begin_layout Plain Layout
+union Data data; 
+\end_layout
+
+\begin_layout Plain Layout
+data.i = 10;
+\end_layout
+
+\begin_layout Plain Layout
+printf( "data.i : %d
+\backslash
+n", data.i);
+\end_layout
+
+\begin_layout Plain Layout
+data.f = 220.5;
+\end_layout
+
+\begin_layout Plain Layout
+printf( "data.f : %f
+\backslash
+n", data.f);
+\end_layout
+
+\begin_layout Plain Layout
+strcpy( data.str, "C Programming");
+\end_layout
+
+\begin_layout Plain Layout
+printf( "data.str : %s
+\backslash
+n", data.str);
+\end_layout
+
+\begin_layout Plain Layout
+return 0;
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\begin_layout Plain Layout
+When the above code is compiled and executed, it produces the following
+ result:
+\end_layout
+
+\begin_layout Plain Layout
+data.i : 10
+\end_layout
+
+\begin_layout Plain Layout
+data.f : 220.500000
+\end_layout
+
+\begin_layout Plain Layout
+data.str : C Programming
+\end_layout
+
+\begin_layout Plain Layout
+Here, all the members are getting printed very well because one member is
+ being used at a time.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Anexos
+\end_layout
+
+\begin_layout Section
+Funções da libc
+\end_layout
+
+\begin_layout Subsection
+abs (Valor Absoluto Inteiro)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: int abs (int x);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Standard
+stdlib.h
+\end_layout
+
+\begin_layout Subsection
+fabs (Valor Absoluto Real)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: float fabs (float x);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Standard
+stdlib.h
+\end_layout
+
+\begin_layout Subsection
+asin (Arco Seno)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double asin (double x);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Standard
+Faixa: -pi/2 pi/2 /* resposta em radianos */
+\end_layout
+
+\begin_layout Subsection
+acos (Arco Cosseno)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double acos (double x);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Standard
+Faixa: 0 pi /* resposta em radianos */
+\end_layout
+
+\begin_layout Subsection
+atan (Arco Tangente)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double atan (double x);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Standard
+Faixa: -pi/2 pi/2
+\end_layout
+
+\begin_layout Subsection
+cos (Cosseno)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double cos (double x); x em radianos
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h 
+\end_layout
+
+\begin_layout Standard
+Faixa: -1 1 
+\end_layout
+
+\begin_layout Subsection
+sin (Seno)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double sin (double x); x em radianos
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Standard
+Faixa: -1 1
+\end_layout
+
+\begin_layout Subsection
+exp (Expoente - e ) 
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double exp (double x);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Subsection
+pow (Potência)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double pow (double x, double y);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Subsection
+sqrt (Raiz Quadrada)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double sqrt (double x);'
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Subsection
+log (Logarítmo Natural)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double log (double x);
+\end_layout
+
+\begin_layout Standard
+Prototype math.h
+\end_layout
+
+\begin_layout Subsection
+atof (Converte String em Ponto Flutuante)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double atof (const char *s);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h e stdlib.h
+\end_layout
+
+\begin_layout Subsection
+atoi (Converte String em Inteiro)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: int atoi (const char *s);
+\end_layout
+
+\begin_layout Standard
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Subsection
+atol (Converte String em Inteiro Longo)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: long int atol (const char *s);
+\end_layout
+
+\begin_layout Standard
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Subsection
+log10 (Logarítmo na Base 10)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double log10 (double x);
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Subsection
+tan (Tangente)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: double tan (double x); x em radianos
+\end_layout
+
+\begin_layout Standard
+Prototype: math.h
+\end_layout
+
+\begin_layout Subsection
+max (Valor Máximo)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: int max (int a, int b);
+\end_layout
+
+\begin_layout Standard
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Subsection
+min (Valor Mínimo)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: int min (int a, int b);
+\end_layout
+
+\begin_layout Standard
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Subsection
+rand (Numero Aleatório)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: int rand (void);
+\end_layout
+
+\begin_layout Standard
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Standard
+Faixa: 0 32767
+\end_layout
+
+\begin_layout Subsection
+random (Número Aleatório)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: int random (int limite);
+\end_layout
+
+\begin_layout Standard
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Standard
+Faixa: 0 (limite - 1)
+\end_layout
+
+\begin_layout Subsection
+randomize (Inicializa a Geração de Números Aleatórios)
+\end_layout
+
+\begin_layout Standard
+Sintaxe: void randomize (void);
+\end_layout
+
+\begin_layout Standard
+Prototype: stdlib.h
+\end_layout
+
+\begin_layout Subsection
+system (Executa Comandos e Arquivos .COM e .EXE do Sistema Operacional) 
+\end_layout
+
+\begin_layout Standard
+Sintaxe: int system (const char *comando);
+\end_layout
+
+\begin_layout Standard
+Prototype: process.h e stdlib.h
+\end_layout
+
+\begin_layout Standard
+Retorna: 0 ok e -1 erro
+\end_layout
+
+\begin_layout Standard
+Exemplos: 
+\end_layout
+
+\begin_layout Itemize
+system("dir"); 
+\end_layout
+
+\begin_layout Itemize
+system("sk");
+\end_layout
+
+\begin_layout Itemize
+system("dir *.c");
+\end_layout
+
+\end_body
+\end_document

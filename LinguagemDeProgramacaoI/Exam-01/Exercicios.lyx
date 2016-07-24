@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass article
@@ -38,13 +38,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -55,15 +55,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry false
-\use_amsmath 1
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 1
 \index Index
 \shortcut idx
@@ -107,7 +116,7 @@ Professor: André Ferreira Bem Silva
 \begin_layout Standard
 
 \series bold
-Data: 26/09/2014
+Data: __/__/2015
 \end_layout
 
 \begin_layout Standard
@@ -163,16 +172,19 @@ Leia atentamente as questões a seguir e responda-as.
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="8">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<lyxtabular version="3" rows="2" columns="11">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -237,11 +249,38 @@ Questão
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
 \end_layout
 
 \end_inset
@@ -261,6 +300,15 @@ Gabarito
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -270,6 +318,15 @@ Gabarito
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+d
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -279,6 +336,15 @@ Gabarito
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -288,6 +354,15 @@ Gabarito
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -297,6 +372,15 @@ Gabarito
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+d
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -306,6 +390,69 @@ Gabarito
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+e
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -315,6 +462,15 @@ Gabarito
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+e
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -329,7 +485,11 @@ Gabarito
 \end_layout
 
 \begin_layout Enumerate
-(1,5 pontos) Assinale a questão com todas as assertivas corretas:
+(1 ponto) Assinale a questão com todas as assertivas 
+\series bold
+corretas
+\series default
+:
 \begin_inset ERT
 status open
 
@@ -344,7 +504,7 @@ baselineskip}
 
 \end_inset
 
-
+b
 \end_layout
 
 \begin_deeper
@@ -399,7 +559,11 @@ main
 
 \end_deeper
 \begin_layout Enumerate
-(1,5 pontos) Qual a saída correta para o código a seguir?
+(1 ponto) Qual a saída 
+\series bold
+correta
+\series default
+ para o código a seguir?
 \begin_inset Newline newline
 \end_inset
 
@@ -503,7 +667,11 @@ O construtor padrão é qualquer método com o mesmo nome da classe.
 
 \end_deeper
 \begin_layout Enumerate
-(1 ponto) A respeito do comando while, assinale a alternativa correta:
+(1 ponto) A respeito do comando while, assinale a alternativa 
+\series bold
+correta
+\series default
+:
 \end_layout
 
 \begin_deeper
@@ -545,7 +713,7 @@ Executa somente comandos de atribuição.
 
 \end_deeper
 \begin_layout Enumerate
-(2 pontos) Assinale a alternativa incorreta a respeito do código referente:
+(1 ponto) Assinale a alternativa incorreta a respeito do código referente:
 \begin_inset Newline newline
 \end_inset
 
@@ -615,12 +783,131 @@ Nesse trecho de código são utilizados operadores aritméticos, unários e
 
 \end_deeper
 \begin_layout Enumerate
-(1,5 pontos) A respeito de orientação objeto em Java e do código referente
- em sequência, assinale a alternativa correta:
+(1 ponto) A respeito de orientação objeto em Java e do código referente
+ em sequência, assinale a alternativa 
+\series bold
+correta
+\series default
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/Pessoa.java
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+( ) A seguinte sentença seria válida no método main dessa classe: Pessoa
+ pessoa = new Pessoa();
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+( ) Seria possível definir o tipo Mes como sendo um enum cujos valores seriam
+ os meses do ano.
+ Ex: JANEIRO, FEVEREIRO, ..., DEZEMBRO.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+( ) Só é possível instanciar objetos do tipo Pessoa com mesmo nome, cpf,
+ dia, mes e ano de nascimento.
+ Para ser possível instanciar objetos distin- tos faz-se necessário o uso
+ da palavra-chave static em cada atributo.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+( ) O sublinhado (underline) antes do nome de cada variável é um substi-
+ tuto ao this, sendo somente uma notação para facilitar a compreensão do
+ que é atributo do objeto e o que é parâmetro nos métodos dessa classe.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+( ) Os parâmetros do único construtor de Pessoa são invariantes em relação
+ àqueles passados na instanciação do objeto com a diretiva new.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+V-V-V-V-V
 \end_layout
 
 \begin_layout Enumerate
-(1,5 pontos) Qual dos seguintes códigos apresentam uma construção inválida
+F-V-F-V-F
+\end_layout
+
+\begin_layout Enumerate
+V-F-V-F-F
+\end_layout
+
+\begin_layout Enumerate
+V-V-F-V-V
+\end_layout
+
+\begin_layout Enumerate
+F-F-F-F-F
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) Qual a saída esperada para o trecho em seguida?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/Java/ArrayTest.java
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+123456
+\end_layout
+
+\begin_layout Enumerate
+Erro de acesso inválido ao array
+\end_layout
+
+\begin_layout Enumerate
+12345
+\end_layout
+
+\begin_layout Enumerate
+65432
+\end_layout
+
+\begin_layout Enumerate
+654321
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) Qual dos seguintes códigos apresentam uma construção inválida
  na linguagem Java?
 \end_layout
 
@@ -643,6 +930,161 @@ if (true) { System.out.println("Uma string"); }
 
 \begin_layout Enumerate
 if (false) { System.out.println("Uma string"); }
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+A respeito do trecho em sequência, responda as questões 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:BS1"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:BS2"
+
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset External
+	template JavaSource
+	filename ../Code/BubbleSort.java
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) 
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:BS1"
+
+\end_inset
+
+Assinale a alternativa 
+\series bold
+incorreta
+\series default
+ a respeito do trecho:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A variável 
+\emph on
+ocorreuTroca
+\emph default
+ admite dois possíveis valores em função de ser uma variável do tipo booleano.
+\end_layout
+
+\begin_layout Enumerate
+Esse trecho de código apresenta duas estruturas de 
+\emph on
+loop
+\emph default
+ e uma estrutura de 
+\emph on
+condicional
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Nem todos os elementos do array são acessados em função da condição de loop,
+ da 
+\emph on
+linha 8
+\emph default
+, ser o tamanho do array menos um.
+\end_layout
+
+\begin_layout Enumerate
+O método estático 
+\emph on
+fazerAlgo 
+\emph default
+resulta na ordenação ascendente do arranjo de números de entrada.
+\end_layout
+
+\begin_layout Enumerate
+O código referente funciona independentemente do tamanho do array de entrada.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(1 ponto) 
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:BS2"
+
+\end_inset
+
+ Assinale a alternativa 
+\series bold
+correta
+\series default
+ ainda a respeito do código:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+As variáveis das linhas 2 e 3 são estáticas em função do método ser estático.
+\end_layout
+
+\begin_layout Enumerate
+A variável length, interna ao array, retorna o valor do último índice válido
+ do array.
+\end_layout
+
+\begin_layout Enumerate
+Na linha 8, seria impossível trocar o incremento de ++j para j++.
+ 
+\end_layout
+
+\begin_layout Enumerate
+A variável 
+\emph on
+valorAtual 
+\emph default
+não poderia ser declarada no escopo do while, 
+\emph on
+linha 7
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Seria possível fazer uma ordenação descendente apenas trocando-se o condicional
+ da 
+\emph on
+linha 10
+\emph default
+ para "
+\begin_inset Formula $num[j]>num[j+1]$
+\end_inset
+
+".
 \end_layout
 
 \end_deeper

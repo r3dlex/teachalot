@@ -83,6 +83,45 @@
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Exceções
+\end_layout
+
+\begin_layout Itemize
+throw
+\end_layout
+
+\begin_layout Itemize
+try-catch-finally
+\end_layout
+
+\begin_layout Itemize
+throws
+\end_layout
+
+\begin_layout Itemize
+Extensão
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout EndFrame
 
 \end_layout

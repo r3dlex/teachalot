@@ -1,9 +1,62 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
-\textclass abnt
+\textclass abntex2
 \begin_preamble
+%\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+pdftitle={\@title}, 
+pdfauthor={\@author},
+    	pdfsubject={Modelo de artigo científico com abnTeX2},
+    pdfcreator={LaTeX with abnTeX2},
+pdfkeywords={abnt}{latex}{abntex}{abntex2}{atigo científico}, 
+colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+urlcolor=blue,
+bookmarksdepth=4
+}
+\makeatother
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ---
+% Altera as margens padrões
+% ---
+\setlrmarginsandblock{3cm}{3cm}{*}
+\setulmarginsandblock{3cm}{3cm}{*}
+\checkandfixthelayout
+% ---
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% Espaçamento simples
+\SingleSpacing
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+%\selectlanguage{english}
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
 %\usepackage[num, abnt-etal-list=0, abnt-full-initials=yes]{abntcite}
 %\usepackage{setspace}
 %\floatname{algorithm}{Algoritmo}
@@ -17,13 +70,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -34,15 +87,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry false
-\use_amsmath 1
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 1
 \index Index
 \shortcut idx
@@ -79,12 +141,8 @@ André Ferreira Bem Silva
 Faculdade de Ciências Sociais de Florianópolis
 \end_layout
 
-\begin_layout Comentario
-Disiciplina de Linguagem de Programação I
-\end_layout
-
-\begin_layout Data
-Florianópolis, 01 de agosto de 2014
+\begin_layout Tipo-trabalho
+Disiciplina de Linguagem de Programação II
 \end_layout
 
 \begin_layout Standard
@@ -95,6 +153,13 @@ status open
 
 
 \backslash
+maketitle
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
 folhaderosto
 \end_layout
 
@@ -103,34 +168,30 @@ folhaderosto
 
 \end_layout
 
-\begin_layout Capitulo
+\begin_layout Chapter
 Curso
 \end_layout
 
 \begin_layout Standard
-O curso será de 80h, ministrado ao longo do semestre letivo 2014/2.
+O curso será de 80h, ministrado ao longo do semestre letivo 2015/1.
 
 \series bold
  
 \end_layout
 
-\begin_layout Secao
+\begin_layout Section
 Ementa
 \end_layout
 
 \begin_layout Standard
-Introdução a linguagem de programação estruturada.
- Estrutura geral de um programa.
- Variáveis, constantes, operadores e expressões.
- Comandos de entrada e saída de dados.
- Comandos de controle de fluxo de processos.
- Vetores e Matrizes.
- Ponteiros.
- Trabalhando com funções.
- Operações com arquivos em disco.
+Introdução a linguagem de programação orientada a objetos; Variáveis, constantes
+, operadores e expressões; Estruturas de controle; Estruturas de iteração;
+ Comandos de entrada e saída da dados; Arrays, Listas; Funções estáticas;
+ Objetos e Classes; Herança e Polimorfismo; Exceções; Operações com arquivos
+ em disco; Interfaces Gráficas.
 \end_layout
 
-\begin_layout Secao
+\begin_layout Subsection
 
 \series bold
 Objetivo geral
@@ -138,12 +199,12 @@ Objetivo geral
 
 \begin_layout Standard
 Propiciar ao aluno o domínio de conhecimentos que contribua para o desenvolvimen
-to da consciência crítica sobre diversos conceitos básicos de programação
+to da consciência crítica sobre diversos conceitos avançados de programação
  estruturada para compreensão da solução de problemas e nas aplicações relaciona
-das a área de desenvolvimento de software.
+das a área de desenvolvimento de software para desktops e dispositivos móveis.
 \end_layout
 
-\begin_layout Secao
+\begin_layout Subsection
 
 \series bold
 Objetivos específicos
@@ -153,12 +214,12 @@ Objetivos específicos
 Ao final do semestre o aluno deverá:
 \end_layout
 
-\begin_layout Items
+\begin_layout Itemize
 Compreender e ser capaz de programas estruturadamente em uma linguagem de
- programação.
+ programação num ambiente móvel, utilizando capacidades e sensores dos mesmos.
 \end_layout
 
-\begin_layout Items
+\begin_layout Itemize
 Aplicar os conhecimentos obtidos na resolução de problemas diversos que
  venham a enfrentar em seu cotidiano.
 \end_layout
@@ -188,35 +249,43 @@ prever a fórmula mínima dos compostos iônicos
 
 \end_layout
 
-\begin_layout Secao
+\begin_layout Subsection
 
 \series bold
 Avaliação
 \end_layout
 
 \begin_layout Standard
-A avaliação do aluno será feita na forma de conceitos A, B, C e D.
- O aluno receberá indicadores de acordo com seu desempenho durante as tarefas
+A avaliação do aluno será feita na forma de notas de 0 a 10.
+ O aluno receberá notas de acordo com seu desempenho durante as tarefas
  em aula, externas a ela, nas atividades de pesquisa e nas duas avaliações
  durante a disciplina.
  Assim, o conceito final será dado com base nos seguintes pesos para cada
  indicador:
 \end_layout
 
-\begin_layout Enumerado
-Tarefas em aula (10%).
+\begin_layout Itemize
+Tarefas em aula (20%).
 \end_layout
 
-\begin_layout Enumerado
-Tarefas de implementação extra-classe (40%).
+\begin_layout Itemize
+Tarefas de implementação extra-classe (33%).
 \end_layout
 
-\begin_layout Enumerado
-Duas avaliações discursivas (25% cada).
+\begin_layout Itemize
+Duas avaliações objetivas e discursivas (23.5% cada).
 \end_layout
 
 \begin_layout Standard
-O aluno que receber conceito médio B ou A estará aprovado no final da disciplina.
+O mapeamento para as notas N1 e N2 dá-se pela união de tarefas em aula as
+ avaliações discursivas no total de 66% de peso enquanto a N3 mapeia diretamente
+ para as atividades extra-classe a serem entregues ao final do semestre
+ com peso de 33% da nota final.
+\end_layout
+
+\begin_layout Standard
+O aluno que receber conceito médio igual ou superior a 6 estará aprovado
+ no final da disciplina.
  Aos demais, será disponibilizada a possibilidade de recuperação em uma
  avaliação final, cujo conceito será integrado ao obtido na disciplina.
 \end_layout
