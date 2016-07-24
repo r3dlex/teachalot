@@ -671,7 +671,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -827,7 +827,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Outros SOs
@@ -887,7 +887,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Dispositivos especiais
@@ -943,7 +943,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1060,7 +1060,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1107,7 +1107,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 SO Mobile
@@ -1159,7 +1159,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1387,7 +1387,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-O AppleWatch que também rodará uma versão do iOS.
+O AppleWatch roda uma versão do iOS.
 \end_layout
 
 \end_inset
@@ -1681,7 +1681,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Opções de desenvolvimeno
@@ -1729,7 +1729,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Como desenvolver?
@@ -1802,7 +1802,7 @@ only<1>{
 
 \begin_inset External
 	template JavaSource
-	filename ../Code/HelloWorld.java
+	filename ../Code/Java/HelloWorld.java
 
 \end_inset
 
@@ -1836,7 +1836,7 @@ only<2>{
 
 \begin_inset External
 	template JavaSource
-	filename ../Code/HelloWorldActivity.java
+	filename ../Code/Java/HelloWorldActivity.java
 
 \end_inset
 
