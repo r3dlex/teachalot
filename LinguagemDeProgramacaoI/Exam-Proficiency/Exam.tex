@@ -1,0 +1,151 @@
+%% LyX 2.2.2 created this file.  Para more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[brazil]{article}
+\usepackage[latin9]{inputenc}
+\usepackage{calc}
+\usepackage{graphicx}
+
+\usepackage{epsfig}
+\usepackage{enumitem}
+
+%\usepackage{algorithm2e}
+%\usepackage[linesnumbered]{algorithm2e}
+%\usepackage[linesnumbered,ruled]{algorithm2e}
+\usepackage[portuguese,linesnumbered,ruled,vlined]{algorithm2e}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%Necessary for minted
+\usepackage{minted}
+
+\newminted{java}{
+  fontsize=\footnotesize, 
+  linenos,
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+\newminted{javasnip}{
+  fontsize=\footnotesize, 
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+%Remove a numeracao das paginas
+\pagestyle{empty}% Reset page style to 'empty'
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\includegraphics[height=0.1\textheight]{../../Algoritmos/Image/Logo-FaculdadesCesusc}
+
+\vspace*{\baselineskip}
+
+\textbf{Faculdade CESUSC}
+
+\textbf{Disciplina: Linguagem de Programação I}
+
+\textbf{Professores: André Bem e Gregory Chagas}
+
+\textbf{Data: \_\_/\_\_/2017}
+
+\textbf{Aluno(a): \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+
+\vspace*{2\baselineskip}
+
+\noindent\fbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 2\fboxrule}%
+Leia atentamente as questões a seguir e responda-as. Assinale somente
+uma alternativa correta em cada questão de múltipla escolha e observe
+a pontuação de cada questão. Boa sorte!%
+\end{minipage}}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline 
+Questão & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\tabularnewline
+\hline 
+Gabarito & X & X & X &  &  &  &  &  &  &\tabularnewline
+\hline 
+\end{tabular}
+\par\end{center}
+
+\vspace*{\baselineskip}
+Atenção! Para responder as questões dicursivas, utilize a linguagem de programação Java (versão 1.4 ou maior) ou pseudo-código. 
+\vspace*{2\baselineskip}
+
+1. (1,0 ponto) Defina um algoritmo que receba uma string como parâmetro e descubra se ela é um palíndromo ou não. Uma palavra palíndromo é lida da esquerda para a direita e da direita para a esquerda da mesma forma. \\
+\emph{Exemplos: ovo, ama, mamam, matam, osso, racificar, rir, salas...} \\
+    R: \\
+    
+\newpage
+
+2. (1,0 ponto) Defina o que são X e Y no algoritmo \ref{algo:Maximo}, sabendo que o X é a saída do algoritmo, Y é o nome dele. Descreva o que o algoritmo faz dando um exemplo para o array $A$ de entrada. 
+
+\begin{algorithm}[H]
+	\DontPrintSemicolon % Some LaTeX compilers require you to use \dontprintsemicolon instead
+			\Entrada{Um array finito $A=\{a_1, a_2, \ldots, a_n\}$ de inteiros}
+			\Saida{X}
+			$m \gets a_1$\;
+			\Para{$i \gets 2$ \textbf{até} $n$} {
+				\Se{$a_i > m$} {
+					$m \gets a_i$\;
+				}
+			}
+			\Retorna{$m$}\;
+			\caption{{\sc Y}}
+			\label{algo:Maximo}
+\end{algorithm}
+R:
+\vspace*{5\baselineskip}
+
+3. (0,5 ponto) As interfaces...
+
+\begin{enumerate}[label=(\alph*),leftmargin=3\parindent]
+\item Apresentam somente declaração de métodos.
+\item Possuem somente implementação de métodos.
+\item Só possuem elementos estáticos (\emph{static}).
+\item Tem somente métodos públicos.
+\item São idênticas as \emph{classes abstratas}.
+\end{enumerate}
+\vspace*{\baselineskip}
+
+4. (0,5 ponto) As classes abstratas...
+
+\begin{enumerate}[label=(\alph*),leftmargin=3\parindent]
+  \item São classes que não podem ser instanciadas com a diretiva \emph{new.}
+  \item Só possuem elementos públicos.
+  \item É diferente das interfaces, uma vez que torna opcional a implementação
+    ou não de métodos.
+  \item A diretiva \emph{abstract} não pode ser utilizada para identificar
+    uma classe, sendo somente usada em métodos abstratos.
+  \item Um tipo abstrato não pode ser herdado.
+\end{enumerate}
+\newpage
+
+5. (0,5 ponto) Qual o resultado da variável a após a seguinte sequência na linguagem Java?
+\inputminted[fontsize=\footnotesize,linenos,frame=lines,baselinestretch=1,tabsize=2]{java}{C:/msys64/home/z003m7em/Work/teachalot/LinguagemDeProgramacaoI/Code/StringReplacement.java}
+R:
+\vspace*{\baselineskip}
+
+6. (0,5 ponto) A respeito do código abaixo, responda qual assertiva é \textbf{incorreta}:
+\inputminted[fontsize=\footnotesize,linenos,frame=lines,baselinestretch=1,tabsize=2]{java}{C:/msys64/home/z003m7em/Work/teachalot/LinguagemDeProgramacaoI/Code/AbrirArquivo.java}
+
+\begin{enumerate}[label=(\alph*),leftmargin=3\parindent]
+  \item O código efetua a abertura do arquivo \emph{teste.txt, }em modo \emph{leitura}, localizado no drive C do sistema da pasta raíz (primária).
+  \item Caso o arquivo não seja encontrado o bloco dentro do try causará uma exceção do tipo \emph{FileNotFoundException }a qual será capturada no \emph{catch }subsequente.
+  \item O construtor do \emph{FileReader} apresenta pelo menos a seguinte diretiva de exceção em sua assinatura: \emph{throws FileNotFoundException}.
+  \item Sabendo que a exceção \emph{FileNotFoundException }é do tipo \emph{IOException}, a troca, no código, do bloco catch para capturar uma exceção do tipo \emph{IOException}, continuará somente capturando as mesmas exceções independente do que aconteça na linha 7.
+  \item Na linha 10, o método chamado é herdado da superclasse \emph{Exception} que imprimirá um texto de erro na saída de console, que usualmente é chamado de \emph{dump }da exceção.
+\end{enumerate}
+
+\end{document}

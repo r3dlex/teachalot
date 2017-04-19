@@ -1,0 +1,288 @@
+%% LyX 2.2.2 created this file.  Para more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[brazil]{article}
+\usepackage[latin9]{inputenc}
+\usepackage{calc}
+\usepackage{graphicx}
+
+\usepackage{epsfig}
+\usepackage{enumitem}
+
+%\usepackage{algorithm2e}
+%\usepackage[linesnumbered]{algorithm2e}
+%\usepackage[linesnumbered,ruled]{algorithm2e}
+\usepackage[portuguese,linesnumbered,ruled,vlined]{algorithm2e}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%Necessary for minted
+\usepackage{minted}
+
+\newminted{java}{
+  fontsize=\footnotesize, 
+  linenos,
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+\newminted{javasnip}{
+  fontsize=\footnotesize, 
+  frame=lines,
+  bgcolor=bg,
+  baselinestretch=1,
+  tabsize=2
+} 
+
+%Remove a numeracao das paginas
+\pagestyle{empty}% Reset page style to 'empty'
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\includegraphics[height=0.1\textheight]{../../../Algoritmos/Image/Logo-FaculdadesCesusc}
+
+\vspace*{\baselineskip}
+
+\textbf{Faculdade CESUSC}
+
+\textbf{Disciplina: Linguagem de Programação I}
+
+\textbf{Professores: André Bem e Gregory Chagas}
+
+\textbf{Data: \_\_/\_\_/2017}
+
+\textbf{Aluno(a): \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+
+\vspace*{2\baselineskip}
+
+\noindent\fbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 2\fboxrule}%
+Leia atentamente as questões a seguir e responda-as. Assinale somente
+uma alternativa correta em cada questão de múltipla escolha e observe
+a pontuação de cada questão. Boa sorte!%
+\end{minipage}}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline 
+  Questão & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12\tabularnewline
+\hline 
+  Gabarito &  &  &  & X & X &  &  &  &  &  &  &  &\tabularnewline
+\hline 
+\end{tabular}
+\par\end{center}
+
+A respeito do trecho em sequência, responda as questões 1, 2 e 3: 
+
+\inputminted[fontsize=\footnotesize,linenos,frame=lines,baselinestretch=1,tabsize=2]{c++}{../../../Algoritmos/Code/E01/soma.c}
+
+1. \label{enu:Soma1}(1 ponto) Assinale a questão com todas as assertivas
+\textbf{corretas}:
+
+\begin{enumerate}[label=(\alph*),leftmargin=3\parindent]
+\item A \emph{funcaoX }é uma função que tem como parâmetro um tipo inteiro
+\emph{n }o qual não altera o cálculo da função.
+\item O código não compila uma vez que não é possível passar-se uma variável
+como argumento para a funcaoX, confome acontece com o \emph{i }na
+linha 19.
+\item A \emph{funcaoX} poderia chamar-se soma e calcula o somatório de n
+elementos, tal que soma(n) = 0 + 1 + 2 + ... + n. 
+\item Ao alterar-se, na linha 18, o tipo de i de \emph{int} para \emph{float},
+não haveria mudança na compilação e execução do código.
+\item A \emph{funcaoX}, é também denominada função de \emph{fibonacci} e
+caracteriza-se pela dependência do resultado de n mediante os dois
+antecedentes. Isto é, $fib(n)=fib(n-1)+fib(n-2)$, e $fib(0)=1$,
+$fib(1)=1$.
+\end{enumerate}
+
+
+2. \label{enu:Soma2}(1 ponto) Qual linha constitui a saída esperada
+para a execução do código?
+\begin{enumerate}[label=(\alph*),leftmargin=3\parindent]
+\item f(6)= 21 f(7)=28 f(8)=36 f(9)=45
+\item f(5)=10 f(6)=15 f(7)=21 f(8)=28
+\item f(5)=15 f(6)=21 f(7)=28 f(8)=36
+\item f(5)=15 f(6)=21 f(7)=28 f(8)=36 f(9) = 45
+\item Falha de execução ou falha de compilação.
+\end{enumerate}
+
+
+3. \label{enu:Soma3}(1 ponto) Assinale a alternativa \textbf{incorreta}.
+\begin{enumerate}[label=(\alph*),leftmargin=3\parindent]
+\item a função \emph{main }sempre apresenta a mesma assinatura no c e é
+o ponto de entrada do código em questão. 
+\item um algoritmo é uma sequência de passos para atingir um determinado
+objetivo. em linguagens de programação, o algoritmo é uma sequência
+de passos, que dado uma entrada, gera sempre a mesma saída para esta
+entrada.
+\item uma expressão lógica ou relacional pode ser usada como condição de
+iteração em um loop.
+\item o número de instruções executadas em um loop será sempre o mesmo para
+os loops for, while e do-while, dado que a condição do mesmo seja
+idêntica.
+\item ao declarar-se a \emph{funcaox}, em qualquer chamada após sua declaração
+que utilize-se \emph{funcaox}(\emph{argumento}), onde \emph{argumento}
+é um número inteiro, o compilador sabe que nesse ponto haverá uma
+chamada de função para a \emph{funcaox} e gera código para que isso
+aconteça.
+\end{enumerate}
+
+
+4. (1,0 ponto) Defina, em pseudo-código, C ou C++ um algoritmo que receba uma string como parâmetro e descubra se ela é um palíndromo ou não. Uma palavra palíndromo é lida da esquerda para a direita e da direita para a esquerda da mesma forma. \\
+\emph{Exemplos: ovo, ama, mamam, matam, osso, racificar, rir, salas...} \\
+    R: 
+\vspace*{10\baselineskip}
+
+
+5. (1,0 ponto) Defina o que são X e Y no algoritmo \ref{algo:Maximo}, sabendo que o X é a saída do algoritmo, Y é o nome dele. Descreva o que o algoritmo faz dando um exemplo para o array $A$ de entrada. 
+
+\begin{algorithm}[H]
+  \DontPrintSemicolon % Some LaTeX compilers require you to use \dontprintsemicolon instead
+      \Entrada{Um array finito $A=\{a_1, a_2, \ldots, a_n\}$ de inteiros}
+      \Saida{X}
+      $m \gets a_1$\;
+      \Para{$i \gets 2$ \textbf{até} $n$} {
+        \Se{$a_i > m$} {
+          $m \gets a_i$\;
+        }
+      }
+      \Retorna{$m$}\;
+      \caption{{\sc Y}}
+      \label{algo:Maximo}
+\end{algorithm}
+R:
+\vspace*{5\baselineskip}
+
+
+6. (0,5 ponto) Qual dos seguintes códigos \textbf{não} apresenta uma
+expressão lógica ou relacional em C?
+
+\begin{enumerate}[label=(\alph*),leftmargin=3\parindent]
+\item $a == b$;
+\item $a < b$;
+\item $a >= b$;
+\item $a++$;
+\item $a != b$;
+\end{enumerate}
+
+
+7. (0,5 ponto) Quais dos seguintes tipos \textbf{não} é um tipo básico
+da linguagem C?
+
+\begin{enumerate}[label=(\alph*),leftmargin=3\parindent]
+\item char
+\item int
+\item std
+\item long
+\item void 
+\end{enumerate}
+
+
+8. (1 ponto) Qual das seguintes saídas apresenta um número \textbf{corretamente}
+convertido de uma base para outra?
+
+\begin{enumerate}[label=(\alph*),leftmargin=3\parindent]
+\item $61_{10}=0b111101$
+\item $32_{10}=0b1000$
+\item $45_{10}=0x26$
+\item $0b111=0x8$
+\item $0x16=0b10000$\\
+\end{enumerate}
+
+
+A respeito do código em sequência, responda as questões 9, 10, 11 e 12: 
+
+\inputminted[fontsize=\footnotesize,linenos,frame=lines,baselinestretch=1,tabsize=2]{c++}{../../../Algoritmos/Code/E01/fatorial.c}
+
+
+9.\label{enu:Fat1}(1 ponto) Quanto a função \emph{fatorial}, asssinale
+a alternativa \textbf{correta}:
+
+\begin{enumerate}[label=(\alph*),leftmargin=3\parindent]
+\item Essa é uma função recursiva pelo fato de ser chamada uma única vez dentro do corpo main, para cada valor distinto.
+\item É uma função recursiva, isto é, que chama a si mesma recursivamente, porém não há garantia de parada para essa função para qualquer valor
+\emph{n} de parâmetro.
+\item O corpo da função fatorial apresenta duas expressões lógicas e outras duas aritméticas.
+\item O condicional if-then-else desta função serve como parada para a chamada recursiva da função, isto é, se a condição for verdade, então a recursão para nessa chamada.
+\item Cada linha da função representa um comando distinto da linguagem C, e isso é verdade para todas as funções.\\
+\end{enumerate}
+
+
+10. \label{enu:Fat2}(0,5 ponto) Assinale a opção que\textbf{ falsa }a
+respeito do programa fatorial:
+
+\begin{enumerate}[label=(\alph*),leftmargin=3\parindent]
+\item O condicional no corpo do main, evita que seja passado um valor negativo
+a função fatorial, o que causaria um loop infinito.
+\item No loop \emph{for,} primeiro executa-se a inicialização, depois verifica-se
+a condição, se ela for verdade, executa-se o corpo do laço e depois
+faz-se o incremento, retornando então a condição, senão executa-se
+o comando imediatamente subsequente ao término do escopo do laço.
+Os demais loops se darão dessa forma.
+\item O resultado da função main para esse programa, será na saída do console "Entre com um valor:" para obter-se o valor de \emph{n} e a impressão dos valores de fatoriais, um por linha, no seguinte formato, "fatorial(i) = x", onde x é o valor do fatorial $x!$.
+\item No corpo da função main, há a declaração de duas variáveis inteiras, uma no escopo do main e outro no escopo interno do condicional, utilizada na inicialização da variável de iteração.
+\item A diretiva printf lê valores formatados da entrada de console, enquanto a scanf lê escreve de maneira formatada na saída de console.
+\end{enumerate}
+
+
+11. \label{enu:Fat3}(0,5 ponto) Qual das seguintes constatações é \textbf{falsa}
+no escopo do algoritmo indicado?
+
+\begin{enumerate}[label=(\alph*),leftmargin=3\parindent]
+\item A palavra-chave return, nas funções \emph{main} e \emph{fatorial},
+indicam que naquele ponto, retorna-se um valor do tipo de retorno
+para a função chamante.
+\item Dentro do loop \emph{for} na função main, quando passa-se o valor
+\emph{i} para \emph{fatorial}, esse valor vira o argumento da função
+nesse ponto e a variável \emph{n} é inicializada com uma cópia do
+valor \emph{i}.
+\item O tipo int, define uma variável inteira de 32 bits numa máquina PC
+(x86). O valor máximo calculado pela função \emph{fatorial}, estará
+definido pelo tamanho da variável. 
+\item A função main retorna um valor de tipo inteiro, tipicamente 0, o qual
+indica ao sistema operacional que o programa executou com sucesso.
+\item Não é possível utilizar-se estruturas de laços e recursão no mesmo
+código, isto é, uma função recursiva é incapaz de utilizar um laço
+em seu \emph{corpo} (escopo).
+\end{enumerate}
+
+
+12. \label{enu:Fat4}(1,0 ponto) Qual a \textbf{saída esperada} para o
+programa se o $n$ assumir o valor $4$? (Ao omitir-se a saída
+"Entre com um valor:")
+
+\begin{enumerate}[label=(\alph*),leftmargin=3\parindent]
+\item fat(0) = 0\\
+fat(1) = 1\\
+fat(2) = 2\\
+fat(3) = 6\\
+fat(4)=24
+\item fat(0)=1\\
+fat(1) = 1\\
+fat(2) = 2\\
+fat(3) = 6\\
+fat(4) = 24
+\item fat(1)=1\\
+fat(2) = 2\\
+fat(3) = 6\\
+fat(4) = 24\\
+fat(5) = 120
+\item fat(0) = 1\\
+fat(1) = 2\\
+fat(2) = 2\\
+fat(3) = 6
+\item fat(0) = 1\\
+fat(1) = 1\\
+fat(2) = 1\\
+fat(3) = 3\\
+fat(4) = 12
+\end{enumerate}
+
+\end{document}
