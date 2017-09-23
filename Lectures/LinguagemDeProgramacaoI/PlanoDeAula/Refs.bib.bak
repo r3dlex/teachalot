@@ -1,0 +1,83 @@
+% This file was created with JabRef 2.10.
+% Encoding: UTF-8
+
+
+@Book{Aragao2013,
+  Title                    = {JAVA E PROGRAMA{\c{C}}{\~A}O ORIENTADA A OBJETOS: uma abordagem did{\'a}tica: Java, Programa{\c{c}}{\~a}o Orientada a Objetos, Programa{\c{c}}{\~a}o, Orienta{\c{c}}{\~a}o a Objetos},
+  Author                   = {ARAG{\~A}O, H.G.},
+  Year                     = {2013},
+
+  ISBN                     = {9788591355815},
+  Url                      = {http://books.google.com.br/books?id=3LZDAgAAQBAJ}
+}
+
+@Book{Brito2014,
+  Title                    = {Java Me na Prática - Fundamentos da Plataforma Passo A Passo},
+  Author                   = {Brito, Robison Cris},
+  Editor                   = {Ciência Moderna},
+  Year                     = {2014},
+
+  Owner                    = {andre},
+  Timestamp                = {2015.01.14}
+}
+
+@Book{Darwin2010,
+  Title                    = {Android Cookbook - Problemas e Soluções Para Desenvolvedores de Android},
+  Author                   = {Darwin, Ian F.},
+  Publisher                = {NOVATEC},
+  Year                     = {2010},
+
+  Owner                    = {andre},
+  Timestamp                = {2015.01.14}
+}
+
+@Book{dimarzio2008android,
+  Title                    = {ANDROID A PROGRAMMERS GUIDE},
+  Author                   = {DiMarzio, J.F.},
+  Publisher                = {McGraw-Hill Education},
+  Year                     = {2008},
+  Series                   = {McGraw-Hill professional},
+
+  ISBN                     = {9780071599894},
+  Url                      = {http://books.google.com.br/books?id=hoFI5pxjGesC}
+}
+
+@Book{David2014,
+  Title                    = {Introduction to Programming Using Java, Seventh Editio},
+  Author                   = {David J. Eck},
+  Year                     = {2014},
+
+  Url                      = {http://math.hws.edu/javanotes/}
+}
+
+@Book{Blake2012,
+  Title                    = {Programando Android - Programação Java Para a Nova Geração de Dispositivos Móveis},
+  Author                   = {G. Blake Meike, Laird Dornin, Masuri NakamuraMednieks, Zigurd},
+  Publisher                = {NOVATEC},
+  Year                     = {2012},
+
+  Owner                    = {andre},
+  Timestamp                = {2015.01.14}
+}
+
+@Book{Gamma:1995:DPE:186897,
+  Title                    = {Design Patterns: Elements of Reusable Object-oriented Software},
+  Author                   = {Gamma, Erich and Helm, Richard and Johnson, Ralph and Vlissides, John},
+  Publisher                = {Addison-Wesley Longman Publishing Co., Inc.},
+  Year                     = {1995},
+
+  Address                  = {Boston, MA, USA},
+
+  ISBN                     = {0-201-63361-2}
+}
+
+@Book{Luckow2010,
+  Title                    = {Programa{\c{c}}{\~a}o Java para a Web: },
+  Author                   = {Luckow, D.H. and de Melo, A.A.},
+  Publisher                = {NOVATEC},
+  Year                     = {2010},
+
+  ISBN                     = {9788575222386},
+  Url                      = {http://books.google.com.br/books?id=eROWAwAAQBAJ}
+}
+
