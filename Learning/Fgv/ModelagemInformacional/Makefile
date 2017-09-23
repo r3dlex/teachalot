@@ -1,0 +1,2 @@
+trabalho:
+	pdflatex trabalho.tex
