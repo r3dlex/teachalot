@@ -1,0 +1,995 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Neste capítulo, será discorrido quanto aos elementos da pesquisa de protótipos
+ que culminou com a campanha publicitária sobre o produto Ford Ka
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texttrademark
+\end_layout
+
+\end_inset
+
+.
+ Assim, define-se primeiro o embasamento técnico e objetivos gerais e depois
+ a estrutura do resto do trabalho.
+\end_layout
+
+\begin_layout Section
+Embasamento Técnico
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:embasamento-tecnico"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A escolha do lançamento de um automóvel deve ser feita a partir do pressuposto
+ que o enfoque publicitário consiga atender as características alinhadas
+ entre a perspectiva de alcance da empresa com a procura do consumidor.
+ Seu foco deve ser planejado com auxílio de estudos de marketing que determinam
+ em quais segmentos de mercado a empresa deve direcionar sua divulgação
+ e com que tipo de publicidade deve trabalhar.
+ 
+\end_layout
+
+\begin_layout Standard
+Em um mercado com variedade de opções e de marcas, como o dos automóveis,
+ a demanda por um produto que se adeque às necessidades pessoais do consumidor,
+ por via de regra, é heterogênea (SMITH, 1956)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Citação
+\end_layout
+
+\end_inset
+
+.
+ O autor explica que por esses produtos fazerem parte de um ambiente competitivo
+, seus fornecedores tendem a criar estratégias de diferenciação em recursos
+ distintivos, nos serviços propostos pelo o anunciante e em estudos mais
+ elaborados na publicidade de seus produtos em comparação com os demais.
+ Por este motivo, é necessário separar os diversos segmentos que se assemelham
+ para que se encontre o equilíbrio entre a curva da oferta e a curva da
+ demanda.
+ A homogeneidade de um ambiente com essas características é vista apenas
+ nos grupos que são formados quando se elabora uma boa segmentação de mercado.
+ 
+\end_layout
+
+\begin_layout Standard
+Uma empresa não deve acreditar que vai conseguir ofertar e vender o mesmo
+ produto, com as mesmas características, para todos os clientes de um mercado
+ amplo (KOTLER, 2000)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Citação
+\end_layout
+
+\end_inset
+
+.
+ O autor considera que uma boa prática da empresa é optar por um estudo
+ de marketing de mercado-alvo que consiga encontrar os maiores segmentos
+ de mercados em que atuam, para que com maior eficiência, desenvolva produtos
+ e propagandas para cada um.
+ 
+\end_layout
+
+\begin_layout Standard
+A segmentação de mercado é largamente discutida e abordada no marketing
+ por sua capacidade de encontrar variáveis explicativas que consigam separar
+ grupos distintos de consumidores por suas inúmeras características (MYERS,
+ 1996)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Citação
+\end_layout
+
+\end_inset
+
+.
+ Ele acredita que para se obter essa segmentação é preciso decidir quais
+ são as variáveis dependentes e independentes, decidir a metodologia da
+ análise de dados, aplicá-la para identificar os diferentes segmentos para
+ o direcionamento de sua divulgação e criar o 
+\emph on
+marketing mix
+\emph default
+ para cada segmento encontrado.
+ Entre esses segmentos encontrados, são estudados os efeitos publicitários
+ com base na análise cognitiva (propaganda informativa) e na análise experimenta
+l (propaganda transformacional) (PUTO and WELLS, 1984)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Citação
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Os autores explicam que a propaganda informativa é aquela que possui informações
+ factuais (presumivelmente verificáveis) que deixam claro para o consumidor
+ quais são as reais características do produto.
+ Já a propaganda transformativa é aquela que associa a experiência do uso
+ do produto de uma marca com um conjunto de características psicológicas
+ que não estão associadas a marca.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="5">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top" width="14text%">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="15text%">
+<column alignment="left" valignment="top" width="10text%">
+<column alignment="left" valignment="top" width="25text%">
+<row newpage="true">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+VARIÁVEL
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CATEGORIA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIPO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+VALOR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DESCRIÇÃO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Imagem
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+psicográfica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Quantitativa Contínua
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[0;3,59\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Convertida através de análise fatorial
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Utilitário
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+psicográfica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Quantitativa Contínua
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[0;4,17\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Convertida através de análise fatorial
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Preço
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+psicográfica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Quantitativa Contínua
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[0;3,99\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Convertida através de análise fatorial
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gênero
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sociodemográfica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Qualitativa Nominal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F, M
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F = Feminino
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newline
+\end_layout
+
+\end_inset
+
+ M = Masculino
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Estado Civil
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sociodemográfica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Qualitativa Nominal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Solteiro, Casado
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Solteiro(a)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newline
+\end_layout
+
+\end_inset
+
+ Casado(a)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Idade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sociodemográfica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Qualitativa Ordinal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+J, M, S
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+J = Jovem
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newline
+\end_layout
+
+\end_inset
+
+ M = Mediano
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newline
+\end_layout
+
+\end_inset
+
+ S = Senior
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Filhos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sociodemográfica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Qualitativa Nominal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Com, Sem
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Com = com filhos
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newline
+\end_layout
+
+\end_inset
+
+ Sem = Sem filhos
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Renda Anual
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sociodemográfica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Qualitativa Ordinal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M, MA, A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M = Média
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newline
+\end_layout
+
+\end_inset
+
+ MA = Média 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newline
+\end_layout
+
+\end_inset
+
+ A = Alta
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pequeno
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Não sei
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Qualitativa Nominal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sim, Não
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sim = carro pequeno 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newline
+\end_layout
+
+\end_inset
+
+ Não = carro grande
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Protótipo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+protótipo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Qualitativa Nominal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1, 2, 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 = Protótipo 1 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newline
+\end_layout
+
+\end_inset
+
+ 2 = Protótipo 2 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newline
+\end_layout
+
+\end_inset
+
+ 3 = Protótipo 3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:descricao-variaveis-da-amostra"
+
+\end_inset
+
+Descreve as variáveis envolvidas na amostra em questão.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Objetivos
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:objetivos"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O objetivo geral deste relatório é de auxiliar a escolha e de elucidar o
+ protótipo ideal, para o lançamento do automóvel Ford Ká, juntamente, com
+ o tipo de análise publicitária (informativa ou transformativa) que a empresa
+ deve investir para ter um alcance maior e uma escolha mais contundente.
+ O relatório possui estudos estatísticos que direcionam a escolha do protótipo
+ e seu enfoque publicitário ideais, mas não se abstém das demais análises
+ e descobertas para mostrar, com clareza, os tipos de variáveis e segmentos
+ de mercado trabalhados na pesquisa em questão.
+ 
+\end_layout
+
+\begin_layout Standard
+As confirmações do estudo foram encontradas diante de resultados de predições
+ estatísticas entre variáveis de perfil sociodemográfico e as características
+ dos três diferentes tipos de protótipos anunciados.
+ A caracterização dos segmentos encontrados foi feita a partir de estudos
+ de Cluster Analysis e sua análise tem por base o cruzamento destes clusters
+ (segmentos) com as características de cada protótipo.
+ Tais clusters foram criados em decorrência de análises das inferências
+ estatísticas entre as variáveis disponíveis no questionário proposto na
+ pesquisa e esclarecidos neste relatório.
+\end_layout
+
+\begin_layout Section
+Metodologia
+\end_layout
+
+\begin_layout Standard
+A pesquisa foi realizada com uma amostra probabilística de 250 clientes.
+ Seus respondentes avaliaram 50 questões em escala de Likert, responderam
+ sobre seu perfil sócio demográfico e psicográfico e analisaram os três
+ protótipos de lançamento, propostos pela empresa, escolhendo aquele que
+ mais gostaria de possuir.
+ As questões em escala de Likert foram convertidas, via análise fatorial,
+ em três variáveis contínuas (Imagem, Utilitário e Preço).
+\end_layout
+
+\begin_layout Standard
+Os testes de hipóteses utilizados na pesquisa foram: Pearson Chi-Quadrado,
+ One-way ANOVA e t-Student.
+ Em todos os testes, foi avaliado o valor p (p value) da correlação entre
+ as variáveis descritas na pesquisa para que se avaliasse o risco da decisão
+ das hipóteses.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\color red
+Descrever o porque do Cluster Analysis
+\end_layout
+
+\begin_layout Standard
+A variáveis que constituem essa pesquisa e suas categorias, tipos, valores
+ e descrições são descritas na tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:descricao-variaveis-da-amostra"
+
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

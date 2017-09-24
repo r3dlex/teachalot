@@ -1,0 +1,238 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\newcommand{\nomeCa}{Apaixonados}
+\newcommand{\nomeCb}{Invejáveis}
+\newcommand{\nomeCc}{Hamletianos}
+\newcommand{\nomeCd}{Descomplicados}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Personas
+\end_layout
+
+\begin_layout Standard
+A análise de personas, a nível de marketing, é um perfil semifictício que
+ representa um estereótipo de cliente da empresa.
+ Na análise de protótipos, definimos uma persona por cluster para que assim
+ possamos melhor caracterizá-los.
+ Nas próximas seções são definidos uma persona por cluster.
+\end_layout
+
+\begin_layout Subsection
+Cluster 1: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nomeCa{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pedro 30 anos advogado bem-sucedido admite sua paixão por carro.
+ Para ele o carro é um objeto de desejo que diz quem você é, representa
+ a passagem para um futuro cada vez mais avançado, além de trazer agilidade
+ no dia-a-dia e conforto nas viagens.
+ Preferência: A análise mostrou que dentre os quatro clusters analisados,
+ este é o mais heterogêneo, porém analisando o cruzamento com as três variáveis
+ psicográficas foi o que mostrou maior interesse em todas elas, e o preço
+ foi a variável mais relevante.
+ Para estas pessoas o carro reflete a sua imagem, é visto como um bem utilitário
+ e o preço precisa obrigatoriamente dar um retorno em relação à expectativa
+ que eles possuem quanto a imagem e a tecnologia.
+ São pessoas que conhecem carro, não se importam em pagar caro, desde que
+ tenham os benefícios, isto é, o carro seja realmente uma máquina bela e
+ possante.
+ 
+\end_layout
+
+\begin_layout Subsection
+Cluster 2: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nomeCb{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Marcelo executivo de sucesso 55 anos, seu carro é a sua própria imagem.
+ Segundo ele, dependendo do modelo, que varia com os anseios de cada um,
+ o carro transmite a mensagem que seu dono pode ser ou forte, ou livre,
+ ou rico, ou aventureiro, ou ter todas, ou algumas dessas características.
+ Um carro limpo e brilhante está associado ao sucesso social, à estabilidade
+ financeira e ao cuidado com seus pertences.
+ Preferência: Analisando os dados é possível concluir que este cluster é
+ bem homogêneo.
+ A análise do cruzamento do cluster com as variáveis psicográficas mostrou
+ que o maior peso foi dado à variável imagem, e as variáveis utilitário
+ e preço tiveram igualmente um peso bem menor.
+ Isso significa que as pessoas que fazem parte deste cluster estão dispostas
+ a pagar o preço que for por um carro que traduza fielmente o que pretendem
+ transmitir a sociedade.
+ Não estão preocupadas com o que o carro oferece de utilitários nem mesmo
+ com a relação custo-benefício, o fator de escolha é apenas a imagem transmitida
+ pelo bem.
+ 
+\end_layout
+
+\begin_layout Subsection
+Cluster 3: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nomeCc{}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Persona: Clara é uma jovem estudante preocupada com a preservação do planeta,
+ com o clima, com a ameaça do fim dos recursos naturais.
+ Para ela a sociedade deve se preocupar em diminuir o nível de consumo e
+ criar alternativas de consumo coletivo, compartilhamento de bens.
+ Ela se questiona se é recomendável comprar um carro.
+ Preferência: A análise dos dados evidenciou que este cluster é bem heterogêneo.
+ O cruzamento das variáveis cluster e imagem demonstrou que existe uma relação
+ entre elas, porém o peso dado é menor comparado aos outros clusters.
+ Analisando o cruzamento das variáveis cluster e utilitário, verificou-se
+ que o peso dado foi menor ainda.
+ A variável preço foi a que obteve o maior peso.
+ Estas pessoas demonstram ser indiferentes a ter um carro, para elas a imagem
+ que ter um carro transmite não importa, e o carro como utilitário também
+ não.
+ Se comprassem um carro, o preço seria um fator de escolha em detrimento
+ da imagem e da utilidade.
+ 
+\end_layout
+
+\begin_layout Subsection
+Cluster 4: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nomeCd{}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Mariana é médica e tem dois filhos, sua vida é muito corrida pois precisa
+ conciliar o trabalho com a rotina dos filhos.
+ Para ela, o carro fez com que nos tornássemos “auto-móveis”.
+ O carro nada mais é do que um bem utilitário, e quando ele deixa de ser
+ adequado às suas necessidades práticas, não lhe parece tão doloroso trocá-lo
+ por outro.
+ Ela quer um produto seguro e, de preferência, fácil de estacionar.
+ Preferência: A análise dos dados mostrou que este cluster é o mais homogêneo
+ dentre os quatro.
+ As pessoas que fazem parte deste cluster valorizam o carro como utilitário
+ mais do que as pessoas dos outros três clusters.
+ No cruzamento das variáveis cluster e imagem, e cluster e preço, foi possível
+ verificar que estas variáveis receberam igualmente menor peso dentro do
+ cluster, e em relação aos outros clusters também.
+ Este cluster vê o carro somente como um bem utilitário, não criam nenhum
+ tipo de apego afetivo, e trocam quando não lhe serve mais.
+ 
+\end_layout
+
+\end_body
+\end_document

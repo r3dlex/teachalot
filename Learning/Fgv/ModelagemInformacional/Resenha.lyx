@@ -95,6 +95,64 @@ p
 \emph default
 -variáveis é um método de discriminação de quais elementos são contundentes
  na seleção do protótipo, dados os clusters em questão.
+ 
+\end_layout
+
+\begin_layout Standard
+Nesta seção, vamos discorrer sobre as diversas variáveis do espaço amostral
+ e sua relação com os clusters 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nomeCa{}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nomeCb{}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nomeCc{}
+\end_layout
+
+\end_inset
+
+ e 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nomeCd{}
+\end_layout
+
+\end_inset
+
+.
 \begin_inset Float table
 wide true
 sideways false
@@ -948,7 +1006,6 @@ status open
 
 \begin_layout Plain Layout
 
-\emph on
 
 \backslash
 nomeCa{}
