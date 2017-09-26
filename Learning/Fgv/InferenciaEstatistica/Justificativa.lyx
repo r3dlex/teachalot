@@ -1,0 +1,555 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Conforme identificado no capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:introducao"
+
+\end_inset
+
+, em posse dos dados, devemos classificá-los de forma a identificar os diferente
+s segmentos de mercado na população, verificar para quais desses segmentos
+ o produto é mais interessante e direcionar a comunicação e criar a campanha
+ de marketing de forma a atingir essa parte da população.
+\end_layout
+
+\begin_layout Standard
+A ferramenta de análise utilizada para resolução desse problema será a Análise
+ de Cluster, também conhecida como análise de conglomerados.
+\end_layout
+
+\begin_layout Standard
+A análise de cluster é uma técnica de análise multivariada cujo principal
+ objetivo é reunir pontos de dados baseando-se nas características individuais
+ de cada um.
+ Ou seja, ele classifica cada elemento segundo aquilo que cada um tem de
+ similar em relação a outros pertencentes a um determinado grupo, considerando
+ um critério de seleção predeterminado.
+\end_layout
+
+\begin_layout Standard
+O resultado da Análise de Cluster deve exibir um alto grau de homogeneidade
+ interna (dentro do cluster) e alto grau de heterogeneidade externa (entre
+ os diferentes clusters) conforme demonstrado na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:clustering"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagens/clustering.png
+	width 85text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:clustering"
+
+\end_inset
+
+Heterogeneidade e homogeneidade
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esse tipo de análise é utilizada em diferentes campos de estudo, como psicologia
+, biologia, marketing, engenharia, administração e contabilidade.
+ Entretanto em todos esses campos a análise tem um objetivo comum.
+ Classificar os elementos de acordo com os relacionamentos naturais.
+\end_layout
+
+\begin_layout Standard
+Existem diferentes maneiras e técnicas de se aplicar esse tipo de análise,
+ em nosso caso será utilizado o método de Ward, que é um método no qual
+ a soma dos quadrados dos desvios de cara elemento em relação a cada conglomerad
+o é minimizada.
+ Esse método tem uma tendência a combinar grupos com um menor número de
+ observações e produz grupos com aproximadamente o mesmo número de elementos.
+\end_layout
+
+\begin_layout Standard
+Por fim, ao final da análise deve-se interpretar os resultados, o que envolve
+ o exame de cada grupo levando em conta o conjunto de variáveis eleitas
+ para atribuir uma identificação que descreva adequadamente a natureza dos
+ grupos.
+\end_layout
+
+\begin_layout Standard
+No caso estudado a análise de cluster mostra-se especialmente útil pois
+ ela classifica os elementos em diferentes segmentos de mercado e auxilia
+ na escolha de qual protótipo seria mais indicado a cada grupo, bem como
+ indicaria qual o tipo de comunicação deveria ser feita a cada grupo após
+ escolhido o protótipo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagens/dendogram.png
+	width 85text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:dendogram"
+
+\end_inset
+
+O Dendograma por método de Ward tomados 
+\emph on
+Imagem, Utilitário e Preço
+\emph default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="6">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Variável
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cluster 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cluster 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cluster 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cluster 4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Centróide
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Imagem
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,35
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3,04
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,95
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,62
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,00
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Utilitário
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,95
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,57
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,99
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3,47
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Preço
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,89
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,98
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,36
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,54
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,86
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:centroids-ward"
+
+\end_inset
+
+Centróides de clustering obtidos por método de Ward
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O dendograma apresentado na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:dendogram"
+
+\end_inset
+
+ e na tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:centroids-ward"
+
+\end_inset
+
+ denotam a relação entre 
+\emph on
+Imagem, Preço, Utilitário 
+\emph default
+e
+\emph on
+ Cluster 
+\emph default
+que é usada como base na abordagem de 
+\emph on
+Persona 
+\emph default
+neste capítulo.
+ Na tabela, observa-se uma atração do cluster 1 para 
+\emph on
+Imagem
+\emph default
+, 
+\emph on
+Utilitário
+\emph default
+ e 
+\emph on
+Preço
+\emph default
+.
+ Do cluster 2 para 
+\emph on
+Imagem
+\emph default
+, do 3 para 
+\emph on
+Preço
+\emph default
+ e do 4 para 
+\emph on
+Utilitário
+\emph default
+.
+\end_layout
+
+\end_body
+\end_document
