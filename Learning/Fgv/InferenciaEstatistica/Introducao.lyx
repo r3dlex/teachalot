@@ -70,6 +70,16 @@
 \begin_body
 
 \begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:introducao"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Neste capítulo, será discorrido quanto aos elementos da pesquisa de protótipos
  que culminou com a campanha publicitária sobre o produto Ford Ka
 \begin_inset ERT
