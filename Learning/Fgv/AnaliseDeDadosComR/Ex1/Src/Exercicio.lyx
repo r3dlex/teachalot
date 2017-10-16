@@ -1,0 +1,848 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{minted}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Relatório de Exercícios: 3.5.1 
+\end_layout
+
+\begin_layout Standard
+MBA Executivo em Economia e Gestão: Business Analytics e Big Data
+\end_layout
+
+\begin_layout Standard
+Turma: MSP21734-ZEBABD-T3
+\end_layout
+
+\begin_layout Standard
+Disciplina: Análise de Dados com R
+\end_layout
+
+\begin_layout Standard
+Aluno: André Ferreira Bem Silva
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{4
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1.
+ O que acontece é que para cada valor individual da variável 
+\emph on
+displ 
+\emph default
+ele irá criar um gráfico separado.
+ Se houver muitos valores, é possível que aconteça algum tipo de problema
+ no 
+\emph on
+runtime 
+\emph default
+R.
+ Além disso, o gráfico não é muito 
+\emph on
+ilustrativo
+\emph default
+, ou seja, útil.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minted}{R}
+\end_layout
+
+\begin_layout Plain Layout
+
+exercise1 <- function() 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(data = mpg) + 
+\end_layout
+
+\begin_layout Plain Layout
+
+	geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
+\end_layout
+
+\begin_layout Plain Layout
+
+	facet_wrap(~ displ)
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggsave("Img/exercise1.pdf")
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minted}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Img/exercise1.pdf
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ As celulas vazias na imagem da direita siginificam combinações não presentes,
+ visíveis mais facilmente na imagem à esquerda, uma vez que cada variável
+ no eixo x corresponde a uma categoria diferente de 
+\emph on
+drv
+\emph default
+.
+ Para o valor 
+\emph on
+f
+\emph default
+, por exemplo, não há veículo de 4 cilindos o que fica visível no gráfico
+ olhando-se a primeira coluna do grid, 
+\emph on
+4-f
+\emph default
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minted}{R}
+\end_layout
+
+\begin_layout Plain Layout
+
+exercise2 <- function()
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(data = mpg) +
+\end_layout
+
+\begin_layout Plain Layout
+
+    geom_point(mapping = aes(x = drv, y = cyl))
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggsave("Img/exercise2-1.pdf")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(data = mpg) +
+\end_layout
+
+\begin_layout Plain Layout
+
+    geom_point(mapping = aes(x = drv, y = cyl)) +
+\end_layout
+
+\begin_layout Plain Layout
+
+    facet_grid(drv ~ cyl)
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggsave("Img/exercise2-2.pdf")
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minted}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Img/exercise2-1.pdf
+	width 49text%
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename Img/exercise2-2.pdf
+	width 49text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ O .
+ é uma notação usada em R para denotar a ausência de uma variável.
+ No caso do grid, significa que na dimensão em que foi usado o valor de
+ 
+\begin_inset Formula $G_{nxn}$
+\end_inset
+
+ torna-se 
+\begin_inset Formula $G_{1xn}$
+\end_inset
+
+ (primeiro exemplo) ou 
+\begin_inset Formula $G_{nx1}$
+\end_inset
+
+ (segundo exemplo), dependendo da dimensão em que for utilizado.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minted}{R}
+\end_layout
+
+\begin_layout Plain Layout
+
+ggplot(data = mpg) + 
+\end_layout
+
+\begin_layout Plain Layout
+
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+\end_layout
+
+\begin_layout Plain Layout
+
+  facet_grid(drv ~ .)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minted}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Img/exercise3-1.pdf
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minted}{R}
+\end_layout
+
+\begin_layout Plain Layout
+
+ggplot(data = mpg) + 
+\end_layout
+
+\begin_layout Plain Layout
+
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+\end_layout
+
+\begin_layout Plain Layout
+
+  facet_grid(.
+ ~ cyl)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minted}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Img/exercise3-2.pdf
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4.
+ Fica evidenciado no plot a seguir, que olhando cada 
+\emph on
+facet 
+\emph default
+individualmente fica mais simples entender as tendências dentro da categoria
+ em questão, enquanto no gráfico de dispersão colorido, a cor funciona como
+ uma dimensão a mais, sendo ao mesmo tempo mais complexo observar o comportament
+o individual de cada categoria nele, mas entender o comportamento de todos
+ ao mesmo tempo.
+ O fator colorido pode tornar-se poluído visualmente, gerando um efeito
+ 
+\emph on
+arco-íris 
+\emph default
+indesejável para a análise dos dados.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minted}{R}
+\end_layout
+
+\begin_layout Plain Layout
+
+exercise4 <- function()
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(data = mpg) +
+\end_layout
+
+\begin_layout Plain Layout
+
+    geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
+\end_layout
+
+\begin_layout Plain Layout
+
+    facet_wrap(~ class, nrow = 2)
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggsave("Img/exercise4-1.pdf")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(data = mpg) +
+\end_layout
+
+\begin_layout Plain Layout
+
+    geom_point(mapping = aes(x = displ, y = hwy, color = class))
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggsave("Img/exercise4-2.pdf")
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minted}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Img/exercise4-1.pdf
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Img/exercise4-2.pdf
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+5.
+ Ao ler-se o manual rodando o 
+\emph on
+?face_wrap, 
+\emph default
+vê-se que as variáveis 
+\emph on
+nrow 
+\emph default
+e 
+\emph on
+ncol
+\emph default
+ são variáveis que determinam a disposição dos gráficos.
+ Isto é, o número de colunas e linhas dos 
+\emph on
+facets 
+\emph default
+de saída.
+ No 
+\emph on
+facet_grid 
+\emph default
+há o parâmetro 
+\emph on
+as.table
+\emph default
+ que define um layout de tabela com os maiores valores no canto inferior
+ direito.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+6.
+ Observando-se os plots 
+\emph on
+de displ x hwy
+\emph default
+ com 
+\emph on
+facets fl x drv 
+\emph default
+(esquerda)
+\emph on
+ e drv x fl
+\emph default
+ (direita), fica evidente que o primeiro plot, com apenas três colunas,
+ é mais visível neste documento.
+ A ideia é que é mais usual fazer-se a leitura vertical nesses casos que
+ uma leitura mais horizontal, podendo inclusive não caber no documento,
+ caso hajam muitas categorias.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minted}{R}
+\end_layout
+
+\begin_layout Plain Layout
+
+exercise6 <- function()
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(data = mpg) + 
+\end_layout
+
+\begin_layout Plain Layout
+
+    geom_point(mapping = aes(x = displ, y = hwy)) +
+\end_layout
+
+\begin_layout Plain Layout
+
+    facet_grid(fl ~ drv)
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggsave("Img/exercise6-1.pdf")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(data = mpg) + 
+\end_layout
+
+\begin_layout Plain Layout
+
+    geom_point(mapping = aes(x = displ, y = hwy)) +
+\end_layout
+
+\begin_layout Plain Layout
+
+    facet_grid(drv ~ fl)
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggsave("Img/exercise6-2.pdf")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minted}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Img/exercise6-1.pdf
+	width 49text%
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename Img/exercise6-2.pdf
+	width 49text%
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
