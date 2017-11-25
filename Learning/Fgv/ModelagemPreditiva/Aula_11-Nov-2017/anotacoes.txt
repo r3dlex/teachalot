@@ -1,0 +1,27 @@
+Árvores de decisão
+  Overfitting => Treinamento excessivo em função da amostra. A extrapolação do modelo é ruim (e.g redes neurais, deep nets...)
+
+  In-balance (balanceamento de amostras de tamanhos disintos - slide Balanceamento de Amostras)
+    Bibliotecas R
+      SMOTE
+      ROSE
+
+
+    Random Forest algorithms - Conjuntos de árvores
+
+Refs
+    Data Mininig Livro Berry & Linoff, 2nd ed
+
+    An introduction to Recursive Partitioning RPART
+    Mayo Foundation
+
+Callcenter
+  Xzcall shrt
+
+> data <- read.csv2("data.csv")
+> data2 <- data[, !(names(data) %in% c("funcionario"))]
+> data2.mask.bom <- data2$status == "bom"
+> library(rpart)
+> dt <- rpart(data = xx, status~idade+prim_emp+teste+educ)
+> library(rpart.plot)
+> prp(dt, type=2, extra=104, nn=T, fallen.leaves = T, branch.col = "red", branch.lty = 5, box.col = c("white", "green"))
