@@ -1,0 +1,12 @@
+unclass(x$var) - transforma categorias em sequência de números. Útil para usar cores
+
+Teste Íris
+> cores <- c("blue", "green", "red")
+> pairs(iris[1:4], main="Iris teste blibs", pch=21, bg=cores[unclass(iris$Species)])
+
+GGAlly - packages
+ggpairs(iris, columns=1:4)
+ggpairs(iris, columns=1:4, ggplot2::aes(color=Species))
+
+# Converts numeric into category
+> cut(mbas.df.final$sex, breaks = 2, labels = c("Male", "Female"))

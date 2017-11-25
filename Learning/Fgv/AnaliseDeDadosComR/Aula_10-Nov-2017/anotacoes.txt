@@ -1,0 +1,40 @@
+UsingR (pacote com dados estatísticos)
+  florida - Dados da eleição da Florida/US - 2000 (eleições com problemas eleitorais)
+  plot (BUSH,BUCHANAN)
+  Condado que houve recontagem - outlier (50) => PALM BEACH (florida[50,])
+
+identify - Identifica valores em um plot
+
+InsectSprays
+  unstack(InsectSprays) - fields A, B, C, D, E, F)
+  oneway.test(unstack(InsectSprays))
+  oneway.test(InsectSprays$count ~ InsectSprays$spray)
+  boxplot(InsectSprays$count ~ InsectSprays$spray)
+  ggplot(InsectSprays, aes(x=spray, y=count)) + geom_boxplot(aes(fill=spray))
+  
+
+MBA Salaries
+  quarter -> primeiro quartil é o maior
+  Missing salary => 998 não respondeu, 999 respondeu e não falou o salário
+
+> mean(mba2$salary[mba2$sex==1])
+  [1] 104971
+> mean(mba2$salary[mba2$sex==2])
+  [1] 98524.39
+> oneway.test(mba2$salary ~ mba2$sex)
+
+  One-way analysis of means (not assuming equal variances)
+  data:  mba2$salary and mba2$sex
+  F = 1.8573, num df = 1.000, denom df = 38.115, p-value = 0.1809
+
+> boxplot(mba2$salary ~ mba2$sex) - observado super salário feminino
+> identify(mba2$salary ~ mba2$sex)
+
+> mba3 <- mba2[mba2$salary != max(mba2$salary),]
+> oneway.test(mba3$salary ~ mba3$sex)
+
+  One-way analysis of means (not assuming equal variances)
+
+  data:  mba3$salary and mba3$sex
+  F = 17.729, num df = 1.000, denom df = 70.693, p-value = 7.384e-05
+

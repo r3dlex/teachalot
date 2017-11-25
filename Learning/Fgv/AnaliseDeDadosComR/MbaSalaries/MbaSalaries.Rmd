@@ -1,0 +1,383 @@
+---
+title: "Análise de dados com R"
+subtitle: "Trabalho MBA Salaries"
+date: "25 de Novembro de 2017"
+author:
+  - name: "André Ferreira Bem"
+  - name: "Augusto Gonçalves"
+  - name: "Marcos Vinício de Siqueira"
+    affiliation: "Fundação Getulio Vargas - FGV"
+output:
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align='center',fig.height=5,fig.width=6)
+
+#Instalar os seguintes pacotes:
+package.requirements <- c("ggplot2", "dplyr", "kableExtra", "knitr", "corrplot", "readxl", "GGally")
+#install.packages(package.requirements)
+
+# Loads all libraries
+lapply(package.requirements, library, character.only = TRUE)
+
+```
+
+---
+
+### 1. ESTUDO DE CASO
+
+Este trabalho visa auxiliar a decisão de uma candidata a caloura de um curso de MBA através de resultados da análise de dados com o R. Estes resultados demonstram para candidata se vale ou não a pena fazer o curso escolhido.
+
+Marie Daer quer saber os salários iniciais dos formandos do curso, quer saber se a questão do gênero faz a diferença no valor desses salários, se os estudantes gostaram de fazer o curso e se a nota do seu GMAT tem alguma influência nesta questão, visto que, por ela não ser nativa de um país anglosaxônico ela obteve uma nota baixa no GMAT. Ela ganhou acesso a uma pesquisa de satisfação do curso em questão feita entre formandos do curso.
+
+Os dados utilizados neste estudo de caso foram disponibilizados em uma planilha Excel e importados para o R. Abaixo é mostrada a importação dos dados, uma tabela com uma visualização prévia das informações e um histograma com todos os salários contidos na base:
+
+
+```{r echo=TRUE, message=FALSE}
+
+mba <- read_excel("./mba.xlsx") # É NECESSÁRIO COPIAR O ARQUIVO PARA O DIRETÓRIO RAIZ DO R
+
+kable(
+    mba[1:10,],
+    format = "html",
+    align="c",
+    caption = "Tabela 1 - 10 primeiros salários da base MBA.xlsx"
+    ) %>%
+      kable_styling(
+          bootstrap_options = c("striped","hover","condensed"),
+          font_size = 10
+      ) %>%
+        column_spec(
+            column = 12, 
+            border_left = T, 
+            border_right = T,
+            color = "red",
+            bold = T
+        ) %>%
+            row_spec(
+              row = 8:10,
+              background = "lightblue"
+            )
+
+ggplot(mba, aes(x = salary)) + 
+    xlab("Salário") + 
+    ylab("Frequência") +
+    ggtitle("Histograma 1 - Todos os salários") +
+      geom_histogram(bins = 15, fill = "#5B7FE7", color = "black") +
+      geom_vline(aes(xintercept = median(mba$salary), linetype="Mediana"), col = "red") +
+      scale_linetype_manual(name="Legenda:", values = 1,guide = guide_legend(override.aes = list(color = "red")))
+
+```
+
+---
+
+### 2. FILTRAGEM DOS DADOS
+
+O histograma acima demonstra algumas inconsistências nos dados pelo fato de ter muitos salários zerados seguidos pela linha da mediana que se concentra próximo ao valor 0 do eixo dos Salários. Na verdade, se levarmos em consideração o que a Marie Daer encontrou nos dados, temos o seguinte:
+
+* Salários com valores 998 pertencem a estudantes que não responderam à pesquisa.
+* Salários com valores 999 pertencem a estudantes que responderam à pesquisa mas não divulgaram seus salários.
+
+Observando os dez primeiros registros da base **"mba"** demonstrados na *Tabela 1*, podemos perceber que salários zerados ou com valor 999 possuem a nota de satisfação *(variável **"satis"**)* que o aluno teve do curso. Por esta razão, se formos analisar somente o nível de satisfação dos alunos, temos que incluir estes registros em nossa análise. Por ora, como vamos analisar os salários iniciais dos alunos vamos desconsiderar os dados com salários referentes a estes valores. Por precaução criaremos um novo `data.frame` de nome **"mba2"** para não perdermos nenhuma informação disponível na base **"mba"** criada anteriormente. Após a filtragem dos dados, o resultado do Histograma é o seguinte:
+
+```{r echo=TRUE,message=FALSE}
+mba2 <- filter(mba, salary != 999 & salary != 998 & salary != 0)
+
+ggplot(mba2, aes(x = salary)) + 
+    xlab("Salário") + 
+    ylab("Frequência") +
+    ggtitle("Histograma 2 - Salários sem valores 0, 998 e 999") +
+      geom_histogram(bins = 15, fill = "#5B7FE7", color = "black") +
+      geom_vline(aes(xintercept = median(mba2$salary), linetype="Mediana"), col = "red") +
+      scale_linetype_manual(name="Legenda:", values = 1,guide = guide_legend(override.aes = list(color = "red")))
+
+```
+
+Como podemos ver no *Histograma 2* sua mediana indica uma maior concentração dos valores na casa dos salários de $100.000,00. Neste contexto, já temos evidências que existem salários que se deslocam dessa maior concentração e ficam além dos limites da análise. 
+
+Para se ter mais clareza do total da amostra que utilizaremos nesta análise, vamos utilizar um boxplot que indicará os outliers e através de linhas horizontais veremos os limites dos desvios padrão a partir da média (linha laranja). Para este boxplot utilizaremos apenas 3 desvios padrão que representam 99,73% dos dados.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+ggplot(mba2, aes(x = factor(0), y = salary)) + 
+    ylab("Salário") +
+    xlab(NULL)+
+    scale_x_discrete(breaks = NULL) +
+    ggtitle("Boxplot 1 - Salários sem valores 0, 998 e 999") +
+      geom_boxplot(fill = "#5B7FE7", color = "black", outlier.color = "red", outlier.shape = 16)+
+      geom_hline(aes(yintercept = mean(mba2$salary), linetype="Média"), col = "orange")+
+      geom_hline(aes(yintercept = mean(mba2$salary) - (sd(mba2$salary) * 1), linetype="1º Desvio Padrão"), col = "purple")+
+      geom_hline(aes(yintercept = mean(mba2$salary) + (sd(mba2$salary) * 1), linetype="1º Desvio Padrão"), col = "purple")+
+      geom_hline(aes(yintercept = mean(mba2$salary) - (sd(mba2$salary) * 2), linetype="2º Desvio Padrão"), col = "blue")+
+      geom_hline(aes(yintercept = mean(mba2$salary) + (sd(mba2$salary) * 2), linetype="2º Desvio Padrão"), col = "blue")+
+      geom_hline(aes(yintercept = mean(mba2$salary) - (sd(mba2$salary) * 3), linetype="3º Desvio Padrão"), col = "green")+
+      geom_hline(aes(yintercept = mean(mba2$salary) + (sd(mba2$salary) * 3), linetype="3º Desvio Padrão"), col = "green")+
+      scale_linetype_manual(name="Legenda:", values = c(1,1,1,1), 
+                      guide = guide_legend(override.aes = list(color = c("purple", "blue", "green","orange"))))
+
+```
+
+Como podemos perceber no *Boxplot 1* os possíveis outliers destacados em vermelho destoam da maior concentração dos dados e para que alcance o equilibrio da distribuição destes valores, utilizaremos o desvio padrão como parâmetro de escolha da amostra de análise.
+
+A maior concentração dos dados se encontra no primeiro desvio padrão a partir da média (linha roxa), mas não devemos utilizar apenas essa amostra pois existe uma pequena quantidade da aglomeração do 1º quartil do boxplot, que ultrapassa para a segunda faixa do desvio padrão (linha azul). O 1º desvio padrão equivale a 68,26% do total do dados e dessa forma, deixaremos de análisar dados que estão dentro da maior concentração.
+
+Deste modo, para se aproveitar a maior concentração dos dados utilizaremos a amostra da faixa do 2º desvio padrão. Consideraremos seus possíveis outliers a alcançaremos ao equivalente a 95,44% do total dos dados. Os demais outliers que fazem parte da faixa do 3º desvio padrão, serão desconsiderados da amostra da análise.
+
+Logo abaixo criaremos um novo `data.frame` de nome **"mba3"** que vamos desconsiderar os valores aquém dessa faixa do 2º desvio padrão e mostraremos que o histograma, desta vez, se aproximou de uma destribuição normal.
+
+
+```{r echo=TRUE}
+mba3 <- mba2[mba2$salary >= mean(mba2$salary) - (sd(mba2$salary) * 2) & mba2$salary <= mean(mba2$salary) + (sd(mba2$salary) * 2),]
+
+ggplot(mba3, aes(x = salary)) + 
+    xlab("Salário") + 
+    ylab("Frequência") +
+    ggtitle("Histograma 3 - Faixa do 2º Desvio Padrão") +
+      geom_histogram(bins = 15, fill = "#5B7FE7", color = "black") +
+      geom_vline(aes(xintercept = median(mba3$salary), linetype="Mediana"), col = "red") +
+      # geom_vline(xintercept = mean(mba3$salary), col = "green") +
+      scale_linetype_manual(name="Legenda:", values = 1,guide = guide_legend(override.aes = list(color = "red")))
+```
+
+Agora podemos perceber que a mediana se posiciona na região central do *Histograma 3* destribuindo os dados de maneira uniforme. Através do boxplot abaixo conseguimos visualizar os outliers considerados no momento da filtragem dos dados.
+
+```{r echo=TRUE}
+ggplot(mba3, aes(x = factor(0), y = salary)) + 
+    ylab("Salário") +
+    xlab(NULL)+
+    scale_x_discrete(breaks = NULL) +
+    ggtitle("Boxplot 2 - Faixa do 2º Desvio Padrão") +
+      geom_boxplot(fill = "#5B7FE7", color = "black", outlier.color = "red", outlier.shape = 16)
+
+```
+
+---
+
+### 3. ANÁLISE SALARIAL
+
+Uma das dúvidas da Marie Daer é se existe diferença de salário referente ao gênero do egresso. Mais precisamente, ela tem interesse em averiguar se o salário masculino é ou não superior ao feminino. No *Boxplot 3*, deriva-se forte tendência a aceitar-se a hipótese que os homens egressos ganham mais que as mulheres, em geral. Enquanto a média salarial dos homens é de $102.958,10 a das mulheres é de $95.526,07, demonstrados na *Tabela 2*:
+
+```{r echo=TRUE}
+
+mba3$gen <- factor(mba3$sex,levels = c(1,2),labels = c("Homem", "Mulher")) 
+
+ggplot(mba3, aes(group=sex, x = gen, y = salary)) + 
+    ylab("Salário") +
+    xlab("Gênero")+
+    ggtitle("Boxplot 3 - Salário por Gênero") +
+      geom_boxplot(fill = "#5B7FE7", color = "black", outlier.color = "red", outlier.shape = 16) +
+      geom_hline(aes(yintercept = mean(mba3$salary[mba3$sex==1]), linetype="Homens"), col = "#00CDFF")+
+      geom_hline(aes(yintercept = mean(mba3$salary[mba3$sex==2]), linetype="Mulheres"), col = "#FF3E00")+
+      scale_linetype_manual(name="Média Salarial:", values = c(2,5), 
+                      guide = guide_legend(override.aes = list(color = c("#00CDFF","#FF3E00"))))
+
+```
+
+```{r echo=TRUE}
+
+g <- c("Homens","Mulheres") 
+m <- c(mean(mba3$salary[mba3$sex==1]),mean(mba3$salary[mba3$sex==2]))
+medias <- data.frame("Gênero"=g,"Média Salarial" = m)
+
+kable(
+  medias, 
+  caption = "Tabela 2: Média Salarial por gênero",
+  format = "html",
+  align = "c"
+) %>%
+  kable_styling(
+    bootstrap_options = c("striped","hover","condensed"), 
+    full_width = F 
+  ) %>%
+    column_spec(1, bold = T, border_right = T,width = "3cm") %>%
+    column_spec(2, width = "3cm")
+
+```
+
+Podemos confirmar isso através da análise de variância one-way (ANOVA One-Way)
+
+```{r}
+
+oneway.test(mba3$salary ~ mba3$sex)
+
+```
+
+Demonstra-se que o valor p é muito baixo, confirmando que a hipótese alternativa
+é aceita.
+
+---
+
+### 4. CORRELAÇÃO ENTRE AS VARIÁVEIS 
+
+Para analisar o grau de correlação entre as variáveis faremos o cruzamento entre todas elas. Dando seguimento à análise salarial dos alunos, no gráfico a seguir, conseguiremos enxergar quais variáveis possuem maior grau de correlação com salário e quais cruzamentos tem o valor p indicado como abaixo de 5%.
+
+Esse estudo auxilia a identificação das principais correlações existentes na base de dados. O gráfico **Correlação 1** demonstra a correlação entre as variáveis traduzida em intesidade de cor e preenchimento das células de cada cruzamento, para facilitar a indentificação das correlações que possuem o valor p abaixo de 5% será introduzido um asterisco na célula do cruzamento a que ele pertence. A gama de cores azuis indicam valores positivos das correlações e gama de cores vermelhas valores negativos.
+
+
+```{r}
+correlacao <- cor(mba3[1:13])
+mtx_p_value <- cor.mtest(mba3[1:13])$p
+
+corrplot(
+  correlacao,
+  title = "Correlação 1 - Entre todas as variáveis",
+  method="square",
+  order="hclust",
+  hclust.method = "ward.D",
+  diag=FALSE,
+  type = "upper",
+  tl.col = "#000000",
+  tl.srt = 45,
+  tl.cex = .9,
+  p.mat = mtx_p_value,
+  sig.level = .05,
+  insig = "label_sig",
+  number.cex = .8,
+  pch = "*",
+  pch.cex = 1.5,
+  pch.col ="#000000",
+  mar = c(0,0,2,0)
+)
+
+```
+
+--- 
+
+#### 4.1 CORRELAÇÕES COM A VARIÁVEL SALARY
+
+O que podemos perceber é que a variável `salary` possue valores de correlação consideráveis no cruzamento com as variáveis `age, work_yrs, quarter, sex e s_avg`. Todas essas correlações possuem o valor p baixo, indicados pelo asterisco.
+
+Através de uma regressão linear múltipla analisaremos seus coeficientes de correlação entre as variáveis destacadas. 
+
+```{r}
+
+summary(lm(mba3$salary~mba3$age+mba3$work_yrs+mba3$sex+mba3$quarter+mba3$s_avg))
+
+```
+
+Analisando os resultados da regressão percebemos que o valor p da variável `work_yrs`é o maior dentre os demais, o que sugere que não seja um bom preditor para essa regressão. Por este motivo vamos aplicar um *backward* com essa variável e analisar o novo resultado da regressão. 
+
+No gráfico **Correlação 1** podemos perceber que a váriavel `work_yrs` tem uma grande correlação com a variável `age`, mas na comparação da regressão múltipla ambas se anulam. Por isso escolheremos a que tem menor predição com as demais variáveis.
+
+```{r}
+
+summary(lm(mba3$salary~mba3$age+mba3$sex+mba3$quarter+mba3$s_avg))
+
+```
+
+Dessa vez, devemos aplicar o *backward* na variável `quarter` pois ela quem está com o valor p maior. Novamente analisando o gráfico **Correlação 1** conseguimos perceber que a correlação entre a variável `quarter` e a variável `s_avg` é expressiva porém, entre as duas variáveis em relação as outras variáveis dessa regressão, `s_avg` por poucos décimos que seja, possue um valor preditivo maior.
+
+Deste modo, vamos analisar o resultado desconsiderando a variável `quarter`
+
+```{r}
+summary(lm(mba3$salary~mba3$age+mba3$sex+mba3$s_avg))
+
+```
+
+Este resultado mostra um valor p geral bem baixo, o valor p de cada variável preditora baixo também e através dos códigos de significância demonstrados pelos asteriscos podemos perceber que para esse teste de regressão as variáveis tem boas qualidades de predição.
+
+Definindo-se três faixas etárias até 25 anos, de 25 a 30 e maior que 30, as quais chamamos de `Jovens, Jovens Adultos e Adultos`, respectivamente. E também, ao constratar-se a variável salário com as variáveis idade, sexo, nota, e faixa etária baseando-se em sexo, temos:
+
+```{r, echo=TRUE, message=FALSE}
+# Constants
+mba.salary.sexlabels <- c("Masc", "Fem")
+mba.salary.selectedcolumns <- c("salary", "age", "s_avg", "sexlabel")
+
+mba.salary.finaldf <- function(mba.df)
+{
+    # Adds sex label factor to dataframe
+  mba.df$sexlabel <- factor(mba.df$sex, labels = mba.salary.sexlabels)
+
+  mba.df.final <- mba.df[mba.salary.selectedcolumns]
+  # Jovem (J), Jovem Adulto (JA), Adulto (A)
+  mba.df.final$agelabel <- cut(mba.df$age, breaks = c(20, 25, 30, 40), labels = c("J", "JA", "A"))
+
+  return (mba.df.final)
+}
+
+mydensity <- function(data, mapping, ...) {
+  ggplot(data = data, mapping=mapping) +
+    geom_density(..., alpha = 0.5) 
+}
+
+mba.df.final <- mba.salary.finaldf(mba3)
+#ggpairs(mba.df.final, aes(color = agelabel))
+ggpairs(mba.df.final,
+        aes(color = sexlabel),
+        upper = list(continuous="smooth", combo = "box"),
+        lower = list(continuous="cor", combo="blank", discrete = "blank"),
+        diag = list(continuous = mydensity))
+``` 
+
+Nesse gráfico, há evidência de que o salário masculino, está em média acima do salário feminino. Isso vem em acordo com o fato do teste oneway entre `salário` e `gênero` apresentar a hipótese alternativa como aceita. Ou seja, existe sim relação entre sexo e salário nessa base, mas seria essa relação dada de forma direta, ou há alguma outra variável que também explica a variável salário encontrar-se maior, em média, para os homens. Isso é algo de suma importância a ser analisado para Marie.
+
+Observa-se que a mediana das notas é a mesma em ambos, mas os quartis masculinos são mais abrangentes, sendo bem mais heterogêneos que o feminino. Além disso, nota-se que o número de mulheres em idades acima de 30 é 0 e o número absoluto de mulheres `Jovens` e `Jovens Adultas` é bem inferior ao dos homens. Sendo assim,  inferimos que as mulheres do curso tem em geral menos experiência de trabalho, conforme ficou evidente no gráfico de correlação entre idade e anos de trabalho.
+
+No gráfico de `salário x faixa etária` fica evidente que nas duas faixas etárias em que as mulheres estão presentes, há uma discrepância significativa entre os salários observados entre elas e homens, sendo assim é provável a relação entre `gênero e salário` nesse caso? 
+
+Obervando-se a variável idade, identifica-se que R² para idade entre as mulheres é quase o dobro com relação aos homens. Observa-se isso no gráfico de pontos da variável idade dado os gêneros. Será que o comportamento do salário entre as mulheres pode ser explicado pela idade então? Vamos analisar a base de dados sob a ótica de faixas etárias afim de melhor analisarmos essa relação.
+
+``` {r, echo=TRUE, message=FALSE}
+ggpairs(mba.df.final,
+        aes(color = agelabel),
+        upper = list(continuous="smooth"),
+        lower = list(continuous="cor", combo="blank", discrete = "blank"),
+        diag = list(continuous = mydensity))
+``` 
+
+Nesse, torna-se mais evidente que há uma forte relação entre nota e idade, denotado pelas três faixas, observáveis no gráfico de pontos nota x idade e novamente na relação com idade. Nos adultos, a relação R² com salário chega a mais de 50%, que são inclusive os mais altos, como vê-se no gráfico.
+
+Também, fica evidente a presença de faixas de salário bastante distintas dado a faixa etária. Curiosamente, os salários mais baixos concentram-se na faixa de Jovens Adultos, portanto pode não ser uma boa ideia a srta. Daer cursar o MBA se estiver nessa faixa. Além disso, se ela tiver a expectativa de ganhar ao menos o mesmo salário que um homem, esta pós provavelmente não seria uma boa escolha, já que evidencia-se uma diferença de salário entre gêneros. Contudo, se Marie tiver bastante experiência, no gráfico onde a cor representa gênero, observa-se que entre as categorias Jovens e Jovens Adultos, há uma diminuição da diferença entre os boxplots de gêneros.
+
+É possível que para uma mulher com mais de 30 anos a diferença fosse menor ainda, entretanto não há como fazer tal inferência, dado a não existência de dados reais válidos nessa faixa. Assim, responde-se dois dos questionamentos fundamentais de Daer, se a idade e gênero fazem diferença quanto ao salário nesse MBA.
+
+--- 
+
+#### 4.2 CORRELAÇÃO DAS VARIÁVEIS QUARTER E SATIS 
+
+Conforme visto no gráfico **Correlação 1** percebemos que a variável `quarter` tem forte correlação com a variável `satis`. Essa análise pode auxiliar no questionamento de Marie Daer no âmbito de saber o grau da satisfação do estudantes.
+
+Conforme explicado no item 1 e por questões de aproveitamento das informações da base proposta, os alunos que responderam o questionário e não informaram o salário receberam o valor 999, mas sua nota de satisfação do curso foi informada. Neste caso, vamos retomar o uso da base **"mba"** e apenas desconsiderar os valores 998 da variável `satis`. As variáveis serão codificadas de maneira que fique mais claro o entendimento da análise.
+
+A seguir vamos mostrar o teste Qui-quadrado entre as variáveis quarter e satis e verificar a correlação entre os valores delas.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+mba_satis_valid_rows <- mba$satis != 998
+mba_sq <- mba[mba_satis_valid_rows, ]
+
+nivel_aluno <- factor(mba_sq$quarter,levels = c(1,2,3,4),labels = c("Muito Baixo", "Baixo", "Médio", "Alto")) 
+satisfacao <- factor(mba_sq$satis,levels = c(1,2,3,4,5,6,7),labels = c("Extremamente Baixa", "Muito Baixa", "Baixa", "Média Baixa", "Média", "Média Alta", "Alta")) 
+
+cor_quarter_satis <- table(satisfacao,nivel_aluno)
+
+chisq <- chisq.test(cor_quarter_satis)
+
+cor_quarter_satis
+
+corrplot(
+    chisq$observed,
+    is.corr = FALSE,
+    title = "Correlação 2 - Quarter X Satis",
+    method="square",
+    tl.col = "#000000",
+    tl.srt = 45,
+    tl.cex = .9,
+    number.cex = .8,
+    mar = c(0,0,2,0),
+    addCoefasPercent = TRUE,
+    cl.align.text = "l"
+)
+
+quarter_satis_regression <- lm(formula = mba_sq$satis ~ mba_sq$quarter)
+summary(quarter_satis_regression)
+
+```
+
+De acordo com o gráfico de **Correlação 2** e com o p-valor de 0.601, observa-se que não há forte correlação entre as variáveis `quarter` e `satis`. Sendo assim, o desempenho geral do aluno no curso e seu grau de satisfação com o mesmo, apesar de relacionados, como visto na figura **Correlação 1**, não é possível afirmar que há relação direta entre o nível de satisfação com a variável `quarter`. 
+
+A principal diferença da **Correlação 2** para a **Correlação 1** é que a base utilizada para o processa da última, está focada em salários, e portanto, nenhuma das pessoas que não possuem salário são avaliadas na análise. Quando traz-se o foco da análise para a variável `satis`, o que ocorre é que a população de interesse é diferente da primeira. Sendo assim, o p-valor encontrado na regressão das duas variáveis é muito mais alto do que o encontrado originalmente.
+
+Assim, é impossível afirmar-se que a satisfação está ligada a nota do aluno e, além disso, a grande maioria das avaliações concentrou-se em Média, Média Alta e Alta, independente da variável `quarter`. Então, em geral a satisfação com o curso é bem alta, que é uma das análises de interesse da Marie Daer.
+
