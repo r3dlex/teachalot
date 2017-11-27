@@ -6,8 +6,7 @@ all:
 #	${LATEX} Src/Exercicio.tex && ${LATEX} Src/Exercicio.tex
 
 clean:
-	rm -v *.pdf
-	rm -v Img/*.pdf
+	rm -vf Img/*
 
 trabalho:
 	pdflatex Src/Tex/trabalho.tex
