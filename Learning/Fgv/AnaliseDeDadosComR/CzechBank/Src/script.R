@@ -1,3 +1,5 @@
+library(dplyr)
+
 source.directory <- "Src"
 data.directory <- "Data"
 
@@ -9,6 +11,11 @@ GetDataFilepath <- function(filename)
 GetSrcFilepath <- function(filename)
 {
   return (sprintf("%s/%s", source.directory, filename))
+}
+
+ReadDataFrameFromFilepath <- function(filename)
+{
+  return (read.csv2(GetDataFilepath(filename)))
 }
 
 RunSrcFromPath <- function(filename)
@@ -26,3 +33,12 @@ RunSrcFromPath <- function(filename)
 #setwd.scriptdir()
 
 RunSrcFromPath("clients.R")
+RunSrcFromPath("accounts.R")
+
+clientsdisp.df <- GetClientsDispositionDataFrame()
+districts.df <- ReadDistrictsDataFrame()
+accounts.df <- ReadAccountsDataFrame()
+transactions.df <- ReadTransactionsDataFrame()
+loans.df <- ReadLoansDataFrame()
+cards.df <- ReadCreditCardsDataFrame()
+orders.df <- ReadPermanentOrdersDataFrame()

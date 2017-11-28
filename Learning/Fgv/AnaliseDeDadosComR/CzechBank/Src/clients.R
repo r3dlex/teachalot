@@ -1,5 +1,14 @@
 library(dplyr)
 
+################# Data Description ############
+#client = (5369 objects in the file CLIENT.ASC) ­ each record describes characteristics of
+#a client,
+#disposition = (5369 objects in the file DISP.ASC) ­ each record relates together a client
+#with an account i.e. this relation describes the rights of clients to operate accounts,
+#relation permanent order (6471 objects in the file ORDER.ASC) ­ each record describes
+###############################################
+
+
 FixedSizeStringSplit <- function(string, size){
   pat <- paste0('(?<=.{',size,'})')
   strsplit(string, pat, perl=TRUE)
@@ -36,10 +45,29 @@ GetBirthDateYyMmDd <- function(birthnumber)
 
 ReadClientsDataFrame <- function()
 {
-  clients.df <- (read.csv2(GetDataFilepath("client.asc")))
+  
+  clients.df <- ReadDataFrameFromFilepath("client.asc")
   clients.df$gender <- sapply(clients.df$birth_number, GenderFromDate)
   clients.df$birth_date <- sapply(clients.df$birth_number, GetBirthDateYyMmDd)
 
   return (clients.df)
+}
+
+ReadDispositionDataFrame <- function()
+{
+  return (ReadDataFrameFromFilepath("disp.asc"))
+}
+
+GetClientsDispositionDataFrame <- function()
+{
+  clients.df <- ReadClientsDataFrame()
+  disposition.df <- ReadDispositionDataFrame()
+
+  return (inner_join(clients.df, disposition.df))
+}
+
+ReadDistrictsDataFrame <- function()
+{
+  return (ReadDataFrameFromFilepath("district.asc"))
 }
 
