@@ -9,16 +9,6 @@ library(dplyr)
 ###############################################
 
 
-FixedSizeStringSplit <- function(string, size){
-  pat <- paste0('(?<=.{',size,'})')
-  strsplit(string, pat, perl=TRUE)
-}
-
-GetDateFromBirthNumber <- function(birthnumber)
-{
-  return (FixedSizeStringSplit(sprintf("%d", birthnumber), 2)[[1]])
-}
-
 # birthnumber is in the format YYMMDD - if it is a woman it is DD + 50
 GenderFromDate <- function(birthnumber)
 {
