@@ -98,7 +98,7 @@ ReadTransactionsDataFrame <- function()
 
 GetLoanStatusEn <- function()
 {
-  return (list(FINISHEDOK = "ContractFinishedOk", FINISHEDDEFAULT = "ContractFinishedDefault", RUNNINGOK = "RunninOk", RUNNINGDEBT = "RunningInDebt"))
+  return (list(FINISHEDOK = "ContractFinishedOk", FINISHEDDEFAULT = "ContractFinishedDefault", RUNNINGOK = "RunningOk", RUNNINGDEBT = "RunningInDebt"))
 }
 
 GetLoanStatusLetters <- function()
