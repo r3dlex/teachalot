@@ -1,6 +1,10 @@
+###############################################
+# This is the script file for the
+
+
 package.requirements <- c("ggplot2", "dplyr", "kableExtra",
-                          "data.table", "corrplot", "readxl",
-                          "GGally", "gmodels", "rpart",
+                          "tables", "Hmisc", "data.table", 
+                          "corrplot", "gmodels", "rpart",
                           "rpart.plot", "arules", "car")
 
 # Uncomment this line if you want to install all the requirements
@@ -9,9 +13,28 @@ package.requirements <- c("ggplot2", "dplyr", "kableExtra",
 # Loads all libraries
 lapply(package.requirements, library, character.only = TRUE)
 
+# Used in the construction of the Decision Tree and anywhere
+# that a random variable is applicable
+set.seed(5668)
+
+
 source.directory <- "Src"
 data.directory <- "Data"
-image.directory <- "Img"
+gen.directory <- "Gen"
+image.directory <- sprintf("%s/%s", gen.directory, "Img")
+gentable.directory <- sprintf("%s/%s", gen.directory, "Table")
+
+GenerateDirectory <- function(dirname)
+{
+  dir.create(file.path(".", dirname), showWarnings = FALSE)
+}
+
+GenerateDirectories <- function()
+{
+  sapply(c(image.directory, gen.directory, gentable.directory), GenerateDirectory)
+}
+
+# Defines manual colors for the STATUS variable
 status.colors <- c("#B0D5DB", "#E46161")
 
 GetDataFilepath <- function(filename)
@@ -29,17 +52,15 @@ GetImgFilepath <- function(filename)
   return (sprintf("%s/%s", image.directory, filename))
 }
 
+GetLatexTableFilepath <- function(filename)
+{
+  return (sprintf("%s/%s", gentable.directory, filename))
+}
 
 ReadDataFrameFromFilepath <- function(filename)
 {
   return (fread(GetDataFilepath(filename), header=T, sep=";"))
 }
-
-#conn <- odbcConnectExcel2007("dados.xlsx")
-#calvo <- sqlFetch(conn, "CALVOshrt")
-#odbcClose(conn)
-calvo <- ReadDataFrameFromFilepath("Calvo.csv")
-
 
 RunSrcFromPath <- function(filename)
 {
@@ -71,7 +92,7 @@ GenerateNaturezaStatusPlot <- function(calvo.df)
 {
   natxstatus.df <- data.frame(calvo.df$NATUREZA, calvo.df$STATUS)
   names(natxstatus.df) <- c("NATUREZA", "STATUS")
-  natxstatus.df <- within(natxstatus, NATUREZA <- factor(NATUREZA, levels=names(sort(table(NATUREZA), decreasing=FALSE))))
+  natxstatus.df <- within(natxstatus.df, NATUREZA <- factor(NATUREZA, levels=names(sort(table(NATUREZA), decreasing=FALSE))))
 
 	bp <- ggplot(natxstatus.df, aes(NATUREZA, group = factor(STATUS, levels = rev(levels(STATUS))))) + 
 		geom_bar(aes(y = (..prop..), fill = STATUS), stat = "count", position = position_dodge()) +
@@ -112,9 +133,39 @@ CreateFaixaRendaCategory <- function(calvo.df)
   return (calvo.df)
 }
 
+WriteTableToLatex <- function(atable, filename)
+{
+  text.out <- capture.output(latex(atable))
+  print(text.out)
+  #Localization to pt-BR
+  text.out <- gsub("Percent", "Porcentagem", x = text.out)
+  text.out <- gsub("All", "Todos", x = text.out)
+  #Writes tex to output file
+  write(text.out, file=GetLatexTableFilepath(filename), sep = "\n")
+
+  return (text.out)
+}
+
+CreateStatusNaturezaTable <- function(calvo.df)
+{
+  sn.df <- data.frame(factor(calvo$STATUS), factor(calvo$NATUREZA))
+  names(sn.df) <- c("STATUS", "NATUREZA")
+  sntable <- tabular((Status=NATUREZA) + Hline() + 1 ~ (Natureza=STATUS) * Format(digits = 2) * (Percent("row") + 1), data=sn.df)
+  WriteTableToLatex(sntable, "status_natureza.tex")
+}
+
+# Generates output directories if they are not created
+GenerateDirectories()
+
+#conn <- odbcConnectExcel2007("dados.xlsx")
+#calvo <- sqlFetch(conn, "CALVOshrt")
+#odbcClose(conn)
+calvo <- ReadDataFrameFromFilepath("Calvo.csv")
+
 # Initial analysis plots
 GenerateStatusPlot(calvo)
 GenerateNaturezaStatusPlot(calvo)
+CreateStatusNaturezaTable(calvo)
 # Correlation plots
 
 #analisar variávies
@@ -151,20 +202,16 @@ head(calvo$NATUREZA)
 
 CrossTable(calvo$FAIXARENDA, calvo$STATUS, prop.chisq = F, prop.t = F, digits = 2)
 
-hist(calvo$FAIXARENDA)
+#hist(calvo$FAIXARENDA)
 
 #Natureza
 CrossTable(calvo$NATUREZA, calvo$STATUS, prop.chisq = F, prop.t = F, digits = 2)
 table(calvo$NATUREZA, calvo$FAIXARENDA)
 
-boxplot(calvo$RENDA, calvo$NATUREZA)
+#boxplot(calvo$RENDA, calvo$NATUREZA)
 
 anova <- aov(calvo$RENDA ~ calvo$NATUREZA)
 summary(anova)
-
-#Arvore
-#divisão
-set.seed(5668)
 
 flag=sample(1:25000, 12500, replace = F)
 
