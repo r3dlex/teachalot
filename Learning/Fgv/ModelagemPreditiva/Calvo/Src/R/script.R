@@ -31,7 +31,7 @@ GenerateDirectory <- function(dirname)
 
 GenerateDirectories <- function()
 {
-  sapply(c(image.directory, gen.directory, gentable.directory), GenerateDirectory)
+  sapply(c(gen.directory, image.directory, gentable.directory), GenerateDirectory)
 }
 
 # Defines manual colors for the STATUS variable
@@ -109,15 +109,28 @@ GenerateNaturezaStatusPlot <- function(calvo.df)
   return (bp)
 }
 
-
-  #pdf(sprintf('Img/%s.pdf', 'final_agelabel'),width=10,height=7,paper='special')
-  #print(ggpairs(mba.df.final, aes(color = agelabel)))
-  #dev.off()
+#pdf(sprintf('Img/%s.pdf', 'final_agelabel'),width=10,height=7,paper='special')
+#print(ggpairs(mba.df.final, aes(color = agelabel)))
+#dev.off()
 
 #GenerateStatusCharts <- function(calvo.df)
 #{
   #pie(table(calvo$STATUS))
 #}
+
+#ecxsts.chisq <- chisq.test(calvo$ESTCIV, calvo$STATUS)
+#corrplot(
+    #ecxst.chisq$observed,
+    #is.corr = FALSE,
+    #method="square",
+    #tl.col = "#000000",
+    #tl.srt = 45,
+    #tl.cex = .9,
+    #number.cex = .8,
+    #mar = c(0,0,2,0),
+    #addCoefasPercent = TRUE,
+    #cl.align.text = "l"
+#)
 
 CreateFaixaRendaCategory <- function(calvo.df)
 {
@@ -133,13 +146,19 @@ CreateFaixaRendaCategory <- function(calvo.df)
   return (calvo.df)
 }
 
+NormalizeCalvoDataFrame <- function(calvo.df)
+{
+  calvo.df$UF = factor(calvo.df$UF)
+
+  return (calvo.df)
+}
+
 WriteTableToLatex <- function(atable, filename)
 {
   text.out <- capture.output(latex(atable))
-  print(text.out)
   #Localization to pt-BR
   text.out <- gsub("Percent", "Porcentagem", x = text.out)
-  text.out <- gsub("All", "Todos", x = text.out)
+  text.out <- gsub("All", "Total", x = text.out)
   #Writes tex to output file
   write(text.out, file=GetLatexTableFilepath(filename), sep = "\n")
 
@@ -150,9 +169,42 @@ CreateStatusNaturezaTable <- function(calvo.df)
 {
   sn.df <- data.frame(factor(calvo$STATUS), factor(calvo$NATUREZA))
   names(sn.df) <- c("STATUS", "NATUREZA")
-  sntable <- tabular((Status=NATUREZA) + Hline() + 1 ~ (Natureza=STATUS) * Format(digits = 2) * (Percent("row") + 1), data=sn.df)
+  sntable <- tabular((Natureza=NATUREZA) + Hline() + 1 ~ (Status=STATUS) * Format(digits = 2) * (Percent("row") + 1), data=sn.df)
   WriteTableToLatex(sntable, "status_natureza.tex")
 }
+
+CreateStatusEstadoCivilTable <- function(calvo.df)
+{
+  se.df <- data.frame(factor(calvo$STATUS), factor(calvo$ESTCIV))
+  names(se.df) <- c("STATUS", "ESTCIV")
+  setable <- tabular((EstadoCivil=ESTCIV) + Hline() + 1 ~ (Status=STATUS) * Format(digits = 2) * (Percent("row") + 1), data = se.df)
+  WriteTableToLatex(setable, "status_estciv.tex")
+}
+
+CreateStatusEscolaridadeTable <- function(calvo.df)
+{
+  se.df <- data.frame(factor(calvo$STATUS), factor(calvo$ESCOLARIDADE))
+  names(se.df) <- c("STATUS", "ESCOLARIDADE")
+  setable <- tabular((Escolaridade=ESCOLARIDADE) + Hline() + 1 ~ (Status=STATUS) * Format(digits = 2) * (Percent("row") + 1), data = se.df)
+  WriteTableToLatex(setable, "status_escolaridade.tex")
+}
+
+CreateStatusUfTable <- function(calvo.df)
+{
+  su.df <- data.frame(factor(calvo$STATUS), factor(calvo$UF))
+  names(su.df) <- c("STATUS", "UF")
+  setable <- tabular((Estado=UF) + Hline() + 1 ~ (Status=STATUS) * Format(digits = 2) * (Percent("row") + 1), data = su.df)
+  WriteTableToLatex(setable, "status_estado.tex")
+}
+
+CreateStatusTable <- function(calvo.df)
+{
+  s.df <- data.frame(factor(calvo.df$STATUS))
+  names(s.df) <- "STATUS"
+  stable <- tabular((Status=s.df$STATUS) + Hline() + 1 ~ (Percent("col") + 1))
+  WriteTableToLatex(stable, "status.tex")
+}
+
 
 # Generates output directories if they are not created
 GenerateDirectories()
@@ -161,27 +213,30 @@ GenerateDirectories()
 #calvo <- sqlFetch(conn, "CALVOshrt")
 #odbcClose(conn)
 calvo <- ReadDataFrameFromFilepath("Calvo.csv")
+calvo <- NormalizeCalvoDataFrame(calvo)
 
 # Initial analysis plots
 GenerateStatusPlot(calvo)
 GenerateNaturezaStatusPlot(calvo)
+# Tables
+CreateStatusTable(calvo)
 CreateStatusNaturezaTable(calvo)
+CreateStatusEstadoCivilTable(calvo)
+CreateStatusEscolaridadeTable(calvo)
+CreateStatusUfTable(calvo)
 # Correlation plots
 
 #analisar variávies
 #Status
-CrossTable(calvo$STATUS)
+#CrossTable(calvo$STATUS)
+#UF
+#CrossTable(calvo$UF, calvo$STATUS, prop.chisq = F, prop.t = F, digits = 2)
+#Escolaridade
+#CrossTable(calvo$ESCOLARIDADE, calvo$STATUS, prop.chisq = F, prop.t = F, digits = 2)
+#Estado Civil
+#CrossTable(calvo$ESTCIV, calvo$STATUS, prop.chisq = F, prop.t = F, digits = 2)
 
 pie(table(calvo$STATUS))
-
-#UF
-CrossTable(calvo$UF, calvo$STATUS, prop.chisq = F, prop.t = F, digits = 2)
-
-#Escolaridade
-CrossTable(calvo$ESCOLARIDADE, calvo$STATUS, prop.chisq = F, prop.t = F, digits = 2)
-
-#Estado Civil
-CrossTable(calvo$ESTCIV, calvo$STATUS, prop.chisq = F, prop.t = F, digits = 2)
 
 #Renda
 min(calvo$RENDA)
@@ -199,7 +254,6 @@ calvo
 
 head(calvo$NATUREZA)
 
-
 CrossTable(calvo$FAIXARENDA, calvo$STATUS, prop.chisq = F, prop.t = F, digits = 2)
 
 #hist(calvo$FAIXARENDA)
@@ -215,8 +269,8 @@ summary(anova)
 
 flag=sample(1:25000, 12500, replace = F)
 
-calvo.lrn = calvo[flag,]
-calvo.tst = calvo[-flag,]
+calvo.lrn = droplevels(calvo[flag,])
+calvo.tst = droplevels(calvo[-flag,])
 
 prop.table(table(calvo.lrn$STATUS)); prop.table(table(calvo.tst$STATUS))
 
@@ -235,10 +289,15 @@ prob = predict(ac2, newdata = calvo.tst, type = "prob")
 head(prob)
 
 #Probabilidade
-phat_tst = predict(ac1, newdata = calvo.tst, type = "prob")
+print("Yupieeee")
+phat_tst = predict(ac1, newdata = calvo.tst, type = "prob", se.fit = FALSE)
+print("Jero")
 phat_tst
-yhat_tst = predict(ac1, newdata = calvo.tst, type = "class")
+print("noo")
+yhat_tst = predict(ac1, newdata = calvo.tst, type = "class", se.fit = FALSE)
+print("Ha")
 
+print("Woohoo")
 CrossTable(calvo.tst$STATUS, yhat_tst, prop.chisq = F, prop.t = F, digits = 2)
 #####################
 

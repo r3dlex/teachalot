@@ -26,21 +26,13 @@ pelo comando R:
 > CrossTable(calvo$STATUS)
 \end{minted}
 
-\begin{lstlisting}
- 
-Total Observations in Table:  25000 
- 
- 
-          |     admpl |      inad | 
-          |-----------|-----------|
-          |     17336 |      7664 | 
-          |     0.693 |     0.307 | 
-          |-----------|-----------|
-\end{lstlisting}
+\begin{table}[h]
+\centering
+\input{Table/status.tex}
+\caption{\label{tab:StatusEstado}Análise de frequência relativa da variável \emph{status} na amostra}
+\end{table}
 
-
-
-\section{UF}
+\section{Estado (UF)}
 
 Nota-se que cerca 96\% da amostra é de SP, seguido por cerca de 4\%
 de MG, o restante dos estados somados representam cerca de 1\%.
@@ -49,68 +41,20 @@ de MG, o restante dos estados somados representam cerca de 1\%.
 > CrossTable(calvo$UF, calvo$STATUS, prop.chisq = F, prop.t = F, digits = 2)
 \end{minted}
 
-\begin{lstlisting}
-Total Observations in Table:  25000 
- 
-            | calvo$STATUS 
-    calvo$UF |     admpl |      inad | Row Total | 
--------------|-----------|-----------|-----------|
-          BA |         0 |         1 |         1 | 
-             |      0.00 |      1.00 |      0.00 | 
-             |      0.00 |      0.00 |           | 
--------------|-----------|-----------|-----------|
-          GO |         0 |         1 |         1 | 
-             |      0.00 |      1.00 |      0.00 | 
-             |      0.00 |      0.00 |           | 
--------------|-----------|-----------|-----------|
-          MG |       476 |       573 |      1049 | 
-             |      0.45 |      0.55 |      0.04 | 
-             |      0.03 |      0.07 |           | 
--------------|-----------|-----------|-----------|
-          MS |         3 |         2 |         5 | 
-             |      0.60 |      0.40 |      0.00 | 
-             |      0.00 |      0.00 |           | 
--------------|-----------|-----------|-----------|
-          MT |         1 |         0 |         1 | 
-             |      1.00 |      0.00 |      0.00 | 
-             |      0.00 |      0.00 |           | 
--------------|-----------|-----------|-----------|
-          PA |         3 |         0 |         3 | 
-             |      1.00 |      0.00 |      0.00 | 
-             |      0.00 |      0.00 |           | 
--------------|-----------|-----------|-----------|
-          PE |         1 |         1 |         2 | 
-             |      0.50 |      0.50 |      0.00 | 
-             |      0.00 |      0.00 |           | 
--------------|-----------|-----------|-----------|
-          PR |         6 |         8 |        14 | 
-             |      0.43 |      0.57 |      0.00 | 
-             |      0.00 |      0.00 |           | 
--------------|-----------|-----------|-----------|
-          RJ |         3 |         1 |         4 | 
-             |      0.75 |      0.25 |      0.00 | 
-             |      0.00 |      0.00 |           | 
--------------|-----------|-----------|-----------|
-          RS |         1 |         0 |         1 | 
-             |      1.00 |      0.00 |      0.00 | 
-             |      0.00 |      0.00 |           | 
--------------|-----------|-----------|-----------|
-          SE |         0 |         1 |         1 | 
-             |      0.00 |      1.00 |      0.00 | 
-             |      0.00 |      0.00 |           | 
--------------|-----------|-----------|-----------|
-          SP |     16842 |      7076 |     23918 | 
-             |      0.70 |      0.30 |      0.96 | 
-             |      0.97 |      0.92 |           | 
--------------|-----------|-----------|-----------|
-Column Total |     17336 |      7664 |     25000 | 
-             |      0.69 |      0.31 |           | 
--------------|-----------|-----------|-----------|
-\end{lstlisting}
-
-
+\begin{table}[h]
+\centering
+\input{Table/status_estado.tex}
+\caption{\label{tab:StatusEstado}Tabela de relação entre as variáveis \emph{Status} e \emph{Estado (UF)}}
+\end{table}
 
 \section{Escolaridade}
+
+\begin{table}[h]
+\centering
+\input{Table/status_escolaridade.tex}
+\caption{\label{tab:StatusEscolaridade}Tabela de relação entre as variáveis \emph{Status
+} e \emph{Escolaridade}}
+\end{table}
 
 Nota-se que a maior proporção se encontra nos que possuem escolaridade
 Secundária com cerca de 35\% e a menor proporção é de nível de escolaridade
@@ -119,75 +63,20 @@ Pós Graduação com 8\%.
 Os registros com Pos Graduação possuem o menor índice de Inadimplentes
 com 18\%, enquanto os com nível Primário tem 37\% de Inadimplentes.
 
-\begin{lstlisting}
-Total Observations in Table:  25000 
-
-                  | calvo$STATUS 
-calvo$ESCOLARIDADE |     admpl |      inad | Row Total | 
--------------------|-----------|-----------|-----------|
-           posgrad |      1703 |       377 |      2080 | 
-                   |      0.82 |      0.18 |      0.08 | 
-                   |      0.10 |      0.05 |           | 
--------------------|-----------|-----------|-----------|
-          primario |      3176 |      1884 |      5060 | 
-                   |      0.63 |      0.37 |      0.20 | 
-                   |      0.18 |      0.25 |           | 
--------------------|-----------|-----------|-----------|
-        secundario |      5938 |      3201 |      9139 | 
-                   |      0.65 |      0.35 |      0.37 | 
-                   |      0.34 |      0.42 |           | 
--------------------|-----------|-----------|-----------|
-          superior |      6519 |      2202 |      8721 | 
-                   |      0.75 |      0.25 |      0.35 | 
-                   |      0.38 |      0.29 |           | 
--------------------|-----------|-----------|-----------|
-      Column Total |     17336 |      7664 |     25000 | 
-                   |      0.69 |      0.31 |           | 
--------------------|-----------|-----------|-----------|
-\end{lstlisting}
-
-
-
 \section{Estado Civil}
 
-A maioria dos tomadores de empréstimos são solteiros com 59\%, enquanto
-a minoria são outros, com 1 \%.
+\begin{table}[h]
+\centering
+\input{Table/status_estciv.tex}
+\caption{\label{tab:StatusEstadoCivil}Tabela de relação entre as variáveis \emph{Status
+}e \emph{Estado Civil}}
+\end{table}
 
-Os maiores inadimplentes são os divorciados com 77\% e os menores
-inadimplentes são os casados com 15\%.
+Na tabela \ref{tab:StatusEstadoCivil}, temos Os percentuais individuais dos possíveis valores para a variável estado civil: \emph{solteiro, casado, divorciado, viúvo e outros}. As colunas representam a divisão em \emph{adimplentes} e \emph{inadimplentes}.
 
-\begin{lstlisting}
-Total Observations in Table:  25000 
+Observa-se que a maioria dos tomadores de empréstimos são solteiros com 59\%, enquanto a minoria são outros, com 1\%.
 
-            | calvo$STATUS 
-calvo$ESTCIV |     admpl |      inad | Row Total | 
--------------|-----------|-----------|-----------|
-      casado |      6948 |      1194 |      8142 | 
-             |      0.85 |      0.15 |      0.33 | 
-             |      0.40 |      0.16 |           | 
--------------|-----------|-----------|-----------|
-  divorciado |       194 |       662 |       856 | 
-             |      0.23 |      0.77 |      0.03 | 
-             |      0.01 |      0.09 |           | 
--------------|-----------|-----------|-----------|
-      outros |       137 |        78 |       215 | 
-             |      0.64 |      0.36 |      0.01 | 
-             |      0.01 |      0.01 |           | 
--------------|-----------|-----------|-----------|
-        solt |      9318 |      5353 |     14671 | 
-             |      0.64 |      0.36 |      0.59 | 
-             |      0.54 |      0.70 |           | 
--------------|-----------|-----------|-----------|
-       viuvo |       739 |       377 |      1116 | 
-             |      0.66 |      0.34 |      0.04 | 
-             |      0.04 |      0.05 |           | 
--------------|-----------|-----------|-----------|
-Column Total |     17336 |      7664 |     25000 | 
-             |      0.69 |      0.31 |           | 
--------------|-----------|-----------|-----------|
-\end{lstlisting}
-
-
+Os maiores inadimplentes são os divorciados com 77\% e os menores inadimplentes são os casados com 15\%.
 
 \section{Renda}
 
@@ -201,12 +90,12 @@ Para melhor analisar a renda, a mesma foi discretizada em faixas utilizando
 um algoritmo de quebra supervisionado do R:
 
 \begin{lstlisting}
-ksalario             admpl      inad
-  [   1,    839) 0.7578000 0.2422000
-  [ 839,   1373) 0.7448000 0.2552000
-  [1373,   2261) 0.6923846 0.3076154
-  [2261,   4021) 0.6810580 0.3189420
-  [4021,1380200] 0.5884655 0.4115345
+  ksalario             admpl      inad
+    [   1,    839) 0.7578000 0.2422000
+    [ 839,   1373) 0.7448000 0.2552000
+    [1373,   2261) 0.6923846 0.3076154
+    [2261,   4021) 0.6810580 0.3189420
+    [4021,1380200] 0.5884655 0.4115345
 \end{lstlisting}
 
 
@@ -216,33 +105,36 @@ de renda, maior a inadimplência.
 
 \section{Natureza}
 
-\begin{table}
+\begin{table}[h]
 \centering
 \input{Table/status_natureza.tex}
 \caption{\label{tab:StatusNatureza}Tabela de relação entre as variáveis \emph{Status
 }e \emph{Natureza}}
 \end{table}
 
-Os tomadores de empréstimos de Natureza de Renda Empregado são os
-mais inadimplentes com 40\% e os menos inadimplentes são os Profissionais
-Liberais com 1\%. O resultado também pode ser confirmado pelo comando
+É evidenciado na tabela \ref{tab:StatusNatureza} os percentuais individuais dada a natureza do vínculo empregatício
+do indivíduo com relação ao fato de ele encontrar-se em adimplência ou inadimplência. Nota-se que para determinadas categorias 
+há maior presença de um ou outro \emph{status}. 
+
+Na figura \ref{fig:FreqStatusVsNatureza}, demonstra-se todas as diferentes classes da variável categorica \emph{natureza} em relação ao status percentual na amostra. Evidencia-se uma grande predominância de poucas classes no espaço amostral.
+
+\begin{center}
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.85\textwidth]{natureza_vs_status}
+\par\end{centering}
+
+\caption{\label{fig:FreqStatusVsNatureza}Gráfico de barras de frequência da
+  variável \emph{status} para a categoria \emph{natureza}.}
+\end{figure}
+
+\par\end{center}
+
+Os tomadores de empréstimos de Natureza de Renda \emph{empregado} são os
+mais inadimplentes com 40\% e os menos inadimplentes são os \emph{profissionais
+liberais} com 1\%. O resultado também pode ser confirmado pelo comando
 R:
 
 \begin{minted}{R}
 > CrossTable(calvo$STATUS)
 \end{minted}
-
-\begin{center}
-\begin{figure}
-\begin{centering}
-\includegraphics[width=1\textwidth]{natureza_vs_status}
-\par\end{centering}
-
-\caption{\label{fig:FreqStatusVsNatureza}Gráfico de barras de frequência da
-variável STATUS.}
-\end{figure}
-
-\par\end{center}
-
-\emph{TODO - AUMENTAR OS TEXTOS DE DESCRIÇÃO DE VARIÁVEIS E CONVERTER
-EM TABELAS MESMO}
