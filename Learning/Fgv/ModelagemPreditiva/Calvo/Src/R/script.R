@@ -109,6 +109,39 @@ GenerateNaturezaStatusPlot <- function(calvo.df)
   return (bp)
 }
 
+GenerateRendaPlot <- function(calvo.df)
+{
+  cut.points <- quantile(calvo.df$RENDA, c(.05, .95))
+  sp <- ggplot(calvo.df, aes(x = "", y = RENDA, color = RENDA)) + 
+    geom_point(shape=1) + 
+    geom_hline(yintercept = cut.points[1], color = "green", linetype = "dashed") +
+    geom_hline(yintercept = cut.points[2], color = "green", linetype = "dashed")
+
+  print(sp)
+  SaveGgplot("renda_original.pdf")
+
+  calvo2.df <- calvo.df %>% filter(RENDA > cut.points[1] & RENDA < cut.points[2])
+
+  sp2 <- ggplot(calvo2.df, aes(x = "", y = RENDA, color = RENDA)) + 
+    geom_point(shape = 1) + 
+    geom_hline(yintercept = mean(calvo2.df$RENDA) - sd(calvo2.df$RENDA), color = "blue", linetype = "dashed") +
+    geom_hline(yintercept = mean(calvo2.df$RENDA) + sd (calvo2.df$RENDA), color = "blue", linetype = "dashed") + 
+    geom_hline(yintercept = mean(calvo2.df$RENDA), color = "red")
+  print(sp2)
+  SaveGgplot("renda_modified.pdf")
+
+  sp2 <- ggplot(calvo2.df, aes(x = STATUS, y = RENDA, color = RENDA)) + 
+    geom_boxplot() + 
+    geom_hline(yintercept = mean(calvo2.df$RENDA) - sd(calvo2.df$RENDA), color = "blue", linetype = "dashed") +
+    geom_hline(yintercept = mean(calvo2.df$RENDA) + sd (calvo2.df$RENDA), color = "blue", linetype = "dashed") + 
+    geom_hline(yintercept = mean(calvo2.df$RENDA), color = "red")
+
+  print(sp2)
+  SaveGgplot("status_renda_modified.pdf")
+
+  return (sp)
+}
+
 #pdf(sprintf('Img/%s.pdf', 'final_agelabel'),width=10,height=7,paper='special')
 #print(ggpairs(mba.df.final, aes(color = agelabel)))
 #dev.off()
@@ -146,9 +179,11 @@ CreateFaixaRendaCategory <- function(calvo.df)
   return (calvo.df)
 }
 
-NormalizeCalvoDataFrame <- function(calvo.df)
+NormalizeUfInDataFrame <- function(calvo.df)
 {
-  calvo.df$UF = factor(calvo.df$UF)
+  calvo.df[calvo.df$UF != "SP" & calvo.df$UF != "MG"]$UF <- "OT"
+  calvo.df <- droplevels(calvo.df)
+  calvo.df$UF <- factor(calvo.df$UF)
 
   return (calvo.df)
 }
@@ -178,7 +213,7 @@ CreateStatusEstadoCivilTable <- function(calvo.df)
   se.df <- data.frame(factor(calvo$STATUS), factor(calvo$ESTCIV))
   names(se.df) <- c("STATUS", "ESTCIV")
   setable <- tabular((EstadoCivil=ESTCIV) + Hline() + 1 ~ (Status=STATUS) * Format(digits = 2) * (Percent("row") + 1), data = se.df)
-  WriteTableToLatex(setable, "status_estciv.tex")
+  WriteTableToLatex(setable,  "status_estciv.tex")
 }
 
 CreateStatusEscolaridadeTable <- function(calvo.df)
@@ -189,12 +224,12 @@ CreateStatusEscolaridadeTable <- function(calvo.df)
   WriteTableToLatex(setable, "status_escolaridade.tex")
 }
 
-CreateStatusUfTable <- function(calvo.df)
+CreateStatusUfTable <- function(calvo.df, filename)
 {
   su.df <- data.frame(factor(calvo$STATUS), factor(calvo$UF))
   names(su.df) <- c("STATUS", "UF")
   setable <- tabular((Estado=UF) + Hline() + 1 ~ (Status=STATUS) * Format(digits = 2) * (Percent("row") + 1), data = su.df)
-  WriteTableToLatex(setable, "status_estado.tex")
+  WriteTableToLatex(setable, filename)
 }
 
 CreateStatusTable <- function(calvo.df)
@@ -205,7 +240,6 @@ CreateStatusTable <- function(calvo.df)
   WriteTableToLatex(stable, "status.tex")
 }
 
-
 # Generates output directories if they are not created
 GenerateDirectories()
 
@@ -213,18 +247,20 @@ GenerateDirectories()
 #calvo <- sqlFetch(conn, "CALVOshrt")
 #odbcClose(conn)
 calvo <- ReadDataFrameFromFilepath("Calvo.csv")
-calvo <- NormalizeCalvoDataFrame(calvo)
 
 # Initial analysis plots
 GenerateStatusPlot(calvo)
 GenerateNaturezaStatusPlot(calvo)
+GenerateRendaPlot(calvo)
 # Tables
 CreateStatusTable(calvo)
 CreateStatusNaturezaTable(calvo)
 CreateStatusEstadoCivilTable(calvo)
 CreateStatusEscolaridadeTable(calvo)
-CreateStatusUfTable(calvo)
+CreateStatusUfTable(calvo, "status_estado.tex")
 # Correlation plots
+calvo <- NormalizeUfInDataFrame(calvo)
+CreateStatusUfTable(calvo, "status_estado_normalized.tex")
 
 #analisar variávies
 #Status
@@ -289,15 +325,10 @@ prob = predict(ac2, newdata = calvo.tst, type = "prob")
 head(prob)
 
 #Probabilidade
-print("Yupieeee")
-phat_tst = predict(ac1, newdata = calvo.tst, type = "prob", se.fit = FALSE)
-print("Jero")
+phat_tst = predict(ac1, newdata = calvo.tst, type = "prob")
 phat_tst
-print("noo")
-yhat_tst = predict(ac1, newdata = calvo.tst, type = "class", se.fit = FALSE)
-print("Ha")
+yhat_tst = predict(ac1, newdata = calvo.tst, type = "class")
 
-print("Woohoo")
 CrossTable(calvo.tst$STATUS, yhat_tst, prop.chisq = F, prop.t = F, digits = 2)
 #####################
 

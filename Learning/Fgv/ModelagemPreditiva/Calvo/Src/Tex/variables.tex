@@ -5,9 +5,15 @@ no capítulo \ref{chap:Introducao}.
 
 \section{Status}
 
+\begin{table}[h]
+\centering
+\input{Table/status.tex}
+\caption{\label{tab:StatusEstado}Análise de frequência relativa da variável \emph{status} na amostra}
+\end{table}
+
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.8\textwidth]{status_freq}
+\includegraphics[width=0.6\textwidth]{status_freq}
 \par\end{centering}
 
 \caption{\label{fig:FreqStatus}Gráfico de barras de frequência da variável
@@ -26,25 +32,38 @@ pelo comando R:
 > CrossTable(calvo$STATUS)
 \end{minted}
 
-\begin{table}[h]
-\centering
-\input{Table/status.tex}
-\caption{\label{tab:StatusEstado}Análise de frequência relativa da variável \emph{status} na amostra}
-\end{table}
+Sendo assim, entende-se que a maior parte da população é adimplemente. Resta-nos entender o que caracteriza
+a parte dessa amostra que possui a variável \emph{status} como inadimplente em relação aos demais. Para tal, continua-se
+com uma análise das diversas variáveis que compõe a base e analisa-se suas relações visuais, correlacionais, diretas e indiretas
+com a variável de interesse.
 
 \section{Estado (UF)}
-
-Nota-se que cerca 96\% da amostra é de SP, seguido por cerca de 4\%
-de MG, o restante dos estados somados representam cerca de 1\%.
-
-\begin{minted}{R}
-> CrossTable(calvo$UF, calvo$STATUS, prop.chisq = F, prop.t = F, digits = 2)
-\end{minted}
 
 \begin{table}[h]
 \centering
 \input{Table/status_estado.tex}
 \caption{\label{tab:StatusEstado}Tabela de relação entre as variáveis \emph{Status} e \emph{Estado (UF)}}
+\end{table}
+
+No R podemos executar o comando:
+
+\begin{minted}{R}
+> CrossTable(calvo$UF, calvo$STATUS, prop.chisq = F, prop.t = F, digits = 2)
+\end{minted}
+
+Cujo resultado pode ser visto na tabela \ref{tab:StatusEstado}. Nota-se que cerca ~96\% da amostra é de SP, 
+seguido por cerca de ~4\% de MG, o restante dos estados somados representam cerca de ~1\%. Nota-se portanto uma 
+forte predominância de determinadas categorias na variável \emph{estado}.
+
+Essa disparidade entre os dados de SP, MG e os demais pode causar problemas na geração e validação da árvore de decisão, já que
+as categorias na base de dados de aprendizado podem não ser as mesmas daquelas de validação. Nesses casos, a diretiva \emph{predict} do R pode falhar ao testar-se tanto as probablidades previstas como a previsão de classes. 
+
+Tendo em vista essa problemática, decidiu-se em normalizar-se a coluna estado (UF) em três diferentes categorias, afim de minimizar o problema descrito: SP, MG e OT, para os estados de São Paulo, Minas Gerais e Outros, respectivamente. Assim, temos a distribuição vista na tabela \ref{tab:StatusEstadoNormalizado} que mostra os percentuais finais para as três categorias.
+
+\begin{table}[h]
+\centering
+\input{Table/status_estado_normalized.tex}
+\caption{\label{tab:StatusEstadoNormalizado}Tabela de relação entre as variáveis \emph{Status} e \emph{Estado (UF), dados normalizados.}}
 \end{table}
 
 \section{Escolaridade}
@@ -80,13 +99,39 @@ Os maiores inadimplentes são os divorciados com 77\% e os menores inadimplentes
 
 \section{Renda}
 
-A menor renda que temos é 1 e a maior é 1.380.200,00, através do boxplot
-pode-se ver que não temos dados homogêneos, ou seja, temos muitos
-outliers:
+\begin{center}
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.85\textwidth]{renda_original}
+\par\end{centering}
+\caption{\label{fig:RendaOriginal}Distribuição da variável renda na amostra.}
+\end{figure}
+\vspace*{-40pt}
+\par\end{center}
 
-TODO - imagem do boxplot
+\begin{center}
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.85\textwidth]{status_renda_modified}
+\par\end{centering}
+\caption{\label{fig:StatusRendaMod}Boxplot da distribuição da variável renda para os adimplentes e inadimplentes.}
+\end{figure}
+\vspace*{-40pt}
+\par\end{center}
 
-Para melhor analisar a renda, a mesma foi discretizada em faixas utilizando
+A menor renda que temos é 1 e a maior é 1.380.200,00, através da figura \ref{fig:RendaOriginal}
+pode-se ver que não temos dados homogêneos, ou seja, temos muitos outliers. Um possível boxplot nesse caso sequer faz sentido
+pois ele seria \emph{flat} muito próximo ao valor zero.
+
+Dado a \emph{aparência} da variável, pode-se entender que hipoteticamente ela ou foi adquirida de maneira incompleta ou 
+incorreta, ou há necessidade de sua normalização. Tendo esse último em vista, pode-se fazer a observação no gráfico da figura 
+\ref{fig:RendaOriginal} a existência de duas linhas verdes pontilhadas. Elas indicam os pontos de corte de 5\% dos dados amostrais e 95\% dos mesmos. Observa-se como a presença dos possíveis outliers afetam a visualização e o valor da variável para a análise.
+
+Na figura \ref{fig:StatusRendaMod}, observa-se o mesmo gráfico da figura \ref{fig:RendaOriginal}, porém com os pontos de cortes aplicados em no intervalo de 415 a 9542. Nessa figura, a linha vermelha representa a média, a linha azul pontilhada representa o desvio padrão acima e abaixo da média.
+
+Observa-se que os dados encontram-se bem mais \emph{limpos}. Até é possível extrapolar-se, por meio dessa análise, que os dados de inadimplentes tendem a acontecer em rendas, em média, maiores que aqueles adimplementes. 
+
+Pelo fato de desconhecer-se a origem e o tratamento inicial dos dados, invalida-se tal inferência e busca-se outra alternativa de tratamento dos dados. Portanto, para melhor analisar a renda, a mesma foi discretizada em faixas utilizando
 um algoritmo de quebra supervisionado do R:
 
 \begin{lstlisting}
@@ -98,10 +143,9 @@ um algoritmo de quebra supervisionado do R:
     [4021,1380200] 0.5884655 0.4115345
 \end{lstlisting}
 
-
 Com essa divisão em faixas, é possível notar que quanto maior a faixa
-de renda, maior a inadimplência.
-
+de renda, maior a inadimplência, conforme foi também cogitado como hipótese na 
+figura \ref{fig:StatusRendaMod}. Tem-se assim, forte indício de correlação desse status com um valor alto na variável renda.
 
 \section{Natureza}
 
