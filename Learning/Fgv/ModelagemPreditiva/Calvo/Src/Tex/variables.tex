@@ -1,4 +1,4 @@
-Neste capítulo, será feito uma análise passo a passo de cada uma das
+\label{chap:Variables}Neste capítulo, será feito uma análise passo a passo de cada uma das
 variáveis do espaço amostral da base \nomeDaBase{}. Conforme demonstrado
 no capítulo \ref{chap:Introducao}.
 
@@ -25,7 +25,7 @@ e inadimplentes na base \nomeDaBase{}.
 
 Nota-se, na tabela \ref{tab:StatusNatureza} que 69,3\% da amostra
 é Adimplente enquanto 30,7\% é inadimplente, graficamente representado
-no gráfico \ref{fig:FreqStatus}. O resultado também pode ser confirmado
+na figura \ref{fig:FreqStatus}. O resultado também pode ser confirmado
 pelo comando R:
 
 \begin{minted}{R}
@@ -36,6 +36,8 @@ Sendo assim, entende-se que a maior parte da população é adimplemente. Resta-
 a parte dessa amostra que possui a variável \emph{status} como inadimplente em relação aos demais. Para tal, continua-se
 com uma análise das diversas variáveis que compõe a base e analisa-se suas relações visuais, correlacionais, diretas e indiretas
 com a variável de interesse.
+
+\clearpage
 
 \section{Estado (UF)}
 
@@ -55,16 +57,18 @@ Cujo resultado pode ser visto na tabela \ref{tab:StatusEstado}. Nota-se que cerc
 seguido por cerca de ~4\% de MG, o restante dos estados somados representam cerca de ~1\%. Nota-se portanto uma 
 forte predominância de determinadas categorias na variável \emph{estado}.
 
-Essa disparidade entre os dados de SP, MG e os demais pode causar problemas na geração e validação da árvore de decisão, já que
+Essa disparidade entre os dados de SP, MG e os demais estados pode causar problemas na geração e validação da árvore de decisão, já que
 as categorias na base de dados de aprendizado podem não ser as mesmas daquelas de validação. Nesses casos, a diretiva \emph{predict} do R pode falhar ao testar-se tanto as probablidades previstas como a previsão de classes. 
-
-Tendo em vista essa problemática, decidiu-se em normalizar-se a coluna estado (UF) em três diferentes categorias, afim de minimizar o problema descrito: SP, MG e OT, para os estados de São Paulo, Minas Gerais e Outros, respectivamente. Assim, temos a distribuição vista na tabela \ref{tab:StatusEstadoNormalizado} que mostra os percentuais finais para as três categorias.
 
 \begin{table}[h]
 \centering
 \input{Table/status_estado_normalized.tex}
 \caption{\label{tab:StatusEstadoNormalizado}Tabela de relação entre as variáveis \emph{Status} e \emph{Estado (UF), dados normalizados.}}
 \end{table}
+
+Tendo em vista essa problemática, decidiu-se em normalizar-se a coluna estado (UF) em três diferentes categorias, afim de minimizar o problema descrito: SP, MG e OT, para os estados de São Paulo, Minas Gerais e Outros, respectivamente. Assim, temos a distribuição vista na tabela \ref{tab:StatusEstadoNormalizado} que mostra os percentuais finais para as três categorias.
+
+\clearpage
 
 \section{Escolaridade}
 
@@ -79,8 +83,10 @@ Nota-se que a maior proporção se encontra nos que possuem escolaridade
 Secundária com cerca de 35\% e a menor proporção é de nível de escolaridade
 Pós Graduação com 8\%.
 
-Os registros com Pos Graduação possuem o menor índice de Inadimplentes
+Os registros com Pós-graduação possuem o menor índice de Inadimplentes
 com 18\%, enquanto os com nível Primário tem 37\% de Inadimplentes.
+
+\clearpage
 
 \section{Estado Civil}
 
@@ -91,30 +97,23 @@ com 18\%, enquanto os com nível Primário tem 37\% de Inadimplentes.
 }e \emph{Estado Civil}}
 \end{table}
 
-Na tabela \ref{tab:StatusEstadoCivil}, temos Os percentuais individuais dos possíveis valores para a variável estado civil: \emph{solteiro, casado, divorciado, viúvo e outros}. As colunas representam a divisão em \emph{adimplentes} e \emph{inadimplentes}.
+Na tabela \ref{tab:StatusEstadoCivil}, temos os percentuais individuais dos possíveis valores para a variável estado civil: \emph{solteiro, casado, divorciado, viúvo e outros}. As colunas representam a divisão em \emph{adimplentes} e \emph{inadimplentes}.
 
 Observa-se que a maioria dos tomadores de empréstimos são solteiros com 59\%, enquanto a minoria são outros, com 1\%.
 
 Os maiores inadimplentes são os divorciados com 77\% e os menores inadimplentes são os casados com 15\%.
 
+\clearpage
+
 \section{Renda}
 
 \begin{center}
-\begin{figure}
+\begin{figure}[h]
 \begin{centering}
-\includegraphics[width=0.85\textwidth]{renda_original}
+\includegraphics[width=0.49\textwidth]{renda_original}
+\includegraphics[width=0.49\textwidth]{renda_modified}
 \par\end{centering}
-\caption{\label{fig:RendaOriginal}Distribuição da variável renda na amostra.}
-\end{figure}
-\vspace*{-40pt}
-\par\end{center}
-
-\begin{center}
-\begin{figure}
-\begin{centering}
-\includegraphics[width=0.85\textwidth]{status_renda_modified}
-\par\end{centering}
-\caption{\label{fig:StatusRendaMod}Boxplot da distribuição da variável renda para os adimplentes e inadimplentes.}
+\caption{\label{fig:RendaOriginal}Distribuição da variável renda na amostra (esq.) e após o corte de aplicado entre 5\% e 95\% dos valores encontrados (dir.).}
 \end{figure}
 \vspace*{-40pt}
 \par\end{center}
@@ -123,17 +122,29 @@ A menor renda que temos é 1 e a maior é 1.380.200,00, através da figura \ref{
 pode-se ver que não temos dados homogêneos, ou seja, temos muitos outliers. Um possível boxplot nesse caso sequer faz sentido
 pois ele seria \emph{flat} muito próximo ao valor zero.
 
-Dado a \emph{aparência} da variável, pode-se entender que hipoteticamente ela ou foi adquirida de maneira incompleta ou 
-incorreta, ou há necessidade de sua normalização. Tendo esse último em vista, pode-se fazer a observação no gráfico da figura 
-\ref{fig:RendaOriginal} a existência de duas linhas verdes pontilhadas. Elas indicam os pontos de corte de 5\% dos dados amostrais e 95\% dos mesmos. Observa-se como a presença dos possíveis outliers afetam a visualização e o valor da variável para a análise.
+\begin{center}
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.85\textwidth]{status_renda_modified}
+\par\end{centering}
+\caption{\label{fig:StatusRendaMod}Boxplot da distribuição da variável renda para os adimplentes e inadimplentes. As linhas tracejadas indicam os desvios em relação a média, enquanto a linha contínua indica a média em si.}
+\end{figure}
+\vspace*{-40pt}
+\par\end{center}
 
-Na figura \ref{fig:StatusRendaMod}, observa-se o mesmo gráfico da figura \ref{fig:RendaOriginal}, porém com os pontos de cortes aplicados em no intervalo de 415 a 9542. Nessa figura, a linha vermelha representa a média, a linha azul pontilhada representa o desvio padrão acima e abaixo da média.
+
+Dada a \emph{aparência} da variável, pode-se entender que hipoteticamente ela ou foi adquirida de maneira incompleta ou 
+incorreta, ou há necessidade de sua normalização. Tendo esse último em vista, pode-se fazer a observação no gráfico da figura 
+\ref{fig:RendaOriginal} a existência de duas linhas verdes pontilhadas (esq.). Elas indicam os pontos de corte de 5\% dos dados amostrais e 95\% dos mesmos. Observa-se como a presença dos possíveis outliers afetam a visualização e o valor da variável para a análise.
+
+Na figura \ref{fig:StatusRendaMod}, observa-se o mesmo gráfico da figura \ref{fig:RendaOriginal}, porém com os pontos de cortes aplicados em no intervalo de 415 a 9542. Nessa figura, a linha contínua representa a média, as linhas pontilhadas são marcações de um desvio padrão acima e abaixo da média.
 
 Observa-se que os dados encontram-se bem mais \emph{limpos}. Até é possível extrapolar-se, por meio dessa análise, que os dados de inadimplentes tendem a acontecer em rendas, em média, maiores que aqueles adimplementes. 
 
 Pelo fato de desconhecer-se a origem e o tratamento inicial dos dados, invalida-se tal inferência e busca-se outra alternativa de tratamento dos dados. Portanto, para melhor analisar a renda, a mesma foi discretizada em faixas utilizando
 um algoritmo de quebra supervisionado do R:
 
+\begin{minipage}{\linewidth}
 \begin{lstlisting}
   ksalario             admpl      inad
     [   1,    839) 0.7578000 0.2422000
@@ -142,12 +153,32 @@ um algoritmo de quebra supervisionado do R:
     [2261,   4021) 0.6810580 0.3189420
     [4021,1380200] 0.5884655 0.4115345
 \end{lstlisting}
+\end{minipage}
 
 Com essa divisão em faixas, é possível notar que quanto maior a faixa
 de renda, maior a inadimplência, conforme foi também cogitado como hipótese na 
 figura \ref{fig:StatusRendaMod}. Tem-se assim, forte indício de correlação desse status com um valor alto na variável renda.
 
+\clearpage
+
 \section{Natureza}
+
+\begin{center}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=0.85\textwidth]{natureza_vs_status}
+\par\end{centering}
+\caption{\label{fig:FreqStatusVsNatureza}Gráfico de barras de frequência da
+  variável \emph{status} para a categoria \emph{natureza}.}
+\end{figure}
+\vspace*{-40pt}
+\par\end{center}
+
+É evidenciado na tabela \ref{tab:StatusNatureza} os percentuais individuais dada a natureza do vínculo empregatício
+do indivíduo com relação ao fato de ele encontrar-se em adimplência ou inadimplência. Nota-se que para determinadas categorias 
+há maior presença de um ou outro \emph{status}. 
+
+Na figura \ref{fig:FreqStatusVsNatureza}, demonstra-se todas as diferentes classes da variável categórica \emph{natureza} em relação ao status percentual na amostra. Evidencia-se uma grande predominância de poucas classes no espaço amostral.
 
 \begin{table}[h]
 \centering
@@ -156,29 +187,12 @@ figura \ref{fig:StatusRendaMod}. Tem-se assim, forte indício de correlação de
 }e \emph{Natureza}}
 \end{table}
 
-É evidenciado na tabela \ref{tab:StatusNatureza} os percentuais individuais dada a natureza do vínculo empregatício
-do indivíduo com relação ao fato de ele encontrar-se em adimplência ou inadimplência. Nota-se que para determinadas categorias 
-há maior presença de um ou outro \emph{status}. 
+Os tomadores de empréstimos de Natureza de Renda \emph{empregado} são os mais inadimplentes com 40\%, seguido de perto
+pelos funcionários públicos e aposentados, com 21,6\% e 19.6\%, respectivamente. O restante das profissões contribuem aproximadamente ~7\% dos inadimplementes, contudo nota-se que principalmente os aposentados contribuem fortemente para a proporção de inadimplentes. Proporcionalmente, somente 0.8\% dos aposentados podem ser considerados adimplementes.
 
-Na figura \ref{fig:FreqStatusVsNatureza}, demonstra-se todas as diferentes classes da variável categorica \emph{natureza} em relação ao status percentual na amostra. Evidencia-se uma grande predominância de poucas classes no espaço amostral.
-
-\begin{center}
-\begin{figure}
-\begin{centering}
-\includegraphics[width=0.85\textwidth]{natureza_vs_status}
-\par\end{centering}
-
-\caption{\label{fig:FreqStatusVsNatureza}Gráfico de barras de frequência da
-  variável \emph{status} para a categoria \emph{natureza}.}
-\end{figure}
-
-\par\end{center}
-
-Os tomadores de empréstimos de Natureza de Renda \emph{empregado} são os
-mais inadimplentes com 40\% e os menos inadimplentes são os \emph{profissionais
-liberais} com 1\%. O resultado também pode ser confirmado pelo comando
+Os \emph{profissionais liberais} com 1\% são os menos inadimplemnetes, porém proporcionalmente os menos inadimplentes são os \emph{outros}, cuja proporção relativa a sua proporção de inadimplentes é na casa de ~65\%. Proporção essa obtida pela divisão da proporção de adimplentes e inadimplentes dessa classe somente na amostra. O resultado também pode ser confirmado pelo comando
 R:
 
 \begin{minted}{R}
-> CrossTable(calvo$STATUS)
+> CrossTable(calvo$STATUS ~ calvo$NATUREZA)
 \end{minted}

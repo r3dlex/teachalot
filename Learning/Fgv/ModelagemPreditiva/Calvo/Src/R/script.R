@@ -34,7 +34,7 @@ GenerateDirectories <- function()
   sapply(c(gen.directory, image.directory, gentable.directory), GenerateDirectory)
 }
 
-# Defines manual colors for the STATUS variable
+# Defines manual colors for the STATUS variable - adimpl, inadimpl
 status.colors <- c("#B0D5DB", "#E46161")
 
 GetDataFilepath <- function(filename)
@@ -115,7 +115,8 @@ GenerateRendaPlot <- function(calvo.df)
   sp <- ggplot(calvo.df, aes(x = "", y = RENDA, color = RENDA)) + 
     geom_point(shape=1) + 
     geom_hline(yintercept = cut.points[1], color = "green", linetype = "dashed") +
-    geom_hline(yintercept = cut.points[2], color = "green", linetype = "dashed")
+    geom_hline(yintercept = cut.points[2], color = "green", linetype = "dashed") +
+		theme(legend.position = "top")
 
   print(sp)
   SaveGgplot("renda_original.pdf")
@@ -126,15 +127,17 @@ GenerateRendaPlot <- function(calvo.df)
     geom_point(shape = 1) + 
     geom_hline(yintercept = mean(calvo2.df$RENDA) - sd(calvo2.df$RENDA), color = "blue", linetype = "dashed") +
     geom_hline(yintercept = mean(calvo2.df$RENDA) + sd (calvo2.df$RENDA), color = "blue", linetype = "dashed") + 
-    geom_hline(yintercept = mean(calvo2.df$RENDA), color = "red")
+    geom_hline(yintercept = mean(calvo2.df$RENDA), color = "darkgrey") + 
+		theme(legend.position = "top")
   print(sp2)
   SaveGgplot("renda_modified.pdf")
 
   sp2 <- ggplot(calvo2.df, aes(x = STATUS, y = RENDA, color = RENDA)) + 
-    geom_boxplot() + 
+    geom_boxplot(fill = status.colors) + 
+		scale_fill_manual(values = status.colors) + 
     geom_hline(yintercept = mean(calvo2.df$RENDA) - sd(calvo2.df$RENDA), color = "blue", linetype = "dashed") +
     geom_hline(yintercept = mean(calvo2.df$RENDA) + sd (calvo2.df$RENDA), color = "blue", linetype = "dashed") + 
-    geom_hline(yintercept = mean(calvo2.df$RENDA), color = "red")
+    geom_hline(yintercept = mean(calvo2.df$RENDA), color = "darkgrey")
 
   print(sp2)
   SaveGgplot("status_renda_modified.pdf")
