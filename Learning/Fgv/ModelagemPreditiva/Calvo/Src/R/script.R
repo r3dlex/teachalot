@@ -243,6 +243,22 @@ CreateStatusTable <- function(calvo.df)
   WriteTableToLatex(stable, "status.tex")
 }
 
+CreateTreeTestTable <- function(calvo.df, test.data)
+{
+  ss.df <- data.frame(factor(calvo.tst$STATUS), factor(as.vector(test.data)))
+  names(ss.df) <- c("STATUS_ORIGINAL", "STATUS_PREVISAO")
+  sstable <- tabular((Original = STATUS_ORIGINAL) + Hline() + 1 ~ (Previsto = STATUS_PREVISAO) * Format(digits = 2) * (Percent("row") + 1), data = ss.df)
+
+  WriteTableToLatex(sstable, "status_predict.tex")
+}
+
+GenerateTreeImg <- function(dtree, filename)
+{
+  pdf(sprintf('Gen/Img/%s.pdf', filename),width=9,height=7,paper='special')
+  prp(dtree, type=2, extra=104,nn=T, fallen.leaves = F, branch.col = "gray40", branch.lty = 5,box.col = c("gray80",'gray40'))
+  dev.off()
+}
+
 # Generates output directories if they are not created
 GenerateDirectories()
 
@@ -314,16 +330,16 @@ calvo.tst = droplevels(calvo[-flag,])
 prop.table(table(calvo.lrn$STATUS)); prop.table(table(calvo.tst$STATUS))
 
 #Arvore
-ac1 = rpart(data = calvo.lrn, STATUS~UF+ESCOLARIDADE+ESTCIV+FAIXARENDA+NATUREZA)
-prp(ac1, type=2, extra=104,nn=T, fallen.leaves = F, branch.col = "red", branch.lty = 5,box.col = c("white",'green'))
+ac1 <- rpart(data = calvo.lrn, STATUS~UF+ESCOLARIDADE+ESTCIV+FAIXARENDA+NATUREZA)
+GenerateTreeImg(ac1, "training_tree")
 prp(ac1, type=1, extra=104, fallen.leaves = FALSE, branch.type = 1, faclen = 30)
 ac1
 print(ac1, digits = 2)
 printcp(ac1)
 
 #Teste
-ac2 = rpart(data = calvo.tst, STATUS~UF+ESCOLARIDADE+ESTCIV+FAIXARENDA+NATUREZA)
-prp(ac2, type=2, extra=104,nn=T, fallen.leaves = F, branch.col = "red", branch.lty = 5,box.col = c("white",'green'))
+ac2 <- rpart(data = calvo.tst, STATUS~UF+ESCOLARIDADE+ESTCIV+FAIXARENDA+NATUREZA)
+GenerateTreeImg(ac2, "test_tree")
 prob = predict(ac2, newdata = calvo.tst, type = "prob")
 head(prob)
 
@@ -333,6 +349,7 @@ phat_tst
 yhat_tst = predict(ac1, newdata = calvo.tst, type = "class")
 
 CrossTable(calvo.tst$STATUS, yhat_tst, prop.chisq = F, prop.t = F, digits = 2)
+CreateTreeTestTable(calvo.tst, yhat_tst)
 #####################
 
 calvo[calvo$FAIXARENDA == '',]

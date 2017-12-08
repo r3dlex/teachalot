@@ -13,15 +13,24 @@ Através do método CART foi gerada a seguinte árvore com a amostra
 de aprendizado:
 
 \begin{center}
-\includegraphics[width=0.9\textwidth]{CartTree}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{training_tree}
+\par\end{centering}
+\caption{\label{fig:TrainingTree}Árvore de decisão gerada a partir de 12500 amostras da base de dados original (treinamento)}
+\end{figure}
+\vspace*{-40pt}
 \par\end{center}
 
 É possível notar que as variáveis mais significantes para a classificação
-foram Natureza e Estado Civil. 
+foram Natureza e Estado Civil. O comando R usado para gerar a árvore foi:
 
 \begin{minted}{R}
 > printcp(ac1)
 \end{minted}
+
+
+A saída do comando rpart indica, no console R, como está a distribuição do erro da árvore de decisão pelos seus nós, a partir do nó raíz:
 
 \begin{lstlisting}
 Classification tree:
@@ -46,41 +55,43 @@ Através dos valores CP é possível verificar que os erros para a amostra
 de aprendizado foram de 31\% e a menor taxa de erro se encontra no
 nó 3 com 78\%, portando não é necessário podar a árvore. 
 
+Pode-se constatar, pelo cálculo do erro relativo em função do nó folha, isto é, o nó cujo n = 3 que
+
+\[
+E=30,88\%*77,98\%=24,08\%
+\]
+
+Onde \emph{E} é a taxa de erro geral para a previsão de inadimplência. Ela é obtida multiplicando-se a taxa de erro do nó raiz pela taxa de erro específica do nó folha.
+
+\clearpage
 
 \section{Validação com Amostra Teste}
+
+Afim de validar-se a árvore obtida com o conjunto de treinamento, pega-se os 12500 elementos restantes do espaço amostral, não utilizados como parte do conjunto da amostra de treinamento e gera-se uma segunda árvore de decisão, extremamente similar a primeira. Tal árvore pode ser observada na figura \ref{fig:TestTree}. O fato de as árvores serem muito similares indica que o espaço amostral para treinamento e teste são bastante correlatos.
+
+\begin{center}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{test_tree}
+\par\end{centering}
+\caption{\label{fig:TestTree}Árvore de decisão gerada a partir de 12500 amostras da base de dados original (treinamento)}
+\end{figure}
+\vspace*{-40pt}
+\par\end{center}
+
 
 \begin{minted}{R}
 > CrossTable(calvo.tst$STATUS, yhat_tst, prop.chisq = F, prop.t = F, digits = 2)
 \end{minted}
 
-\begin{lstlisting}
-   Cell Contents
-|-------------------------|
-|                       N |
-|           N / Row Total |
-|           N / Col Total |
-|-------------------------|
- 
- 
-Total Observations in Table:  12500 
- 
- 
-                 | yhat_tst 
-calvo.tst$STATUS |     admpl |      inad | Row Total | 
------------------|-----------|-----------|-----------|
-           admpl |      8534 |       163 |      8697 | 
-                 |      0.98 |      0.02 |      0.70 | 
-                 |      0.75 |      0.15 |           | 
------------------|-----------|-----------|-----------|
-            inad |      2869 |       934 |      3803 | 
-                 |      0.75 |      0.25 |      0.30 | 
-                 |      0.25 |      0.85 |           | 
------------------|-----------|-----------|-----------|
-    Column Total |     11403 |      1097 |     12500 | 
-                 |      0.91 |      0.09 |           | 
------------------|-----------|-----------|-----------|
-\end{lstlisting}
+\begin{table}[h]
+\centering
+\input{Table/status_predict.tex}
+  \caption{\label{tab:StatusPrevisao}Tabela de valores originais da base de dados (Original) e valores previstos pela árvore de decisão gerada (Previsto)}
+\end{table}
 
+O comando R acima gerará a tabela \ref{tab:StatusPrevisao}. Observa-se que para a previsão de adimplentes na base original em relação aqueles da base, foi de 98.1\%. Já os que foram erroneamente previstos como inadimplentes quando a varíavel \emph{status} no original era adimplente foram somente 1.9\%.
 
-Pode-se notar que existe 20\% de erro na amostra de teste, sendo maior
-na classificação de adimplentes para inadimplentes (25\%). 
+Ainda na tabela, para os inadimplentes na base original, 75.4\% foram previstos como adimplentes enquanto 25.6\% foram corretamente classificados como inadimplentes.
+
+Conclui-se que a taxa de erro final é na casa dos 24\% o que, dependendo do custo do erro pode ser ou não proibitivo. Corre-se um grande risco ao analisar-se um indivíduo como inadimplente se ele não o for. Isto é, falsos positivos podem prejudicar o desempenho da instituição em questão dado que esse tipo de erro não seja aceitável quando o custo do erro for alto.
