@@ -2,13 +2,13 @@
 # This is the script file for the
 
 
-package.requirements <- c("ggplot2", "dplyr", "kableExtra",
+package.requirements <- c("ggplot2", "dplyr",
                           "tables", "Hmisc", "data.table", 
                           "corrplot", "gmodels", "rpart",
                           "rpart.plot", "arules", "car")
 
 # Uncomment this line if you want to install all the requirements
-# install.packages(package.requirements)
+#install.packages(package.requirements)
 
 # Loads all libraries
 lapply(package.requirements, library, character.only = TRUE)
