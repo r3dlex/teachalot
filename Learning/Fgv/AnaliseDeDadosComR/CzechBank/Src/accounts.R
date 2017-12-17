@@ -1,11 +1,11 @@
 ################# Data Description ############
-#account = (4500 objects in the file ACCOUNT.ASC) ­ each record describes static
+#account = (4500 objects in the file ACCOUNT.ASC) ? each record describes static
 #characteristics of an account,
-#permanent order = (6471 objects in the file ORDER.ASC) ­ each record describes
+#permanent order = (6471 objects in the file ORDER.ASC) ? each record describes
 #characteristics of a payment order,
-#transaction = (1056320 objects in the file TRANS.ASC) ­ each record describes one
+#transaction = (1056320 objects in the file TRANS.ASC) ? each record describes one
 #transaction on an account,
-#loan = (682 objects in the file LOAN.ASC) ­ each record describes a loan granted for a
+#loan = (682 objects in the file LOAN.ASC) ? each record describes a loan granted for a
 #given account,
 ###############################################
 
@@ -24,19 +24,19 @@ GetFrequencyValuesCz <- function()
 ReadAccountsDataFrame <- function()
 {
   accounts.df <- (ReadDataFrameFromFilepath("account.asc"))
-
+  
   # Normalizes date values
   accounts.df$date <- sapply(accounts.df$date, GetBirthDateYyMmDd)
-
+  
   # Normalizes statement frequency values
   fv.cz <- GetFrequencyValuesCz()
   fv.en <- GetFrequencyValuesEn()
-
+  
   accounts.df$frequency <- mapvalues(accounts.df$frequency, 
-            from = c(fv.cz$MONTHLY, fv.cz$WEEKLY, fv.cz$TRANSACTION),
-            to = c(fv.en$MONTHLY, fv.en$WEEKLY, fv.en$TRANSACTION))
-
-  return (accounts.df)
+                                     from = c(fv.cz$MONTHLY, fv.cz$WEEKLY, fv.cz$TRANSACTION),
+                                     to = c(fv.en$MONTHLY, fv.en$WEEKLY, fv.en$TRANSACTION))
+  
+  return (as.data.frame(accounts.df))
 }
 
 GetTypeValuesCz <- function()
@@ -67,33 +67,33 @@ GetOperationValuesEn <- function()
 ReadTransactionsDataFrame <- function()
 {
   trans.df <- ReadDataFrameFromFilepath("trans.asc")
-
+  
   # Normalizes operation values
   op.cz <- GetOperationValuesCz()
   op.en <- GetOperationValuesEn()
-
+  
   trans.df$operation <- mapvalues(trans.df$operation, 
-            from = c(op.cz$CARDDEBIT, op.cz$CASHCREDIT, op.cz$CASHDEBIT, op.cz$OTHERBANKCREDIT, op.cz$OTHERBANKDEBIT),
-            to = c(op.en$CARDDEBIT, op.en$CASHCREDIT, op.en$CASHDEBIT, op.en$OTHERBANKCREDIT, op.en$OTHERBANKDEBIT))
-
+                                  from = c(op.cz$CARDDEBIT, op.cz$CASHCREDIT, op.cz$CASHDEBIT, op.cz$OTHERBANKCREDIT, op.cz$OTHERBANKDEBIT),
+                                  to = c(op.en$CARDDEBIT, op.en$CASHCREDIT, op.en$CASHDEBIT, op.en$OTHERBANKCREDIT, op.en$OTHERBANKDEBIT))
+  
   # Normalizes date values
   trans.df$date <- sapply(trans.df$date, GetBirthDateYyMmDd)
-
+  
   tp.cz <- GetTypeValuesCz()
   tp.en <- GetTypeValuesEn()
-
+  
   trans.df$type <- mapvalues(trans.df$type, 
-            from = c(tp.cz$CREDIT, tp.cz$DEBIT, tp.cz$CHOICE),
-            to = c(tp.en$CREDIT, tp.en$DEBIT, tp.en$CHOICE))
-
+                             from = c(tp.cz$CREDIT, tp.cz$DEBIT, tp.cz$CHOICE),
+                             to = c(tp.en$CREDIT, tp.en$DEBIT, tp.en$CHOICE))
+  
   ks.cz <- GetKsymbolValuesCz()
   ks.en <- GetKsymbolValuesEn()
-
+  
   trans.df$k_symbol <- mapvalues(trans.df$k_symbol, 
-            from = c(ks.cz$INSURANCE, ks.cz$HOUSEHOLD, ks.cz$LOAN, ks.cz$PENSION, ks.cz$STATEMENT, ks.cz$SANCTION, ks.cz$INTEREST),
-            to = c(ks.en$INSURANCE, ks.en$HOUSEHOLD, ks.en$LOAN, ks.en$PENSION, ks.en$STATEMENT, ks.en$SANCTION, ks.en$INTEREST))
-
-  return (trans.df)
+                                 from = c(ks.cz$INSURANCE, ks.cz$HOUSEHOLD, ks.cz$LOAN, ks.cz$PENSION, ks.cz$STATEMENT, ks.cz$SANCTION, ks.cz$INTEREST),
+                                 to = c(ks.en$INSURANCE, ks.en$HOUSEHOLD, ks.en$LOAN, ks.en$PENSION, ks.en$STATEMENT, ks.en$SANCTION, ks.en$INTEREST))
+  
+  return (as.data.frame(trans.df))
 }
 
 GetLoanStatusEn <- function()
@@ -109,18 +109,18 @@ GetLoanStatusLetters <- function()
 ReadLoansDataFrame <- function()
 {
   loans.df <- (ReadDataFrameFromFilepath("loan.asc"))
-
+  
   # Normalizes date values
   loans.df$date <- sapply(loans.df$date, GetBirthDateYyMmDd)
-
+  
   ls.en <- GetLoanStatusEn()
   ls.lt <- GetLoanStatusLetters()
-
+  
   loans.df$status <- mapvalues(loans.df$status, 
-            from = c(ls.lt$FINISHEDOK, ls.lt$FINISHEDDEFAULT, ls.lt$RUNNINGOK, ls.lt$RUNNINGDEBT),
-            to = c(ls.en$FINISHEDOK, ls.en$FINISHEDDEFAULT, ls.en$RUNNINGOK, ls.en$RUNNINGDEBT))
-
-  return (loans.df)
+                               from = c(ls.lt$FINISHEDOK, ls.lt$FINISHEDDEFAULT, ls.lt$RUNNINGOK, ls.lt$RUNNINGDEBT),
+                               to = c(ls.en$FINISHEDOK, ls.en$FINISHEDDEFAULT, ls.en$RUNNINGOK, ls.en$RUNNINGDEBT))
+  
+  return (as.data.frame(loans.df))
 }
 
 # k_symbol is a column in permanent order and also in transactions
@@ -137,23 +137,23 @@ GetKsymbolValuesCz <- function()
 ReadPermanentOrdersDataFrame <- function()
 {
   orders.df <- (ReadDataFrameFromFilepath("order.asc"))
-
+  
   ks.cz <- GetKsymbolValuesCz()
   ks.en <- GetKsymbolValuesEn()
-
+  
   orders.df$k_symbol <- mapvalues(orders.df$k_symbol, 
-            from = c(ks.cz$INSURANCE, ks.cz$HOUSEHOLD, ks.cz$LEASING, ks.cz$LOAN),
-            to = c(ks.en$INSURANCE, ks.en$HOUSEHOLD, ks.en$LEASING, ks.en$LOAN))
-
-  return (orders.df)
+                                  from = c(ks.cz$INSURANCE, ks.cz$HOUSEHOLD, ks.cz$LEASING, ks.cz$LOAN),
+                                  to = c(ks.en$INSURANCE, ks.en$HOUSEHOLD, ks.en$LEASING, ks.en$LOAN))
+  
+  return (as.data.frame(orders.df))
 }
 
 ReadCreditCardsDataFrame <- function()
 {
   cards.df <- (ReadDataFrameFromFilepath("card.asc"))
-
+  
   # Normalizes date values
   cards.df$issued <- sapply(cards.df$issued, GetBirthDateYyMmDd)
-
-  return (cards.df)
+  
+  return (as.data.frame(cards.df))
 }
