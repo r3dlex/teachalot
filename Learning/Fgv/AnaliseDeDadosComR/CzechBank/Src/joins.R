@@ -58,6 +58,16 @@ GetScoreForFactorVariables <- function(data, discript, strings)
   return (data)
 }
 
+GetScoreForFactorVariables <- function(data, discript, strings)
+{
+  values <- data[, discript]
+  scores <- 1:length(strings)
+  names(scores) <- strings
+  data$scores <- scores[values]
+  
+  return (data)
+}
+
 clientsdisp.df <- GetScoreForFactorVariables(clientsdisp.df, "type", c("DISPONENT", "OWNER"))
 cards.df <- GetScoreForFactorVariables(cards.df, "type", c("junior", "classic", "gold"))
-account.dr 
+accounts.df <- GetScoreForFactorVariables(accounts.df, "frequency", c("Monthly", "Weekly", "AfterTransaction"))
