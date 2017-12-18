@@ -70,17 +70,17 @@ Então, criamos um StarSchema com a finalidade de criar uma única tabela com a 
 TABELAS <- c("client_id", "gender", "age", "account_id", "card" ,"year_card",
               "acnt_frequency", "year_account", "loan_status", "year_loan", "duration_loan", "mth_to_pay_loan")
  
-# kable(
-#     TABELAS,
-#     format = "html",
-#     align="l",
-#     caption = "Tabela 2 - Tabela de análise"
-#     ) %>%
-#       kable_styling(
-#           bootstrap_options = c("striped","hover","condensed"),
-#           font_size = 10
-#       )
- 
+kable(
+    TABELAS,
+    format = "html",
+    align="l",
+    caption = "Tabela 2 - Tabela de análise"
+    ) %>%
+      kable_styling(
+          bootstrap_options = c("striped","hover","condensed"),
+          font_size = 10
+      )
+
  
 ```
 ---
