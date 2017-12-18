@@ -67,6 +67,3 @@ if (!exists("transactions.df"))
 loans.df <- ReadLoansDataFrame()
 cards.df <- ReadCreditCardsDataFrame()
 orders.df <- ReadPermanentOrdersDataFrame()
-
-
-

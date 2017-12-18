@@ -50,7 +50,7 @@ ReadClientsDataFrame <- function()
   clients.df <- ReadDataFrameFromFilepath("client.asc")
   clients.df$gender <- sapply(clients.df$birth_number, GenderFromDate)
   clients.df$birth_date <- sapply(clients.df$birth_number, GetBirthDateYyMmDd)
-  clients.df$age <- GetAgeFromRefDate(clientsdisp.df$birth_date,refdate) #Date when the PKDD'99 happened 
+  clients.df$age <- GetAgeFromRefDate(clients.df$birth_date,refdate) #Date when the PKDD'99 happened 
   return (clients.df)
 }
 
