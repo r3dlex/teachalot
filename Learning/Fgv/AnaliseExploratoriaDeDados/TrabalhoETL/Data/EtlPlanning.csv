@@ -1,0 +1,57 @@
+Tabela,Coluna,Tipo Dado,Tipo Tabela,Tipo SCD,Tabela,Coluna,Tipo de Dado,Transformação
+DIM_LOJAS,SK_LOJA,INT,Dimensão,1,,,,Surroguate key
+DIM_LOJAS,IdLoja,INT,Dimensão,1,Loja,IdLoja,INT,
+DIM_LOJAS,Descricao,VARCHAR(45),Dimensão,1,Loja,Descricao,VARCHAR(45),
+DIM_LOJAS,Tamanho,VARCHAR(45),Dimensão,1,Loja,Tamanho,VARCHAR(45),
+DIM_LOJAS,CEP,VARCHAR(45),Dimensão,1,Endereco,CEP,VARCHAR(45),
+DIM_LOJAS,TipoLogradouro,VARCHAR(45),Dimensão,1,TipoLogradouro,Descricao,VARCHAR(45),
+DIM_LOJAS,Logradouro,VARCHAR(45),Dimensão,1,Endereco,Logradouro,VARCHAR(45),
+DIM_LOJAS,Cidade,VARCHAR(45),Dimensão,1,Cidade,Cidade,VARCHAR(45),
+DIM_LOJAS,Estado,VARCHAR(45),Dimensão,1,Estado,Estado,VARCHAR(45),
+DIM_LOJAS,Pais,VARCHAR(45),Dimensão,1,Pais,Pais,VARCHAR(45),
+DIM_CLIENTES,SK_CLIENTE,INT,Dimensão,1,,,,Surroguate key
+DIM_CLIENTES,IdCliente,INT,Dimensão,1,Cliente,IdCliente,INT,
+DIM_CLIENTES,Nome,VARCHAR(45),Dimensão,1,Cliente,Nome,VARCHAR(45),
+DIM_CLIENTES,DtNascimento,DATE,Dimensão,1,Cliente,DtNascimento,DATE,
+DIM_CLIENTES,Email,VARCHAR(45),Dimensão,1,ClienteEmail,Email,VARCHAR(45),
+DIM_CLIENTES,Telefone,VARCHAR(45),Dimensão,1,ClienteTelefone,Telefone,VARCHAR(45),
+DIM_CLIENTES,CEP,VARCHAR(45),Dimensão,1,Endereco,CEP,VARCHAR(45),
+DIM_CLIENTES,TipoLogradouro,VARCHAR(45),Dimensão,1,TipoLogradouro,Descricao,VARCHAR(45),
+DIM_CLIENTES,Logradouro,VARCHAR(45),Dimensão,1,Endereco,Logradouro,VARCHAR(45),
+DIM_CLIENTES,Cidade,VARCHAR(45),Dimensão,1,Cidade,Cidade,VARCHAR(45),
+DIM_CLIENTES,Estado,VARCHAR(45),Dimensão,1,Estado,Estado,VARCHAR(45),
+DIM_CLIENTES,Pais,VARCHAR(45),Dimensão,1,Pais,Pais,VARCHAR(45),
+DIM_PRODUTOS,SK_PRODUTO,INT,Dimensão,1,,,,Surroguate key
+DIM_PRODUTOS,IdProduto,INT,Dimensão,1,Produto,IdProduto,INT,
+DIM_PRODUTOS,DescricaoProduto,VARCHAR(45),Dimensão,1,Produto,Descricao,VARCHAR(45),
+DIM_PRODUTOS,Sabor,VARCHAR(45),Dimensão,1,Sabor,Descricao,VARCHAR(45),
+DIM_PRODUTOS,IdEmbalagem,INT,Dimensão,1,Embalagem,IdEmbalagem,INT,
+DIM_PRODUTOS,DescricaoEmbalagem,VARCHAR(45),Dimensão,1,Embalagem,Descricao,VARCHAR(45),
+DIM_PRODUTOS,Preco,"DECIMAL(5,2)",Dimensão,1,Preco,Preco,"DECIMAL(5,2)",
+DIM_PRODUTOS,Custo,"DECIMAL(5,2)",Dimensão,1,Preco,Custo,"DECIMAL(5,2)",
+DIM_PERIODO,SK_PERIODO,INT,Dimensão,1,,,,Surroguate key
+DIM_PERIODO,Data,DATE,Dimensão,1,NotaFiscal,Data,DATE,
+DIM_PERIODO,Ano,INT,Dimensão,1,,,,YEAR(NotaFiscal.DATE)
+DIM_PERIODO,Mês,INT,Dimensão,1,,,,MONTH(NotaFiscal.DATE)
+DIM_PERIODO,Dia,INT,Dimensão,1,,,,DAY(NotaFiscal.DATE)
+DIM_PERIODO,DiaSemana,VARCHAR(45),Dimensão,1,,,,Dia da semana da data da nota fiscal
+DIM_PROMOCOES,SK_PROMOCAO,INT,Dimensão,1,,,,Surroguate key
+DIM_PROMOCOES,DescricaoPromocao,VARCHAR(45),Dimensão,1,Promocao,Descricao,VARCHAR(45),
+DIM_PROMOCOES,ValidoDe,DATE,Dimensão,1,Promocao,ValidoDe,DATE,
+DIM_PROMOCOES,ValidoAte,DATE,Dimensão,1,Promocao,ValidoAte,DATE,
+DIM_PROMOCOES,IdLoja,INT,Dimensão,1,Loja,IdLoja,INT,
+DIM_PROMOCOES,DescricaoLoja,VARCHAR(45),Dimensão,1,Loja,Descricao,VARCHAR(45),
+DIM_PROMOCOES,IdProduto,INT,Dimensão,1,Produto,IdProduto,INT,
+DIM_PROMOCOES,DescricaoProduto,VARCHAR(45),Dimensão,1,Produto,Descricao,VARCHAR(45),
+DIM_PROMOCOES,IdEmbalagem,INT,Dimensão,1,Embalagem,IdEmbalagem,INT,
+DIM_PROMOCOES,DescricaoEmbalagem,VARCHAR(45),Dimensão,1,Embalagem,Descricao,VARCHAR(45),
+DIM_PROMOCOES,Sabor,VARCHAR(45),Dimensão,1,Sabor,Descricao,VARCHAR(45),
+FATO_VENDAS,SK_FATO_VENDAS,INT,Fato,1,,,,Surroguate key
+FATO_VENDAS,SK_LOJA,INT,Fato,1,DIM_LOJA,SK_LOJA,INT,
+FATO_VENDAS,SK_CLIENTE,INT,Fato,1,DIM_CLIENTE,SK_CLIENTE,INT,
+FATO_VENDAS,SK_PRODUTO,INT,Fato,1,DIM_PRODUTO,SK_PRODUTO,INT,
+FATO_VENDAS,SK_PERIODO,INT,Fato,1,DIM_PERIODO,SK_PERIODO,INT,
+FATO_VENDAS,SK_PROMOCAO,INT,Fato,1,DIM_PROMOCAO,SK_PROMOCAO,INT,
+FATO_VENDAS,QUANTIDADE,INT,Fato,1,NotaFiscalItens,Quantidade,INT,
+FATO_VENDAS,PRECO,"DECIMAL(5,2)",Fato,1,NotaFiscalItens,Preco,"DECIMAL(5,2)",
+FATO_VENDAS,DESCONTO,"DECIMAL(5,2)",Fato,1,NotaFiscalItens,Desconto,"DECIMAL(5,2)",

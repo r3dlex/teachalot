@@ -1,0 +1,28 @@
+\label{chap:Introduction} Neste capítulo é discorrido quanto aos objetivos e organização do trabalho de planejamento ETL referente a base \emph{\databaseName}. 
+
+Primeiramente, apresentando-se os objetivos da análise e em seguida falando-se sobre a formatação dos dados da base e como será dado o processo de planejamento de Extração, Transformação e Carregamento (ETL, do inglês \emph{Extract, Transform, Load}). Isto é, a técnica usada na criação de um modelo dimensional (\emph{snowflake}), a partir de um modelo relacional da base \emph{\databaseName}. 
+
+\section{Objetivo}
+
+Neste trabalho tem-se como objetivo prover, a partir de uma base de dados relacional, normalizada,
+de uma rede de sorveterias com quatro lojas distribuídas fisicamente pela cidade de São Paulo, 
+um planejamento para um modelo dimensional capaz de responder determinadas dores do negócio da
+rede de sorveteria.
+
+\section {Organização do trabalho}
+
+Nesta seção discorre-se sobre a organização do resto do trabalho e a relação entre os próximos capítulos do mesmo.
+
+\subsection{Modelo Relacional}
+
+O modelo relacional da base \emph{\databaseName{}} pode ser visto no capítulo \ref{chap:RelationalModel}, onde primeiro é construído o cenário e modelo de negócios dessa rede de sorveteria, e depois é detalhado a base de dados atual e quais as características e relações entre suas entidades.
+
+A partir dessa análise é possível entender-se e definir-se um modelo dimensional que seja capaz de responder as dores do negócio em questão. Sendo assim, o conhecimento técnico da base aliado ao conhecimento de negócio é que provê os meios para uma modelagem dimensional em sequência.
+
+\subsection{Modelagem Dimenstional}
+
+A transformação de \emph{Extract, Transform and Load (ETL)}, tem por objetivo extrair dados de diversos sistemas transformando esses dados, de acordo com as regras de negócio em um modelo dimensional de dados, que pode ser carregado em uma \emph{Data Warehouse e/ou Data Mart}. A etapa de transformação é onde os dados são tratados de modo a regularizar determinados aspectos do relacional para o modelo dimensional (\emph{snowflake}). 
+
+Existem diversos sofwtares capazes de proverem os mecanismos ETL, como por exemplo o \emph{Pentaho Data Integration}, \emph{Oracle Data Integrator (ODI), Microsfot SQL Server Integration Services (SSIS)}, etc. Para fins deste trabalho, somente o planejamento das etapas de \emph{extract} e \emph{transform} serão demonstrados, uma vez que são etapas agnósticas a ferramenta utilizada, e portanto independetendes da escolha dessa.
+
+No capítulo \ref{chap:DimensionalModel}, vê-se o planejamento de das etapas de extração e transformação para  a base de dados da \emph{\databaseName{}}. Para isso, define-se um modelo dimensional a ser abordado para os dados dessa base, tendo em vista as questões de negócios discorridas no capítulo \ref{chap:RelationalModel}. Por fim, detalha-se, em forma de tabela, todas as variáveis e entidades a serem carregadas para o modelo dimensional e quais são suas \emph{surrogate keys}.
