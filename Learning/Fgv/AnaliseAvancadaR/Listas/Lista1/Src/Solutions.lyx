@@ -79,7 +79,33 @@ André Ferreira Bem Silva
 Lista 01 - Exercícios Resolvidos
 \end_layout
 
-\begin_layout Part
+\begin_layout Standard
+\align center
+Fundação Getúlio Vargas
+\end_layout
+
+\begin_layout Standard
+\align center
+MBA Executivo em Economia e Gestão: Business Analytics e Big Data T3
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
 Resolução
 \end_layout
 
@@ -87,8 +113,52 @@ Resolução
 E
 \end_layout
 
+\begin_layout Standard
+Várias licenças 
+\emph on
+opensources
+\emph default
+ não permitem determinadas utilizações do software e/ou restringem a utilização
+ para fins comerciais, etc.
+ Por exemplo, a licença GPL, em todas suas versões, não permite a utilização
+ em código fonte 
+\emph on
+fechado
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Para utilizar um código GPL, faz-se necessário que o código utilizante também
+ seja 
+\emph on
+opensurce
+\emph default
+, por isso ela é conhecida como uma licença 
+\emph on
+contaminante
+\emph default
+.
+\end_layout
+
 \begin_layout Section
-A, B, D, E
+B, D
+\end_layout
+
+\begin_layout Standard
+B - Pelo fato do R ser opensource é amplamente discutido e possui comunidade
+ ativa internacional e possui interoperabilidade com diversas outras iniciativas
+ (e.g.
+ Python), diferente de outras soluções, mais fechadas e restritas ao ambiente
+ de interesse de uma entidade (e.g SAS).
+\end_layout
+
+\begin_layout Standard
+\noindent
+D - Pelo fato de ser GPL realmente é gratuito e é possível utilizar o R
+ para qualquer fim, dado que é uma linguagem de programação multi-paradigma.
+ O suporte ao R não existe de maneira oficial, já que não é mantido por
+ somente uma entidade.
 \end_layout
 
 \begin_layout Section
@@ -125,16 +195,647 @@ evasão
 2 e 3
 \end_layout
 
+\begin_layout Standard
+2 - Para evitar-se o efeito de multicolinearidade, realmente não faria sentido
+ aplicar todas ao mesmo tempo.
+ Observa-se nas regressões individuais que o 
+\emph on
+p-value 
+\emph default
+é praticamente 0 (
+\begin_inset Formula $<1e^{-12})$
+\end_inset
+
+ e tem-se a tabela:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+SI1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SI2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SI3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SI4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+SI1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.73
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.58
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.67
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+SI2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.62
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.72
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+SI3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.67
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+SI4 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:MulticolinearityCorrelation"
+
+\end_inset
+
+Tabela de correlação entre as variáveis SI1, SI2, SI3, SI4.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Sendo assim, há forte correlação entre todas as variáveis (
+\begin_inset Formula $>0.5$
+\end_inset
+
+ ), o que explica o fato de nem todas serem selecionadas ao aplicar-se a
+ função 
+\emph on
+step 
+\emph default
+na regressão delas com 
+\emph on
+evasão.
+\end_layout
+
+\begin_layout Standard
+\noindent
+3 - Idem a alternativa 2, observa-se pela tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:MulticolinearityCorrelation"
+
+\end_inset
+
+ que há correlação entre todas as variáveis e a existência dessa correlação
+ é o fator que motiva o 
+\emph on
+AIC 
+\emph default
+utilizando SI2 e SI3 maiores em relação a sua não utilização na função 
+\emph on
+step
+\emph default
+.
+ 
+\end_layout
+
 \begin_layout Section
 2 e 4
 \end_layout
 
-\begin_layout Section
-C e D
+\begin_layout Standard
+2 - Observando-se no gráfico, o número de componentes tal que a menor componente
+ explicaria pelo menos 
+\begin_inset Formula $5\%$
+\end_inset
+
+ da variância seria realmente 5.
+ Além disso, o uso da análise de componentes principais, sem a utilização
+ de 
+\emph on
+análise fatorial
+\emph default
+, pode fazer com que o modelo sofra críticas pelo fato de não haver uma
+ análise direta com as variáveis originais do problema.
 \end_layout
 
-\begin_layout Part
-Código Fonte
+\begin_layout Standard
+\noindent
+4 - O ajuste do modelo deve ser diferente do original, mas para entender-se
+ o quão melhor ou pior faz-se necessário testar o novo modelo com uma base
+ de testes para ser possível analisar o 
+\emph on
+fit 
+\emph default
+em relação aos valores observados.
+\end_layout
+
+\begin_layout Section
+B e D
+\end_layout
+
+\begin_layout Standard
+B, D - Pelo teste de Hosmer & Lemeshow, temos as alternativas
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H_{0}:$
+\end_inset
+
+ Os eventos encontrados e previstos são similares em 10 intervalos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H_{a}:$
+\end_inset
+
+ Eles não são os mesmos.
+ 
+\end_layout
+
+\begin_layout Standard
+Sendo assim, observa-se a seguinte saída para os testes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize},breaklines=true,showstringspaces=false,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+[1] "=============SIXTH=============="
+\end_layout
+
+\begin_layout Plain Layout
+
+Class labels have been switched from (FALSE,TRUE) to (0,1)
+\end_layout
+
+\begin_layout Plain Layout
+
+          H Gini  AUC AUCH   KS MER  MWL Spec.Sens95 Sens.Spec95  ER Sens
+ Spec
+\end_layout
+
+\begin_layout Plain Layout
+
+scores 0.41 0.67 0.83 0.86 0.51 0.2 0.21        0.45        0.44 0.2 0.57  0.9
+\end_layout
+
+\begin_layout Plain Layout
+
+       Precision Recall  TPR FPR    F Youden TP FP  TN FN
+\end_layout
+
+\begin_layout Plain Layout
+
+scores      0.71   0.57 0.57 0.1 0.63   0.46 69 28 250 53
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        Hosmer and Lemeshow goodness of fit (GOF) test
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+data:  sixth.data$evasao, fitted(sixth.fit)
+\end_layout
+
+\begin_layout Plain Layout
+
+X-squared = 30, df = 8, p-value = 2e-04
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+[1] "=============SIXTH=============="
+\end_layout
+
+\begin_layout Plain Layout
+
+[1] "=============THIRD=============="
+\end_layout
+
+\begin_layout Plain Layout
+
+Class labels have been switched from (FALSE,TRUE) to (0,1)
+\end_layout
+
+\begin_layout Plain Layout
+
+          H Gini  AUC AUCH   KS  MER  MWL Spec.Sens95 Sens.Spec95   ER Sens
+\end_layout
+
+\begin_layout Plain Layout
+
+scores 0.21 0.47 0.74 0.75 0.37 0.26 0.27        0.26         0.2 0.27 0.32
+\end_layout
+
+\begin_layout Plain Layout
+
+       Spec Precision Recall  TPR   FPR    F Youden TP FP  TN FN
+\end_layout
+
+\begin_layout Plain Layout
+
+scores 0.91      0.62   0.32 0.32 0.086 0.42   0.23 39 24 254 83
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        Hosmer and Lemeshow goodness of fit (GOF) test
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+data:  third.data$evasao, fitted(third.fit)
+\end_layout
+
+\begin_layout Plain Layout
+
+X-squared = 6, df = 8, p-value = 0.7
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+[1] "=============THIRD=============="
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sendo assim, para o modelo baseado em componentes a hipótese aceita é 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, portanto há necessidade de refinamento desse modelo, o que pode ser feito
+ por exemplo por meio de análise fatorial.
+ Já o modelo da questão 3, ao rodar-se Hosmer & Lemeshow apresenta um 
+\emph on
+fit 
+\emph default
+melhor, definido pelo fato de o 
+\emph on
+p-value 
+\emph default
+ser maior que 
+\begin_inset Formula $0.5$
+\end_inset
+
+ e portanto a hipótese nula, 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ ser aceita.
+\end_layout
+
+\begin_layout Standard
+Por isso a alternativa D é também verdadeira uma vez que pelo teste de Hesmer
+ & Lemeshow identifica-se que o fit da mesma é pior, uma vez que 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ é rejeitada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Anexo: Código Fonte
 \end_layout
 
 \begin_layout Standard
@@ -275,7 +976,7 @@ step.hbat400 <- step(fit.min.hbat400,
 
 \begin_layout Plain Layout
 
-print(summary(step.hbat400))
+print(summary(step.hbat400), digits = 2)
 \end_layout
 
 \begin_layout Plain Layout
@@ -303,7 +1004,17 @@ sapply(test.formulas, PrintGlmBinomialLogit, data.df = hbat400)
 
 \begin_layout Plain Layout
 
-print(cor(hbat400[,c("SI1", "SI2", "SI3")]))
+print("=============Correlation = SI1 + SI2 + SI3 + SI4==============")
+\end_layout
+
+\begin_layout Plain Layout
+
+print(cor(hbat400[,c("SI1", "SI2", "SI3", "SI4")]), digits = 2)
+\end_layout
+
+\begin_layout Plain Layout
+
+print("===============================================================")
 \end_layout
 
 \begin_layout Plain Layout
@@ -367,12 +1078,12 @@ print("=============SIXTH==============")
 
 \begin_layout Plain Layout
 
-print(HMeasure(hbat400$evasao, sixth.predict)$metrics)
+print(HMeasure(hbat400$evasao, sixth.predict)$metrics, digits = 2)
 \end_layout
 
 \begin_layout Plain Layout
 
-print(hoslem.test(sixth.data$evasao, fitted(sixth.fit)))
+print(hoslem.test(sixth.data$evasao, fitted(sixth.fit)), digits = 2)
 \end_layout
 
 \begin_layout Plain Layout
@@ -396,7 +1107,7 @@ third.data <- hbat400[, c("evasao", "SI4", "SI1", "JS5")]
 
 \begin_layout Plain Layout
 
-third.predict <- predict(third.fit, newdata = hbat400, type = "response")
+third.predict <- predict(third.fit, newdata = third.data, type = "response")
 \end_layout
 
 \begin_layout Plain Layout
@@ -406,17 +1117,21 @@ print("=============THIRD==============")
 
 \begin_layout Plain Layout
 
-print(HMeasure(hbat400$evasao, third.predict)$metrics)
+print(HMeasure(hbat400$evasao, third.predict)$metrics, digits = 2)
 \end_layout
 
 \begin_layout Plain Layout
 
-print(hoslem.test(third.data$evasao, fitted(third.fit)))
+print(hoslem.test(third.data$evasao, fitted(third.fit)), digits = 2)
 \end_layout
 
 \begin_layout Plain Layout
 
 print("=============THIRD==============")
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset

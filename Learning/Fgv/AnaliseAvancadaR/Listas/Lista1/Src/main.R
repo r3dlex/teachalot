@@ -25,13 +25,15 @@ step.hbat400 <- step(fit.min.hbat400,
                     direction = "both",
                     scope = scope.formula)
 
-print(summary(step.hbat400))
+print(summary(step.hbat400), digits = 2)
 
 # Questao 4 e 5
 test.formulas <- c(evasao ~ SI1, evasao ~ SI2, evasao ~ SI3, evasao ~  SI4)
 sapply(test.formulas, PrintGlmBinomialLogit, data.df = hbat400)
 
-print(cor(hbat400[,c("SI1", "SI2", "SI3")]))
+print("=============Correlation = SI1 + SI2 + SI3 + SI4==============")
+print(cor(hbat400[,c("SI1", "SI2", "SI3", "SI4")]), digits = 2)
+print("===============================================================")
 
 #Questao 6
 sixth.formula <- evasao ~ SI1 + SI2 + SI3 + SI4
@@ -44,14 +46,14 @@ sixth.fit <- glm(sixth.data$evasao ~ sixth.pca1,
 
 sixth.predict <- predict(sixth.fit, newdata = sixth.data, type = "response")
 print("=============SIXTH==============")
-print(HMeasure(hbat400$evasao, sixth.predict)$metrics)
-print(hoslem.test(sixth.data$evasao, fitted(sixth.fit)))
+print(HMeasure(hbat400$evasao, sixth.predict)$metrics, digits = 2)
+print(hoslem.test(sixth.data$evasao, fitted(sixth.fit)), digits = 2)
 print("=============SIXTH==============")
 
 third.fit <- step.hbat400
 third.data <- hbat400[, c("evasao", "SI4", "SI1", "JS5")]
-third.predict <- predict(third.fit, newdata = hbat400, type = "response")
+third.predict <- predict(third.fit, newdata = third.data, type = "response")
 print("=============THIRD==============")
-print(HMeasure(hbat400$evasao, third.predict)$metrics)
-print(hoslem.test(third.data$evasao, fitted(third.fit)))
+print(HMeasure(hbat400$evasao, third.predict)$metrics, digits = 2)
+print(hoslem.test(third.data$evasao, fitted(third.fit)), digits = 2)
 print("=============THIRD==============")
