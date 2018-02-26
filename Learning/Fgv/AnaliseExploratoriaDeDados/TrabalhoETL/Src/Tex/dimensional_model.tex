@@ -4,19 +4,18 @@ A modelagem dimensional (\emph{snowflake}) é feita a partir de uma tabela fato 
 
 \section{Modelo Dimensional}
 
-Na figura \ref{figure:RelationalModel}, observa-se o modelo dimensional de Vendas, com a tabela Fato no centro e as dimensões ao redor.
+Na figura \ref{figure:RelationalModel}, observa-se o modelo dimensional de Vendas, com a tabela Fato no centro e as dimensões ao redor. A tabela a seguir é contém o plano de ETL modelo relacional para o modelo dimensional, com o qual obtém-se o modelo descrito na figura \ref{figure:RelationalModel}:
 
 \begin{center}
 \begin{figure}[ht]
 \begin{centering}
-\includegraphics[width=0.95\textwidth]{DimensionalModel}
+\includegraphics[width=0.8\textwidth]{DimensionalModel}
 \par\end{centering}
   \caption{\label{figure:DimensionalModel}O modelo dimensional gerado a partir do modelo relacional, da figura \ref{figure:RelationalModel}, a ser carregado via ETL para um \emph{Data Warehouse/Mart}.}
 \end{figure}
 \vspace*{-40pt}
 \par\end{center}
 
-A tabela a seguir é contém o plano de ETL modelo relacional para o modelo dimensional, com o qual obtém-se o modelo descrito na figura \ref{figure:RelationalModel}:
 
 \begin{landscape}
 \begin{longtable}{l|l|l|l|l|l|l|l|l}
@@ -82,3 +81,39 @@ A tabela a seguir é contém o plano de ETL modelo relacional para o modelo dime
 \hline 
 \end{longtable}
 \end{landscape}
+
+\section{Dashboard \storeName{}: Dores do Negócio}
+
+Afim de entender-se as dores do negócio da \emph{\storeName{}}, pode-se utilizar-se do recurso de \emph{dashboards} dinâmicos. Esses são \emph{capturas} dinâmicas do modelo dimensional de dados da base \emph{\databaseName{}}.
+
+Dado o ETL descrito na figura \ref{figure:DimensionalModel}, rodou-se o modelo no software Tableau\texttrademark{}
+e obteve-se o Dashboard da figura \ref{figure:BusinessDashboard}. 
+
+\begin{center}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=1\textwidth]{DashboardGelattoFelice}
+\par\end{centering}
+  \caption{\label{figure:BusinessDashboard}Dashboard final, obtido após extração ETL e análise da base de dados do Data Warehouse da \storeFullName{}.}
+\end{figure}
+\vspace*{-40pt}
+\end{center}
+
+Nesta mesma figura \ref{figure:BusinessDashboard}, podemos observar que os países mais rentáveis são EUA, Brasil e França, assim como os produtos que mais vendem e as promoções mais eficazes com relação a margem de contribuição. Além disso, observa-se as lojas mais lucrativas e os maiores clientes, respondendo-se assim os questionamentos das dores de negócio, da seção \ref{section:BusinessRules}.
+
+\subsection{Dashboard: em Aula}
+
+O dashboard da figura \ref{figure:TableauDashboardInClass} foi feito com o auxílio da professora Sanda Puga, na aula especial sobre o software Tableua\texttrademark{}, realizada no dia 17/02/2018. Nessa aula, utilizou-se a base de dados de uma base exemplo de \emph{sorveteria}, afim de obter-se um dashboard para a equipe de negócios dessa rede de lojas.
+
+A \emph{sorveteria} trata-se de uma rede nacional, nesse caso, com diversas lojas pela cidade de São Paulo. A equipe de negócios dessa rede obteve, por meio de análise de dados o dashboard da figura \ref{figure:TableauDashboardInClass}.
+
+\begin{center}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=1\textwidth]{DashboardInClass}
+\par\end{centering}
+  \caption{\label{figure:TableauDashboardInClass}Dashboard final obtido na aula sobre o software Tableau\texttrademark{}, realizada nas dependências da FGV, unidade Faria Lima, no dia 17/02/2018.}
+\end{figure}
+\vspace*{-40pt}
+\end{center}
+

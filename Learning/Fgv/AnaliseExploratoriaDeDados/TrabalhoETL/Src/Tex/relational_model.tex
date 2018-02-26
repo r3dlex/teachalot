@@ -8,31 +8,9 @@ relacional vigente, suas entidades e as relações entre elas.
 \label{section:BusinessRules}
 Nesta seção é  discutida as principais regras de negócio de interesse e o cenário das mesmas.
 
-A rede de sorveteria Sweet possui 4 lojas, espalhadas pela cidade de São Paulo. As lojas possuem administrações distintas e dono único. As diferentes unidades podem ser observadas na tabela \ref{table:StoreUnits}.
+A rede de sorveteria \storeName{} é uma rede multinacional e possui 35 lojas em 8 países. São eles: Brasil, Alemanha, França, Argentina, Estados Unidos, México, Uruguai e Paraguai. As lojas possuem administrações distintas e matriz única no Brasil.
 
-\begin{center}
-  \begin{table}[h]
-\begin{centering}
-\begin{tabular}{c|c|c}
-\hline 
-Unidade & Localização & Tamanho\tabularnewline
-\hline 
-1 & Shopping Morumbi & Grande\tabularnewline
-\hline 
-2 & Avenida Paulista & Pequena\tabularnewline
-\hline 
-3 & Berrini & Média\tabularnewline
-\hline 
-4 & Shopping Itaquera & Pequena\tabularnewline
-\hline 
-\end{tabular}
-\par\end{centering}
-\caption{\label{table:StoreUnits} Lojas físicas da \storeName{}, todas na cidade de São Paulo, SP.}
-\end{table}
-\vspace*{-40pt}
-\par\end{center}
-
-Numa compra nesta \emph{loja}, o \emph{cliente} dirige-se até uma das unidades da tabela \ref{table:StoreUnits}, escolhe o \emph{produto}, dado seu \emph{sabor}, o tipo de \emph{embalagem} e procede até o caixa, onde cada compra efetuada por um cliente deve gerar uma nota fiscal. Essa compra deve conter pelo menos uma unidade de sorvete. 
+Numa compra nesta \emph{loja}, o \emph{cliente} dirige-se até uma das unidades rede, escolhe o \emph{produto}, dado seu \emph{sabor}, o tipo de \emph{embalagem} e procede até o caixa, onde cada compra efetuada por um cliente deve gerar uma nota fiscal. Essa compra deve conter pelo menos uma unidade de sorvete. 
 
 Sazonalmente, a franquia promove campanhas publicitárias e de códigos de \emph{cupons de desconto} e outras \emph{promoções} afim de aumentar o movimento, quantidade de vendas e a lucratividade geral das lojas franquiadas.
 
@@ -91,7 +69,7 @@ Uma entidade associativa é um termo de modelagem relacional que significa uma r
 \begin{itemize}
 \item \emph{ProdutoEmbalagem}: Relação entre Produto e Embalagem.
 \item \emph{LojaProdutoEmbalagem}: Relação entre Loja e Produto com Embalagem.
-\item \emph{Preco}: Associa um valor fiat a um produto.
+\item \emph{Preco}: Associa um valor em moeda \emph{fiduciária} a um produto em determinado instante. Ex: Real, Dólar...
 \item \emph{NotaFiscal}: Relatório de venda de produto(s).
 \item \emph{NotaFiscalItens}: O relatório de um item de venda.
 \item \emph{PromocaoPreco}: Preço referente a uma promoção específica.
@@ -100,7 +78,7 @@ Uma entidade associativa é um termo de modelagem relacional que significa uma r
 \item \emph{ClienteEndereco}: Endereço de um  cliente.
 \item \emph{ClienteTelefone}: Telefone de um cliente.
 \item \emph{LojaEndereco}: Endereço de uma loja.
-\item \emph{ClienteEmailMark}: Visualização ou não de um determinado e-mail por parte do cliente.
+\item \emph{ClienteEmailMark}: Visualização de um determinado e-mail por parte do cliente.
 \item \emph{ClienteMensagem}: Mensagem enviada ao cliente por e-mail.
 \end{itemize}
 

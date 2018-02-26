@@ -10,7 +10,7 @@ INKSCAPE_OUTPUT_OPTIONS = --export-ignore-filters --export-ps-level=3
 SUFFIX_SVG = .svg
 
 all:
-	#make images
+	make images
 	make trabalho
 
 images:
