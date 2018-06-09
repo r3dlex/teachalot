@@ -36,8 +36,8 @@ inadimplentes$bpc
 inadimplentesShift1 <- inadimplentes  %>% mutate_all(.funs = funs(lag), n = 1)
 inadimplentesShift2 <- inadimplentes  %>% mutate_all(.funs = funs(lag), n = 2)
 inadimplentesShift3 <- inadimplentes  %>% mutate_all(.funs = funs(lag), n = 3)
-inadimplentesShift4 <- inadimplentes  %>% mutate_all(.funs = funs(lag), n = 3)
-inadimplentesShift5 <- inadimplentes  %>% mutate_all(.funs = funs(lag), n = 3)
+inadimplentesShift4 <- inadimplentes  %>% mutate_all(.funs = funs(lag), n = 4)
+inadimplentesShift5 <- inadimplentes  %>% mutate_all(.funs = funs(lag), n = 5)
 
 inadimplentes$bpc1 <- inadimplentesShift1$bpc
 inadimplentes$bpc2 <- inadimplentesShift2$bpc
@@ -63,10 +63,13 @@ modeloBpp <- lm(bp ~ bpc1 + bpd1, data = inadimplentes[2:nrow(inadimplentes), ])
 inadFull <- AddNewRowForInad(inadimplentes, 62)
 
 #BPC
-predict(modeloBpc, newdata = inadFull[62, ])
+paste0("BPC(62)", predict(modeloBpc, newdata = inadFull[62, ])) %>% print
 #BPD
-predict(modeloBpd, newdata = inadFull[62, ])
+paste0("BPD(62)", predict(modeloBpd, newdata = inadFull[62, ])) %>% print
 #BP
-predict(modeloBp, newdata = inadFull[62, ])
+paste0("BP(62)", predict(modeloBp, newdata = inadFull[62, ])) %>% print
+#BP = BPCt_-1 + BPDt_-1
+paste0("BPP(62)", predict(modeloBp, newdata = inadFull[62, ])) %>% print
+
 
 
