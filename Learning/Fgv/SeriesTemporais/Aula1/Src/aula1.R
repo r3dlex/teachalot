@@ -19,17 +19,6 @@ AddNewRowForInad <- function(data, n) {
   data
 }
  
-#Exercicio inicial
-vendas <- c(14, 16, 19, 22, 24)
-vendasn <- c(16, 19, 22, 24, 26)
-modeloVvendas <- lm (vendasn ~ vendas, data = data.frame(vendas, vendasn))
-
-
-x1 <- c(16, 19, 22, 25)
-x2 <- c(14, 16, 19, 22)
-y <- c(19, 22, 24, 26)
-modeloY <- lm(y ~ x1 + x2, data = data.frame(x1, x2, y))
-
 inadimplentes  <- read.csv("Data/inadimplencia.csv")
 
 inadimplentes$bpc
@@ -53,7 +42,7 @@ inadimplentes$bp3 <- inadimplentesShift3$bp
 inadimplentes$bp5 <- inadimplentesShift5$bp
 
 #inadimplentesRegressao <- write.csv(inadimplentes, file = "Data/inadimplentes_pre.csv")
-write.csv(inadimplentesRegressao, file = "Data/inadimplentes_processado.csv")
+#write.csv(inadimplentesRegressao, file = "Data/inadimplentes_processado.csv")
 
 modeloBpc <- lm(bpc ~ bpc1 + bpc2 + bpc3, data = inadimplentes[4:nrow(inadimplentes), ])
 modeloBpd <- lm(bpd ~ bpd2 + bpd4, data = inadimplentes[5:nrow(inadimplentes), ])
@@ -63,13 +52,10 @@ modeloBpp <- lm(bp ~ bpc1 + bpd1, data = inadimplentes[2:nrow(inadimplentes), ])
 inadFull <- AddNewRowForInad(inadimplentes, 62)
 
 #BPC
-paste0("BPC(62)", predict(modeloBpc, newdata = inadFull[62, ])) %>% print
+paste0("BPC(62) = ", predict(modeloBpc, newdata = inadFull[62, ])) %>% print
 #BPD
-paste0("BPD(62)", predict(modeloBpd, newdata = inadFull[62, ])) %>% print
+paste0("BPD(62) = ", predict(modeloBpd, newdata = inadFull[62, ])) %>% print
 #BP
-paste0("BP(62)", predict(modeloBp, newdata = inadFull[62, ])) %>% print
+paste0("BP(62) = ", predict(modeloBp, newdata = inadFull[62, ])) %>% print
 #BP = BPCt_-1 + BPDt_-1
-paste0("BPP(62)", predict(modeloBp, newdata = inadFull[62, ])) %>% print
-
-
-
+paste0("BPP(62) = ", predict(modeloBp, newdata = inadFull[62, ])) %>% print
