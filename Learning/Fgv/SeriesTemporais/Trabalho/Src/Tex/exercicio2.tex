@@ -1,0 +1,147 @@
+Para cada um dos processos abaixo gere 200 observações. Faça um gráfico da série, ACF e PACF. Comente os resultados.
+
+\section{Série aleatória, observações iid da distribuição N(0,1)}
+
+% Comments 
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist2d_plot_ts}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist2d_acf}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist2d_pacf}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+Para a distribuição N(0,1) os resultados apresentam uma série estacionária com pouca sazonalidade vista no gráfico e acrescentada na análise do ACF, pois quase todos pontos se mantém dentro das bandas de defasagem. O único ponto que apresenta defasagem no PACF é o ponto 16.
+
+%\subsection{Código Fonte}
+
+%\inputminted{R}{Src/R/ex2d.R}
+
+\section{Série com tendência estocástica $x_{i}=x_{t-1}+N(1,5^{2})$.}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist2e_plot_ts}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist2e_acf}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist2e_pacf}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+No caso da tendência estocástica os resultados apresentam uma série não estacionária com pouca sazonalidade vista na linha de tendência no gráfico, porém ao analisar o gráfico apresentado após o cálculo da Autocorrelação (ACF), verifica-se que na verdade é uma série estacionária pois os pontos de defasagem tendem a zero.
+
+%\subsection{Código Fonte}
+
+%\inputminted{R}{Src/R/ex2e.R}
+
+%\subsection{Saída}
+
+\section{Série com correlação de curto-prazo, $x_{i}=0.95x_{t-1}+N(0,1)$.}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist2f_plot_ts}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist2f_acf}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist2f_pacf}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+Na análise da correlação de curto-prazo pode-se concluir que é uma série estacionária pois em todas os gráficos os pontos tendem a zero.
+
+%\subsection{Código Fonte}
+%\inputminted{R}{Src/R/ex2f.R}
+
+\section{Série com correlações negativas, $x_{i}=-0.95x_{t-1}+N(0,1)$.}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist2g_plot_ts}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist2g_acf}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist2g_pacf}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+
+%\subsection{Código Fonte}
+%\inputminted{R}{Src/R/ex2g.R}
+Na série de correlações negativas     conclui-se que é estacionária e é interessante nota que no ACF e PACF há pontos de defasagens negativos.
+
+\section{Médias móveis, $x_{t}=\epsilon_{t}+0,6\epsilon_{t-1}$ e $\epsilon_{t}\sim N(0,1)$}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist2h_plot_ts}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist2h_acf}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist2h_pacf}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+Na série de médias móveis conclui-se que é estacionária e como no caso anterior vale a observação que neste caso apresentam-se pontos de defasagem tanto para o lado positivo quanto para o lado negativo.
+
+%\subsection{Código Fonte}
+%\inputminted{R}{Src/R/ex2h.R}

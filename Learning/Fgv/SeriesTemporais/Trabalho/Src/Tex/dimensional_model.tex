@@ -1,0 +1,119 @@
+\label{chap:DimensionalModel} 
+
+A modelagem dimensional (\emph{snowflake}) é feita a partir de uma tabela fato (Vendas) e suas dimensões. Na análise de dores de negócio no capítulo \ref{chap:RelationalModel}, seção \ref{section:BusinessRules}.
+
+\section{Modelo Dimensional}
+
+Na figura \ref{figure:RelationalModel}, observa-se o modelo dimensional de Vendas, com a tabela Fato no centro e as dimensões ao redor. A tabela a seguir é contém o plano de ETL modelo relacional para o modelo dimensional, com o qual obtém-se o modelo descrito na figura \ref{figure:RelationalModel}:
+
+\begin{center}
+\begin{figure}[ht]
+\begin{centering}
+\includegraphics[width=0.8\textwidth]{DimensionalModel}
+\par\end{centering}
+  \caption{\label{figure:DimensionalModel}O modelo dimensional gerado a partir do modelo relacional, da figura \ref{figure:RelationalModel}, a ser carregado via ETL para um \emph{Data Warehouse/Mart}.}
+\end{figure}
+\vspace*{-40pt}
+\par\end{center}
+
+
+\begin{landscape}
+\begin{longtable}{l|l|l|l|l|l|l|l|l}
+\hline 
+{\scriptsize{}Tabela} & {\scriptsize{}Coluna} & {\scriptsize{}Tipo Dado} & {\scriptsize{}Tipo} & {\scriptsize{}SCD} & {\scriptsize{}Tabela} & {\scriptsize{}Coluna} & {\scriptsize{}Tipo de Dado} & {\scriptsize{}Transformação}\tabularnewline
+\hline 
+{\scriptsize{}LOJAS} & {\scriptsize{}SK\_LOJA} & {\scriptsize{}INT} & {\scriptsize{}Dim} & {\scriptsize{}1} &  &  &  & {\scriptsize{}Surrogate Key}\tabularnewline
+{\scriptsize{}LOJAS} & {\scriptsize{}IdLoja} & {\scriptsize{}INT} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Loja} & {\scriptsize{}IdLoja} & {\scriptsize{}INT} & \tabularnewline
+{\scriptsize{}LOJAS} & {\scriptsize{}Descricao} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Loja} & {\scriptsize{}Descricao} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}LOJAS} & {\scriptsize{}Tamanho} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Loja} & {\scriptsize{}Tamanho} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}LOJAS} & {\scriptsize{}CEP} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Endereco} & {\scriptsize{}CEP} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}LOJAS} & {\scriptsize{}TipoLogradouro} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}TipoLogradouro} & {\scriptsize{}Descricao} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}LOJAS} & {\scriptsize{}Logradouro} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Endereco} & {\scriptsize{}Logradouro} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}LOJAS} & {\scriptsize{}Cidade} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Cidade} & {\scriptsize{}Cidade} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}LOJAS} & {\scriptsize{}Estado} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Estado} & {\scriptsize{}Estado} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}LOJAS} & {\scriptsize{}Pais} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Pais} & {\scriptsize{}Pais} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}CLIENTES} & {\scriptsize{}SK\_CLIENTE} & {\scriptsize{}INT} & {\scriptsize{}Dim} & {\scriptsize{}1} &  &  &  & {\scriptsize{}Surrogate Key}\tabularnewline
+{\scriptsize{}CLIENTES} & {\scriptsize{}IdCliente} & {\scriptsize{}INT} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Cliente} & {\scriptsize{}IdCliente} & {\scriptsize{}INT} & \tabularnewline
+{\scriptsize{}CLIENTES} & {\scriptsize{}Nome} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Cliente} & {\scriptsize{}Nome} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}CLIENTES} & {\scriptsize{}DtNascimento} & {\scriptsize{}DATE} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Cliente} & {\scriptsize{}DtNascimento} & {\scriptsize{}DATE} & \tabularnewline
+{\scriptsize{}CLIENTES} & {\scriptsize{}Email} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}ClienteEmail} & {\scriptsize{}Email} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}CLIENTES} & {\scriptsize{}Telefone} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}ClienteTelefone} & {\scriptsize{}Telefone} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}CLIENTES} & {\scriptsize{}CEP} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Endereco} & {\scriptsize{}CEP} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}CLIENTES} & {\scriptsize{}TipoLogradouro} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}TipoLogradouro} & {\scriptsize{}Descricao} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}CLIENTES} & {\scriptsize{}Logradouro} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Endereco} & {\scriptsize{}Logradouro} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}CLIENTES} & {\scriptsize{}Cidade} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Cidade} & {\scriptsize{}Cidade} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}CLIENTES} & {\scriptsize{}Estado} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Estado} & {\scriptsize{}Estado} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}CLIENTES} & {\scriptsize{}Pais} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Pais} & {\scriptsize{}Pais} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}PRODUTOS} & {\scriptsize{}SK\_PRODUTO} & {\scriptsize{}INT} & {\scriptsize{}Dim} & {\scriptsize{}1} &  &  &  & {\scriptsize{}Surrogate Key}\tabularnewline
+{\scriptsize{}PRODUTOS} & {\scriptsize{}IdProduto} & {\scriptsize{}INT} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Produto} & {\scriptsize{}IdProduto} & {\scriptsize{}INT} & \tabularnewline
+{\scriptsize{}PRODUTOS} & {\scriptsize{}DescricaoProduto} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Produto} & {\scriptsize{}Descricao} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}PRODUTOS} & {\scriptsize{}Sabor} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Sabor} & {\scriptsize{}Descricao} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}PRODUTOS} & {\scriptsize{}IdEmbalagem} & {\scriptsize{}INT} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Embalagem} & {\scriptsize{}IdEmbalagem} & {\scriptsize{}INT} & \tabularnewline
+{\scriptsize{}PRODUTOS} & {\scriptsize{}DescricaoEmbalagem} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Embalagem} & {\scriptsize{}Descricao} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}PRODUTOS} & {\scriptsize{}Preco} & {\scriptsize{}DECIMAL(5,2)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Preco} & {\scriptsize{}Preco} & {\scriptsize{}DECIMAL(5,2)} & \tabularnewline
+{\scriptsize{}PRODUTOS} & {\scriptsize{}Custo} & {\scriptsize{}DECIMAL(5,2)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Preco} & {\scriptsize{}Custo} & {\scriptsize{}DECIMAL(5,2)} & \tabularnewline
+{\scriptsize{}PERIODO} & {\scriptsize{}SK\_PERIODO} & {\scriptsize{}INT} & {\scriptsize{}Dim} & {\scriptsize{}1} &  &  &  & {\scriptsize{}Surrogate Key}\tabularnewline
+{\scriptsize{}PERIODO} & {\scriptsize{}Data} & {\scriptsize{}DATE} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}NotaFiscal} & {\scriptsize{}Data} & {\scriptsize{}DATE} & {\scriptsize{}Nota Fiscal}\tabularnewline
+{\scriptsize{}PERIODO} & {\scriptsize{}Ano} & {\scriptsize{}INT} & {\scriptsize{}Dim} & {\scriptsize{}1} &  &  &  & {\scriptsize{}YEAR}\tabularnewline
+{\scriptsize{}PERIODO} & {\scriptsize{}Mês} & {\scriptsize{}INT} & {\scriptsize{}Dim} & {\scriptsize{}1} &  &  &  & {\scriptsize{}MONTH}\tabularnewline
+{\scriptsize{}PERIODO} & {\scriptsize{}Dia} & {\scriptsize{}INT} & {\scriptsize{}Dim} & {\scriptsize{}1} &  &  &  & {\scriptsize{}DAY}\tabularnewline
+{\scriptsize{}PERIODO} & {\scriptsize{}DiaSemana} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} &  &  &  & {\scriptsize{}WEEKDAY}\tabularnewline
+{\scriptsize{}PROMOCOES} & {\scriptsize{}SK\_PROMOCAO} & {\scriptsize{}INT} & {\scriptsize{}Dim} & {\scriptsize{}1} &  &  &  & {\scriptsize{}Surrogate Key}\tabularnewline
+{\scriptsize{}PROMOCOES} & {\scriptsize{}DescricaoPromocao} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Promocao} & {\scriptsize{}Descricao} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}PROMOCOES} & {\scriptsize{}ValidoDe} & {\scriptsize{}DATE} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Promocao} & {\scriptsize{}ValidoDe} & {\scriptsize{}DATE} & \tabularnewline
+{\scriptsize{}PROMOCOES} & {\scriptsize{}ValidoAte} & {\scriptsize{}DATE} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Promocao} & {\scriptsize{}ValidoAte} & {\scriptsize{}DATE} & \tabularnewline
+{\scriptsize{}PROMOCOES} & {\scriptsize{}IdLoja} & {\scriptsize{}INT} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Loja} & {\scriptsize{}IdLoja} & {\scriptsize{}INT} & \tabularnewline
+{\scriptsize{}PROMOCOES} & {\scriptsize{}DescricaoLoja} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Loja} & {\scriptsize{}Descricao} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}PROMOCOES} & {\scriptsize{}IdProduto} & {\scriptsize{}INT} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Produto} & {\scriptsize{}IdProduto} & {\scriptsize{}INT} & \tabularnewline
+{\scriptsize{}PROMOCOES} & {\scriptsize{}DescricaoProduto} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Produto} & {\scriptsize{}Descricao} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}PROMOCOES} & {\scriptsize{}IdEmbalagem} & {\scriptsize{}INT} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Embalagem} & {\scriptsize{}IdEmbalagem} & {\scriptsize{}INT} & \tabularnewline
+{\scriptsize{}PROMOCOES} & {\scriptsize{}DescricaoEmbalagem} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Embalagem} & {\scriptsize{}Descricao} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}PROMOCOES} & {\scriptsize{}Sabor} & {\scriptsize{}VARCHAR(45)} & {\scriptsize{}Dim} & {\scriptsize{}1} & {\scriptsize{}Sabor} & {\scriptsize{}Descricao} & {\scriptsize{}VARCHAR(45)} & \tabularnewline
+{\scriptsize{}VENDAS} & {\scriptsize{}SK\_VENDAS} & {\scriptsize{}INT} & {\scriptsize{}Fato} & {\scriptsize{}1} &  &  &  & {\scriptsize{}Surrogate Key}\tabularnewline
+{\scriptsize{}VENDAS} & {\scriptsize{}SK\_LOJA} & {\scriptsize{}INT} & {\scriptsize{}Fato} & {\scriptsize{}1} & {\scriptsize{}LOJA} & {\scriptsize{}SK\_LOJA} & {\scriptsize{}INT} & \tabularnewline
+{\scriptsize{}VENDAS} & {\scriptsize{}SK\_CLIENTE} & {\scriptsize{}INT} & {\scriptsize{}Fato} & {\scriptsize{}1} & {\scriptsize{}CLIENTE} & {\scriptsize{}SK\_CLIENTE} & {\scriptsize{}INT} & \tabularnewline
+{\scriptsize{}VENDAS} & {\scriptsize{}SK\_PRODUTO} & {\scriptsize{}INT} & {\scriptsize{}Fato} & {\scriptsize{}1} & {\scriptsize{}PRODUTO} & {\scriptsize{}SK\_PRODUTO} & {\scriptsize{}INT} & \tabularnewline
+{\scriptsize{}VENDAS} & {\scriptsize{}SK\_PERIODO} & {\scriptsize{}INT} & {\scriptsize{}Fato} & {\scriptsize{}1} & {\scriptsize{}PERIODO} & {\scriptsize{}SK\_PERIODO} & {\scriptsize{}INT} & \tabularnewline
+{\scriptsize{}VENDAS} & {\scriptsize{}SK\_PROMOCAO} & {\scriptsize{}INT} & {\scriptsize{}Fato} & {\scriptsize{}1} & {\scriptsize{}PROMOCAO} & {\scriptsize{}SK\_PROMOCAO} & {\scriptsize{}INT} & \tabularnewline
+{\scriptsize{}VENDAS} & {\scriptsize{}QUANTIDADE} & {\scriptsize{}INT} & {\scriptsize{}Fato} & {\scriptsize{}1} & {\scriptsize{}NotaFiscalItens} & {\scriptsize{}Quantidade} & {\scriptsize{}INT} & \tabularnewline
+{\scriptsize{}VENDAS} & {\scriptsize{}PRECO} & {\scriptsize{}DECIMAL(5,2)} & {\scriptsize{}Fato} & {\scriptsize{}1} & {\scriptsize{}NotaFiscalItens} & {\scriptsize{}Preco} & {\scriptsize{}DECIMAL(5,2)} & \tabularnewline
+{\scriptsize{}VENDAS} & {\scriptsize{}DESCONTO} & {\scriptsize{}DECIMAL(5,2)} & {\scriptsize{}Fato} & {\scriptsize{}1} & {\scriptsize{}NotaFiscalItens} & {\scriptsize{}Desconto} & {\scriptsize{}DECIMAL(5,2)} & \tabularnewline
+\hline 
+\end{longtable}
+\end{landscape}
+
+\section{Dashboard \storeName{}: Dores do Negócio}
+
+Afim de entender-se as dores do negócio da \emph{\storeName{}}, pode-se utilizar-se do recurso de \emph{dashboards} dinâmicos. Esses são \emph{capturas} dinâmicas do modelo dimensional de dados da base \emph{\databaseName{}}.
+
+Dado o ETL descrito na figura \ref{figure:DimensionalModel}, rodou-se o modelo no software Tableau\texttrademark{}
+e obteve-se o Dashboard da figura \ref{figure:BusinessDashboard}. 
+
+\begin{center}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=1\textwidth]{DashboardGelattoFelice}
+\par\end{centering}
+  \caption{\label{figure:BusinessDashboard}Dashboard final, obtido após extração ETL e análise da base de dados do Data Warehouse da \storeFullName{}.}
+\end{figure}
+\vspace*{-40pt}
+\end{center}
+
+Nesta mesma figura \ref{figure:BusinessDashboard}, podemos observar que os países mais rentáveis são EUA, Brasil e França, assim como os produtos que mais vendem e as promoções mais eficazes com relação a margem de contribuição. Além disso, observa-se as lojas mais lucrativas e os maiores clientes, respondendo-se assim os questionamentos das dores de negócio, da seção \ref{section:BusinessPains}.
+
+\subsection{Dashboard: em Aula}
+
+O dashboard da figura \ref{figure:TableauDashboardInClass} foi feito com o auxílio da professora Sanda Puga, na aula especial sobre o software Tableua\texttrademark{}, realizada no dia 17/02/2018. Nessa aula, utilizou-se a base de dados de uma base exemplo de \emph{sorveteria}, afim de obter-se um dashboard para a equipe de negócios dessa rede de lojas.
+
+A \emph{sorveteria} trata-se de uma rede nacional, nesse caso, com diversas lojas pela cidade de São Paulo. A equipe de negócios dessa rede obteve, por meio de análise de dados o dashboard da figura \ref{figure:TableauDashboardInClass}.
+
+\begin{center}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=1\textwidth]{DashboardInClass}
+\par\end{centering}
+  \caption{\label{figure:TableauDashboardInClass}Dashboard final obtido na aula sobre o software Tableau\texttrademark{}, realizada nas dependências da FGV, unidade Faria Lima, no dia 17/02/2018.}
+\end{figure}
+\vspace*{-40pt}
+\end{center}
+

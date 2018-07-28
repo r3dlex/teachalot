@@ -1,0 +1,27 @@
+Utilize a série abaixo para resolver cada item.
+
+\emph{An example of a time series that can probably be described using an additive model with a trend and no seasonality is the time series of the annual diameter of women’s skirts at the hem, from 1866 to 1911. The data is available in the \href{http://robjhyndman.com/tsdldata/roberts/skirts.dat}{web file}} (original data from Hipel and McLeod, 1994).
+
+%a
+\section{\label{sec:3a} Faça a leitura da série de dados e os tratamentos necessários para considerar a mesma como uma série temporal}
+
+\inputminted{R}{Src/R/ex3a.R}
+
+%b
+\section{Faça a decomposição da série do item anterior: Sazonalidade, Tendência e Aleatória.}
+Não há sazonalidade nesta séries de dados, muito menos flutuações randômicas. Decompondo, séries não sazonais, retirando-se as flutuações randômicas para ficar claro a tendência, o que pode ser notado é que a \emph{Série Original}, sem transformação, já apresenta uma tendência de alta nos 15 primeiros anos e entra em tendência de queda.
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist3a_plot_ts}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist3b_plot_ts_ma3}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+

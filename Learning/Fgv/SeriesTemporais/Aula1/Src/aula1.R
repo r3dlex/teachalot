@@ -1,6 +1,6 @@
 library(dplyr)
 
-# Add parameters for calculation
+# Adds parameters for calculation
 AddNewRowForInad <- function(data, n) {
   data[n, ] <- data[n - 1, ]
   data[n, ]$bp5 <- data[n - 1, ]$bp4
