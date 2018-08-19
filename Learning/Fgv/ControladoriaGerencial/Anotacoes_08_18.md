@@ -1,214 +1,87 @@
 
 
-# Aula 4/Aug/2018 (8:30-12:30h)
-
-## Geração de Caixa
+# Aula 18/Aug/2018 (12:30-17:30h)
 
-O valor de uma empresa depende do **fluxo de caixa** e não do **lucro**.
-Lucro: Conceito de eficiência. Quem tem lucro tem receita maior dos que os outros gastos e investimentos
-Fluxo de caixa livre: Dinheiro que sobra após assumir todos os custos e despesas da empresa (dividendos).
+## Exercício 2.2 (Slide 122)
 
-### Fluxo de caixa (composto por 3 blocos):
-1. Operacional - operações geram ou consomem o caixa (empresa saudável gera mais caixa do que consome com sua operação). Perguntas: A companhia gerou ou consumiu?
-    + Geração Bruta
-    + Investimentos operacionais de Giro (estoque, contas a receber e contas a pagar)
-2. Investimentos:
-    + Gera caixa: Vendendo ativos
-    + Consome Caixa: Comprando novos investimentos
-3. Financiamentos:
-    + Com sócio:
-        + Gerar caixa: aporte de capital
-        + Consome caixa: Pagamento de dividendos
-    + Com terceiros:
-        + Gerar caixa: captação de empréstimo
-        + Consome caixa: Pagamento do Principal da Dívida
+$MOD+CIF=R\$37.200$
 
-### Capital de Giro
-É o dinheiro que a empresa precisa para operar. Quando bem gerido a composição de geração de caixa tem sucesso.
+$Absorção=CT_{prod}=MD+MOD+CIF$
 
-Capital de Giro é composto por:
-1. Controle de Estoque (quanto menos, mais capital | quanto mais, menos capital)
-2. Contas a receber (quanto menos, mais capital | quanto mais, menos capital)
-3. Contas a pagar (quanto menos, menos capital | quanto mais, mais capital)
+Onde MD = Material Direto, MOD = Mão de Obra Direta e CIF = Custo 
 
-DICA: Nem todos os fluxos de caixa mostram a geração bruta de caixa                           
- + NCG - Necessidade de Capital de Giro ou;
- + IOG - Investimento Operacional de Giro.
+Passos:
 
-## Análise Financeira
+1. Remover o valor da Compra sem ICMS $\rightarrow Compra_{sem ICMS}=50000*(1-\%_{ICMS})=50000*(1-0.18)=R\$41.000$
+2. Calcular o Custo do Material Direto $\rightarrow Custo_{MD}=Consumo=\frac{4}{5}*41000=R\$32.800$
+3. O custo total da produção fica $\rightarrow CT_{prod}=MD+MOD+CIF=32800+37200=R\$70.000$
+4. O preço por unidade fica $\rightarrow Custo_{unidade}=\frac{CT_{prod}}{N_{unidades}}=\frac{70000}{20}=R\$3.500$
+5. DRE Oficial
+    1. $Receita_{Bruta}=15*5000=R\$75.000$
+    2. $ICMS_{vendas}=0.18*75000=R\$13.500$
+    3. $Receita_{Líquida}=Receita_{Bruta}-ICMS_{vendas}=75000-13500=R\$61.500$
+    4. $Custo_{vendas}=15*3500=R\$52.500$
+    5. $Lucro_{Bruto}=Receita_{Líquida}-Custo_{vendas}=61500-52500=R\$9.000$
+6. $ICMS_{a recolher}=R\$13.500$ (Passivo, pago)
+7. $ICMS_{a recuperar}=R\$9.000$ (Ativo, sobre o lucro)
+8. $ICMS_{a pagar}=R\$4.500$ (É o que vai efetivamente para o documento fiscal, DARF, etc)
 
-Serve para decisões de curto prazo? Olha sempre para o período anterior ao processo decisório.
+Erro comum de prova => O ICMS a recuperar (do que é retornado) está ligado a quantidade de vendas do mês, sujeito a um período máximo de cinco anos. Isso tem o nome de mercado de *crédito de imposto*.
 
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+Obs: Tudo que não está presente no trabalho cai.
 
-## Macroambiente
+## Custeio Variável
 
-Produto substituto: Não é concorrente mas provê a mesma funcionalidade. Ex: batata vs arroz, carbs em geral.
+$CT_{total}=CT_{período}+CV_{unitário}*Quantidade$
 
-### Força
-Atributos da empresa que são positivos e aumentam a atuação da empresa. E.g: sustentabilidade, logística, ...
+### Margem de Contribuição
 
-### Fraqueza
-Fatores que limitam ou impactam sobre o negócio. E.g Preocupação com o meio ambiente.
+$Margem_{contribuição}=Receita_{Bruta}-Custos_{Var}-Desp_{Var}$
 
-### Oportunidades
-Possibilidades de melhoria. E.g. adicionar inteligência e previsibilidade no varejo
+A margem de contribuição unitária é o percentual de retorno na venda de cada produto. 
 
-### Ameaças
-BLIBS
+A margem de contribuição por peso indica qual é a margem de contribuição do produto por unidade de peso. 
 
-### Variáveis - Pão de Açúcar
-* Prazo médio de recebimento vendas
-    + 30 dias (cartão)
+### Lucro Operacional
 
-* Prazo médio de renovação de estoque
-    + 10 dias (todo o estoque)
+$Lucro_{operacional}=Margem_{contribuição}-Custo_{fixo}-Despesa_{fixa}$
 
-* Prazo médio de pagamento de fornecedores
-    + 90 dias
+### Diferenças DRE Gerencial vs DRE Oficial
 
-### Resultado
+| DRE Gerencial       |  DRE Oficial         |
+|---------------------|----------------------|
+| Receita Líquida     | Receita Líquida      |
+| Custos Variáveis    | Custos Variáveis     |
+| Despesas Variáveis  | Custos Fixos         |
+|---------------------|----------------------|
+|  = Mg Contrib       | = Lucro Bruto        |
+| - Custo Fixo        | - Despesas Fixas     |
+| - Despesa Fixa      | - Despesas Variáveis |
+|---------------------|----------------------|
+| = Lucro Operacional | = Lucro Operacional  |
 
-Avaliação do resultado da empresa de acordo com o ponto de vista dos acionistas da empresa e de acordo com a estratégia da mesma.
+No processo de decisão de um desconto ao cliente deve-se levar em consideração o DRE Gerencial e não o DRE Oficial, uma vez que esse leva em consideração todas as despesas, como aluguel, etc. 
 
-## Trabalho de Análise de Crédito
+## Livro Mckinsey - The price advantage
 
-![](2018-08-04-14-01-04.png)
+## Exercícios
 
-Objetivo: Descobrir qual é o risco de crédito da empresa
-1. Stakeholder 
-    + Banco (Se vai emprestar dinheiro ou não) -> Esse que vamos utilizar para o trabalho
-    + Fornecedor - Vender a prazo ou somente a vista
-    + Cliente: comprar na planta ou não
-	
-Escolher temas que temos familiaridade para facilitar as análises. Analisar o balanço, demonstrativo de resultados e fluxo de caixa.
-Verificar o passo a passo do trabalho a partir do slide 57 do arquivo: material big data  atualizado mngmt2016.2.crv2
+### Exercício 3.29
 
-### Passo a passo do trabalho
-1. Objetivo: 
-2. Análise do Macroambiente:
-3. Análise do Microambiente: ambiente da empresa
-4. Análise de Demonstrações Financeiras: 
-   + Fluxo de Caixa
-   + Análise Horizontal ou Análise Vertical
-   + Análise por meio de índices
-5. Conclusão: 1 página com a conclusão a respeito dos relatórios
-   + 1º Parágrafo - Empresta ou não
-   + 2º Parágrafo - Porque você empresta ou porque você não empresta
+![](2018-08-18-15-47-49.png)
 
-# Aula 4 (13:30-17:30h)
+Não, pois o sapato possui margem de  contribuição maior, no valor de R$35,00 contra R$30,00 da bolsa.
 
-## Referências
+### Exercício 3.36
 
-Administração Financeira Teoria e Prática
-Autores: Brigham Edhard.
+![](2018-08-18-15-52-26.png)
 
-## Objetivos da Contabilidade de Custos
+A margem de contribuição da lata é 0,55/lata enquanto o da garrafa é 0,90/garrafa, porém a garrafa consome dois lugares, sendo assim sua margem de contribuição por espaço é de 0,45/espaço contra 0,55/espaço da lata. Assim, vale mais a pena focar em latas.
 
-* Determinar quanto cada produto contribui para o resultado da empresa;
-* Determinar o preço de venda;
-* Determinar o nível ótimo de ativida da empresa.
+## Fotos da Aula
 
-## Custos e Despesas
-
-### Depreciação
-
-A depreciação deve ser sempre mensal, referente ao valor de produto.
-
-### Método da Absorção
-
-$Absorção=CT_{P}=M_{D}+MO_{D}+C_{F}$
-
-onde $CT_{P}$ é o custo de produção, $M_{D}$ é o material direto, $MO_{D}$ é a mão de  obra direta e $C_{F}$ é o custo de fabricação.
-
-### Método Variável
-
-$Variável=CT_{P}=CT_{F}+CV_{u}*Q$
-
-Onde $CT_{F}$ é o custo fixo da empresa (e.g. folha de pagamento) e $CV_{u}$ é o custo variável dependente do volume de produção (e.g. matéria-prima) e $Q$ é a quantidade.
-
-### Despesa
-
-Valor que não está associado a produção. Se o destino do gasto está associado a produção então é despesa, senão é custo.
-
-### Investimento $\Longleftrightarrow$ Ativos
-
-Aquisição de computadores, peças, etc.
-
-### Custo semi-variável
-
-Custo que é parte fixo e parte variável em relação a varíavel $Q$. 
-
-### Custo semi-fixo
-
-Quando o custo é unitário, mas o número de unidades pode mudar de acordo com a quantidade produzida (e.g número de galpões)
-
-### Custo do Material
-
-Valor pago pelo fornecedor:
-* IPI - a recuperar
-* ICMS - a recuperar
-* PIS E CONFINS - a recuperar
-* Frete
-* Seguro 
-* Armazenagem e outros gastos
-
-O produto não pode ser bitributado, portanto a questão do a recuperar está relacionado a isso.
-
-Impostos
-* ICMS: Variável (~20%)
-* PIS: Variável (~0,65%)
-* CONFINS: Variável (~7,5%)
-* IPI: Variável
-
-$Valor_{ICMS}=\frac{Valor_{original}}{1-\%_{ICMS}}$
-
-Apresenta o valor total aplicado o ICMS. Por exemplo, para uma taxa de 20% de ICMS, um produto de R$100,00 custa:
-
-$Valor_{ICMS}=\frac{100}{1-0.2}=R\$125,00$
-
-O PIS e CONFINS também são tributados internamente, portanto para um produto, fica:
-
-$Valor_{ICMS}=\frac{Valor_{original}}{1-\%_{ICMS}-\%_{PIS}-\%_{CONFINS}}$
-
-Por exemplo, o mesmo cálculo anterior com PIS de 0,65% e CONFINS de 7,5%, fica:
-
-$Valor_{ICMS}=\frac{R\$100,00}{1-0.2-0.0065-0.075}=\frac{R\$100}{0.7185}=R\$139,18$
-
-Ao $Valor_{ICMS}$ ainda é aplicado o IPI externamente:
-
-$Valor_{final}=Valor_{ICMS}*(1+\%_{IPI})$
-
-Para um IPI de 10%, o cálculo final do produto que custava R$139,18 fica:
-
-$Valor_{final}=R\$139,18*(1+0.1)=R\$153,10$
-
-### Métodos de avaliação de estoque
-
-Cálculo de Imposto
-* PEPS
-    + O primeiro a entrar é o primeiro a sair (e.g perecíveis)
-* UEPS (Não pode ser usado no Brasil)
-    + Último que entra, primeiro que sai (e.g. chapas de aço)
-* Custo Médio 
-    + Mais usado no Brasil por ter menor % de IR
-
-### Activity Based Costing (Custos Indiretos)
-
-Os custos indiretos são adicionados por meio de rateio. O problema dos rateios é que eles são arbitrários caso não possam ser justificadas através da realidade da empresa.
-
-Fazer o rateio baseado no faturamento é uma ideia ruim pois isso penaliza os departamentos e/ou lojas que performam melhor. Sendo assim, um critério adequado nesse caso é o da *utilização* da atividade.
-
-Por exemplo, trantado-se dos custos de uma sede da empresa, faz sentido "cobrar" o rateio em cima da utilização de chamados a mesma.
-
-É possível ratear de maneiras diferentes de acordo com a atividade relacionada. Esse tipo de custeio denomina-se Custeio Baseado em Atividades ou Custeio ABC.
-
-### Exercícios a fazer
-
-Exercício 2.19
-
-*Importante para a prova 2.20*
+![](2018-08-18-15-32-35.png)
+![](2018-08-18-15-32-08.png)
+![](2018-08-18-15-32-52.png)
+![](2018-08-18-15-33-33.png)
+![](2018-08-18-15-33-09.png)
