@@ -1,3 +1,19 @@
+---
+title: "Análise Text Mining"
+subtitle: " Memórias Póstumas de Brás Cubas"
+author: "André F. B. Silva, Augusto Gonçalves, Marco V. de Siqueira"
+date: "19 de dezembro de 2018"
+output:
+  ioslides_presentation:
+    incremental: no
+    mouse_click_enabled: yes
+    widescreen: yes
+    smaller: yes
+    df_print: tibble
+  beamer_presentation: default
+---
+
+```{r setup, include=FALSE}
 RequireLibraries <- function(libraries) {
   newLibs <- libraries[!(libraries %in% installed.packages()[,"Package"])]
   
@@ -19,6 +35,7 @@ RequireLibraries(
     "dplyr", #mutate, %>%
     "tm",
     "httr",
+    "ggplot2",
     "Matrix",
     "NLP",
     "stringr",
@@ -37,8 +54,8 @@ RequireLibraries(
 # require(Matrix)
 
 # Constants
-kFilenamePt <- "Data/MemoriasPostumas.txt"
-kProcessedBookFile <- "Data/MemoriasPostumas.rds"
+kFilenamePt <- "../Data/MemoriasPostumas.txt"
+kProcessedBookFile <- "../Data/MemoriasPostumas.rds"
 kMaxNumberOfRetries <- 5
 kUntranslatedWordPattern <- "contos"
 
@@ -90,8 +107,6 @@ CleanupCorpus <- function(docs, ...) {
     language <- args[["language"]]
   }
 
-  sprintf("Chosen language is %s", language) %>% print
-
   tm_map(docs, content_transformer(tolower)) %>%
   tm_map(., removeNumbers) %>%
   tm_map(., removeWords, stopwords(language)) %>%
@@ -142,7 +157,7 @@ if (!file.exists(kProcessedBookFile)) {
   print("Will run Google Translate engine on pt-br book!")  
   # Assumes gcloud is properly installed and configured
   # https://cloud.google.com/translate/docs/translating-text#translate_text_with_model-protocol#
-  kApiToken <- system("gcloud auth application-default print-access-token", intern = TRUE)
+  #kApiToken <- system("gcloud auth application-default print-access-token", intern = TRUE)
 
   memoriasPostumasChapters <- kFilenamePt %>% 
       readChar(., file.info(kFilenamePt)$size) %>%
@@ -175,7 +190,13 @@ memoriasPostumas <- readRDS(file = kProcessedBookFile) %>%
     word = str_extract(word, "[a-z]+") %>% as.character
   ) %>% 
   filter(!grepl(kUntranslatedWordPattern, word))
+```
 
+
+```{r, fig.align = 'center', echo=FALSE, message=FALSE, warning=FALSE}
+```
+
+```{r, fig.align = 'center', echo=FALSE, message=FALSE, warning=FALSE}
 textPerLineEn <- memoriasPostumas %>% 
   group_by(line_number) %>% 
   select(line_number, text_en) %>% 
@@ -194,8 +215,6 @@ wordFrequenciesPt <- textPerLinePt$text %>%
     GetCorpusFromTextVector(., language = "portuguese") %>%
     GetWordsFrequencies
 
-wordFrequencies %>% PlotWordsWithHighestFrequencies
-
 memoriasPostumasBing <- memoriasPostumas %>%
   inner_join(get_sentiments("bing")) %>%
   count(chapter, sentiment) %>%
@@ -206,3 +225,41 @@ memoriasPostumasAfinn <- memoriasPostumas %>%
   inner_join(get_sentiments("afinn")) %>%
   group_by(chapter) %>%
   summarize(sentiment = sum(score))
+```
+
+## Roteiro (Passos)
+
+1. Livro: [Memórias Póstumas de Brás Cubas](https://pt.wikipedia.org/wiki/Memórias_Póstumas_de_Brás_Cubas)
+1. Obtenção do [arquivo texto](http://machado.mec.gov.br/obra-completa-lista/item/download/16_ff646a924421ea897f27cf6d21e6bb23)
+1. Tradução por script c/ [Google SDK](https://cloud.google.com/translate/docs/translating-text#translate_text_with_model-protocol)
+1. Análise de Sentimento (tm, tidytext)
+
+## Wordcloud (English)
+
+```{r, fig.align = 'center', fig.height = 5, fig.width = 5, echo=FALSE,  results="hide", message=FALSE, warning=FALSE}
+wordFrequencies %>% PlotWordsWithHighestFrequencies
+```
+
+## Most Frequent Words (Portuguese)
+
+```{r, fig.align = 'center', echo=FALSE, message=FALSE, warning=FALSE}
+wordFrequenciesPt %>% head(12)
+```
+
+## Wordcloud (Portuguese)
+
+```{r, fig.align = 'center', fig.height = 5, fig.width = 5, echo=FALSE,  results="hide", message=FALSE, warning=FALSE}
+wordFrequenciesPt %>% PlotWordsWithHighestFrequencies
+```
+
+## Sentiment Analysis (Bing)
+
+```{r, fig.align = 'center', fig.height = 5, fig.width = 5, echo=FALSE,  results="hide", message=FALSE, warning=FALSE}
+ggplot(memoriasPostumasBing, aes(chapter, sentiment)) + geom_col(show.legend = FALSE)
+```
+
+## Sentiment Analysis (Afinn)
+
+```{r, fig.align = 'center', fig.height = 5, fig.width = 5, echo=FALSE,  results="hide", message=FALSE, warning=FALSE}
+ggplot(memoriasPostumasAfinn, aes(chapter, sentiment)) + geom_col(show.legend = FALSE)
+```
