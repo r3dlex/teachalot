@@ -131,6 +131,10 @@ $Variável=CT_{P}=CT_{F}+CV_{u}*Q$
 
 Onde $CT_{F}$ é o custo fixo da empresa (e.g. folha de pagamento) e $CV_{u}$ é o custo variável dependente do volume de produção (e.g. matéria-prima) e $Q$ é a quantidade.
 
+### Custos vs Despesas
+
+![](2018-08-26-15-13-15.png)
+
 ### Despesa
 
 Valor que não está associado a produção. Se o destino do gasto está associado a produção então é despesa, senão é custo.
