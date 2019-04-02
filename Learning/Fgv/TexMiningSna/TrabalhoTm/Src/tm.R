@@ -71,6 +71,50 @@ TranslateWithGoogle <- function(apiToken, text, sourceLanguage, targetLanguage) 
   httr::content(r)$data$translations[[1]]$translatedText
 }
 
+CleanupCorpus <- function(docs) {
+    tm_map(docs, content_transformer(tolower)) %>%
+    tm_map(., removeNumbers) %>%
+    tm_map(., removeWords, stopwords('portuguese')) %>%
+    tm_map(., removePunctuation) %>%
+    tm_map(., stripWhitespace)
+}
+
+GetCorpusFromTextVector <- function(texts) {
+    texts %>%
+        trim %>%
+        VectorSource %>% 
+        Corpus %>% 
+        CleanupCorpus
+}
+
+GetWordsFrequencies <- function(docs) {
+    documentTermsMatrix <- docs %>% TermDocumentMatrix
+    sparseTermsMatrix <- sparseMatrix(i=documentTermsMatrix$i, j=documentTermsMatrix$j, x=documentTermsMatrix$v)
+    termsFrequencies <- sort(rowSums(sparseTermsMatrix), decreasing=TRUE)
+    
+    data.frame(word = documentTermsMatrix$dimnames$Terms, freq=termsFrequencies)
+}
+
+PlotWordsWithHighestFrequencies <- function(wordsFrequencies) {
+    kMaxNumberOfWordsToPlotInWordCloud <- 64
+
+    wordcloud(
+        words = wordsFrequencies$word, 
+        freq = wordsFrequencies$freq, 
+        min.freq = 1, 
+        max.words=kMaxNumberOfWordsToPlotInWordCloud, 
+        random.order=FALSE,
+        rot.per=0.35, 
+        colors=brewer.pal(8, "Dark2"),
+        scale=c(3.5, 0.2))
+}
+
+PlotMostFrequentCorpusWords <- function(corpus) {
+    corpus %>% 
+        GetWordsFrequencies %>%
+        PlotWordsWithHighestFrequencies
+}
+
 # Preprocess book if necessary
 if (!file.exists(kProcessedBookFile)) {
   print("Will run Google Translate engine on pt-br book!")
