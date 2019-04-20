@@ -120,11 +120,11 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Acompanhamento de Achados Acidentais em Pacientes Oncológicos e suas Jornadas Clínicas para Nódulo Pulmonar e Screening de Mama}
+\titulo{T2: Inicidental Findings on Lung Nodule Screening and Appropriate Patient Follow-up}
 \autor{André Ferreira Bem Silva}
 
 \local{São Paulo, SP}
-\data{13/04/2019}
+\data{20/04/2019}
 %\coorientador{}
 \instituicao{%
   \nomeFgv{} -- FGV
@@ -184,8 +184,8 @@
 \begin{document}
 
 % Seleciona o idioma do documento (conforme pacotes do babel)
-%\selectlanguage{english}
-\selectlanguage{brazil}
+\selectlanguage{english}
+%\selectlanguage{brazil}
 
 % Retira espaço extra obsoleto entre as frases.
 \frenchspacing 
@@ -217,17 +217,17 @@
 % ---
 % inserir lista de ilustrações
 % ---
-\pdfbookmark[0]{\listfigurename}{lof}
-\listoffigures*
-\cleardoublepage
+%\pdfbookmark[0]{\listfigurename}{lof}
+%\listoffigures*
+%\cleardoublepage
 % ---
 
 % ---
 % inserir lista de tabelas
 % ---
-\pdfbookmark[0]{\listtablename}{lot}
-\listoftables*
-\cleardoublepage
+%\pdfbookmark[0]{\listtablename}{lot}
+%\listoftables*
+%\cleardoublepage
 % ---
 
 % ---
@@ -265,24 +265,27 @@
 % ----------------------------------------------------------
 \textual
 
+% Adds Images path
+\graphicspath{{./Gen/Image/}{../Gen/Image/}{./Image/}}
+
 % ----------------------------------------------------------
 % Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
 % ----------------------------------------------------------
-%\chapter*[Introdução]{Introdução}
-%\addcontentsline{toc}{chapter}{Introdução}
+\chapter[Introduction]{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
 % ----------------------------------------------------------
+\input{introducao.tex}
 
 %Adiciona introdução com numeração
 % ----------------------------------------------------------
 % Ficha de Avaliação Individual da Experiência Pessoal Durante Pesquisa de Campo
 % ----------------------------------------------------------
-\chapter{Introdução}
+%\chapter[Introdução]{Introdução}
 % ---
-\input{introducao.tex}
 
-\chapter{Conclusão}
+%\chapter{Conclusion}
 % ---
-\input{conclusion.tex}
+%\input{conclusion.tex}
 
 % ----------------------------------------------------------
 % Finaliza a parte no bookmark do PDF
