@@ -105,6 +105,11 @@
 	\fi}%
 % ---
 
+%\printbibliography[title={Reference}]
+\addto\captionsportuguese{\renewcommand*{\refname}{Reference}}
+%\renewcommand*{\refname}{Refer\^encias}
+\renewcommand*{\bibname}{Refer\^encias}
+
 % --- 
 % NOME DOS CLUSTERS 
 % --- 
@@ -219,16 +224,16 @@
 % inserir lista de ilustrações
 % ---
 %\pdfbookmark[0]{\listfigurename}{lof}
-%\listoffigures*
-%\cleardoublepage
+\listoffigures*
+\cleardoublepage
 % ---
 
 % ---
 % inserir lista de tabelas
 % ---
 %\pdfbookmark[0]{\listtablename}{lot}
-%\listoftables*
-%\cleardoublepage
+\listoftables*
+\cleardoublepage
 % ---
 
 % ---
@@ -284,7 +289,7 @@
 %\chapter[Introdução]{Introdução}
 % ---
 
-\chapter{Literature Review}
+\chapter{State of the Art}
 % ---
 \input{literature_review.tex}
 
