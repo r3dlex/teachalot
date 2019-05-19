@@ -30,14 +30,24 @@ It is important to note that this definition of diagnostic error extends beyond 
 
 \begin{figure}
 \begin{centering}
-\includegraphics[height=0.37\textheight]{DiagnosticProcess}
+\includegraphics[width=1.0\textwidth]{DiagnosticProcess}
 \par\end{centering}
 \caption{\label{fig:DiagnosticProcess}The clinical diagnosis workflow along with the flow and gathering of the necessary information to support the clinical decision\cite{parasuraman2000}.}
+%\vspace*{-44pt}
 \end{figure}
 
 The diagnostic process is a complex, collaborative activity that involves the synthesis of a patient’s clinical information from various sources, the goal of which is to identify the patient’s health problem. As such, this is a cyclic process consisting of acquiring, integrating, and interpreting which is the formation of a working diagnosis. 
 
 As depicted by figure \ref{fig:DiagnosticProcess}, the process specifically includes the acquisition of the patient’s clinical history, performing hands-on physical examinations, diagnostic testing. The process of diagnostic testing is comprised of both medical imaging and laboratory analysis as well as consultation with other clinicians to seek additional expertise.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=1.0\textwidth]{CancerDeathRatesByTypeInBrazil}
+\par\end{centering}
+\caption{\label{fig:cancer_deaths_in_brazil}Cancer relative deaths by type in Brazil from 1990 to 2017.}
+%\vspace*{-44pt}
+
+\end{figure}
 
 \section{Lung Cancer Screening}
 
@@ -45,9 +55,11 @@ Lung Cancer is of particular interest as the two most important factors for it i
 
 For lung cancer screening the parameters of interest are the patient age, exposure to chemicals, the family oncology history and the patient tabacco smoking history\cite{fleischner2017}\cite{parasuraman2000}\cite{jaklitsch2012}.
 
+Lung cancer is of particular interest due to it's high mortality ratio when compared with other cancers that could have even higher incidence. This trend can be seen in figure \ref{fig:cancer_deaths_in_brazil} and worse it is a trend that has been having a good resistance support which means that overall mortality for this type of cancer is hardly falling throughout the years.
+
 \section{General Objective}
 
-Define a patient risk profile according to the available patient information in the \emph{Electronic Health Record (EHR)} of the patient inside the medical institution. % How to handle appropriate incidental lung nodule follow up across different care providers and ensure that the patient's nodule findings are not lost along the care pathway, ensuring adherence to the Fleischner 2017\cite{fleischner2017} guideline?
+Extract a patient population for incidental lung nodule screening according to the available patient information in the \emph{Electronic Health Record (EHR)} and the \emph{Radiology Information System (RIS)} of the medical institution. 
 
 \section{Specific Objectives}
 
@@ -59,3 +71,7 @@ The following are the guiding questions of interest for this work:
   \item Find out patients that are eligible for a follow up according to the available information in the Radiology Information System (RIS)
   \item Predict the patient risk profile according to it's own available health information
 \end{itemize}
+
+\section{Document Organization}
+
+This document is organized in chapters with different goals. Chapter number \ref{chap:introduction} is introduces the general work thematic as well as a lung cancer screening overview; chapter \ref{chap:literature_review} performs a literature review of the state of art; number \ref{chap:methodology} talks about the data extraction methodology and results; and finally chapter \ref{chap:conclusion} is a review of the whole process along with a discussion of possibilities for improvements and future works.

@@ -1,5 +1,7 @@
 \label{chap:literature_review}
 
+In the following chapter, the state of the art in the lung cancer screening and incidental lung nodule care gaps and follow up literature are reviewed and discussed.
+
 \section{Keywords and Thresholds}
 \begin{center}
 \begin{table}
@@ -11,6 +13,8 @@
     tabagism & lung nodule tabagism OR lung cancer tabagism & First 8\tabularnewline
     guidelines & lung screening guideline OR lung cancer guideline & First 8\tabularnewline
     lung cancer & lung cancer OR malignant lung nodule & First 8\tabularnewline
+    imaging & dicom OR incidental lung nodule reports & First 4\tabularnewline
+    nlp & natural language processing AND cancer & First 4\tabularnewline
     \hline 
   \end{tabular}
 \par
@@ -23,7 +27,7 @@ The table \ref{table:search_terms} show all the search terms utilized as a basis
 
 For each of these articles, guidelines, books and documents evaluated only the first eight of each combined search was kept as a result. All were read and the most impacting related works were also taken into consideration for this systematic literature review.
 
-So for only the three different combined search parameters, 24 papers were selected. From these each, the  most impacting cited ones were taken into consideration, increasing the number of papers to  read to 58. From this overall number, 10 were selected to be cited as part of the literature review. % TODO
+So for only the three different combined search parameters, 32 papers were selected. From these each, the  most impacting cited ones were taken into consideration, increasing the number of papers to  read to 72. From this overall number, 21 were selected to be cited as part of the literature review. % TODO
 
 \section{Lung Cancer Studies}
 
@@ -105,22 +109,6 @@ to \citeonline{fleischner2017}.}
 \vspace*{-44pt}
 \par\end{center}
 
-\begin{center}
-\begin{figure}
-\begin{centering}
-\includegraphics[width=0.5\textwidth]{PatientPopulation}
-\par\end{centering}
-\begin{centering}
-\includegraphics[width=0.49\textwidth]{PatientPopulationWithThreshold}\includegraphics[width=0.49\textwidth]{FilteredLungNodulePopulation}
-\par\end{centering}
-\caption{\label{fig:patient_population}The upper histogram defines the whole \nomeHsl{} population. The lower left image shows a vertical bar on 35 and 90 years which can
-be considered minimum and maximum bounds for patient screening and
-finally the lower right image is a filtered version of the lower left
-histogram only taking the age intereval of interest into consideration.}
-\end{figure}
-\vspace*{-44pt}
-\par\end{center}
-
 These follow-ups should occur as a  means of mitigating the risk that the risk of finding a malignant cancer in a late stage of clinical evolution. Missed follow-ups, as mentioned in  the chapter \ref{chap:introduction} are one of the possible medical errors. These are especially common when taking radiology reports into consideration. The reason for it is that the ordering or referring physician for the image exam forgets or does not reads the incidental lung nodule finding. 
 
 So it would be appropriate to have any tool to help both the ordering or referring physician and the responsible physician at \nomeHsl{}. This holds true as about one third of \nomeHslShort{} workforce is constituted of external physicians, decreasing precision medicine returns values for itself. For that matter, the use of the information stored at \nomeHslShort{} has the potential of solving a potential care gap. 
@@ -130,19 +118,4 @@ So it would be appropriate to have any tool to help both the ordering or referri
 As mentioned in the previous sections, the existence of both a radiology report based risk profile and the follow-up table depending basically on the lung nodule type and  size (tables \ref{tab:solid_nodules} and \ref{tab:subsolid_nodules}). 
 
 The patient family history of cancer and also it's smoking behavior and age should provide insight on wether the patient should be screened or not and that is the endgoal of this work.
-
-The figure \ref{fig:patient_population} shows the overall patient population for the institution. The suggested patient population filters are based on \nomeHslShort{} own internal guidelines along with the Fleischner 2017 and NCCN recommendations.
-
-Also, a 10 pack-year smoking history qualifies the patient for a routine follow up after 35 years as mentioned for \nomeHslShort{}. In that sense, the figure \ref{fig:cigars_per_day} an overall picture of the patient smoking behavior for the hospital's own population is given. In this dataset, only 24\% of all screeneable patients can be considered smokers which is only slightly lower than the wolrdwide average of 30\% smokers.
-
-\begin{center}
-\begin{figure}
-\begin{centering}
-\includegraphics[width=1\textwidth]{PatientsCigarsPerDay}
-\par\end{centering}
-\caption{\label{fig:cigars_per_day} Histogram of cigars per day according to \nomeHsl{} own internal's
-patient autoreported information.}
-\end{figure}
-\vspace*{-44pt}
-\par\end{center}
 

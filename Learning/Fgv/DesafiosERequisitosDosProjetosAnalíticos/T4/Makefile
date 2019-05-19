@@ -4,11 +4,12 @@ R_SRC_DIR = Src/R
 PDFLATEX_OPTIONS = -output-directory $(LATEX_OUTPUT_DIR) -shell-escape
 
 all:
-	#make images
+	make images
 	make trabalho
 
 images:
-	R --no-save < $(R_SRC_DIR)/script.R
+	#R --no-save < $(R_SRC_DIR)/script.R
+	./Scripts/GenEpsFromSvg.sh
 
 trabalho:
 	mkdir -pv $(LATEX_OUTPUT_DIR)
