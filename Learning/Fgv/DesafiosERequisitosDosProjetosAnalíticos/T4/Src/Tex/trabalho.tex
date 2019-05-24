@@ -4,8 +4,8 @@
 %% This work may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3
 %% of this license or (at your option) any later version.
-%% The latest version of this license is in
 %%   http://www.latex-project.org/lppl.txt
+%% The latest version of this license is in
 %% and version 1.3 or later is part of all distributions of LaTeX
 %% version 2005/12/01 or later.
 %%
@@ -42,10 +42,10 @@
 	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
 	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
 	% -- opções do pacote babel --
-	english,			% idioma adicional para hifenização
-	french,				% idioma adicional para hifenização
+	brazil,			% idioma adicional para hifenização
+	french,			% idioma adicional para hifenização
 	spanish,			% idioma adicional para hifenização
-	brazil				% o último idioma é o principal do documento
+	english       % o último idioma é o principal do documento
 	]{abntex2}
 
 % ---
@@ -63,7 +63,8 @@
 \usepackage{textcomp}       % Adiciona símbolo de trademark e outros ao T1
 \usepackage{array}          % Usado nas tabelas com \newline
 \usepackage{multirow}       % Define tabelas multirow
-		
+
+	
 % ---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
@@ -73,7 +74,8 @@
 % ---
 % Pacotes de citações
 % ---
-\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[brazilian,hyperpageref]{}	 % Paginas com as citações na bibl
+%\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 
 % Copiado das configurações do LyX
@@ -89,26 +91,50 @@
 % --- 
 
 % ---
+% Babel e ajustes
+\addto\captionsenglish{
+    %% ajusta nomes padroes do babel
+    \renewcommand{\bibname}{References}
+    %\renewcommand{\indexname}{\'Indice}
+    %\renewcommand{\listfigurename}{Lista de ilustra\c{c}\~{o}es}
+    %\renewcommand{\listtablename}{Lista de tabelas}
+    %%% ajusta nomes usados com a macro \autoref
+    %\renewcommand{\pageautorefname}{p\'agina}
+    %\renewcommand{\sectionautorefname}{se{\c c}\~ao}
+    %\renewcommand{\subsectionautorefname}{subse{\c c}\~ao}
+    %\renewcommand{\paragraphautorefname}{par\'agrafo}
+    %\renewcommand{\subsubsectionautorefname}{subse{\c c}\~ao}
+    %\renewcommand{\paragraphautorefname}{subse{\c c}\~ao}
+}  
+% ---
+	
+% ---
 % Configurações do pacote backref
 % Usado sem a opção hyperpageref de backref
-\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+%\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
 % Texto padrão antes do número das páginas
-\renewcommand{\backref}{}
+%\renewcommand{\backref}{}
 % Define os textos da citação
-\renewcommand*{\backrefalt}[4]{
-	\ifcase #1 %
-		Nenhuma citação no texto.%
-	\or
-		Citado na página #2.%
-	\else
-		Citado #1 vezes nas páginas #2.%
-	\fi}%
-% ---
+%\renewcommand*{\backrefalt}[4]{
+	%\ifcase #1 %
+		%Nenhuma citação no texto.%
+	%\or
+		%Citado na página #2.%
+	%\else
+		%Citado #1 vezes nas páginas #2.%
+	%\fi}%
+%% ---
 
-%\printbibliography[title={Reference}]
-\addto\captionsportuguese{\renewcommand*{\refname}{Reference}}
-%\renewcommand*{\refname}{Refer\^encias}
-\renewcommand*{\bibname}{Refer\^encias}
+% ---
+% Configurações do pacote hyperref
+% ---
+\hypersetup{
+		colorlinks=true,       		% false: boxed links; true: colored links
+		linkcolor=blue,        		% color of internal links
+		citecolor=blue,        		% color of links to bibliography
+		filecolor=magenta,     		% color of file links
+urlcolor=blue}
+%% ---
 
 % --- 
 % NOME DOS CLUSTERS 
@@ -117,10 +143,9 @@
 % ---
 % Define o nome dos quatro clusters usados no trabalho.
 \newcommand{\nomeFgv}{Fundação Getulio Vargas}
-\newcommand{\nomeHsl}{Hospital Sírio-Libanês}
-\newcommand{\nomeHslShort}{Sírio-Libanês}
+\newcommand{\nomeHsl}{Hospital Santa Luz}
+\newcommand{\nomeHslShort}{Santa Luz}
 % ---
-
 
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
@@ -185,6 +210,7 @@
 \makeindex
 % ---
 
+
 % ----
 % Início do documento
 % ----
@@ -220,6 +246,68 @@
 % ---
 
 % ---
+
+
+ ---
+% Dedicatória
+% ---
+\begin{dedicatoria}
+  %\vspace{\fill}
+  \centering
+  \noindent
+  \textit{To my wife Yara for all the love and support,\\To my forever loyal dog Haroldo,\\To my beloved parents,\\To all those who believe they can make a change in the world, no matter how small.}
+  \vspace*{\fill}
+\end{dedicatoria}
+% ---
+
+% ---
+% Agradecimentos
+% ---
+\begin{agradecimentos}
+  I'd like to thank everyone involved from Siemens Healthineers, especially Eduardo Barreto Alexandre and Jeferson Vieira Ramos whose great work were also a basis for this work. Eduardo for his review of my tabagism extraction algorithm and Jeferson Ramos for the review of the NLP techniques applied in this project.
+
+  Still from Siemens Healthineers, but from the USA, I would like to thank MD Maíra Couto Lopes and MD Jonathan Darer for their continued support, optimism and motivation and for presenting my work at RSNA 2018 when I could not be present. This support has proved invaluable to me.
+
+  Also, I'd hope to thank all the clinical personnel involved throughout the development of the incidental lung nodule program at \nomeHsl{}. Due to data restrictions I cannot name them individually but you have my deepest thanks and admiration for your daily work on improving the human healthcare and therefore patients lives.
+\end{agradecimentos}
+% ---
+
+% ---
+% Epígrafe
+% ---
+\begin{epigrafe}
+    \vspace*{\fill}
+	\begin{flushright}
+		\textit{``Education is a system of imposed ignorance``\\
+    (Noam Chomksy)}
+	\end{flushright}
+\end{epigrafe}
+% ---
+
+% ---
+% RESUMOS
+% ---
+
+% resumo em português
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}[Resumo]
+  Este trabalho teve por objetivo estudar a relação entre os dados disponíveis de pacientes em uma instituição denominada \emph{verticalizada} no cuidado e atendimento médico. Isto é, que provê todas as etapas do tratamento clínico, incluindo por internação, tratamento e cuidado contínuo ao paciente. Um elemento crucial de informação nestas instituições é o prontuário eletrônico. O prontuário porém apresenta um certo grau de informação não-estruturada, enquanto o sistema radiológico nos hospitais costuma ser bem digitalizado e estruturado. Neste trabalho une-se os dados não-estruturados de paciente com os dados semi-estruturados ou estruturados do sistema de informação radiológica com o objetivo de identificar pacientes que não estejam tendo o cuidado clínico adequado no tratamento oncológico. A condição clínica pivô escolhida foi o nódulo incidental pulmonar, uma vez que é uma doença de alta mortalidade e que aflinge toda a população mundial. 
+
+  Neste trabalho, evidenciou-se que há uma grande informação a respeito de carga tabágica nos dados disponíveis a partir do prontuário eletrônico do paciente e que é possível tanto extrair-se a carga tabágica como também extrair-se a informações de falta de acompanhamento de pacientes, utilizando-se de técnicas de \emph{mineração de texto} e de \emph{processamento de linguagem natural}. No primeiro caso, 24\% dos pacientes elegíveis da instituição alvo foram identificados como tabagistas, um número abaixo da média mundial que gira em torno de 30\% dos adultos, mas ainda assim possível. Também verificou-se que 6692 laudos radiológicos que indicam uma necessidade de acompanhamento em função do tamanho e tipo do nódulo talvez não o tiveram conforme indicam as guideline mais importantes no escopo deste trabalho: a NCCN e Fleischner 2017.
+
+ \textbf{Palavras-chave}: nódulo pulmonar incidental, fleischner 2017, nccn, câncer pulmonar, processamento de linguagem natural, mineração de texto, processamento de linguagem natural, PLN
+\end{resumo}
+
+% resumo em inglês
+\begin{resumo}[Abstract]
+ \begin{otherlanguage*}{english}
+   This work's goal is to study the relationship between the available patient data in a verticalized patient care institution. This vertical care institution is capable of handling all aspects of the medical care, including hospitalization, treatment and continuous patient care. One key aspect to the correct inference process from these informations is the electronic health record (EHR) of the patients. The EHR is capable of storing lots of unstructured information in the form of anamneses, self disclaimed information and exams. The radiology information system (RIS) on the other hand holds usually semi-structured or structured information related to the patient examination and evolution from a radiology perspective. By uniting both data silos it is possible to have an holistic view of the patient current clinical pathway. The clinical condition chosen to be parth of the first pilot for this work was the incidental lung nodule screening which is part of the lung cancer screening program of an institution.
+
+   As part of this work the tabagism history of a patient was extracted from the self reported patient data available from the EHR. Besides that, it was also extracted the follow up information for every patient that performed a Chest CT (CCT) exam in the institution. The end results where that 24\% of all patients eligible for lung screening where identified as tabagists. This number is inferior to the 30\% observed in worldwide researchs, but yet possible. Also, from all the CCT reports from January/2016 to December/2018 6692 were identified as requiring a follow up given the incidental nodule size but did not have it inside of this timespan. This is a problem since NCCN and Fleischner 2017, the two most important guidelines for lung cancer screening indicate very especifically how to follow up on incidental lung nodules.
+ 
+   \textbf{Keywords}: incidental lung nodule, fleischner 2017, nccn, lung cancer, natural language processing, NLP, text mining 
+ \end{otherlanguage*}
+\end{resumo}
 
 % ---
 % inserir lista de ilustrações
@@ -290,11 +378,11 @@
 %\chapter[Introdução]{Introdução}
 % ---
 
-\chapter{State of the Art}
+\chapter{Literature Review}
 % ---
 \input{literature_review.tex}
 
-\chapter{Data Silos, Methodology \& Results}
+\chapter{Methodology}
 \input{methodology.tex}
 
 \chapter{Conclusion}
