@@ -1,0 +1,97 @@
+\label{chap:DecisionTree}A árvore de decisão, é um mecanismo que permite entendermos uma variável,
+estimando seu valor baseado numa regressão, na qual o espaço é subdividido
+em duas partes a cada nível. Presta-se assim, a uma caracterização
+binária da amostra de dados de entrada.
+
+
+\section{Árvore Gerada}
+
+Utilizando o seed 5668 os dados foram separados em duas amostras aleatórias
+de 12500 observações cada.
+
+Através do método CART foi gerada a seguinte árvore com a amostra
+de aprendizado:
+
+\begin{center}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{training_tree}
+\par\end{centering}
+\caption{\label{fig:TrainingTree}Árvore de decisão gerada a partir de 12500 amostras da base de dados original (treinamento).}
+\end{figure}
+\vspace*{-40pt}
+\par\end{center}
+
+É possível notar que as variáveis mais significantes para a classificação
+foram Natureza e Estado Civil. O comando R usado para gerar a árvore foi:
+
+\begin{minted}{R}
+> printcp(ac1)
+\end{minted}
+
+
+A saída do comando rpart indica, no console R, como está a distribuição do erro da árvore de decisão pelos seus nós, a partir do nó raíz:
+
+\begin{lstlisting}
+Classification tree:
+rpart(formula = STATUS ~ UF + ESCOLARIDADE + ESTCIV + FAIXARENDA + 
+    NATUREZA, data = calvo.lrn)
+ 
+Variables actually used in tree construction:
+[1] ESTCIV   NATUREZA
+ 
+Root node error: 3861/12500 = 0.30888
+ 
+n= 12500 
+ 
+        CP nsplit rel error  xerror     xstd
+1 0.182595      0   1.00000 1.00000 0.013379
+2 0.018778      1   0.81740 0.81740 0.012580
+3 0.010000      3   0.77985 0.77985 0.012383
+\end{lstlisting}
+
+
+Através dos valores CP é possível verificar que os erros para a amostra
+de aprendizado foram de 31\% e a menor taxa de erro se encontra no
+nó 3 com 78\%, portando não é necessário podar a árvore. 
+
+Pode-se constatar, pelo cálculo do erro relativo em função do nó folha, isto é, o nó cujo n = 3 que
+
+\[
+E=30,88\%*77,98\%=24,08\%
+\]
+
+Onde \emph{E} é a taxa de erro geral para a previsão de inadimplência. Ela é obtida multiplicando-se a taxa de erro do nó raiz pela taxa de erro específica do nó folha.
+
+\clearpage
+
+\section{Validação com Amostra Teste}
+
+Afim de validar-se a árvore obtida com o conjunto de treinamento, pega-se os 12500 elementos restantes do espaço amostral, não utilizados como parte do conjunto da amostra de treinamento e gera-se uma segunda árvore de decisão, extremamente similar a primeira. Tal árvore pode ser observada na figura \ref{fig:TestTree}. O fato de as árvores serem muito similares indica que o espaço amostral para treinamento e teste são bastante correlatos.
+
+\begin{center}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{test_tree}
+\par\end{centering}
+\caption{\label{fig:TestTree}Árvore de decisão gerada a partir de 12500 amostras da base de dados original (teste).}
+\end{figure}
+\vspace*{-40pt}
+\par\end{center}
+
+
+\begin{minted}{R}
+> CrossTable(calvo.tst$STATUS, yhat_tst, prop.chisq = F, prop.t = F, digits = 2)
+\end{minted}
+
+\begin{table}[h]
+\centering
+\input{Table/status_predict.tex}
+  \caption{\label{tab:StatusPrevisao}Tabela de valores originais da base de dados (Original) e valores previstos pela árvore de decisão gerada (Previsto)}
+\end{table}
+
+O comando R acima gerará a tabela \ref{tab:StatusPrevisao}. Observa-se que para a previsão de adimplentes na base original em relação aqueles da base, foi de 98.1\%. Já os que foram erroneamente previstos como inadimplentes quando a varíavel \emph{status} no original era adimplente foram somente 1.9\%.
+
+Ainda na tabela, para os inadimplentes na base original, 75.4\% foram previstos como adimplentes enquanto 25.6\% foram corretamente classificados como inadimplentes.
+
+Conclui-se que a taxa de erro final é na casa dos 24\% o que, dependendo do custo do erro pode ser ou não proibitivo. Corre-se um grande risco ao analisar-se um indivíduo como inadimplente se ele não o for. Isto é, falsos positivos podem prejudicar o desempenho da instituição em questão dado que esse tipo de erro não seja aceitável quando o custo do erro for alto.

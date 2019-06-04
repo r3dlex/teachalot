@@ -1,0 +1,75 @@
+\label{chap:Introducao} Neste capítulo é discorrido quanto ao problema referente a base \nomeDaBase{}, primeiramente apresentando-se os objetivos da análise e em seguida falando-se sobre a formatação dos dados da base e como foi dado seu processamento.
+
+\section{Objetivo}
+
+O objetivo desta análise é identificar as
+características dos devedores adimplentes e inadimplentes numa base
+com 25000 registros contendo as variáveis Status, UF, Escolaridade,
+Estado Civil, Renda e Natureza da Renda na base \nomeDaBase{}. Por
+meio da análise deve ser possível gerar um modelo de previsão se um
+determinado indivíduo, dadas determinadas características de interesse,
+é ou não \emph{inadimplente}.
+
+
+\section{Descrição das Variáveis}
+
+\begin{center}
+\begin{tabular}{>{\raggedright}m{0.15\textwidth}|>{\raggedright}m{0.15\textwidth}|>{\raggedright}m{0.2\textwidth}|>{\raggedright}m{0.25\textwidth}}
+\hline 
+VARIÁVEL & TIPO & VALOR & DESCRIÇÃO\tabularnewline
+\hline 
+Status & Qualitativa Nominal & $\left[0;1\right]$ & 0 = Inadimplente \newline 1 = Adimplente\tabularnewline
+\hline 
+UF & Qualitativa Nominal & SP, MG, RJ, DF, BA... & \multirow{1}{0.25\textwidth}{Estados (2 letras).}\tabularnewline
+\hline 
+Escolaridade & Qualitativa Ordinal & primario, posgrad, secundario, superior & Nível de escolaridade do indivíduo em questão.\tabularnewline
+\hline 
+Estado Civil & Qualitativa Nominal & solt, casado, divorciado, viuvo, outros & Estado civil do indivíduo na amostra. \newline solt = Solteiro(a).\tabularnewline
+\hline 
+Renda & Quantitativa Contínua & $\left[1;1380200\right]$ & Renda individual.\tabularnewline
+\hline 
+Natureza da Renda & Qualitativa Nominal & aposentado, empregado, func\_publico, vivederenda, empresario, outros & Tipo de vínculo empregatício que o indivíduo possui.\tabularnewline
+\hline 
+\end{tabular}
+\par\end{center}
+
+\section{Escolha da Semente (set.seed)}
+
+Nesta seção, é discutido o número usado na geração de números aleatórios no R, cuja semente, segundo as regras definidas em sala deve ser baseada nos seguintes passos:
+
+\begin{itemize}
+  \item Reunir todos os integrantes com seus números de matrícula e datas
+    de nascimento em uma tabela;
+  \item Definir de todos, qual o mais velho e selecioná-lo;
+  \item Os quatro últimos digitos da matrícula desse indivíduo deverão ser
+    usados como base para geração de números aleatórios no R.
+\end{itemize}
+
+\begin{table}[h]
+  \begin{centering}
+    \begin{tabular}{c|c|c}
+      \hline 
+      Nome & Data de Nascimento & Matrícula\tabularnewline
+      \hline 
+      André Ferreira Bem Silva & 11/09/1988 & A57015211\tabularnewline
+      \hline 
+      Augusto Gonçalves & 24/03/1986 & A57045668\tabularnewline
+      \hline 
+      Marcos Vinício de Siqueira & 08/10/1988 & A55175603\tabularnewline
+      \hline 
+    \end{tabular}
+  \par\end{centering}
+
+  \caption{\label{tab:Integrantes}Nomes, data de nascimentos e matrículas dos integrantes do grupo.}
+\end{table}
+
+Seguindo, os passos obteve-se que o membro escolhido, a partir da tabela \ref{tab:Integrantes}, é o Augusto, cujos quatro últimos dígitos de matrícula são 5668. Sendo assim, introduziu-se no preâmbulo do código R, antes da geração das árvores de decisão a seguinte linha:
+\begin{minted}{R}
+> set.seed(5668)
+\end{minted}
+
+\section{Organização do texto}
+
+No capítulo \ref{chap:Variables}, é feito uma análise exploratória de cada uma das variáveis do espaço amostral, afim de entender as relações entre as variáveis e delas para com a variável de interesse do estudo: \emph{status}. Cada uma delas é detalhada e compreendida individualmente porque a constituição dos entendimentos individuais das mesmas torna a construção da árvore de decisão mais clara e direta.
+
+Já no capítulo \ref{chap:DecisionTree}, é demonstrado o passo a passo da construção da árvore e os resultados obtidos, incluindo a taxa de erro da árvore gerada em relação as amostras testes. Para tal, o espaço amostral é dividido em dois, sendo um utilizado na construção da árvore e outro em sua validação, conforme é comum nesse tipo de modelo de previsão.

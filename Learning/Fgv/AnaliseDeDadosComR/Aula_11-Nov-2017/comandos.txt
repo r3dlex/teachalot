@@ -1,0 +1,81 @@
+> florida <- UsingR::florida
+> florida.regression.linear <- lm(florida$
+florida$County      florida$BUSH        florida$NADER       florida$HAGELIN     florida$MCREYNOLDS  florida$PHILLIPS
+florida$GORE        florida$BUCHANAN    florida$BROWN       florida$HARRIS      florida$MOOREHEAD   florida$Total
+> florida.regression.linear <- lm(florida$BUCHANAN ~ florida$BUSH)
+> florida
+florida                    florida.regression.linear  
+> florida.regression.linear
+
+Call:
+lm(formula = florida$BUCHANAN ~ florida$BUSH)
+
+Coefficients:
+ (Intercept)  florida$BUSH  
+   45.289861      0.004917  
+
+> summary(florida.regression.linear)
+
+Call:
+lm(formula = florida$BUCHANAN ~ florida$BUSH)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-907.50  -46.10  -29.19   12.26 2610.19 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  4.529e+01  5.448e+01   0.831    0.409    
+florida$BUSH 4.917e-03  7.644e-04   6.432 1.73e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 353.9 on 65 degrees of freedom
+Multiple R-squared:  0.3889,    Adjusted R-squared:  0.3795 
+F-statistic: 41.37 on 1 and 65 DF,  p-value: 1.727e-08
+
+
+
+===========================MBA=======================
+> x <- mbas.df.nooutliers
+> florida.regression.lm(formula = x$salary ~ x$age + x$sex + x$gmat_tot + x$gmat_qpc + x$gmat_vpc + x$gmat_tpc + x$s_avg + x$f_avg + x$quarter + x$work_yrs + x$frstlang + x$satis)
+florida.regression.linear    florida.regression.multiple
+> florida.regression.multiple <- lm(formula = x$salary ~ x$age + x$sex + x$gmat_tot + x$gmat_qpc + x$gmat_vpc + x$gmat_tpc + x$s_avg + x$f_avg + x$quarter + x$work_yrs + x$frstlang + x$satis)
+> summary(florida
+florida                      florida.regression.linear    florida.regression.multiple
+> summary(florida.regression.
+florida.regression.linear    florida.regression.multiple
+> summary(florida.regression.multiple
+florida.regression.multiple
+> summary(florida.regression.multiple)
+
+Call:
+lm(formula = x$salary ~ x$age + x$sex + x$gmat_tot + x$gmat_qpc +
+    x$gmat_vpc + x$gmat_tpc + x$s_avg + x$f_avg + x$quarter +
+    x$work_yrs + x$frstlang + x$satis)
+
+Residuals:
+   Min     1Q Median     3Q    Max
+-17895  -5603  -1127   4846  27676
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept) 106390.4    32070.6   3.317  0.00134 **
+x$age          608.6      692.9   0.878  0.38223
+x$sex        -6386.7     2206.8  -2.894  0.00483 **
+x$gmat_tot    -123.3      106.3  -1.160  0.24943
+x$gmat_qpc     250.7      298.4   0.840  0.40329
+x$gmat_vpc     141.0      302.7   0.466  0.64245
+x$gmat_tpc     157.5      454.9   0.346  0.73011
+x$s_avg       5035.1     6666.6   0.755  0.45218
+x$f_avg        612.0     4039.1   0.152  0.87992
+x$quarter     -632.9     1834.7  -0.345  0.73098
+x$work_yrs     388.2      676.0   0.574  0.56734
+x$frstlang    1933.4     4407.0   0.439  0.66199
+x$satis       -233.2     1278.6  -0.182  0.85572
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 9060 on 85 degrees of freedom
+Multiple R-squared:  0.2809,    Adjusted R-squared:  0.1794
+F-statistic: 2.767 on 12 and 85 DF,  p-value: 0.003189

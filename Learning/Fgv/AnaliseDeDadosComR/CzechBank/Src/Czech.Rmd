@@ -1,0 +1,389 @@
+---
+title: "Análise de dados com R"
+subtitle: "Estudo de Caso: Czech Bank"
+date: "17 de Dezembro de 2017"
+author:
+  - name: "André Ferreira Bem"
+  - name: "Augusto Gonçalves"
+  - name: "Fernando D'Imperio"
+  - name: "Marcos Vinício de Siqueira"
+    affiliation: "Fundação Getulio Vargas - FGV"
+output:
+  html_document: default
+---
+ 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align='center',fig.height=5,fig.width=6)
+ 
+#Instalar os seguintes pacotes:
+package.requirements <- c("ggplot2", "dplyr", "kableExtra", "knitr", "corrplot", "readxl", "GGally")
+#install.packages(package.requirements)
+ 
+# Loads all libraries
+lapply(package.requirements, library, character.only = TRUE)
+ 
+```
+---
+ 
+### 1. ESTUDO DE CASO
+ 
+Este trabalho visa auxiliar os gerentes de um banco Czech a entender melhor seus clientes para que os mesmos tenham condições de oferecer melhores serviços aos seus melhores clientes.
+ 
+Para esta análise, foi disponibilizado a base de dados do Czech Bank contendo informações de Jan/1993 a Dez/1998.
+ 
+Estes base contém as seguintes tabelas:
+ 
+
+```{r echo=FALSE, message=FALSE}
+ 
+TABELAS <- c ("Client (Clientes)",
+"Account (Contas)",
+"Disposition (Vínculos Clientes x Contas)",
+"Demograph (Informações Geográficas)",
+"Credit Card (Cartões de Crédito)",
+"Loan (Empréstimos)",
+"Permanent order (Ordens Permanentes)",
+"Transactions (Transações)")
+ 
+kable(
+    TABELAS,
+    format = "html",
+    align="l",
+    caption = "Tabela 1 - Base de dados"
+    ) %>%
+      kable_styling(
+          bootstrap_options = c("striped","hover","condensed"),
+          font_size = 10
+      )
+ 
+ 
+```
+---
+ 
+### 2. METODOLOGIA
+ 
+Para efetuar as análises primeiro os dados foram imporatados para o R e foram normalizados.
+ 
+Então, criamos um StarSchema com a finalidade de criar uma única tabela com a granulidade sendo os clientes:
+ 
+```{r echo=FALSE, message=FALSE}
+ 
+TABELAS <- c("client_id", "gender", "age", "account_id", "card" ,"year_card",
+              "acnt_frequency", "year_account", "loan_status", "year_loan", "duration_loan", "mth_to_pay_loan")
+ 
+kable(
+    TABELAS,
+    format = "html",
+    align="l",
+    caption = "Tabela 2 - Tabela de análise"
+    ) %>%
+      kable_styling(
+          bootstrap_options = c("striped","hover","condensed"),
+          font_size = 10
+      )
+
+```
+---
+
+### 3. NORMALIZAÇÃO DA BASE DE DADOS
+
+Como visto na seção 1, há 8 tabelas que faz parte do star schema de interesse da análise de dados. As diversas tabelas possuem strings em tchecho e portanto, fez-se  necessário traduzir diversas colunas. Para fins de programação e internacionalização preferiu-se traduzir os termos para o inglês. Segue uma lista dos termos em tcheco e suas mesmas versões em inglês:
+
+```{r echo=TRUE, message=FALSE}
+GetFrequencyValuesEn <- function()
+{
+  return (list(MONTHLY = "Monthly", WEEKLY = "Weekly", TRANSACTION = "AfterTransaction"))
+}
+
+
+GetFrequencyValuesCz <- function()
+{
+  return (list(MONTHLY = "POPLATEK MESICNE", WEEKLY = "POPLATEK TYDNE", TRANSACTION = "POPLATEK PO OBRATU"))
+}
+
+GetTypeValuesCz <- function()
+{
+  return (list(CREDIT = "PRIJEM", DEBIT = "VYDAJ", CHOICE = "VYBER"))
+}
+
+GetTypeValuesEn <- function()
+{
+  # Debit is called withdrawal on the pdf but debit is a more common name
+  return (list(CREDIT = "Credit", DEBIT = "Debit", CHOICE = "Choice")) 
+}
+
+GetOperationValuesCz <- function()
+{
+  return (list(CARDDEBIT = "VYBER KARTOU", CASHCREDIT = "VKLAD", CASHDEBIT = "VYBER", 
+               OTHERBANKCREDIT = "PREVOD Z UCTU", OTHERBANKDEBIT = "PREVOD NA UCET"))
+}
+
+GetOperationValuesEn <- function()
+{
+  # remittance to another bank = sum of money sent to other institution
+  # collection = credit from another institution
+  return (list(CARDDEBIT = "CardDebit", CASHCREDIT = "CashCredit", CASHDEBIT = "CashDebit", 
+               OTHERBANKCREDIT = "OtherBankCredit", OTHERBANKDEBIT = "OtherBankDebit"))
+}
+
+GetLoanStatusEn <- function()
+{
+  return (list(FINISHEDOK = "ContractFinishedOk", FINISHEDDEFAULT = "ContractFinishedDefault", RUNNINGOK = "RunningOk", RUNNINGDEBT = "RunningInDebt"))
+}
+
+GetLoanStatusLetters <- function()
+{
+  return (list(FINISHEDOK = "A", FINISHEDDEFAULT = "B", RUNNINGOK = "C", RUNNINGDEBT = "D"))
+}
+
+# k_symbol is a column in permanent order and also in transactions
+GetKsymbolValuesEn <- function()
+{
+  return (list(INSURANCE = "Insurance", HOUSEHOLD = "Household", LEASING = "Leasing", LOAN = "Loan", PENSION = "Pension", STATEMENT = "StatementForPayment", SANCTION = "SanctionNegativeBalance", INTEREST = "InterestCredit"))
+}
+
+GetKsymbolValuesCz <- function()
+{
+  return (list(INSURANCE = "POJISTNE", HOUSEHOLD = "SIPO", LEASING = "LEASING", LOAN = "UVER", PENSION = "DUCHOD", STATEMENT = "SLUZBY", SANCTION = "SANKC. UROK", INTEREST = "UROK"))
+}
+```
+
+Para mapear os valores fez-se o mapeamento das traduções diretamente nas bases lidas. Por exemplo:
+
+```{r echo=TRUE, message=FALSE}
+ReadPermanentOrdersDataFrame <- function()
+{
+  orders.df <- (ReadDataFrameFromFilepath("order.asc"))
+  
+  ks.cz <- GetKsymbolValuesCz()
+  ks.en <- GetKsymbolValuesEn()
+  
+  orders.df$k_symbol <- mapvalues(orders.df$k_symbol, 
+                                  from = c(ks.cz$INSURANCE, ks.cz$HOUSEHOLD, ks.cz$LEASING, ks.cz$LOAN),
+                                  to = c(ks.en$INSURANCE, ks.en$HOUSEHOLD, ks.en$LEASING, ks.en$LOAN))
+  
+  return (as.data.frame(orders.df))
+}
+```
+
+A função mapvalues mapeia os valores na coluna k_symbol, nesse caso, traduzindo do nome tcheco para o nome em inglês.
+
+Uma outra função utilizada na normalização foi a de normalização das datas numéricas:
+
+```{r echo=TRUE, message=FALSE}
+GetDateFromBirthNumber <- function(birthnumber)
+{
+  return (stri_extract_all(birthnumber, regex="\\d{2}")[[1]])
+}
+
+GetBirthDateYyMmDd <- function(birthnumber)
+{
+  yymmdd <- GetDateFromBirthNumber(birthnumber)
+  
+  yy <- yymmdd[1]
+  mm <- yymmdd[2]
+  dd <- yymmdd[3]
+  
+  return (sprintf('19%s/%s/%s', yy, mm, dd))
+}
+```
+
+Apesar disso, para as datas da tabela Cliente:
+
+```{r echo=TRUE, message=FALSE}
+# birthnumber is in the format YYMMDD - if it is a woman it is DD + 50
+GenderFromDate <- function(birthnumber)
+{
+  yymmdd <- GetDateFromBirthNumber(birthnumber)
+  
+  yy <- as.integer(yymmdd[1])
+  mm <- as.integer(yymmdd[2])
+  dd <- as.integer(yymmdd[3])
+  
+  return (ifelse(mm < 50,  0 , 1))
+}
+
+GetBirthDateYyMmDd <- function(birthnumber)
+{
+  yymmdd <- GetDateFromBirthNumber(birthnumber)
+  
+  yy <- as.integer(yymmdd[1])
+  mm <- as.integer(yymmdd[2])
+  mm <- ifelse(mm < 50, mm, mm - 50)
+  dd <- as.integer(yymmdd[3])
+  
+  return (sprintf('19%s/%s/%s', yy, mm, dd))
+}
+```
+
+Uma vez que o dado de gênero é codificado junto com o mês. 
+
+Finalmente, os dados de distrito estão todos codificados com acrônimos e pseudocódigos, sendo assim, troca-se explicitamente suas colunas por valores mais legíveis:
+
+```{r echo=TRUE, message=FALSE}
+ReadDistrictsDataFrame <- function()
+{
+  districts.df <- ReadDataFrameFromFilepath("district.asc")
+  
+  #Normalizes columns names of districts.df
+  colnames(districts.df) <- c("district_id","district_name","region","n_inhabitants","municip_less_499","municip_between_500_1999","municip_between_2000_9999","municip_more_10000", "n_cities","ratio_urban_inhab","avg_salary","unemploy_rate_95","unemploy_rate_96","n_entrepreneurs_1000_inhab","n_commited_crimes_95","n_commited_crimes_96")
+  
+  return (districts.df)
+}
+```
+
+---
+ 
+### 4. SCORE DOS CLIENTES
+
+Para atribuição de notas dos clientes utilizou-se os valores contídos nas variáveis que possuem o maior peso para tal classificação. Para varíaveis do tipo char, foi utilizada a seguinte função:
+
+```{r echo=TRUE, message=FALSE}
+GetScoreForFactorVariables <- function(data, discript, strings)
+{
+  values <- data[, discript]
+  scores <- 1:length(strings)
+  names(scores) <- strings
+  data$scores <- scores[values]
+  
+  return (data$scores)
+}
+```
+
+E para variáveis do tipo numéricas, foi utilizada a seguinte função:
+
+```{r echo=TRUE, message=FALSE}
+GetScoreForNumericVariables <- function(data, posneg)
+{
+  values <- as.double(unlist(data))
+  score <- as.integer(NA)
+  data <- data.frame(values, score)
+  
+  posneg = "p"
+  range1 <- between(data$values,quantile(data$values, na.rm = T)[1],quantile(data$values, na.rm = T)[2])
+  range2 <- between(data$values,quantile(data$values, na.rm = T)[2],quantile(data$values, na.rm = T)[3])
+  range3 <- between(data$values,quantile(data$values, na.rm = T)[3],quantile(data$values, na.rm = T)[4])
+  range4 <- between(data$values,quantile(data$values, na.rm = T)[4],quantile(data$values, na.rm = T)[5])
+  
+  if(posneg == "p")
+  {
+    data$score <- ifelse(range1 == TRUE, 1,ifelse(range2 == TRUE, 2,ifelse(range3 == TRUE, 3, ifelse(range4 == TRUE, 4, NA))))
+    
+    return(data$score)
+    
+  }else if(posneg == "n")
+  {
+    data$score <- ifelse(range1 == TRUE, 4,ifelse(range2 == TRUE, 3,ifelse(range3 == TRUE, 2, ifelse(range4 == TRUE, 1, NA))))
+    
+    return(data$score)
+  }else
+  {
+    print("Insira p ou n para obter o score desejado.")  
+  }      
+}  
+```
+
+Ambas funções calculam a nota do escore de acordo com os valores das variáveis. Essa nota será utilizada para a elaboração de um data frame que terá as variáveis utilizadas para a análise e a soma da nota final de cada cliente.
+
+Através desse escore conseguiremos saber quem é um bom cliente e quem é um mal cliente. Este data frame foi gerado conforme o código que segue:
+
+```{r echo=TRUE, message=FALSE}
+ConvertCharAndIntegerVariables <- function(data){
+  data[sapply(data, is.integer)] <- lapply(data[sapply(data, is.integer)], as.numeric)
+  data[sapply(data, is.character)] <- lapply(data[sapply(data, is.character)], as.factor) 
+  
+  return(sapply(data, class))
+}
+
+# joins
+joinclientdistrict <- inner_join(clientsdisp.df, districts.df, by = c("district_id","district_id"))
+joinaccountdistrict <- inner_join(accounts.df, districts.df, by = c("district_id","district_id")) 
+joinclientaccount <- inner_join(clientsdisp.df, accounts.df, by = c("account_id","account_id"))
+joinclientcard <- left_join(joinclientdistrict, cards.df, by = c("disp_id","disp_id"))
+joinclientacntloans <- left_join(joinclientaccount, loans.df,by = c("account_id","account_id"))
+
+
+# renaming columns
+colnames(joinclientdistrict)[3] <- c("cl_district_id")
+colnames(joinclientdistrict)[9] <- c("type_cl")
+colnames(joinclientcard)[9] <- c("type_cl")
+colnames(joinclientcard)[26] <- c("type_card")
+colnames(joinclientaccount)[3] <- "cl_district_id"
+colnames(joinclientaccount)[10] <- "acnt_district_id"
+colnames(joinclientacntloans)[12] <- "date_account"
+colnames(joinclientacntloans)[14] <- "date_loan"
+
+
+# converting
+ConvertCharAndIntegerVariables(joinclientaccount)
+ConvertCharAndIntegerVariables(joinaccountdistrict)
+ConvertCharAndIntegerVariables(joinclientcard)
+ConvertCharAndIntegerVariables(joinclientacntloans)
+ConvertCharAndIntegerVariables(joinclientdistrict)
+
+
+clientrating.df <- clientsdisp.df[c(1,4,6,8)]
+clientrating.df$cl_district_id <- joinclientaccount$cl_district_id
+clientrating.df$acnt_district_id <- joinclientaccount$acnt_district_id
+clientrating.df$diff_district <- ifelse(clientrating.df$cl_district_id != clientrating.df$acnt_district_id, 1, 0)
+
+#client district
+clientrating.df$dis_avg_salary <- GetScoreForNumericVariables(joinclientdistrict$avg_salary,"p")
+clientrating.df$dis_unemp_rate_95 <- GetScoreForNumericVariables(joinclientdistrict$unemploy_rate_95,"n")
+clientrating.df$dis_unemp_rate_96 <- GetScoreForNumericVariables(joinclientdistrict$unemploy_rate_96,"n")
+clientrating.df$dis_commit_crimes_95 <- GetScoreForNumericVariables(joinclientdistrict$n_commited_crimes_95,"n")
+clientrating.df$dis_commit_crimes_96 <- GetScoreForNumericVariables(joinclientdistrict$n_commited_crimes_96,"n")
+
+
+# client type - Owner - 2, DISPONENT - 1
+clientrating.df$client_type <- as.numeric(revalue(joinclientdistrict$type_cl,replace = c("OWNER" = 2, "DISPONENT" = 1)))
+
+# Card score - Gold - 3, Classic - 2, Junior - 1
+clientrating.df$card <- as.numeric(revalue(joinclientcard$type_card,replace = c("gold" = 3, "classic" = 2, "junior" = 1)))
+
+# Years that the client has the card
+clientrating.df$year_card <- GetScoreForNumericVariables(GetAgeFromRefDate(joinclientcard$issued,refdate),"p")
+
+# Account frequency
+clientrating.df$acnt_frequency <- GetScoreForFactorVariables(joinclientaccount, "frequency", c("Monthly", "Weekly", "AfterTransaction"))
+
+# Years that the client has the account
+clientrating.df$year_account <- GetScoreForNumericVariables(GetAgeFromRefDate(joinclientaccount$date,refdate))
+
+# Loans
+clientrating.df$loan_status <- GetScoreForFactorVariables(joinclientacntloans, "status", c("ContractFinishedDefault", "RunningInDebt", "RunningOk","ContractFinishedOk"))
+
+# sum score
+clientrating.df$sum_score <- rowSums(clientrating.df[,7:18], na.rm = TRUE)
+
+```
+
+Atráves do data frame gerado e com a obtenção total da soma dos escores, chegamos nessa árvore de decisão:
+
+```{r  echo=TRUE, message=FALSE}
+library(rpart)
+library(rpart.plot)
+library(arules)
+ 
+set.seed(1)
+ 
+clientrating.df$sum_scoreD = discretize(clientrating.df$sum_score, "frequency", categories=4, labels = c("Bad", "Average", "Ok", "Good"))
+ 
+flag=sample(1:nrow(clientrating.df), nrow(clientrating.df) / 2, replace = F)
+ 
+clientLrn = clientrating.df[flag,]
+clientTst = clientrating.df[-flag,]
+ 
+ac = rpart(data = clientLrn, sum_scoreD~gender+age+dis_avg_salary+dis_unemp_rate_95+dis_unemp_rate_96+dis_commit_crimes_95+dis_commit_crimes_96+client_type+card+year_card+acnt_frequency+year_account+loan_status)
+ 
+prp(ac)
+ 
+Dados.previsto.com.modelo<-predict(ac,clientLrn)
+erros.quadraticos<- (clientLrn$sum_score - Dados.previsto.com.modelo)^2
+erros.quadraticos
+erro.medio.quadratico <- sum(erros.quadraticos) / length(erros.quadraticos)
+(erro.medio<- erro.medio.quadratico^0.5)
+```
+
+Podemos perceber que arvore de decisão elencou que as variáveis que mais tem peso na decisão de ser bom ou mal cliente são as variáveis de taxa de desemprego do distrito do cliente, o tempo que ele possui a conta e a taxa de criminalidade de seu distrito.
+

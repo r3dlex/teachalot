@@ -1,0 +1,177 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[brazil]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{graphicx}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{minted}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+\title{Relatório de Exercícios: 3.5.1 }
+
+\maketitle
+MBA Executivo em Economia e Gestão: Business Analytics e Big Data
+
+Turma: MSP21734-ZEBABD-T3
+
+Disciplina: Análise de Dados com R
+
+Aluno: André Ferreira Bem Silva
+
+\vspace*{4\baselineskip}
+
+1. O que acontece é que para cada valor individual da variável \emph{displ
+}ele irá criar um gráfico separado. Se houver muitos valores, é possível
+que aconteça algum tipo de problema no \emph{runtime }R. Além disso,
+o gráfico não é muito \emph{ilustrativo}, ou seja, útil.\begin{minted}{R}
+exercise1 <- function() 
+{
+  ggplot(data = mpg) + 
+	geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
+	facet_wrap(~ displ)
+  ggsave("Img/exercise1.pdf")
+}
+\end{minted}
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Img/exercise1}
+\par\end{center}
+
+\vspace*{\baselineskip}
+
+2. As celulas vazias na imagem da direita siginificam combinações
+não presentes, visíveis mais facilmente na imagem à esquerda, uma
+vez que cada variável no eixo x corresponde a uma categoria diferente
+de \emph{drv}. Para o valor \emph{f}, por exemplo, não há veículo
+de 4 cilindos o que fica visível no gráfico olhando-se a primeira
+coluna do grid, \emph{4-f}. \begin{minted}{R}
+exercise2 <- function()
+{
+  ggplot(data = mpg) +
+    geom_point(mapping = aes(x = drv, y = cyl))
+  ggsave("Img/exercise2-1.pdf")
+
+  ggplot(data = mpg) +
+    geom_point(mapping = aes(x = drv, y = cyl)) +
+    facet_grid(drv ~ cyl)
+  ggsave("Img/exercise2-2.pdf")
+}
+\end{minted}
+
+\begin{center}
+\begin{minipage}[t]{1\columnwidth}%
+\begin{center}
+\includegraphics[width=0.49\textwidth]{Img/exercise2-1}~\includegraphics[width=0.49\textwidth]{Img/exercise2-2}
+\par\end{center}%
+\end{minipage}
+\par\end{center}
+
+\vspace*{\baselineskip}
+
+3. O . é uma notação usada em R para denotar a ausência de uma variável.
+No caso do grid, significa que na dimensão em que foi usado o valor
+de $G_{nxn}$ torna-se $G_{1xn}$ (primeiro exemplo) ou $G_{nx1}$
+(segundo exemplo), dependendo da dimensão em que for utilizado. 
+
+\begin{minted}{R}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ .)
+\end{minted}
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Img/exercise3-1}
+\par\end{center}
+
+\begin{minted}{R}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(. ~ cyl)
+\end{minted}
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Img/exercise3-2}
+\par\end{center}
+
+\vspace*{\baselineskip}
+
+4. Fica evidenciado no plot a seguir, que olhando cada \emph{facet
+}individualmente fica mais simples entender as tendências dentro da
+categoria em questão, enquanto no gráfico de dispersão colorido, a
+cor funciona como uma dimensão a mais, sendo ao mesmo tempo mais complexo
+observar o comportamento individual de cada categoria nele, mas entender
+o comportamento de todos ao mesmo tempo. O fator colorido pode tornar-se
+poluído visualmente, gerando um efeito \emph{arco-íris }indesejável
+para a análise dos dados.
+
+\begin{minted}{R}
+exercise4 <- function()
+{
+  ggplot(data = mpg) +
+    geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
+    facet_wrap(~ class, nrow = 2)
+  ggsave("Img/exercise4-1.pdf")
+
+  ggplot(data = mpg) +
+    geom_point(mapping = aes(x = displ, y = hwy, color = class))
+  ggsave("Img/exercise4-2.pdf")
+}
+\end{minted}
+
+\begin{center}
+\begin{minipage}[t]{1\columnwidth}%
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Img/exercise4-1}
+\par\end{center}
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Img/exercise4-2}
+\par\end{center}%
+\end{minipage}
+\par\end{center}
+
+\vspace*{\baselineskip}
+
+5. Ao ler-se o manual rodando o \emph{?face\_wrap, }vê-se que as variáveis
+\emph{nrow }e \emph{ncol} são variáveis que determinam a disposição
+dos gráficos. Isto é, o número de colunas e linhas dos \emph{facets
+}de saída. No \emph{facet\_grid }há o parâmetro \emph{as.table} que
+define um layout de tabela com os maiores valores no canto inferior
+direito. 
+
+\vspace*{\baselineskip}
+
+6. Observando-se os plots \emph{de displ x hwy} com \emph{facets fl
+x drv }(esquerda)\emph{ e drv x fl} (direita), fica evidente que o
+primeiro plot, com apenas três colunas, é mais visível neste documento.
+A ideia é que é mais usual fazer-se a leitura vertical nesses casos
+que uma leitura mais horizontal, podendo inclusive não caber no documento,
+caso hajam muitas categorias.
+
+\begin{minted}{R}
+exercise6 <- function()
+{
+  ggplot(data = mpg) + 
+    geom_point(mapping = aes(x = displ, y = hwy)) +
+    facet_grid(fl ~ drv)
+  ggsave("Img/exercise6-1.pdf")
+
+  ggplot(data = mpg) + 
+    geom_point(mapping = aes(x = displ, y = hwy)) +
+    facet_grid(drv ~ fl)
+  ggsave("Img/exercise6-2.pdf")
+
+}
+\end{minted}
+
+\begin{center}
+\includegraphics[width=0.49\textwidth]{Img/exercise6-1}~\includegraphics[width=0.49\textwidth]{Img/exercise6-2}
+\par\end{center}
+\end{document}

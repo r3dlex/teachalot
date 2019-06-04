@@ -1,0 +1,5 @@
+sAleatoria = rnorm(200,1,5)
+sAleatoria = cumsum(sAleatoria)
+plot.ts(sAleatoria,xlab='tempo',ylab='observacoes')
+acf(sAleatoria,main='ACF',xlab='defasagem',ylab='autocorrelacoes')
+pacf(sAleatoria,main='PACF',xlab='defasagem',ylab='autocorrelacoes')

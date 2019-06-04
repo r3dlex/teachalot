@@ -1,0 +1,63 @@
+Utilizando o arquivo "Serie\_Dados.csv", realize as seguintes etapas:
+
+\section{Crie a série temporal dos retornos Ln, ou seja, $r=\ln(\frac{P_{t+1}}{P_{t}})$}
+
+\inputminted{R}{Src/R/ex1a.R}
+
+\section{Para cada ação construa o histograma dos retornos. Comente o resultado dos histogramas, verifique também o desvio padrão e a média de cada série.}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist1b}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+Percebe-se que todas as variáveis apresentam distribuição normal após a transformação das séries temporais por logaritmo neperiano. No caso da variável DOLAR, apresenta-se uma homogeneidade maior em comparação com as demais variáveis.
+
+% Preview source code for paragraph 0
+
+\begin{center}
+\begin{tabular}{c|c|c}
+\hline 
+ & Média & Desv Padrão\tabularnewline
+\hline 
+VALE5 & 0.00013 & 0.01839\tabularnewline
+\hline 
+GOLL4 & -0.00049 & 0.03248\tabularnewline
+\hline 
+AMBV4 & 0.00127 & 0.01426\tabularnewline
+\hline 
+ITUB4 & -0.00003 & 0.01833\tabularnewline
+\hline 
+BBDC4 & 0.00021 & 0.01709\tabularnewline
+\hline 
+BVMF3 & 0.00009 & 0.02194\tabularnewline
+\hline 
+RAPT4 & 0.00035 & 0.02012\tabularnewline
+\hline 
+MYPK3 & 0.00102 & 0.02256\tabularnewline
+\hline 
+GOAU4 & -0.00020 & 0.02253\tabularnewline
+\hline 
+LLXL3 & -0.00122 & 0.04117\tabularnewline
+\hline 
+CSAN3 & 0.00088 & 0.01928\tabularnewline
+\hline 
+DOLAR & 0.00025 & 0.00772\tabularnewline
+\hline 
+\end{tabular}
+\par\end{center}
+
+
+% imagem
+\section{Calcule o ACF e PACF de cada série de retornos. Comente os resultados.}
+
+\begin{center}
+\begin{centering}
+\includegraphics[width=0.95\textwidth]{dist1c_acf_pac}
+\par\end{centering}
+%\caption{\label{fig:PlotAcf4a}Plot Acf}
+\par\end{center}
+
+Utilizando-se as séries de dados transformadas pelo LN, percebeu-se, através do cálculo da Autocorrelação (ACF) que todas as séries são estacionárias. Em complemento da análise, podemos concluir que todos as Autocorrelações Parciais (PACF) possuem pouca defasagem.

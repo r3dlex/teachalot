@@ -1,0 +1,475 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{minted}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Relatório do Exercício MBA Salaries
+\end_layout
+
+\begin_layout Standard
+MBA Executivo em Economia e Gestão: Business Analytics e Big Data
+\end_layout
+
+\begin_layout Standard
+Turma: MSP21734-ZEBABD-T3
+\end_layout
+
+\begin_layout Standard
+Disciplina: Análise de Dados com R
+\end_layout
+
+\begin_layout Standard
+Aluno: André Ferreira Bem Silva
+\begin_inset Newline newline
+\end_inset
+
+Augusto Gonçalves
+\begin_inset Newline newline
+\end_inset
+
+Marcos Vinício Siqueira
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{4
+\backslash
+baselineskip}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1.
+ O que acontece é que para cada valor individual da variável 
+\emph on
+displ 
+\emph default
+ele irá criar um gráfico separado.
+ Se houver muitos valores, é possível que aconteça algum tipo de problema
+ no 
+\emph on
+runtime 
+\emph default
+R.
+ Além disso, o gráfico não é muito 
+\emph on
+ilustrativo
+\emph default
+, ou seja, útil.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minted}{R}
+\end_layout
+
+\begin_layout Plain Layout
+
+conn <- odbcConnectExcel2007("mba.xlsx")
+\end_layout
+
+\begin_layout Plain Layout
+
+mba <- sqlFetch(conn, "Sheet1")
+\end_layout
+
+\begin_layout Plain Layout
+
+odbcClose(conn)
+\end_layout
+
+\begin_layout Plain Layout
+
+hist(mba)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minted}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Img/histogram_orig.pdf
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como podemos ver no histograma 
+\series bold
+TODO
+\series default
+, os salários de 0 a 20000 representam a maioria dos dados.
+ Isto acontece pois foi colocado o valor de 998 para o salário de quem não
+ respondeu ao questionário, de 999 para quem resondeu o questionário e não
+ informou o salPara efetuar as análises com o objetivo de responder as dúvidas
+ da Marie Daer, removemos estes dados.ário e ainda tem os que responderam
+ 
+\emph on
+0
+\emph default
+, ou seja, não tem salário.
+\end_layout
+
+\begin_layout Standard
+Para efetuar as análises com o objetivo de responder as dúvidas da Marie
+ Daer, removemos estes dados.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minted}{R}
+\end_layout
+
+\begin_layout Plain Layout
+
+mba2 <- mba[mba$salary != 999 & mba$salary != 998 & mba$salary != 0,]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minted}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Veja como ficou o histograma de salários:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Img/histogram_mod.pdf
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Através do boxplot é possível notar que existem alguns outliers.
+\end_layout
+
+\begin_layout Standard
+boxplot(mba2$salary) #colocar o gráfico
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Img/boxplot_mod.pdf
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para retirar estes outliers, resolvemos retirar os registros cujo salário
+ seja inferior ou superior a duas vezes o desvio padrão a partir da média.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minted}{R}
+\end_layout
+
+\begin_layout Plain Layout
+
+mba3 <- mba2[mba2$salary >= mean(mba2$salary) - (sd(mba2$salary) * 2) &
+ mba2$salary <= mean(mba2$salary) + (sd(mba2$salary) * 2),] #colocar o gráfico
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minted}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Com isso, podemos notar que o histograma ficou "mais normal":
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Img/histogram_nooutliers.pdf
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uma das dúvidas da Marie Daer é se existe diferença de salário por sexo.
+\end_layout
+
+\begin_layout Standard
+Através do boxplot de salário por sexo, já é possível afirmar que os homens
+ ganham mais:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Img/boxplot_nooutliers.pdf
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Através do boxplot, podemos ver que a média de salários dos entrevistados
+ é de aproximadamente 100000.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Identificar com mean qual o valor mesmo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uma das dúvidas da Marie Daer é se existe diferença de salário referente
+ ao 
+\emph on
+sexo
+\emph default
+ do egresso.
+ Mais precisamente, ela tem interesse em averiguar se o salário masculino
+ é ou não superior ao feminino.
+ No boxplot TODO, deriva-se forte tendência a aceitar-se a hipótese que
+ os homens egressos ganham mais que as mulheres, em geral.
+ Enquanto a média salarial dos homens é de $102.958,10 a das mulheres é de
+ $95.526,07:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minted}{R}
+\end_layout
+
+\begin_layout Plain Layout
+
+mean(mba3$salary[mba3$sex==1])
+\end_layout
+
+\begin_layout Plain Layout
+
+> 102958.1
+\end_layout
+
+\begin_layout Plain Layout
+
+mean(mba3$salary[mba3$sex==2])
+\end_layout
+
+\begin_layout Plain Layout
+
+> 95526.07
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minted}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Podemos confirmar isso através da análise de variância one-way (ANOVA One-Way)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minted}{R}
+\end_layout
+
+\begin_layout Plain Layout
+
+oneway.test(mba3$salary ~ mba3$sex)
+\end_layout
+
+\begin_layout Plain Layout
+
+One-way analysis of means (not assuming equal variances)
+\end_layout
+
+\begin_layout Plain Layout
+
+data: mba3$salary and mba3$sex
+\end_layout
+
+\begin_layout Plain Layout
+
+F = 13.624, num df = 1.000, denom df = 57.437, p-value = 0.0004986
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minted}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Demonstra-se que o valor 
+\emph on
+p 
+\emph default
+é muito baixo, confirmando que a hipótese alternativa é aceita.
+\end_layout
+
+\end_body
+\end_document
