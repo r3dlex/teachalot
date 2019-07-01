@@ -279,3 +279,112 @@ The benefits of screening high-risk populations for lung cancer with LDCT outwei
 	year = {2009}
 }
 
+@article{kang2019,
+	abstract = {Purpose
+To develop natural language processing (NLP) to identify incidental lung nodules (ILNs) in radiology reports for assessment of management recommendations.
+Methods and Materials
+We searched the electronic health records for patients who underwent chest CT during 2014 and 2017, before and after implementation of a department-wide dictation macro of the Fleischner Society recommendations. We randomly selected 950 unstructured chest CT reports and reviewed manually for ILNs. An NLP tool was trained and validated against the manually reviewed set, for the task of automated detection of ILNs with exclusion of previously known or definitively benign nodules. For ILNs found in the training and validation sets, we assessed whether reported management recommendations agreed with Fleischner Society guidelines. The guideline concordance of management recommendations was compared between 2014 and�2017.
+Results
+The NLP tool identified ILNs with sensitivity and specificity of 91.1\% and 82.2\%, respectively, in the validation set. Positive and negative predictive values were 59.7\% and 97.0\%. In reports of ILNs in the training and validation sets before versus after introduction of a Fleischner reporting macro, there was no difference in the proportion of reports with ILNs (108 of 500 [21.6\%] versus 101 of 450 [22.4\%]; P�= .8), or in the proportion of reports with ILNs containing follow-up recommendations (75 of 108 [69.4\%] versus 80 of 101 [79.2\%]; P�= .2]. Rates of recommendation guideline concordance were not significantly different before and after implementation of the standardized macro (52 of 75 [69.3\%] versus 60 of 80 [75.0\%]; P�= .43).
+Conclusion
+NLP reliably automates identification of ILNs in unstructured reports, pertinent to quality improvement efforts for ILN management.},
+	author = {Kang, Stella K. and Garry, Kira and Chung, Ryan and Moore, William H. and Iturrate, Eduardo and Swartz, Jordan L. and Kim, Danny C. and Horwitz, Leora I. and Blecker, Saul},
+	doi = {10.1016/j.jacr.2019.04.026},
+	issn = {1546-1440},
+	journal = {Journal of the American College of Radiology},
+	keywords = {Incidental finding; natural language processing; pulmonary nodule; quality improvement},
+	title = {Natural Language Processing for Identification of Incidental Pulmonary Nodules in Radiology Reports},
+	url = {http://www.sciencedirect.com/science/article/pii/S1546144019305332},
+	year = {2019}
+}
+
+@article{jungmann2019,
+	abstract = {Der Bedarf an Anwendungsexpertise im Natural Language Processing (NLP) steigt in der Radiologie an. Denn komplement{\"a}r zur strukturierten Befundung mittels Templates kann somit die n{\"o}tige Datenbasis f{\"u}r Qualit{\"a}tssicherung und kontinuierliche Prozessoptimierung geschaffen werden.},
+	author = {Jungmann, F. and Kuhn, S. and Tsaur, I. and K{\"a}mpgen, B.},
+	day = {05},
+	doi = {10.1007/s00117-019-0555-0},
+	issn = {1432-2102},
+	journal = {Der Radiologe},
+	month = {Jun},
+	title = {Natural Language Processing in der Radiologie},
+	url = {https://doi.org/10.1007/s00117-019-0555-0},
+	year = {2019}
+}
+
+@article{elearning2019,
+	author = {e Oliveiraa, Lucas Emanuel Silva and Gumiela, Yohan Bonescki and dos Santosa, Arnon Bruno Ventrilho and Cinthoa, Lilian Mie Mukai and Carvalhoa, Deborah Ribeiro and Hasanb, Sadid A and Moroa, Claudia Maria Cabral},
+	title = {Learning Portuguese Clinical Word Embeddings: a multi-specialty and multi-institutional corpus of clinical narratives supporting a downstream biomedical task},
+	year = {2015}
+}
+
+@article{WANG201812,
+	abstract = {Background
+Word embeddings have been prevalently used in biomedical Natural Language Processing (NLP) applications due to the ability of the vector representations being able to capture useful semantic properties and linguistic relationships between words. Different textual resources (e.g., Wikipedia and biomedical literature corpus) have been utilized in biomedical NLP to train word embeddings and these word embeddings have been commonly leveraged as feature input to downstream machine learning models. However, there has been little work on evaluating the word embeddings trained from different textual resources.
+Methods
+In this study, we empirically evaluated word embeddings trained from four different corpora, namely clinical notes, biomedical publications, Wikipedia, and news. For the former two resources, we trained word embeddings using unstructured electronic health record (EHR) data available at Mayo Clinic and articles (MedLit) from PubMed Central, respectively. For the latter two resources, we used publicly available pre-trained word embeddings, GloVe and Google News. The evaluation was done qualitatively and quantitatively. For the qualitative evaluation, we randomly selected medical terms from three categories (i.e., disorder, symptom, and drug), and manually inspected the five most similar words computed by embeddings for each term. We also analyzed the word embeddings through a 2-dimensional visualization plot of 377 medical terms. For the quantitative evaluation, we conducted both intrinsic and extrinsic evaluation. For the intrinsic evaluation, we evaluated the word embeddings{\rq} ability to capture medical semantics by measruing the semantic similarity between medical terms using four published datasets: Pedersen{\rq}s dataset, Hliaoutakis{\rq}s dataset, MayoSRS, and UMNSRS. For the extrinsic evaluation, we applied word embeddings to multiple downstream biomedical NLP applications, including clinical information extraction (IE), biomedical information retrieval (IR), and relation extraction (RE), with data from shared tasks.
+Results
+The qualitative evaluation shows that the word embeddings trained from EHR and MedLit can find more similar medical terms than those trained from GloVe and Google News. The intrinsic quantitative evaluation verifies that the semantic similarity captured by the word embeddings trained from EHR is closer to human experts{\rq} judgments on all four tested datasets. The extrinsic quantitative evaluation shows that the word embeddings trained on EHR achieved the best F1 score of 0.900 for the clinical IE task; no word embeddings improved the performance for the biomedical IR task; and the word embeddings trained on Google News had the best overall F1 score of 0.790 for the RE task.
+Conclusion
+Based on the evaluation results, we can draw the following conclusions. First, the word embeddings trained from EHR and MedLit can capture the semantics of medical terms better, and find semantically relevant medical terms closer to human experts{\rq} judgments than those trained from GloVe and Google News. Second, there does not exist a consistent global ranking of word embeddings for all downstream biomedical NLP applications. However, adding word embeddings as extra features will improve results on most downstream tasks. Finally, the word embeddings trained from the biomedical domain corpora do not necessarily have better performance than those trained from the general domain corpora for any downstream biomedical NLP task.},
+	author = {Wang, Yanshan and Liu, Sijia and Afzal, Naveed and Rastegar-Mojarad, Majid and Wang, Liwei and Shen, Feichen and Kingsbury, Paul and Liu, Hongfang},
+	doi = {10.1016/j.jbi.2018.09.008},
+	issn = {1532-0464},
+	journal = {Journal of Biomedical Informatics},
+	keywords = {Word embeddings; Natural language processing; Information extraction; Information retrieval; Machine learning},
+	pages = {12--20},
+	title = {A comparison of word embeddings for the biomedical natural language processing},
+	url = {http://www.sciencedirect.com/science/article/pii/S1532046418301825},
+	volume = {87},
+	year = {2018}
+}
+
+@article{bispo2018arquitetura,
+	author = {Bispo, Thiago Dias},
+	publisher = {P{\'o}s-Gradua{\c c}{\~a}o em Ci{\^e}ncia da Computa{\c c}{\~a}o},
+	title = {Arquitetura LSTM para classifica{\c c}{\~a}o de discursos de {\'o}dio cross-lingual Ingl{\^e}s-PtBR},
+	year = {2018}
+}
+
+@article{danforth2012,
+	abstract = {Introduction:
+Lung nodules are commonly encountered in clinical practice, yet little is known about their management in community settings. An automated method for identifying patients with lung nodules would greatly facilitate research in this area.
+Methods:
+Using members of a large, community-based health plan from 2006 to 2010, we developed a method to identify patients with lung nodules, by combining five diagnostic codes, four procedural codes, and a natural language processing algorithm that performed free text searches of radiology transcripts. An experienced pulmonologist reviewed a random sample of 116 radiology transcripts, providing a reference standard for the natural language processing algorithm.
+Results:
+With the use of an automated method, we identified 7112 unique members as having one or more incident lung nodules. The mean age of the patients was 65 years (standard deviation 14 years). There were slightly more women (54\%) than men, and Hispanics and non-whites comprised 45\% of the lung nodule cohort. Thirty-six percent were never smokers whereas 11\% were current smokers. Fourteen percent of the patients were subsequently diagnosed with lung cancer. The sensitivity and specificity of the natural language processing algorithm for identifying the presence of lung nodules were 96\% and 86\%, respectively, compared with clinician review. Among the true positive transcripts in the validation sample, only 35\% were solitary and unaccompanied by one or more associated findings, and 56\% measured 8 to 30 mm in diameter.
+Conclusions:
+A combination of diagnostic codes, procedural codes, and a natural language processing algorithm for free text searching of radiology reports can accurately and efficiently identify patients with incident lung nodules, many of whom are subsequently diagnosed with lung cancer.},
+	author = {Danforth, Kim N. and Early, Megan I. and Ngan, Sharon and Kosco, Anne E. and Zheng, Chengyi and Gould, Michael K.},
+	doi = {10.1097/JTO.0b013e31825bd9f5},
+	issn = {1556-0864},
+	journal = {Journal of Thoracic Oncology},
+	keywords = {lung nodules; pulmonary coin lesion; lung cancer; natural language processing (NLP); validation study},
+	number = {8},
+	pages = {1257--1262},
+	title = {Automated Identification of Patients With Pulmonary Nodules in an Integrated Health System Using Administrative Health Plan Data, Radiology Reports, and Natural Language Processing},
+	url = {http://www.sciencedirect.com/science/article/pii/S1556086415326915},
+	volume = {7},
+	year = {2012}
+}
+
+@inproceedings{elkinNlp2008,
+	author = {Elkin, Peter L and Froehling, David and Wahner-Roedler, Dietlind and Trusko, Brett and Welsh, Gail and Ma, Haobo and Asatryan, Armen X and Tokars, Jerome I and Rosenbloom, S Trent and Brown, Steven H},
+	booktitle = {AMIA annual symposium proceedings},
+	organization = {American Medical Informatics Association},
+	pages = {172},
+	title = {NLP-based identification of pneumonia cases from free-text radiological reports},
+	volume = {2008},
+	year = {2008}
+}
+
+@article{hripcsak2002,
+	author = {Hripcsak, George and Austin, John HM and Alderson, Philip O and Friedman, Carol},
+	journal = {Radiology},
+	number = {1},
+	pages = {157--163},
+	publisher = {Radiological Society of North America},
+	title = {Use of natural language processing to translate clinical information from a database of 889,921 chest radiographic reports},
+	volume = {224},
+	year = {2002}
+}
+
