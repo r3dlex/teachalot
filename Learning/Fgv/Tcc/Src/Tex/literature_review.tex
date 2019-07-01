@@ -25,16 +25,15 @@ In the following chapter, the state of the art in the lung cancer screening and 
 
 The table~\ref{table:search_terms} shows all the search terms utilized as a basis to extract key articles from Google Scholar, Springer  and ScienceDirect resources. For each of these articles, the most interesting related documents were also taken into account.
 
-For each of these articles, guidelines, books and documents evaluated only the first eight of each combined search was kept as a result. All were read and the most impacting related works were also taken into consideration for this systematic literature review.
+Only the first eight articles, guidelines, books and documents results of the combined search parameters of each are kept as a result. All of them were read and classified from the most impacting to the least impacting. The most important referenced works (DOI, ISSN\ldots) for all documents were also taken into consideration for this systematic literature review.
 
-So for only the three different combined search parameters, 32 papers were selected. From these each, the  most impacting cited ones were taken into consideration, increasing the number of papers to  read to 72. From this overall number, 21 were selected to be cited as part of the literature review. % TODO
+So for only the three different combined search parameters, 32 papers were selected. From these each, the  most impacting cited ones were taken into consideration, increasing the number of papers to  read to 72. From this overall number, 21 were selected to be cited as part of the literature review.
 
 \section{Lung Cancer Studies}
 
 Lung Cancer is the type of 30\% of all cancers. From these 30\%, 90\% of these cancers are  caused by the fact that the patient is an active or recent smoker \cite{jaklitsch2012, nccn2019, roberts2013}. This is an important literature finding because it means that patients that are effective smokers will have much greater chance of developing lung cancer than other patients.
 
-Not only that, but other studies found out that the average quit ratio on the entire smoker worldwide population is of 7\% only but when lung  cancer screening is taken into consideration, about 25\% of the patients that start in screening program are likely to quit smoking \cite{fox2003, aalst2010}. %TODO - smoking cessation paper too
-
+Not only that, but other studies found out that the average quit ratio on the entire smoker worldwide population is of 7\% only but when lung  cancer screening is taken into consideration, about 25\% of the patients that start in screening program are likely to quit smoking\cite{fox2003, aalst2010}. 
 \section{Imaging Lung Nodules}
 
 Some of the papers mention the existence of a strong correlation between patient survivability for the first 24 months and the cancer development stage. It is so common to use cancer stage (I to IV) as a proxy for survivability that there are even works whose main focus is to uncover these relations\cite{roberts2013, fox2003}.
@@ -119,3 +118,10 @@ As mentioned in the previous sections, the existence of both a radiology report 
 
 The patient family history of cancer and also it's smoking behavior and age should provide insight on whether the patient should be screened or not and that is the end goal of this work.
 
+\section{Natural Language Processing and Machine Learning}
+
+Most of the classical Natural Language Processing (NLP) was done as a form of specialized regular expression or hierarchical based decision system according to a lexicon and a corpus. Lemmatization, Tokenization and Stemming are steps torwards normalizing and understanding the text. From these definitions the classical text mining and web crawling techniques were developed\cite{hripcsak2002, elkinNlp2008, danforth2012}. 
+
+More recently, a breakthrough on the usage of Convolution Neural-Network (CNN) such as LSTM have brought the state of the art to a new era where CNNs are the most accepted means of increasing performance on classical NLP problems and news alike\cite{kang2019, jungmann2019}. 
+
+This not only increased the depth to where problems can be solved by the application of machine learning (ML) and CNNs, but also increased greatly the computational power and the technology used to perform these inferences to black box models. That is, to understand the conversion of a string into a multidimensional vector which is then fed into a CNN and outputs a floating point number as an output is non-trivial guess work.
